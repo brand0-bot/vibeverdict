@@ -13,36 +13,6 @@
     <input type="hidden" name="subscribe_error_message" value="Oops, something went wrong."/>
     <p class="vv-signup-status" role="status" aria-live="polite"></p>
   </form>
-  <div class="beehiiv-frame">
-  <script is:inline data-beehiiv-form="f99e0aaf-6091-4c8c-8644-24b908d02966">
-    (function () {
-      var slot = document.currentScript && document.currentScript.closest(".beehiiv-slot");
-      if (!slot) return;
-      var pending = slot.querySelector(".beehiiv-pending");
-      function shown() {
-        var iframe = slot.querySelector("iframe");
-        if (!iframe) return false;
-        if (iframe.getAttribute("data-bhv-sized")) return true;
-        var wrap = iframe.parentElement;
-        if (!wrap || !wrap.style) return false;
-        var h = wrap.style.height;
-        return h !== "0" && h !== "0px";
-      }
-      function hide() {
-        if (pending && shown()) pending.hidden = true;
-      }
-      new MutationObserver(hide).observe(slot, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ["style", "data-bhv-sized"]
-      });
-      setTimeout(function () {
-        if (pending) pending.hidden = true;
-      }, 8000);
-    })();
-  </script>
-  </div>
   <p class="beehiiv-fallback">
     <a class="btn" href="https://vibeverdict.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe on Beehiiv</a>
   </p>
@@ -103,7 +73,6 @@
 </script>
 <style>
   .beehiiv-slot { max-width: 480px; margin: 16px 0; }
-  .beehiiv-frame { min-height: 207px; }
   .vv-signup {
     margin: 0 0 14px;
     padding: 14px;
