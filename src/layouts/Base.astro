@@ -4,6 +4,7 @@ const { title, description, schema } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="impact-site-verification" value="c9d78dc4-3667-4f5f-b52b-55b9039cdf5b"/>
 <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
 <meta property="og:title" content={title}/><meta property="og:description" content={description}/>
 {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)}/>}
