@@ -1,0 +1,38 @@
+{
+ "name": "Suno",
+ "category": "media",
+ "verdict": "The most fun AI music generator, and Pro at $10 gets you commercial use.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Pro",
+   "price": "$10/mo or $8/mo annual"
+  },
+  {
+   "plan": "Premier",
+   "price": "$30/mo or $24/mo annual"
+  }
+ ],
+ "pricingSource": "https://suno.com/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Impressive song quality",
+  "Cheap"
+ ],
+ "cons": [
+  "Copyright questions are still unsettled"
+ ],
+ "alternatives": [
+  "elevenlabs",
+  "runway",
+  "midjourney"
+ ],
+ "website": "https://suno.com",
+ "affiliate": false,
+ "pricingNote": ""
+}

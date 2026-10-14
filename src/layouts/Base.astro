@@ -1,0 +1,25 @@
+---
+const { title, description, schema } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
+<meta property="og:title" content={title}/><meta property="og:description" content={description}/>
+{schema && <script type="application/ld+json" set:html={JSON.stringify(schema)}/>}
+<style is:global>
+:root{--bg:#0b0d12;--card:#141824;--line:#232a3a;--text:#e8ecf4;--mut:#93a0b8;--acc:#8b5cf6;--ok:#22c55e;--mid:#f59e0b;--bad:#ef4444}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{color:#c4b5fd;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:20px;color:var(--text)}.logo span{color:var(--acc)}nav a{margin-left:18px;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}.worth-it{background:#14532d;color:#86efac}.depends{background:#78350f;color:#fcd34d}.skip{background:#7f1d1d;color:#fca5a5}.pending{background:#334155;color:#cbd5e1}
+table{width:100%;border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid var(--line);text-align:left}.mut{color:var(--mut)}
+.warn{background:#3b2a0a;border:1px solid #78350f;color:#fcd34d;border-radius:10px;padding:10px 14px;font-size:14px}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}input{background:#0f131c;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px;min-width:240px}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:24px 0;font-size:13px;color:var(--mut)}h1{line-height:1.15}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="/">Vibe<span>Verdict</span></a><nav><a href="/category/coding-agents/">Coding</a><a href="/category/app-builders/">App builders</a><a href="/category/chat/">Chat</a><a href="/compare/">Compare</a><a href="/newsletter/">Newsletter</a></nav></div></header>
+<main class="wrap"><slot/></main>
+<footer><div class="wrap">VibeVerdict: honest, dated verdicts on AI tools. Some links are affiliate links; they never change our verdicts. <a href="/about/">Methodology &amp; disclosure</a> · <a href="/llms.txt">llms.txt</a></div></footer>
+</body></html>

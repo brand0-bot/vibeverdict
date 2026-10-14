@@ -1,0 +1,42 @@
+{
+ "name": "ElevenLabs",
+ "category": "media",
+ "verdict": "The best AI voice there is; Starter at $6 is a no-brainer for creators.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Starter",
+   "price": "$6/mo (30k credits)"
+  },
+  {
+   "plan": "Creator",
+   "price": "$22/mo (121k credits)"
+  },
+  {
+   "plan": "Pro",
+   "price": "$99/mo (600k credits)"
+  }
+ ],
+ "pricingSource": "https://elevenlabs.io/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Best-in-class voices",
+  "Cheap entry tier"
+ ],
+ "cons": [
+  "Credits go fast on long audio"
+ ],
+ "alternatives": [
+  "suno",
+  "runway",
+  "midjourney"
+ ],
+ "website": "https://elevenlabs.io",
+ "affiliate": true,
+ "pricingNote": ""
+}

@@ -1,0 +1,44 @@
+{
+ "name": "Lovable",
+ "category": "app-builders",
+ "verdict": "The fastest way to go from an idea to a deployed full-stack app; credits run out quickly on big projects.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0 (5 credits/day, max 30/mo)"
+  },
+  {
+   "plan": "Pro",
+   "price": "$25/mo (100 credits) or $21/mo annual"
+  },
+  {
+   "plan": "Business",
+   "price": "$50/mo (100 credits)"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Contact sales"
+  }
+ ],
+ "pricingSource": "https://docs.lovable.dev/introduction/subscription-plans",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Great UI output",
+  "Built-in hosting and backend",
+  "Free tier to try"
+ ],
+ "cons": [
+  "Credit burn on iteration",
+  "Business costs 2x for the same credits"
+ ],
+ "alternatives": [
+  "bolt",
+  "v0",
+  "replit"
+ ],
+ "website": "https://lovable.dev",
+ "affiliate": true,
+ "pricingNote": ""
+}

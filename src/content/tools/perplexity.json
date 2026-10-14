@@ -1,0 +1,38 @@
+{
+ "name": "Perplexity",
+ "category": "chat",
+ "verdict": "The best AI search with citations; Pro is worth it for researchers.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Pro",
+   "price": "$17/mo annual (monthly price unverified)"
+  },
+  {
+   "plan": "Max",
+   "price": "$200/mo or $167/mo annual"
+  }
+ ],
+ "pricingSource": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Cited answers",
+  "Multiple models"
+ ],
+ "cons": [
+  "Max is pricey"
+ ],
+ "alternatives": [
+  "chatgpt",
+  "gemini",
+  "claude"
+ ],
+ "website": "https://perplexity.ai",
+ "affiliate": false,
+ "pricingNote": ""
+}

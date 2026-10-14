@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro'; import { tools, categories, label } from '../../lib/data.js';
+export function getStaticPaths(){ return Object.keys(categories).map(c=>({params:{cat:c}})); }
+const { cat } = Astro.params; const list=tools.filter(t=>t.category===cat);
+const schema={"@context":"https://schema.org","@type":"ItemList",name:categories[cat],itemListElement:list.map((t,i)=>({"@type":"ListItem",position:i+1,url:`https://vibeverdict.ai/tools/${t.slug}/`}))};
+---
+<Base title={`Best ${categories[cat]} tools: are they worth it? (2026)`} description={`Verdicts and verified pricing for ${categories[cat]}.`} schema={schema}>
+<h1>{categories[cat]}</h1><table><tr><th>Tool</th><th>Verdict</th><th>Status</th></tr>
+{list.map(t=>(<tr><td><a href={`/tools/${t.slug}/`}><b>{t.name}</b></a></td><td><span class={`pill ${t.rating}`}>{label[t.rating]}</span> {t.verdict}</td><td class="mut" style="font-size:13px">{t.verified?`✓ ${t.lastVerified}`:'⚠ unverified'}</td></tr>))}</table>
+</Base>

@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro'; import { tools, bySlug, categories, label } from '../../lib/data.js';
+export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
+const { t } = Astro.props;
+const schema=[{"@context":"https://schema.org","@type":"SoftwareApplication",name:t.name,applicationCategory:categories[t.category],url:t.website,
+ ...(t.verified?{offers:t.pricing.map(p=>({"@type":"Offer",name:p.plan,description:p.price}))}:{}),
+ review:{"@type":"Review",author:{"@type":"Organization",name:"VibeVerdict"},reviewBody:t.verdict,...(t.lastVerified?{datePublished:t.lastVerified}:{})}},
+ {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://vibeverdict.ai/"},{"@type":"ListItem",position:2,name:categories[t.category],item:`https://vibeverdict.ai/category/${t.category}/`},{"@type":"ListItem",position:3,name:t.name}]},
+ {"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:`Is ${t.name} worth it?`,acceptedAnswer:{"@type":"Answer",text:t.verdict}}]}];
+---
+<Base title={`Is ${t.name} worth it? Pricing, verdict & alternatives (2026)`} description={t.verdict} schema={schema}>
+<p class="mut" style="margin-top:24px"><a href="/">Home</a> / <a href={`/category/${t.category}/`}>{categories[t.category]}</a></p>
+<h1 style="font-size:38px;margin:6px 0">Is {t.name} worth it?</h1>
+<div class="card" style="font-size:19px"><span class={`pill ${t.rating}`}>{label[t.rating]}</span> <b>{t.verdict}</b></div>
+<p class="mut" style="font-size:14px">{t.verified?<>✓ Last verified <b>{t.lastVerified}</b> from <a href={t.pricingSource} rel="nofollow">the official source</a></>:<>⚠ <b>Pricing not verified.</b> Check the <a href={t.pricingSource} rel="nofollow">official site</a> before buying.</>}</p>
+{t.pricingNote && <p class="warn">{t.pricingNote}</p>}
+<h2>Pricing</h2>
+{t.pricing.length? <table><tr><th>Plan</th><th>Price</th></tr>{t.pricing.map(p=>(<tr><td>{p.plan}</td><td>{p.price}{!t.verified && <span class="mut"> (unverified)</span>}</td></tr>))}</table> : <p class="mut">Pricing hasn't been researched yet. We don't publish prices we haven't verified.</p>}
+{t.pros.length>0 && <div class="grid" style="margin-top:24px"><div class="card"><h3 style="margin-top:0;color:var(--ok)">Pros</h3><ul>{t.pros.map(p=><li>{p}</li>)}</ul></div><div class="card"><h3 style="margin-top:0;color:var(--bad)">Cons</h3><ul>{t.cons.map(p=><li>{p}</li>)}</ul></div></div>}
+{t.alternatives.length>0 && <><h2>Alternatives</h2><div class="grid">{t.alternatives.filter(a=>bySlug[a]).map(a=>(<a class="card" href={`/tools/${a}/`}><b>{bySlug[a].name}</b><div class="mut" style="font-size:13px">{bySlug[a].verdict}</div></a>))}</div></>}
+<p style="margin-top:28px"><a class="btn" href={t.website} rel={t.affiliate?"sponsored nofollow":"nofollow"}>Visit {t.name} →</a></p>
+<p class="mut" style="font-size:13px">{t.affiliate?'Disclosure: this may become an affiliate link (program verified, link not yet active). It never affects our verdict.':'Disclosure: we have no affiliate relationship with this tool.'} <a href="/about/">How we rate</a></p>
+</Base>

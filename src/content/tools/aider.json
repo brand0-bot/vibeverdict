@@ -1,0 +1,35 @@
+{
+ "name": "Aider",
+ "category": "coding-agents",
+ "verdict": "Open-source coding agent: the tool is free and you pay your model provider directly.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Tool",
+   "price": "Free / open source (unverified)"
+  },
+  {
+   "plan": "Model usage",
+   "price": "Pay your API provider"
+  }
+ ],
+ "pricingSource": "https://aider.chat",
+ "lastVerified": null,
+ "verified": false,
+ "pros": [
+  "Open source",
+  "Bring your own model"
+ ],
+ "cons": [
+  "API costs can add up",
+  "More setup required"
+ ],
+ "alternatives": [
+  "claude-code",
+  "cursor",
+  "cline"
+ ],
+ "website": "https://aider.chat",
+ "affiliate": false,
+ "pricingNote": "Pricing not yet verified from the official source."
+}

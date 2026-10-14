@@ -1,0 +1,34 @@
+{
+ "name": "OpenAI Codex",
+ "category": "coding-agents",
+ "verdict": "OpenAI's coding agent comes bundled with ChatGPT Plus and above, so it's a great deal if you already pay for ChatGPT.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Included with ChatGPT Plus",
+   "price": "$20/mo"
+  },
+  {
+   "plan": "Pro tiers",
+   "price": "$100 / $200 / $500 per month"
+  }
+ ],
+ "pricingSource": "https://openai.com/index/introducing-chatgpt-go/",
+ "lastVerified": null,
+ "verified": false,
+ "pros": [
+  "Bundled with ChatGPT",
+  "Cloud and CLI agent"
+ ],
+ "cons": [
+  "Limits depend on ChatGPT plan"
+ ],
+ "alternatives": [
+  "claude-code",
+  "github-copilot",
+  "cursor"
+ ],
+ "website": "https://openai.com/codex",
+ "affiliate": false,
+ "pricingNote": "Inclusion in Plus is verified; exact Codex usage limits per plan are unverified."
+}

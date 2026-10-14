@@ -1,0 +1,39 @@
+{
+ "name": "n8n",
+ "category": "agent-frameworks",
+ "verdict": "The best automation tool for builders: self-host it for free or use the reasonably priced cloud plans.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Self-hosted Community",
+   "price": "Free"
+  },
+  {
+   "plan": "Starter",
+   "price": "\u20ac24/mo or \u20ac20/mo annual (2,500 executions)"
+  },
+  {
+   "plan": "Pro",
+   "price": "\u20ac60/mo or \u20ac50/mo annual (10k executions)"
+  }
+ ],
+ "pricingSource": "https://n8n.io/pricing/",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Self-hostable",
+  "Charges per execution, not per step"
+ ],
+ "cons": [
+  "Prices in EUR",
+  "Steeper learning curve than Zapier"
+ ],
+ "alternatives": [
+  "zapier",
+  "langchain",
+  "crewai"
+ ],
+ "website": "https://n8n.io",
+ "affiliate": false,
+ "pricingNote": ""
+}

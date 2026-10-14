@@ -1,0 +1,43 @@
+{
+ "name": "Midjourney",
+ "category": "media",
+ "verdict": "Still the leader in aesthetic image quality; there's no free plan, and Standard at $30 is the sweet spot.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Basic",
+   "price": "$10/mo"
+  },
+  {
+   "plan": "Standard",
+   "price": "$30/mo"
+  },
+  {
+   "plan": "Pro",
+   "price": "$60/mo"
+  },
+  {
+   "plan": "Mega",
+   "price": "$120/mo"
+  }
+ ],
+ "pricingSource": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Top image quality",
+  "20% off annual"
+ ],
+ "cons": [
+  "No free tier",
+  "GPU-hour limits"
+ ],
+ "alternatives": [
+  "runway",
+  "gamma",
+  "elevenlabs"
+ ],
+ "website": "https://midjourney.com",
+ "affiliate": false,
+ "pricingNote": ""
+}

@@ -1,0 +1,39 @@
+{
+ "name": "v0 by Vercel",
+ "category": "app-builders",
+ "verdict": "Best for React/Next.js UI generation, and it deploys to Vercel with one click.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Plus",
+   "price": "$30/user/mo"
+  },
+  {
+   "plan": "Business",
+   "price": "$100/user/mo"
+  }
+ ],
+ "pricingSource": "https://v0.app/docs/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Great React/shadcn output",
+  "Tight Vercel integration"
+ ],
+ "cons": [
+  "Premium plan sunset",
+  "Tied to the Vercel stack"
+ ],
+ "alternatives": [
+  "lovable",
+  "bolt",
+  "replit"
+ ],
+ "website": "https://v0.app",
+ "affiliate": false,
+ "pricingNote": ""
+}
