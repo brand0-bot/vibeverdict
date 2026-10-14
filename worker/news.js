@@ -1,8 +1,9 @@
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const WINDOW_MS = 10 * 24 * 60 * 60 * 1000;
 const REFRESH_MINUTES = 30;
-const CACHE_URL = "https://vibeverdict.ai/api/ai-news-clean";
-const OG_CACHE_PREFIX = "https://vibeverdict.ai/og-image-cache/v1/";
+const CACHE_URL = "https://vibeverdict.ai/api/ai-news-distinct";
+const OG_CACHE_PREFIX = "https://vibeverdict.ai/og-image-cache/v2/";
+const IMAGE_HASH_PREFIX = "https://vibeverdict.ai/img-hash/v1/";
 const OG_FETCH_LIMIT = 12;
 const OG_HOSTS = new Set([
   "techcrunch.com",
@@ -332,12 +333,51 @@ function urlKey(url) {
   }
 }
 
+const TITLE_STOP = new Set("the a an of to and for on in as is are was were be by with from at or into over after about its their his her you your not new says said will just than then this that".split(" "));
+const SIZE_QUERY = /^(w|h|width|height|quality|q|strip|crop|resize|fit|auto|format|fm|ixlib|ixid|s|cb|sharp|sat|bri|exp|ver|v|size|dpr)$/i;
+
+function storyTokens(title) {
+  return [...new Set(normTitle(title).split(" ").filter((word) => word.length > 2 && !TITLE_STOP.has(word)))];
+}
+
+function nearTitle(a, b) {
+  const left = storyTokens(a);
+  const right = storyTokens(b);
+  if (left.length < 3 || right.length < 3) return false;
+  const rightSet = new Set(right);
+  const shared = left.filter((word) => rightSet.has(word)).length;
+  const smaller = Math.min(left.length, right.length);
+  return shared >= 3 && shared / smaller >= 0.5;
+}
+
 function sameStory(a, b) {
   if (urlKey(a.url) === urlKey(b.url)) return true;
   const left = titleKey(a.title);
   const right = titleKey(b.title);
-  if (!left || !right) return false;
-  return left === right || left.startsWith(right) || right.startsWith(left);
+  if (left && right && (left === right || left.startsWith(right) || right.startsWith(left))) return true;
+  return nearTitle(a.title, b.title);
+}
+
+export function imageIdentity(url) {
+  let parsed;
+  try { parsed = new URL(url); } catch { return String(url || ""); }
+  const kept = [];
+  for (const [key, value] of parsed.searchParams) {
+    if (SIZE_QUERY.test(key)) continue;
+    kept.push(`${key}=${value}`);
+  }
+  kept.sort();
+  const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+  const path = parsed.pathname.replace(/\/+$/, "").toLowerCase();
+  let file = path.split("/").pop() || "";
+  file = file.replace(/\.(jpe?g|png|webp|gif|avif)$/i, "");
+  file = file.replace(/(?:\.(?:width|height|quality|format|strip|crop|resize|w|h)-[a-z0-9]+)+$/i, "");
+  file = file.replace(/[-_](?:\d{2,4}x\d{2,4}|\d{3,4}w)$/i, "");
+  file = file.replace(/-\d{2,4}x\d{2,4}$/i, "");
+  if (file.length >= 12 && !/^(image|img|photo|thumb|thumbnail|featured|default|share|social)$/i.test(file)) {
+    return `file:${file}`;
+  }
+  return `url:${host}${path}${kept.length ? `?${kept.join("&")}` : ""}`;
 }
 
 export function rankItems(items, now = Date.now()) {
@@ -396,25 +436,43 @@ function ogHostAllowed(pageUrl) {
   }
 }
 
-function ogCacheRequest(pageUrl) {
-  return new Request(OG_CACHE_PREFIX + encodeURIComponent(pageUrl));
+function canonicalPage(pageUrl) {
+  const url = new URL(pageUrl);
+  url.hash = "";
+  url.hostname = url.hostname.toLowerCase();
+  if (url.pathname.length > 1) url.pathname = url.pathname.replace(/\/+$/, "");
+  return url.href;
+}
+
+async function sha256Hex(bytes) {
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+async function ogCacheRequest(pageUrl) {
+  const canonical = canonicalPage(pageUrl);
+  const id = await sha256Hex(new TextEncoder().encode(canonical));
+  return { canonical, request: new Request(OG_CACHE_PREFIX + id) };
 }
 
 async function readCachedOg(pageUrl) {
   try {
     if (typeof caches === "undefined" || !caches.default) return null;
-    const hit = await caches.default.match(ogCacheRequest(pageUrl));
+    const { canonical, request } = await ogCacheRequest(pageUrl);
+    const hit = await caches.default.match(request);
     if (!hit) return null;
     const data = await hit.json();
-    return acceptImage(data && data.image, 0);
+    if (!data || data.page !== canonical) return null;
+    return acceptImage(data.image, 0);
   } catch {
     return null;
   }
 }
 
 async function storeCachedOg(pageUrl, image) {
+  const { canonical, request } = await ogCacheRequest(pageUrl);
   const ttl = image ? 7 * 24 * 3600 : 12 * 3600;
-  const response = new Response(JSON.stringify({ image: image || "" }), {
+  const response = new Response(JSON.stringify({ page: canonical, image: image || "" }), {
     headers: {
       "content-type": "application/json",
       "cache-control": `public, max-age=${ttl}`,
@@ -422,7 +480,7 @@ async function storeCachedOg(pageUrl, image) {
   });
   try {
     if (typeof caches === "undefined" || !caches.default) return;
-    await caches.default.put(ogCacheRequest(pageUrl), response);
+    await caches.default.put(request, response);
   } catch { /* a missed cache still returns the image for this response */ }
 }
 
@@ -497,6 +555,81 @@ async function attachOgImages(items) {
   }));
 }
 
+async function imageFingerprint(url) {
+  const identity = imageIdentity(url);
+  const cacheId = await sha256Hex(new TextEncoder().encode(identity));
+  const request = new Request(IMAGE_HASH_PREFIX + cacheId);
+  try {
+    if (typeof caches !== "undefined" && caches.default) {
+      const hit = await caches.default.match(request);
+      if (hit) {
+        const data = await hit.json();
+        if (data && data.identity === identity && data.hash) return data.hash;
+      }
+    }
+  } catch { /* fetch a fresh sample */ }
+  try {
+    const response = await fetch(url, {
+      headers: { "user-agent": UA, range: "bytes=0-65535" },
+      signal: AbortSignal.timeout(4000),
+    });
+    if (!response.ok && response.status !== 206) return "";
+    const bytes = new Uint8Array(await response.arrayBuffer()).slice(0, 65536);
+    if (bytes.length < 32) return "";
+    const hash = await sha256Hex(bytes);
+    try {
+      if (typeof caches !== "undefined" && caches.default) {
+        await caches.default.put(request, new Response(JSON.stringify({ identity, hash }), {
+          headers: { "content-type": "application/json", "cache-control": "public, max-age=604800" },
+        }));
+      }
+    } catch { /* the hash is still usable for this response */ }
+    return hash;
+  } catch {
+    return "";
+  }
+}
+
+async function mapPool(items, limit, task) {
+  const results = new Array(items.length);
+  let cursor = 0;
+  async function worker() {
+    while (cursor < items.length) {
+      const index = cursor;
+      cursor += 1;
+      results[index] = await task(items[index], index);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, () => worker()));
+  return results;
+}
+
+export async function assignUniqueImages(items) {
+  const hashes = new Array(items.length).fill("");
+  const pending = items.map((item, index) => ({ item, index })).filter((entry) => entry.item.image);
+  const work = mapPool(pending, 6, async (entry) => {
+    hashes[entry.index] = await imageFingerprint(entry.item.image);
+  });
+  await Promise.race([
+    work,
+    new Promise((resolve) => setTimeout(resolve, 2500)),
+  ]);
+  const usedKeys = new Set();
+  const usedHashes = new Set();
+  for (let index = 0; index < items.length; index += 1) {
+    const item = items[index];
+    if (!item.image) continue;
+    const key = imageIdentity(item.image);
+    const hash = hashes[index];
+    if (usedKeys.has(key) || (hash && usedHashes.has(hash))) {
+      item.image = null;
+      continue;
+    }
+    usedKeys.add(key);
+    if (hash) usedHashes.add(hash);
+  }
+}
+
 export async function buildNews() {
   const results = await Promise.all(SOURCES.map(async (source) => {
     try {
@@ -510,6 +643,9 @@ export async function buildNews() {
   try {
     await attachOgImages(items);
   } catch { /* headlines still render without thumbnails */ }
+  try {
+    await assignUniqueImages(items);
+  } catch { /* a repeated photo is worse, but the headlines still stand */ }
   return {
     ok: failed < SOURCES.length,
     updatedAt: new Date().toISOString(),
