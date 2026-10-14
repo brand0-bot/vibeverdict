@@ -1,4 +1,4 @@
-const UA = "Mozilla/5.0 (compatible; VibeVerdict/1.0; +https://vibeverdict.ai/news/)";
+const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const WINDOW_MS = 10 * 24 * 60 * 60 * 1000;
 const REFRESH_MINUTES = 30;
 const CACHE_URL = "https://vibeverdict.ai/api/news";
@@ -10,8 +10,8 @@ const SOURCES = [
   { id: "register", name: "The Register", region: "UK", url: "https://www.theregister.com/software/ai_ml/headlines.atom" },
   { id: "nature", name: "Nature", region: "UK", url: "https://www.nature.com/subjects/machine-learning.rss" },
   { id: "lemonde", name: "Le Monde", region: "France", url: "https://www.lemonde.fr/intelligence-artificielle/rss_full.xml" },
-  { id: "reddit-llama", name: "Reddit r/LocalLLaMA", region: "Community", url: "https://www.reddit.com/r/LocalLLaMA/.rss", hotRank: true },
-  { id: "reddit-ai", name: "Reddit r/artificial", region: "Community", url: "https://www.reddit.com/r/artificial/.rss", hotRank: true },
+  { id: "reddit-llama", name: "Reddit r/LocalLLaMA", region: "Community", url: "https://old.reddit.com/r/LocalLLaMA/.rss", hotRank: true },
+  { id: "reddit-ai", name: "Reddit r/artificial", region: "Community", url: "https://old.reddit.com/r/artificial/.rss", hotRank: true },
   { id: "hn", name: "Hacker News", region: "Community", url: "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=40", kind: "hn" },
 ];
 
