@@ -1,0 +1,44 @@
+{
+ "name": "Cursor",
+ "category": "coding-agents",
+ "verdict": "The most polished AI code editor, but its plan lineup is changing, so check current pricing first.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Pro (per docs)",
+   "price": "$20/mo"
+  },
+  {
+   "plan": "Pro+ (per docs)",
+   "price": "$60/mo"
+  },
+  {
+   "plan": "Ultra",
+   "price": "$200/mo"
+  }
+ ],
+ "pricingSource": "https://cursor.com/docs/account/pricing",
+ "lastVerified": null,
+ "verified": false,
+ "pros": [
+  "Deep codebase context",
+  "Strong agent and tab completion",
+  "Multiple frontier models"
+ ],
+ "cons": [
+  "Usage-based overages can surprise you",
+  "Pricing in flux"
+ ],
+ "alternatives": [
+  "windsurf",
+  "github-copilot",
+  "claude-code"
+ ],
+ "website": "https://cursor.com",
+ "affiliate": false,
+ "pricingNote": "CONFLICT: cursor.com/docs lists Pro $20 / Pro+ $60 / Ultra $200, but cursor.com/pricing currently shows Plus $8 / Premium $30 / Super $100 / Ultra $200. Treat as unverified until reconciled."
+}

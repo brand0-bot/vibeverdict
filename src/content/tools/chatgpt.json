@@ -1,0 +1,43 @@
+{
+ "name": "ChatGPT",
+ "category": "chat",
+ "verdict": "Still the default all-rounder. Plus at $20 is the sweet spot; Go at $8 is fine for light use.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Go",
+   "price": "$8/mo"
+  },
+  {
+   "plan": "Plus",
+   "price": "$20/mo"
+  },
+  {
+   "plan": "Pro 100 / 200 / 500",
+   "price": "$100 / $200 / $500 per month"
+  }
+ ],
+ "pricingSource": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Broad features (Codex, images, research)",
+  "Cheap Go tier"
+ ],
+ "cons": [
+  "Go includes ads",
+  "No annual billing"
+ ],
+ "alternatives": [
+  "claude",
+  "gemini",
+  "perplexity"
+ ],
+ "website": "https://chatgpt.com",
+ "affiliate": false,
+ "pricingNote": ""
+}

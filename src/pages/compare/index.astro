@@ -1,0 +1,4 @@
+---
+import Base from '../../layouts/Base.astro'; import { bySlug, comparisons } from '../../lib/data.js';
+---
+<Base title="AI tool comparisons | VibeVerdict" description="Head-to-head AI tool comparisons."><h1>Comparisons</h1><ul>{comparisons.map(([a,b])=><li><a href={`/compare/${a}-vs-${b}/`}>{bySlug[a].name} vs {bySlug[b].name}</a></li>)}</ul></Base>

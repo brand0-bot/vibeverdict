@@ -1,0 +1,39 @@
+{
+ "name": "Windsurf",
+ "category": "coding-agents",
+ "verdict": "A capable Cursor alternative at the same $20, now sold under Devin.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Pro",
+   "price": "$20/mo"
+  },
+  {
+   "plan": "Teams",
+   "price": "$80/mo min + $40/seat"
+  }
+ ],
+ "pricingSource": "https://windsurf.com/blog/windsurf-pricing-plans",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Same price as Cursor Pro",
+  "Good agent flow"
+ ],
+ "cons": [
+  "Branding and ownership changes",
+  "Smaller ecosystem"
+ ],
+ "alternatives": [
+  "cursor",
+  "github-copilot",
+  "cline"
+ ],
+ "website": "https://windsurf.com",
+ "affiliate": false,
+ "pricingNote": ""
+}

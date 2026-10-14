@@ -1,0 +1,39 @@
+{
+ "name": "Replit",
+ "category": "app-builders",
+ "verdict": "An all-in-one cloud IDE plus agent; Core at $25 is fine for hobby builds.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Starter",
+   "price": "$0"
+  },
+  {
+   "plan": "Core",
+   "price": "$25/mo or $20/mo annual"
+  },
+  {
+   "plan": "Pro",
+   "price": "$100/mo or $95/mo annual"
+  }
+ ],
+ "pricingSource": "https://docs.replit.com/help/pricing-and-plans",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Hosting included",
+  "Agent builds and deploys"
+ ],
+ "cons": [
+  "Usage credits run out",
+  "Effort-based agent pricing"
+ ],
+ "alternatives": [
+  "lovable",
+  "bolt",
+  "v0"
+ ],
+ "website": "https://replit.com",
+ "affiliate": false,
+ "pricingNote": ""
+}

@@ -1,0 +1,42 @@
+{
+ "name": "Bolt.new",
+ "category": "app-builders",
+ "verdict": "A solid in-browser app builder; token-based pricing suits short bursts of work.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Pro",
+   "price": "$25/mo (10M tokens)"
+  },
+  {
+   "plan": "Pro 50",
+   "price": "$50/mo (26M tokens)"
+  },
+  {
+   "plan": "Pro 100",
+   "price": "$100/mo (55M tokens)"
+  }
+ ],
+ "pricingSource": "https://bolt.new/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "No daily token cap on paid plans",
+  "Tokens roll over one month"
+ ],
+ "cons": [
+  "Tokens drain on big codebases"
+ ],
+ "alternatives": [
+  "lovable",
+  "v0",
+  "replit"
+ ],
+ "website": "https://bolt.new",
+ "affiliate": false,
+ "pricingNote": ""
+}

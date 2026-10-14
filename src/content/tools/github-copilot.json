@@ -1,0 +1,48 @@
+{
+ "name": "GitHub Copilot",
+ "category": "coding-agents",
+ "verdict": "Best value for most developers: $10 gets you solid completions and agent usage inside the editor you already use.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0 (2,000 completions/mo)"
+  },
+  {
+   "plan": "Pro",
+   "price": "$10/mo"
+  },
+  {
+   "plan": "Pro+",
+   "price": "$39/mo"
+  },
+  {
+   "plan": "Max",
+   "price": "$100/mo"
+  },
+  {
+   "plan": "Business",
+   "price": "$19/user/mo"
+  }
+ ],
+ "pricingSource": "https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Cheap entry tier",
+  "Works in VS Code, JetBrains, CLI",
+  "Generous free tier"
+ ],
+ "cons": [
+  "Usage-credit model is complex",
+  "Less agentic depth than Cursor"
+ ],
+ "alternatives": [
+  "cursor",
+  "windsurf",
+  "claude-code"
+ ],
+ "website": "https://github.com/features/copilot",
+ "affiliate": false,
+ "pricingNote": ""
+}

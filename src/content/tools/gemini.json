@@ -1,0 +1,42 @@
+{
+ "name": "Gemini (Google AI Pro)",
+ "category": "chat",
+ "verdict": "Great value if you live in Google's ecosystem: you get AI plus storage for $19.99.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Google AI Pro",
+   "price": "$19.99/mo"
+  },
+  {
+   "plan": "Ultra 5x",
+   "price": "$99.99/mo"
+  },
+  {
+   "plan": "Ultra 20x",
+   "price": "$199.99/mo"
+  }
+ ],
+ "pricingSource": "https://one.google.com/about/google-ai-plans/",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Bundled with Google One storage",
+  "Deep Workspace integration"
+ ],
+ "cons": [
+  "Plan names change often"
+ ],
+ "alternatives": [
+  "chatgpt",
+  "claude",
+  "perplexity"
+ ],
+ "website": "https://gemini.google.com",
+ "affiliate": false,
+ "pricingNote": ""
+}

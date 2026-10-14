@@ -1,0 +1,40 @@
+{
+ "name": "Claude Code",
+ "category": "coding-agents",
+ "verdict": "A top-tier terminal coding agent that comes bundled with Claude plans; heavy users will want Max.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Pro (includes Claude Code)",
+   "price": "$20/mo or $17/mo annual"
+  },
+  {
+   "plan": "Max 5x",
+   "price": "$100/mo"
+  },
+  {
+   "plan": "Max 20x",
+   "price": "$200/mo"
+  }
+ ],
+ "pricingSource": "https://claude.com/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Excellent multi-file reasoning",
+  "Included with Claude Pro",
+  "Runs in the terminal"
+ ],
+ "cons": [
+  "Session usage limits on Pro",
+  "No free tier for Claude Code"
+ ],
+ "alternatives": [
+  "openai-codex",
+  "cursor",
+  "aider"
+ ],
+ "website": "https://claude.com/product/claude-code",
+ "affiliate": false,
+ "pricingNote": ""
+}

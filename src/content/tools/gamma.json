@@ -1,0 +1,38 @@
+{
+ "name": "Gamma",
+ "category": "writing",
+ "verdict": "The fastest way to make a good-looking deck; Plus at $12 removes the branding.",
+ "rating": "worth-it",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Plus",
+   "price": "$12/seat/mo"
+  },
+  {
+   "plan": "Pro",
+   "price": "$25/seat/mo"
+  }
+ ],
+ "pricingSource": "https://gamma.app/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Decks in minutes",
+  "Web-page export"
+ ],
+ "cons": [
+  "Credits limit heavy use"
+ ],
+ "alternatives": [
+  "notion-ai",
+  "jasper",
+  "chatgpt"
+ ],
+ "website": "https://gamma.app",
+ "affiliate": false,
+ "pricingNote": ""
+}

@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro'; import { bySlug, comparisons, label } from '../../lib/data.js';
+export function getStaticPaths(){ return comparisons.map(([a,b])=>({params:{pair:`${a}-vs-${b}`},props:{a:bySlug[a],b:bySlug[b]}})); }
+const { a, b } = Astro.props;
+---
+<Base title={`${a.name} vs ${b.name}: which is worth it? (2026)`} description={`${a.name} vs ${b.name}: verified pricing, verdicts, pros and cons side by side.`}>
+<h1>{a.name} vs {b.name}</h1><div class="grid">{[a,b].map(t=>(<div class="card"><h2 style="margin-top:0"><a href={`/tools/${t.slug}/`}>{t.name}</a></h2><span class={`pill ${t.rating}`}>{label[t.rating]}</span><p>{t.verdict}</p>
+<table>{t.pricing.map(p=><tr><td>{p.plan}</td><td>{p.price}</td></tr>)}</table><p class="mut" style="font-size:13px">{t.verified?`✓ Verified ${t.lastVerified}`:'⚠ Pricing unverified'}</p>{t.pricingNote&&<p class="warn">{t.pricingNote}</p>}
+<b>Pros</b><ul>{t.pros.map(p=><li>{p}</li>)}</ul><b>Cons</b><ul>{t.cons.map(p=><li>{p}</li>)}</ul></div>))}</div>
+</Base>
