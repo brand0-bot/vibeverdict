@@ -4,5 +4,4 @@ export const tools = Object.entries(files).map(([p, m]) => ({ slug: p.split('/')
 export function visitUrl(tool) { return tool.affiliateUrl || tool.website; }
 export const bySlug = Object.fromEntries(tools.map(t=>[t.slug,t]));
 export const categories = { 'coding-agents':'Coding Agents', 'app-builders':'App Builders (Vibe Coding)', 'chat':'Chat & LLMs', 'agent-frameworks':'Agents & Automation', 'media':'Image, Voice & Music', 'writing':'Writing & Docs' };
-export const comparisons = [['cursor','github-copilot'],['lovable','bolt'],['chatgpt','claude'],['claude-code','openai-codex'],['v0','lovable']];
 export const label = { 'worth-it':'Worth it', 'depends':'Depends', 'skip':'Skip', 'pending':'Pending' };

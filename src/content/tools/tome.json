@@ -1,0 +1,21 @@
+{
+ "name": "Tome",
+ "category": "writing",
+ "verdict": "No price to publish. tome.app and its pricing URL did not resolve on 2026-10-14.",
+ "rating": "pending",
+ "pricing": [],
+ "pricingSource": "https://tome.app/pricing",
+ "lastVerified": null,
+ "verified": false,
+ "pros": [],
+ "cons": [
+  "The pricing page returned deployment not found"
+ ],
+ "alternatives": [
+  "gamma",
+  "beautiful-ai"
+ ],
+ "website": "https://tome.app",
+ "affiliate": false,
+ "pricingNote": "On 2026-10-14, https://tome.app and https://tome.app/pricing returned HTTP 404 (deployment not found). https://tome.com/pricing returned HTTP 500. See the vendor site. No price is shown."
+}

@@ -1,7 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro'; import { tools, bySlug, categories, label, visitUrl } from '../../lib/data.js';
+import { guidesFor } from '../../lib/guides.js';
 export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
 const { t } = Astro.props;
+const related = guidesFor(t.slug, bySlug);
 const schema=[{"@context":"https://schema.org","@type":"SoftwareApplication",name:t.name,applicationCategory:categories[t.category],url:t.website,
  ...(t.verified?{offers:t.pricing.map(p=>({"@type":"Offer",name:p.plan,description:p.price}))}:{}),
  review:{"@type":"Review",author:{"@type":"Organization",name:"VibeVerdict"},reviewBody:t.verdict,...(t.lastVerified?{datePublished:t.lastVerified}:{})}},
@@ -17,6 +19,7 @@ const schema=[{"@context":"https://schema.org","@type":"SoftwareApplication",nam
 <h2>Pricing</h2>
 {t.pricing.length? <table><tr><th>Plan</th><th>Price</th></tr>{t.pricing.map(p=>(<tr><td>{p.plan}</td><td>{p.price}{!t.verified && <span class="mut"> (unverified)</span>}</td></tr>))}</table> : <p class="mut">Pricing hasn't been researched yet. We don't publish prices we haven't verified.</p>}
 {t.pros.length>0 && <div class="grid" style="margin-top:24px"><div class="card"><h3 style="margin-top:0;color:var(--ok)">Pros</h3><ul>{t.pros.map(p=><li>{p}</li>)}</ul></div><div class="card"><h3 style="margin-top:0;color:var(--bad)">Cons</h3><ul>{t.cons.map(p=><li>{p}</li>)}</ul></div></div>}
+{related.length>0 && <><h2>Comparisons</h2><ul>{related.map(r => <li><a href={r.href}>{r.title}</a></li>)}</ul></>}
 {t.alternatives.length>0 && <><h2>Alternatives</h2><div class="grid">{t.alternatives.filter(a=>bySlug[a]).map(a=>{ const alt=bySlug[a]; return alt.affiliateUrl
  ? <a class="card" href={alt.affiliateUrl} rel="sponsored nofollow noopener" target="_blank"><b>{alt.name}</b><div class="mut" style="font-size:13px">{alt.verdict}</div></a>
  : <a class="card" href={`/tools/${a}/`}><b>{alt.name}</b><div class="mut" style="font-size:13px">{alt.verdict}</div></a>; })}</div>

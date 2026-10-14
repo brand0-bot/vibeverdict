@@ -6,19 +6,19 @@
  "pricing": [
   {
    "plan": "Free",
-   "price": "$0"
+   "price": "$0 (300k tokens/day, 1M/month)"
   },
   {
    "plan": "Pro",
-   "price": "$25/mo (10M tokens)"
+   "price": "$25/mo billed monthly (starts at 10M tokens)"
   },
   {
-   "plan": "Pro 50",
-   "price": "$50/mo (26M tokens)"
+   "plan": "Teams",
+   "price": "$30/member/mo billed monthly"
   },
   {
-   "plan": "Pro 100",
-   "price": "$100/mo (55M tokens)"
+   "plan": "Enterprise",
+   "price": "Custom"
   }
  ],
  "pricingSource": "https://bolt.new/pricing",
@@ -38,5 +38,5 @@
  ],
  "website": "https://bolt.new",
  "affiliate": false,
- "pricingNote": ""
+ "pricingNote": "On 2026-10-14 bolt.new/pricing showed these monthly prices and said yearly billing saves up to 28%. It did not list the yearly dollar amounts, or the older Pro 50 and Pro 100 tiers, so those are omitted."
 }

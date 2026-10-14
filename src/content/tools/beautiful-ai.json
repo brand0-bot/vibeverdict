@@ -1,0 +1,39 @@
+{
+ "name": "Beautiful.ai",
+ "category": "writing",
+ "verdict": "Pro is a published $14.50 a month billed annually, with unlimited AI slides and a 14-day trial that needs a card.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Pro",
+   "price": "$14.50/mo billed annually"
+  },
+  {
+   "plan": "Team",
+   "price": "$40/user/mo billed annually, or $50/user billed monthly"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  }
+ ],
+ "pricingSource": "https://www.beautiful.ai/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Unlimited AI content generation on Pro",
+  "PowerPoint import and export",
+  "14-day trial of Pro or Team"
+ ],
+ "cons": [
+  "The trial requires a credit card",
+  "A monthly Pro price was not shown"
+ ],
+ "alternatives": [
+  "gamma",
+  "tome"
+ ],
+ "website": "https://www.beautiful.ai",
+ "affiliate": false,
+ "pricingNote": "beautiful.ai/pricing on 2026-10-14: Pro is $14.50 per month for individuals, billed annually. Teams of 2 to 20 pay $40 per user per month billed annually, or $50 billed monthly. Students with a .edu email get a year free. A monthly individual price was not listed."
+}

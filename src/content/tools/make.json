@@ -1,0 +1,34 @@
+{
+ "name": "Make",
+ "category": "agent-frameworks",
+ "verdict": "A visual automation tool with a free 1,000-credit plan. The paid dollar prices were not in the pricing page text we could read.",
+ "rating": "pending",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "1,000 credits/mo"
+  },
+  {
+   "plan": "Core, Pro, and Teams",
+   "price": "See vendor site"
+  }
+ ],
+ "pricingSource": "https://www.make.com/en/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Free plan is stated on the pricing page",
+  "Most actions consume one credit"
+ ],
+ "cons": [
+  "Paid dollar amounts were not in the page text",
+  "Credits expire at the end of the term"
+ ],
+ "alternatives": [
+  "n8n",
+  "zapier"
+ ],
+ "website": "https://www.make.com",
+ "affiliate": false,
+ "pricingNote": "On 2026-10-14 the pricing page FAQ said the Free plan includes 1,000 credits a month. Core, Pro, and Teams are named, and annual billing is cheaper, but their dollar prices were not in the text we could read. A direct HTML download of the same URL was a Cloudflare challenge. See the vendor site before paying."
+}

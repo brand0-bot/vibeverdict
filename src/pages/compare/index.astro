@@ -1,4 +1,11 @@
 ---
-import Base from '../../layouts/Base.astro'; import { bySlug, comparisons } from '../../lib/data.js';
+import Base from '../../layouts/Base.astro';
+import { bySlug } from '../../lib/data.js';
+import { comparisons, comparisonTitle, roundups } from '../../lib/guides.js';
 ---
-<Base title="AI tool comparisons | VibeVerdict" description="Head-to-head AI tool comparisons."><h1>Comparisons</h1><ul>{comparisons.map(([a,b])=><li><a href={`/compare/${a}-vs-${b}/`}>{bySlug[a].name} vs {bySlug[b].name}</a></li>)}</ul></Base>
+<Base title="AI tool comparisons | VibeVerdict" description="Head-to-head AI tool comparisons. Prices are shown only when verified on the vendor's site.">
+<h1>Comparisons</h1>
+<ul>{comparisons.map(page => <li><a href={`/compare/${page.slug}/`}>{comparisonTitle(page, bySlug)}</a></li>)}</ul>
+<h2>Roundups</h2>
+<ul>{roundups.map(page => <li><a href={`/best/${page.slug}/`}>{page.title}</a></li>)}</ul>
+</Base>

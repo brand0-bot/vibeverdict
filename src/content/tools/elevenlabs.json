@@ -6,7 +6,7 @@
  "pricing": [
   {
    "plan": "Free",
-   "price": "$0"
+   "price": "$0 (10k credits/mo)"
   },
   {
    "plan": "Starter",
@@ -19,6 +19,14 @@
   {
    "plan": "Pro",
    "price": "$99/mo (600k credits)"
+  },
+  {
+   "plan": "Scale",
+   "price": "$299/mo (1.8M credits, 3 seats)"
+  },
+  {
+   "plan": "Business",
+   "price": "$990/mo (6M credits, 10 seats)"
   }
  ],
  "pricingSource": "https://elevenlabs.io/pricing",
@@ -32,12 +40,12 @@
   "Credits go fast on long audio"
  ],
  "alternatives": [
+  "murf",
   "suno",
-  "runway",
-  "midjourney"
+  "runway"
  ],
  "website": "https://elevenlabs.io",
  "affiliateUrl": "https://try.elevenlabs.io/nhvk5hr6srj0",
  "affiliate": true,
- "pricingNote": ""
+ "pricingNote": "Monthly prices on elevenlabs.io/pricing, checked 2026-10-14. A first-month discount (Starter $1, Creator $11) was labeled until Oct 18, 2026. Annual billing is monthly price times 10. The page states equivalent monthly rates of $5, $18.33, $82.50, $249.17, and $825."
 }

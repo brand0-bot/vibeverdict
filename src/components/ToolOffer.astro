@@ -1,0 +1,20 @@
+---
+import { label, visitUrl } from '../lib/data.js';
+const { t, why } = Astro.props;
+const affiliate = Boolean(t.affiliateUrl);
+---
+<div class="card">
+  <h2 style="margin-top:0"><a href={`/tools/${t.slug}/`}>{t.name}</a></h2>
+  <span class={`pill ${t.rating}`}>{label[t.rating]}</span>
+  <p>{t.verdict}</p>
+  {why && <p>{why}</p>}
+  {t.verified && t.pricing.length ? (
+    <table>{t.pricing.map(p => <tr><td>{p.plan}</td><td>{p.price}</td></tr>)}</table>
+  ) : (
+    <p><b>Price:</b> see vendor site.</p>
+  )}
+  <p class="mut" style="font-size:13px">{t.verified && t.lastVerified ? <>✓ Last verified <b>{t.lastVerified}</b></> : <>Pricing not verified.</>} <a href={t.pricingSource} rel="nofollow">Official pricing</a></p>
+  {t.verified && t.pricingNote && <p class="warn">{t.pricingNote}</p>}
+  <p><a class="btn" href={visitUrl(t)} rel={affiliate ? 'sponsored nofollow noopener' : 'nofollow'} target={affiliate ? '_blank' : undefined}>Visit {t.name} →</a></p>
+  <p class="mut" style="font-size:13px">{affiliate ? <>We may earn a commission if you sign up through this link. It never affects our verdict. <a href="/disclosure/">Affiliate disclosure</a></> : t.affiliate ? <>Disclosure: this may become an affiliate link (program verified, link not yet active). It never affects our verdict. <a href="/about/">How we rate</a></> : <>Disclosure: we have no affiliate relationship with this tool.</>}</p>
+</div>

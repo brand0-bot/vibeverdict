@@ -1,10 +1,62 @@
 ---
-import Base from '../../layouts/Base.astro'; import { bySlug, comparisons, label } from '../../lib/data.js';
-export function getStaticPaths(){ return comparisons.map(([a,b])=>({params:{pair:`${a}-vs-${b}`},props:{a:bySlug[a],b:bySlug[b]}})); }
-const { a, b } = Astro.props;
+import Base from '../../layouts/Base.astro';
+import ToolOffer from '../../components/ToolOffer.astro';
+import { bySlug } from '../../lib/data.js';
+import { comparisons, comparisonTitle } from '../../lib/guides.js';
+
+export function getStaticPaths() {
+  return comparisons.map(page => ({
+    params: { pair: page.slug },
+    props: { page, tools: page.tools.map(slug => bySlug[slug]) }
+  }));
+}
+
+const { page, tools } = Astro.props;
+const title = comparisonTitle(page, bySlug);
+const description = page.description || `${title}: verdicts side by side. Prices appear only when we verified them on the vendor's site.`;
+const verdict = page.verdict || tools.map(t => t.verdict).join(' ');
+const pageUrl = `https://vibeverdict.ai/compare/${page.slug}/`;
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description,
+    url: pageUrl,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: tools.map((t, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: t.name,
+        url: `https://vibeverdict.ai/tools/${t.slug}/`
+      }))
+    }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [{
+      '@type': 'Question',
+      name: `${title}: which is worth it?`,
+      acceptedAnswer: { '@type': 'Answer', text: verdict }
+    }]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://vibeverdict.ai/' },
+      { '@type': 'ListItem', position: 2, name: 'Comparisons', item: 'https://vibeverdict.ai/compare/' },
+      { '@type': 'ListItem', position: 3, name: title }
+    ]
+  }
+];
 ---
-<Base title={`${a.name} vs ${b.name}: which is worth it? (2026)`} description={`${a.name} vs ${b.name}: verified pricing, verdicts, pros and cons side by side.`}>
-<h1>{a.name} vs {b.name}</h1><div class="grid">{[a,b].map(t=>(<div class="card"><h2 style="margin-top:0"><a href={`/tools/${t.slug}/`}>{t.name}</a></h2><span class={`pill ${t.rating}`}>{label[t.rating]}</span><p>{t.verdict}</p>
-<table>{t.pricing.map(p=><tr><td>{p.plan}</td><td>{p.price}</td></tr>)}</table><p class="mut" style="font-size:13px">{t.verified?`✓ Verified ${t.lastVerified}`:'⚠ Pricing unverified'}</p>{t.pricingNote&&<p class="warn">{t.pricingNote}</p>}
-<b>Pros</b><ul>{t.pros.map(p=><li>{p}</li>)}</ul><b>Cons</b><ul>{t.cons.map(p=><li>{p}</li>)}</ul></div>))}</div>
+<Base title={`${title}: which is worth it? (2026)`} description={description} schema={schema}>
+<p class="mut" style="margin-top:24px"><a href="/">Home</a> / <a href="/compare/">Comparisons</a></p>
+<h1>{title}</h1>
+<div class="card" style="font-size:19px"><b>{verdict}</b></div>
+<div class="grid" style="margin-top:18px">{tools.map(t => <ToolOffer t={t} />)}</div>
+{page.related?.length > 0 && <p>Related: {page.related.map((link, i) => <><a href={link.href}>{link.title}</a>{i < page.related.length - 1 ? ' · ' : ''}</>)}</p>}
 </Base>

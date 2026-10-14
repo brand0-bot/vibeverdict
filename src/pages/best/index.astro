@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import { roundups } from '../../lib/guides.js';
+---
+<Base title="Best AI tools | VibeVerdict" description="Roundups of AI tools, with prices only when we verified them on the vendor's site.">
+<h1>Best of</h1>
+<ul>{roundups.map(page => <li><a href={`/best/${page.slug}/`}>{page.title}</a></li>)}</ul>
+<p><a href="/compare/">Head-to-head comparisons</a></p>
+</Base>

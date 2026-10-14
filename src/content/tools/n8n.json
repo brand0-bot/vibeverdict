@@ -43,8 +43,8 @@
  ],
  "alternatives": [
   "zapier",
-  "langchain",
-  "crewai"
+  "make",
+  "langchain"
  ],
  "website": "https://n8n.io",
  "affiliate": false,

@@ -6,19 +6,19 @@
  "pricing": [
   {
    "plan": "Free",
-   "price": "$0 (100 tasks/mo, two-step Zaps)"
+   "price": "$0/mo (100 tasks)"
   },
   {
    "plan": "Professional",
-   "price": "From $19.99/mo annual or $29.99/mo (750 tasks)"
+   "price": "Starting from $19.99/mo"
   },
   {
    "plan": "Team",
-   "price": "From $69/mo annual or $103.50/mo (2,000 tasks, 25 users)"
+   "price": "Starting from $69/mo"
   },
   {
    "plan": "Enterprise",
-   "price": "Contact sales"
+   "price": "Contact for pricing"
   }
  ],
  "pricingSource": "https://zapier.com/pricing",
@@ -34,10 +34,10 @@
  ],
  "alternatives": [
   "n8n",
-  "crewai",
-  "langchain"
+  "make",
+  "crewai"
  ],
  "website": "https://zapier.com",
  "affiliate": false,
- "pricingNote": "Self-serve prices scale with the task tier up to 2 million tasks a month. Annual is the lower figure and is billed yearly. Amounts above are the entry tier for each plan."
+ "pricingNote": "On 2026-10-14 the plan cards said Free is $0/month with 100 tasks, Professional starts from $19.99/month, and Team starts from $69/month. A separate higher monthly rate and the paid task caps were not in the page, so those earlier figures are omitted."
 }

@@ -1,0 +1,49 @@
+{
+ "name": "Murf",
+ "category": "media",
+ "verdict": "A pay-as-you-go voice API with a published per-character rate, not a flat creator plan on the page we opened.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "API free trial",
+   "price": "$10 of API credit, no card"
+  },
+  {
+   "plan": "Falcon text to speech",
+   "price": "$0.01 per 1,000 characters"
+  },
+  {
+   "plan": "Gen2 text to speech",
+   "price": "$0.03 per 1,000 characters"
+  },
+  {
+   "plan": "Voice changer",
+   "price": "$0.10 per minute"
+  },
+  {
+   "plan": "Translation",
+   "price": "$0.02 per 1,000 characters"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Contact sales"
+  }
+ ],
+ "pricingSource": "https://murf.ai/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "API trial does not need a card",
+  "Purchased API credit does not expire"
+ ],
+ "cons": [
+  "No studio subscription price on the page we opened",
+  "Harder to compare with a flat monthly creator plan"
+ ],
+ "alternatives": [
+  "elevenlabs"
+ ],
+ "website": "https://murf.ai",
+ "affiliate": false,
+ "pricingNote": "On 2026-10-14, murf.ai/pricing showed the API rates above and a free trial with $10 of API credit. A creator or studio subscription price was not on that page."
+}

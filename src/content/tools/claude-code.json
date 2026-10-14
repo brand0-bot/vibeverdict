@@ -5,16 +5,16 @@
  "rating": "worth-it",
  "pricing": [
   {
+   "plan": "Free",
+   "price": "$0 (Claude Code not included)"
+  },
+  {
    "plan": "Pro (includes Claude Code)",
-   "price": "$20/mo or $17/mo annual"
+   "price": "$20/mo or $17/mo annual ($200 billed up front)"
   },
   {
-   "plan": "Max 5x",
-   "price": "$100/mo"
-  },
-  {
-   "plan": "Max 20x",
-   "price": "$200/mo"
+   "plan": "Max",
+   "price": "From $100/mo (5x or 20x more usage than Pro)"
   }
  ],
  "pricingSource": "https://claude.com/pricing",
@@ -36,5 +36,5 @@
  ],
  "website": "https://claude.com/product/claude-code",
  "affiliate": false,
- "pricingNote": ""
+ "pricingNote": "On 2026-10-14 claude.com/pricing showed Pro at $17 per month with annual billing ($200 up front) or $20 billed monthly, and Max from $100 per month. The Max card says to choose 5x or 20x more usage than Pro, and that Max includes $100 to $200 a month in API credits. It does not list a separate Max 20x subscription price, so none is shown."
 }
