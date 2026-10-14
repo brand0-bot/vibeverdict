@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import FeaturedSponsor from '../../components/FeaturedSponsor.astro';
 import { tools, categories, label, bySlug } from '../../lib/data.js';
 import { guidesForTools } from '../../lib/guides.js';
 export function getStaticPaths(){ return Object.keys(categories).map(c=>({params:{cat:c}})); }
@@ -25,6 +26,7 @@ const schema = [
 ];
 ---
 <Base title={`${name}: are they worth it?`} description={description} schema={schema}>
+<FeaturedSponsor placement={`category/${cat}`} />
 <h1>{name}</h1>
 <p class="mut">{description}</p>
 <table><tr><th>Tool</th><th>Verdict</th><th>Status</th></tr>

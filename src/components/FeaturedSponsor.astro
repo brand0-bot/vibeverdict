@@ -1,0 +1,25 @@
+---
+import { sponsorFor } from '../lib/sponsors.js';
+const { placement } = Astro.props;
+const sponsor = sponsorFor(placement);
+---
+{placement && (sponsor ? (
+<aside class="sponsor" aria-label="Sponsored">
+  <span class="sponsor-label">Sponsored</span>
+  <img class="sponsor-logo" src={sponsor.logo} alt={`${sponsor.name} logo`} width="120" height="40"/>
+  <p class="sponsor-pitch">{sponsor.pitch}</p>
+  <a class="btn" href={sponsor.href} rel="sponsored noopener" target="_blank">{sponsor.cta}</a>
+</aside>
+) : (
+<aside class="sponsor sponsor-open" aria-label="Sponsorship">
+  <a href="/advertise/">Your AI tool here — Become a founding sponsor</a>
+</aside>
+))}
+<style>
+  .sponsor { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 8px 0 18px; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+  .sponsor-label { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mut); border: 1px solid var(--line); border-radius: 99px; padding: 3px 8px; }
+  .sponsor-logo { height: 40px; width: auto; max-width: 140px; object-fit: contain; }
+  .sponsor-pitch { margin: 0; flex: 1; min-width: 180px; }
+  .sponsor-open { border-style: dashed; }
+  .sponsor-open a { font-weight: 700; }
+</style>

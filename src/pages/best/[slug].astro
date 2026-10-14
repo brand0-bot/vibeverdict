@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import FeaturedSponsor from '../../components/FeaturedSponsor.astro';
 import ToolOffer from '../../components/ToolOffer.astro';
 import { bySlug } from '../../lib/data.js';
 import { roundups, guidesForTools } from '../../lib/guides.js';
@@ -54,6 +55,7 @@ const schema = [
 ];
 ---
 <Base title={`${page.title} (2026)`} description={page.description} schema={schema}>
+<FeaturedSponsor placement={`best/${page.slug}`} />
 <p class="mut" style="margin-top:24px"><a href="/">Home</a> / <a href="/best/">Best</a></p>
 <h1>{page.title}</h1>
 <div class="card" style="font-size:19px"><b>{page.verdict}</b></div>
