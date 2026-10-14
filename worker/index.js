@@ -1,5 +1,9 @@
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const BEEHIIV = "https://vibeverdict.beehiiv.com";
+const BROWSER = {
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+  "accept-language": "en-US,en;q=0.9",
+};
 
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -35,15 +39,15 @@ function toastIsError(data) {
 
 async function subscribe(email) {
   const csrfResponse = await fetch(`${BEEHIIV}/csrf_token`, {
-    headers: { accept: "application/json" },
+    headers: { ...BROWSER, accept: "application/json" },
   });
   if (!csrfResponse.ok) {
-    return { ok: false, status: 502, error: "Beehiiv did not accept the signup. Use the Beehiiv link below." };
+    return { ok: false, status: 502, error: "Beehiiv did not accept the signup. Use the Beehiiv link below.", detail: { step: "csrf", status: csrfResponse.status } };
   }
   const csrfBody = await csrfResponse.json().catch(() => null);
   const csrf = csrfBody && typeof csrfBody.csrf === "string" ? csrfBody.csrf : "";
   if (!csrf) {
-    return { ok: false, status: 502, error: "Beehiiv did not accept the signup. Use the Beehiiv link below." };
+    return { ok: false, status: 502, error: "Beehiiv did not accept the signup. Use the Beehiiv link below.", detail: { step: "csrf", status: csrfResponse.status, missing: true } };
   }
 
   const payload = new URLSearchParams({
@@ -61,6 +65,7 @@ async function subscribe(email) {
   const created = await fetch(`${BEEHIIV}/create`, {
     method: "POST",
     headers: {
+      ...BROWSER,
       accept: "application/json",
       "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
       "x-csrf-token": csrf,
@@ -80,7 +85,12 @@ async function subscribe(email) {
   }
 
   if (created.status === 403 || /just a moment|access to this page has been denied/i.test(raw)) {
-    return { ok: false, status: 502, error: "Beehiiv did not accept the signup. Use the Beehiiv link below." };
+    return {
+      ok: false,
+      status: 502,
+      error: "Beehiiv did not accept the signup. Use the Beehiiv link below.",
+      detail: { step: "create", status: created.status, snippet: raw.slice(0, 160) },
+    };
   }
 
   const message = toastMessage(data);
@@ -92,6 +102,7 @@ async function subscribe(email) {
     ok: false,
     status: created.status >= 400 && created.status < 500 ? 400 : 502,
     error: message || "Beehiiv did not accept that email. Check it and try again, or use the Beehiiv link below.",
+    detail: { step: "create", status: created.status, snippet: raw.slice(0, 240) },
   };
 }
 
@@ -124,14 +135,18 @@ export default {
       return json({ ok: false, error: "Enter a valid email address." }, 400);
     }
 
+    const debug = request.headers.get("x-vv-debug") === "1";
     try {
       const result = await subscribe(email);
-      return json(
-        result.ok ? { ok: true, message: result.message } : { ok: false, error: result.error },
-        result.status,
-      );
-    } catch {
-      return json({ ok: false, error: "Beehiiv did not accept the signup. Use the Beehiiv link below." }, 502);
+      const body = result.ok ? { ok: true, message: result.message } : { ok: false, error: result.error };
+      if (debug && result.detail) body.detail = result.detail;
+      return json(body, result.status);
+    } catch (error) {
+      return json({
+        ok: false,
+        error: "Beehiiv did not accept the signup. Use the Beehiiv link below.",
+        ...(debug ? { detail: { step: "exception", snippet: String(error).slice(0, 180) } } : {}),
+      }, 502);
     }
   },
 };
