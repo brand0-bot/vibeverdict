@@ -1,8 +1,9 @@
 <div class="beehiiv-slot">
   <p class="beehiiv-pending mut">Weekly signup is loading.</p>
+  <div class="beehiiv-frame">
   <script is:inline data-beehiiv-form="f99e0aaf-6091-4c8c-8644-24b908d02966">
     (function () {
-      var slot = document.currentScript && document.currentScript.parentNode;
+      var slot = document.currentScript && document.currentScript.closest(".beehiiv-slot");
       if (!slot) return;
       var pending = slot.querySelector(".beehiiv-pending");
       function shown() {
@@ -28,12 +29,14 @@
       }, 8000);
     })();
   </script>
+  </div>
   <p class="beehiiv-fallback">
     <a class="btn" href="https://vibeverdict.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe on Beehiiv</a>
   </p>
 </div>
 <style>
-  .beehiiv-slot { max-width: 480px; min-height: 88px; margin: 16px 0; }
+  .beehiiv-slot { max-width: 480px; margin: 16px 0; }
+  .beehiiv-frame { min-height: 207px; }
   .beehiiv-pending { margin: 0 0 10px; font-size: 14px; }
   .beehiiv-slot:has(iframe[data-bhv-sized]) .beehiiv-pending { display: none; }
   .beehiiv-fallback { margin: 12px 0 0; }
