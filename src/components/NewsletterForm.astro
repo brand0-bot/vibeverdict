@@ -1,5 +1,18 @@
 <div class="beehiiv-slot">
-  <p class="beehiiv-pending mut">Weekly signup is loading.</p>
+  <form class="vv-signup" method="post" action="https://vibeverdict.beehiiv.com/create" novalidate>
+    <div class="vv-signup-row">
+      <input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@email.com" aria-label="Email address"/>
+      <button type="submit">Subscribe</button>
+    </div>
+    <input type="hidden" name="sent_from_orchid" value="true"/>
+    <input type="hidden" name="double_opt" value="false"/>
+    <input type="hidden" name="signup_flow_id" value=""/>
+    <input type="hidden" name="automation_ids" value=""/>
+    <input type="hidden" name="auto_login_enabled" value="true"/>
+    <input type="hidden" name="subscribe_success_message" value="Subscribed!"/>
+    <input type="hidden" name="subscribe_error_message" value="Oops, something went wrong."/>
+    <p class="vv-signup-status" role="status" aria-live="polite"></p>
+  </form>
   <div class="beehiiv-frame">
   <script is:inline data-beehiiv-form="f99e0aaf-6091-4c8c-8644-24b908d02966">
     (function () {
@@ -34,11 +47,108 @@
     <a class="btn" href="https://vibeverdict.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe on Beehiiv</a>
   </p>
 </div>
+<script is:inline>
+  (function () {
+    if (window.__vvSignup) return;
+    window.__vvSignup = true;
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    document.addEventListener("submit", function (event) {
+      var form = event.target;
+      if (!form || !form.classList || !form.classList.contains("vv-signup")) return;
+      event.preventDefault();
+      var input = form.querySelector('input[name="email"]');
+      var status = form.querySelector(".vv-signup-status");
+      var button = form.querySelector("button");
+      var email = (input && input.value || "").trim();
+      function say(text, state) {
+        if (!status) return;
+        status.textContent = text;
+        status.dataset.state = state || "";
+      }
+      if (!emailOk.test(email) || email.length > 254) {
+        say("Enter a valid email address.", "error");
+        if (input) input.focus();
+        return;
+      }
+      if (button) button.disabled = true;
+      say("Subscribing…", "");
+      fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify({ email: email })
+      }).then(function (response) {
+        return response.json().catch(function () { return null; }).then(function (body) {
+          return { ok: response.ok, status: response.status, body: body };
+        });
+      }).then(function (result) {
+        if (result.ok && result.body && result.body.ok) {
+          say(result.body.message || "You're subscribed.", "ok");
+          form.reset();
+          if (button) button.disabled = false;
+          return;
+        }
+        if (result.body && result.body.error && result.status !== 502 && result.status !== 404) {
+          say(result.body.error, "error");
+          if (button) button.disabled = false;
+          return;
+        }
+        say("Opening Beehiiv to finish subscribing…", "");
+        form.submit();
+      }).catch(function () {
+        say("Opening Beehiiv to finish subscribing…", "");
+        form.submit();
+      });
+    });
+  })();
+</script>
 <style>
   .beehiiv-slot { max-width: 480px; margin: 16px 0; }
   .beehiiv-frame { min-height: 207px; }
-  .beehiiv-pending { margin: 0 0 10px; font-size: 14px; }
-  .beehiiv-slot:has(iframe[data-bhv-sized]) .beehiiv-pending { display: none; }
+  .vv-signup {
+    margin: 0 0 14px;
+    padding: 14px;
+    border-radius: 16px;
+    background:
+      radial-gradient(120% 80% at 0% 0%, rgba(139, 92, 246, 0.22), transparent 55%),
+      #10141d;
+    border: 1px solid #3a2d5c;
+    box-shadow: 0 0 28px rgba(139, 92, 246, 0.16);
+  }
+  .vv-signup-row { display: flex; gap: 8px; }
+  .vv-signup input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #2a3348;
+    background: #0b0d12;
+    color: var(--text);
+    font: inherit;
+    font-size: 16px;
+  }
+  .vv-signup input[type="email"]::placeholder { color: #93a0b8; }
+  .vv-signup input[type="email"]:focus-visible,
+  .vv-signup button:focus-visible { outline: 2px solid #c4b5fd; outline-offset: 2px; }
+  .vv-signup button {
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    min-height: 48px;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(90deg, #6d28d9, #8b5cf6 60%, #c084fc);
+  }
+  .vv-signup button:disabled { opacity: 0.7; cursor: progress; }
+  .vv-signup-status { min-height: 1.25em; margin: 8px 0 0; font-size: 14px; }
+  .vv-signup-status[data-state="error"] { color: #fecaca; }
+  .vv-signup-status[data-state="ok"] { color: #86efac; }
   .beehiiv-fallback { margin: 12px 0 0; }
   .beehiiv-fallback a { display: inline-block; text-decoration: none; }
+  @media (max-width: 640px) {
+    .vv-signup-row { flex-direction: column; }
+    .vv-signup button { width: 100%; }
+  }
 </style>

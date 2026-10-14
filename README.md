@@ -11,7 +11,7 @@ npm run dev
 
 ## Deploy on Cloudflare Workers
 
-The site is a static [Astro](https://astro.build) build. `wrangler.jsonc` names the Worker `vibeverdict` and serves `./dist` with no Worker script. Node.js is pinned to 22.19.0 in `.node-version`.
+The site is a static [Astro](https://astro.build) build plus `worker/index.js`. `wrangler.jsonc` names the Worker `vibeverdict`, serves `./dist`, and runs that Worker first for `/api/*` so the newsletter box can subscribe through Beehiiv. Node.js is pinned to 22.19.0 in `.node-version`.
 
 For Git-connected Cloudflare Workers Builds:
 
