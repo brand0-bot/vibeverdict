@@ -1,21 +1,30 @@
 ---
 import NewsletterForm from '../components/NewsletterForm.astro';
-const { title, description, schema } = Astro.props;
+const { title, description, schema, image } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = image || new URL("/og.png", Astro.site).href;
 ---
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="impact-site-verification" value="c9d78dc4-3667-4f5f-b52b-55b9039cdf5b"/>
 <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<meta name="theme-color" content="#0b0d12"/>
 <meta property="og:title" content={title}/><meta property="og:description" content={description}/>
+<meta property="og:image" content={ogImage}/>
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@VibeVerdictAI"/>
-<script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"Organization",name:"VibeVerdict",url:"https://vibeverdict.ai",email:"hello@vibeverdict.ai",sameAs:["https://x.com/VibeVerdictAI"]})}/>
+<meta name="twitter:image" content={ogImage}/>
+<script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"Organization",name:"VibeVerdict",url:"https://vibeverdict.ai",logo:"https://vibeverdict.ai/icon-512.png",email:"hello@vibeverdict.ai",sameAs:["https://x.com/VibeVerdictAI"]})}/>
 {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)}/>}
 <style is:global>
 :root{--bg:#0b0d12;--card:#141824;--line:#232a3a;--text:#e8ecf4;--mut:#93a0b8;--acc:#8b5cf6;--ok:#22c55e;--mid:#f59e0b;--bad:#ef4444}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
 a{color:#c4b5fd;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 header{border-bottom:1px solid var(--line)}header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:800;font-size:20px;color:var(--text)}.logo span{color:var(--acc)}nav a{margin-left:18px;color:var(--mut)}
+.logo{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:20px;color:var(--text)}.logo img{width:28px;height:28px;border-radius:7px;display:block}.logo span{color:var(--acc)}nav a{margin-left:18px;color:var(--mut)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
 .pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}.worth-it{background:#14532d;color:#86efac}.depends{background:#78350f;color:#fcd34d}.skip{background:#7f1d1d;color:#fca5a5}.pending{background:#334155;color:#cbd5e1}
 table{width:100%;border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid var(--line);text-align:left}.mut{color:var(--mut)}
@@ -23,7 +32,7 @@ table{width:100%;border-collapse:collapse}td,th{padding:9px;border-bottom:1px so
 .btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}input{background:#0f131c;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px;min-width:240px}
 footer{border-top:1px solid var(--line);margin-top:60px;padding:24px 0;font-size:13px;color:var(--mut)}.footer-note{margin:0}.footer-x{display:inline-flex;align-items:center;gap:6px}h1{line-height:1.15}
 </style></head><body>
-<header><div class="wrap"><a class="logo" href="/">Vibe<span>Verdict</span></a><nav><a href="/category/coding-agents/">Coding</a><a href="/category/app-builders/">App builders</a><a href="/category/chat/">Chat</a><a href="/compare/">Compare</a><a href="/newsletter/">Newsletter</a></nav></div></header>
+<header><div class="wrap"><a class="logo" href="/"><img src="/icon-192.png" width="28" height="28" alt=""/>Vibe<span>Verdict</span></a><nav><a href="/category/coding-agents/">Coding</a><a href="/category/app-builders/">App builders</a><a href="/category/chat/">Chat</a><a href="/compare/">Compare</a><a href="/newsletter/">Newsletter</a></nav></div></header>
 <main class="wrap"><slot/></main>
 <footer><div class="wrap"><NewsletterForm /><p class="footer-note">VibeVerdict: honest, dated verdicts on AI tools. Some links are affiliate links; they never change our verdicts. <a href="/about/">Methodology</a> · <a href="/disclosure/">Disclosure</a> · <a href="/llms.txt">llms.txt</a></p><p class="footer-note" style="margin-top:10px"><a class="footer-x" href="https://x.com/VibeVerdictAI" target="_blank" rel="noopener noreferrer" aria-label="VibeVerdict on X"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@VibeVerdictAI</a> · <a href="mailto:hello@vibeverdict.ai">hello@vibeverdict.ai</a></p></div></footer>
 </body></html>
