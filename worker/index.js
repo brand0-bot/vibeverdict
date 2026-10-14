@@ -1,3 +1,5 @@
+import { newsFromCache, refreshNewsCache } from "./news.js";
+
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const BEEHIIV = "https://vibeverdict.beehiiv.com";
 const BROWSER = {
@@ -103,6 +105,14 @@ async function subscribe(email) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === "/api/news") {
+      if (request.method !== "GET") return json({ ok: false, error: "Use GET." }, 405);
+      try {
+        return await newsFromCache();
+      } catch {
+        return json({ ok: false, updatedAt: new Date().toISOString(), refreshMinutes: 30, items: [] }, 200);
+      }
+    }
     if (url.pathname !== "/api/subscribe") {
       return env.ASSETS.fetch(request);
     }
@@ -138,5 +148,8 @@ export default {
     } catch {
       return json({ ok: false, error: "Beehiiv did not accept the signup. Use the Beehiiv link below." }, 502);
     }
+  },
+  async scheduled(_event, _env, ctx) {
+    ctx.waitUntil(refreshNewsCache());
   },
 };

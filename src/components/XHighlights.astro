@@ -1,0 +1,43 @@
+---
+import highlights from '../data/x-highlights.json';
+import { cleanHighlights } from '../lib/x-highlights.js';
+const limit = Astro.props.limit ?? 12;
+const items = cleanHighlights(highlights).slice(0, limit);
+---
+{items.length > 0 && (
+  <section class="vv-x" aria-labelledby="vv-x-heading">
+    <h2 id="vv-x-heading">On X</h2>
+    <ul class="vv-x-list">
+      {items.map((item) => (
+        <li class="vv-x-card">
+          <p class="vv-x-summary">{item.summary}</p>
+          <p class="vv-x-meta mut">
+            <span>{item.author}</span>
+            <span>@{item.handle}</span>
+            <span>via X</span>
+            <time datetime={item.date}>{item.date}</time>
+            {item.likes !== undefined && <span>{item.likes.toLocaleString("en-US")} likes</span>}
+            {item.reposts !== undefined && <span>{item.reposts.toLocaleString("en-US")} reposts</span>}
+          </p>
+          <a href={item.url} target="_blank" rel="noopener noreferrer">View post</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+<style>
+  .vv-x { margin: 28px 0; }
+  .vv-x h2 { margin: 0 0 12px; }
+  .vv-x-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .vv-x-card {
+    background:
+      radial-gradient(120% 80% at 100% 0%, rgba(139, 92, 246, 0.16), transparent 55%),
+      var(--card);
+    border: 1px solid #3a2d5c;
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .vv-x-summary { margin: 0; font-weight: 650; }
+  .vv-x-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 8px 0; font-size: 13px; }
+  .vv-x-card a { font-weight: 700; }
+</style>

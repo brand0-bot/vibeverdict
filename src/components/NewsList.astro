@@ -1,0 +1,117 @@
+---
+const { limit = 30, heading = "", more = "" } = Astro.props;
+---
+<section class="vv-news" aria-labelledby={heading ? "vv-news-heading" : undefined}>
+  {heading && (
+    <div class="vv-news-head">
+      <h2 id="vv-news-heading">{heading}</h2>
+      {more && <a href={more}>All news</a>}
+    </div>
+  )}
+  <p class="vv-news-status mut" role="status" data-news-status>Loading AI news…</p>
+  <ol class="vv-news-list" data-news-list data-limit={limit}></ol>
+  <noscript><p class="mut">AI news loads from live feeds and needs JavaScript.</p></noscript>
+</section>
+<script is:inline>
+  (function () {
+    if (window.__vvNews) return;
+    window.__vvNews = true;
+    var roots = document.querySelectorAll("[data-news-list]");
+    if (!roots.length) return;
+    function ago(iso) {
+      var then = Date.parse(iso);
+      if (!then) return "";
+      var seconds = Math.round((Date.now() - then) / 1000);
+      if (seconds < 0) return "just now";
+      if (seconds < 3600) return Math.max(1, Math.round(seconds / 60)) + "m ago";
+      if (seconds < 86400) return Math.round(seconds / 3600) + "h ago";
+      return Math.round(seconds / 86400) + "d ago";
+    }
+    function safeUrl(value) {
+      try {
+        var url = new URL(value);
+        if (url.protocol !== "https:" && url.protocol !== "http:") return "";
+        return url.href;
+      } catch (error) {
+        return "";
+      }
+    }
+    function fail(root, message) {
+      var status = root.parentElement && root.parentElement.querySelector("[data-news-status]");
+      if (status) status.textContent = message;
+      root.replaceChildren();
+    }
+    function render(root, items) {
+      var limit = Number(root.getAttribute("data-limit")) || items.length;
+      var shown = items.slice(0, limit).filter(function (item) { return item && safeUrl(item.url) && item.title; });
+      var status = root.parentElement && root.parentElement.querySelector("[data-news-status]");
+      if (!shown.length) {
+        fail(root, "No recent AI headlines came back from the feeds.");
+        return;
+      }
+      if (status) status.hidden = true;
+      root.replaceChildren();
+      shown.forEach(function (item) {
+        var li = document.createElement("li");
+        li.className = "vv-news-item";
+        var link = document.createElement("a");
+        link.className = "vv-news-title";
+        link.href = safeUrl(item.url);
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.title;
+        var meta = document.createElement("p");
+        meta.className = "vv-news-meta";
+        [item.source, item.region].forEach(function (label) {
+          if (!label) return;
+          var span = document.createElement("span");
+          span.textContent = label;
+          if (label === item.region) span.className = "vv-news-region";
+          meta.appendChild(span);
+        });
+        if (item.publishedAt) {
+          var time = document.createElement("time");
+          time.dateTime = item.publishedAt;
+          time.textContent = ago(item.publishedAt);
+          meta.appendChild(time);
+        }
+        li.appendChild(link);
+        li.appendChild(meta);
+        root.appendChild(li);
+      });
+    }
+    fetch("/api/news", { headers: { accept: "application/json" } })
+      .then(function (response) {
+        if (!response.ok) throw new Error("news");
+        return response.json();
+      })
+      .then(function (data) {
+        var items = data && Array.isArray(data.items) ? data.items : [];
+        if (!data || data.ok === false) {
+          roots.forEach(function (root) { fail(root, "AI news isn't available right now."); });
+          return;
+        }
+        roots.forEach(function (root) { render(root, items); });
+      })
+      .catch(function () {
+        roots.forEach(function (root) { fail(root, "AI news isn't available right now."); });
+      });
+  })();
+</script>
+<style is:global>
+  .vv-news { margin: 8px 0 28px; }
+  .vv-news-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .vv-news-head h2 { margin: 0; }
+  .vv-news-status { margin: 8px 0; }
+  .vv-news-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .vv-news-item {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px 14px;
+  }
+  .vv-news-title { color: var(--text); font-weight: 700; text-decoration: none; }
+  .vv-news-title:hover { color: #c4b5fd; }
+  .vv-news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 6px 0 0; font-size: 12px; color: var(--mut); }
+  .vv-news-region { color: #c4b5fd; font-weight: 700; }
+</style>

@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import NewsList from '../components/NewsList.astro';
+import XHighlights from '../components/XHighlights.astro';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "AI news",
+  url: "https://vibeverdict.ai/news/",
+  description: "Recent AI headlines from public feeds, shown as published."
+};
+---
+<Base title="AI news" description="Recent AI headlines from TechCrunch, The Verge, The Guardian, The Register, Nature, Le Monde, Hacker News, and Reddit. Titles are shown as published." schema={schema}>
+  <h1>AI news</h1>
+  <p class="mut">Recent headlines from public feeds. Each title is shown as the outlet published it. VibeVerdict does not write or rewrite these stories.</p>
+  <NewsList limit={30} />
+  <XHighlights />
+</Base>

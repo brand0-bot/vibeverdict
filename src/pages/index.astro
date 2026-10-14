@@ -1,5 +1,5 @@
 ---
-import Base from '../layouts/Base.astro'; import NewsletterForm from '../components/NewsletterForm.astro'; import { tools, categories, label, bySlug } from '../lib/data.js';
+import Base from '../layouts/Base.astro'; import NewsletterForm from '../components/NewsletterForm.astro'; import NewsList from '../components/NewsList.astro'; import XHighlights from '../components/XHighlights.astro'; import { tools, categories, label, bySlug } from '../lib/data.js';
 import { comparisons, comparisonTitle, roundups } from '../lib/guides.js';
 const schema={"@context":"https://schema.org","@type":"WebSite",name:"VibeVerdict",url:"https://vibeverdict.ai"};
 ---
@@ -7,6 +7,8 @@ const schema={"@context":"https://schema.org","@type":"WebSite",name:"VibeVerdic
 <section class="hero" style="padding:56px 0 28px"><h1>Is this AI tool <span style="color:var(--acc)">worth it?</span></h1>
 <p class="mut" style="font-size:19px;max-width:640px">One-line verdicts, real pricing with sources, and better alternatives for {tools.length} AI, agent and vibe-coding tools. Every price shows the date it was last verified.</p>
 <NewsletterForm /></section>
+<NewsList limit={5} heading="Trending in AI" more="/news/" />
+<XHighlights limit={3} />
 <section><h2>Comparisons and roundups</h2><div class="grid">
 {roundups.map(page => <a class="card" href={`/best/${page.slug}/`}><b>{page.title}</b><p class="mut" style="font-size:14px;margin:8px 0 0">{page.verdict}</p></a>)}
 {comparisons.map(page => <a class="card" href={`/compare/${page.slug}/`}><b>{comparisonTitle(page, bySlug)}</b><p class="mut" style="font-size:14px;margin:8px 0 0">{page.description || 'Side-by-side verdicts. Prices appear only when verified on the vendor site.'}</p></a>)}
