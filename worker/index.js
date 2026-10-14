@@ -105,7 +105,7 @@ async function subscribe(email) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname === "/api/news" || url.pathname === "/api/headlines") {
+    if (url.pathname === "/api/news" || url.pathname === "/api/headlines" || url.pathname === "/api/ai-news") {
       if (request.method !== "GET") return json({ ok: false, error: "Use GET." }, 405);
       try {
         return await newsFromCache();

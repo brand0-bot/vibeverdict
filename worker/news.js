@@ -1,7 +1,7 @@
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const WINDOW_MS = 10 * 24 * 60 * 60 * 1000;
 const REFRESH_MINUTES = 30;
-const CACHE_URL = "https://vibeverdict.ai/api/headlines";
+const CACHE_URL = "https://vibeverdict.ai/api/ai-news";
 
 const SOURCES = [
   { id: "techcrunch", name: "TechCrunch", region: "US", url: "https://techcrunch.com/category/artificial-intelligence/feed/" },
@@ -10,8 +10,8 @@ const SOURCES = [
   { id: "register", name: "The Register", region: "UK", url: "https://www.theregister.com/software/ai_ml/headlines.atom" },
   { id: "nature", name: "Nature", region: "UK", url: "https://www.nature.com/subjects/machine-learning.rss" },
   { id: "lemonde", name: "Le Monde", region: "France", url: "https://www.lemonde.fr/intelligence-artificielle/rss_full.xml" },
-  { id: "reddit-llama", name: "Reddit r/LocalLLaMA", region: "Community", url: "https://old.reddit.com/r/LocalLLaMA/.rss", hotRank: true },
-  { id: "reddit-ai", name: "Reddit r/artificial", region: "Community", url: "https://old.reddit.com/r/artificial/.rss", hotRank: true },
+  { id: "reddit-llama", name: "Reddit r/LocalLLaMA", region: "Community", kind: "reddit", url: "https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=LocalLLaMA&limit=15&sort=desc" },
+  { id: "reddit-ai", name: "Reddit r/artificial", region: "Community", kind: "reddit", url: "https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=artificial&limit=15&sort=desc" },
   { id: "hn", name: "Hacker News", region: "Community", url: "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=40", kind: "hn" },
 ];
 
@@ -78,6 +78,29 @@ function itemsFromXml(xml, source) {
       popularity: source.hotRank ? Math.max(1, 12 - index) * 2 : 0,
     });
   });
+  return items;
+}
+
+function itemsFromReddit(payload, source) {
+  const rows = payload && Array.isArray(payload.data) ? payload.data : [];
+  const items = [];
+  for (const row of rows.slice(0, 15)) {
+    if (!row || row.removed_by_category || row.banned_by) continue;
+    const title = decode(row.title);
+    const permalink = String(row.permalink || "");
+    const url = safeUrl(permalink.startsWith("http") ? permalink : `https://www.reddit.com${permalink}`);
+    const created = Number(row.created_utc);
+    if (!title || !url || !created) continue;
+    const score = Number(row.score);
+    items.push({
+      title,
+      url,
+      source: source.name,
+      region: source.region,
+      publishedAt: new Date(created * 1000).toISOString(),
+      popularity: Number.isFinite(score) && score > 0 ? score : 0,
+    });
+  }
   return items;
 }
 
@@ -166,6 +189,7 @@ async function loadSource(source) {
   });
   if (!response.ok) throw new Error(`${source.id} ${response.status}`);
   if (source.kind === "hn") return itemsFromHn(await response.json());
+  if (source.kind === "reddit") return itemsFromReddit(await response.json(), source);
   return itemsFromXml(await response.text(), source);
 }
 
