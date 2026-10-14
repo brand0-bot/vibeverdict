@@ -1,12 +1,12 @@
 {
  "name": "Cline",
  "category": "coding-agents",
- "verdict": "Open-source coding agent: the tool is free and you pay your model provider directly.",
+ "verdict": "The agent is free and Apache-2.0; you pay whatever model provider you connect.",
  "rating": "depends",
  "pricing": [
   {
-   "plan": "Tool",
-   "price": "Free / open source (unverified)"
+   "plan": "Cline",
+   "price": "Free (Apache-2.0)"
   },
   {
    "plan": "Model usage",
@@ -14,15 +14,15 @@
   }
  ],
  "pricingSource": "https://cline.bot",
- "lastVerified": null,
- "verified": false,
+ "lastVerified": "2026-10-14",
+ "verified": true,
  "pros": [
-  "Open source",
-  "Bring your own model"
+  "Open source, with a CLI and IDE extension",
+  "Any provider, including a local model"
  ],
  "cons": [
-  "API costs can add up",
-  "More setup required"
+  "API bills can pass a $20 editor subscription",
+  "You set up keys and approvals yourself"
  ],
  "alternatives": [
   "claude-code",
@@ -31,5 +31,5 @@
  ],
  "website": "https://cline.bot",
  "affiliate": false,
- "pricingNote": "Pricing not yet verified from the official source."
+ "pricingNote": ""
 }

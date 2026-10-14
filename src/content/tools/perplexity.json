@@ -1,31 +1,32 @@
 {
  "name": "Perplexity",
  "category": "chat",
- "verdict": "The best AI search with citations; Pro is worth it for researchers.",
- "rating": "worth-it",
+ "verdict": "Still the best cited AI search, but the consumer Pro monthly price was not on the pages we could open.",
+ "rating": "pending",
  "pricing": [
   {
    "plan": "Free",
    "price": "$0"
   },
   {
-   "plan": "Pro",
-   "price": "$17/mo annual (monthly price unverified)"
+   "plan": "Education Pro",
+   "price": "$10/mo with SheerID verification"
   },
   {
-   "plan": "Max",
-   "price": "$200/mo or $167/mo annual"
+   "plan": "Enterprise Pro",
+   "price": "From $40/mo or $400/year per seat"
   }
  ],
- "pricingSource": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
- "lastVerified": "2026-10-14",
- "verified": true,
+ "pricingSource": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+ "lastVerified": null,
+ "verified": false,
  "pros": [
-  "Cited answers",
-  "Multiple models"
+  "Answers come with citations",
+  "Education Pro is a published $10 discount"
  ],
  "cons": [
-  "Max is pricey"
+  "Consumer Pro and Max prices did not load",
+  "Enterprise starts at $40 a seat"
  ],
  "alternatives": [
   "chatgpt",
@@ -34,5 +35,5 @@
  ],
  "website": "https://perplexity.ai",
  "affiliate": false,
- "pricingNote": ""
+ "pricingNote": "perplexity.ai/pro returned HTTP 403 on 2026-10-14. The help-center plan article does not list a consumer Pro or Max dollar amount, so earlier figures ($17/mo annual, Max $200/mo or $167/mo annual) are not confirmed. It does list Education Pro at $10/mo and Enterprise Pro from $40/month or $400/year per seat."
 }

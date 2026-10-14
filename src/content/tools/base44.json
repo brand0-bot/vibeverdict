@@ -1,16 +1,52 @@
 {
  "name": "Base44",
  "category": "app-builders",
- "verdict": "Review in progress. Pricing has not been verified yet.",
- "rating": "pending",
- "pricing": [],
- "pricingSource": "https://base44.com",
- "lastVerified": null,
- "verified": false,
- "pros": [],
- "cons": [],
- "alternatives": [],
+ "verdict": "A full-stack vibe coder with a real free tier; paid plans on the page are the annual rates, starting at $16 a month.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0 (25 message credits/mo)"
+  },
+  {
+   "plan": "Starter",
+   "price": "$16/mo billed annually (100 message credits)"
+  },
+  {
+   "plan": "Builder",
+   "price": "$40/mo billed annually (250 message credits)"
+  },
+  {
+   "plan": "Pro",
+   "price": "$80/mo billed annually (500 message credits)"
+  },
+  {
+   "plan": "Elite",
+   "price": "$160/mo billed annually (1,200 message credits)"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Contact sales"
+  }
+ ],
+ "pricingSource": "https://base44.com/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Free plan includes auth, database, and up to 5 apps",
+  "You can export the code to GitHub",
+  "Annual billing is 20% off"
+ ],
+ "cons": [
+  "Message credits run out on bigger builds",
+  "The page did not show the month-to-month prices"
+ ],
+ "alternatives": [
+  "lovable",
+  "bolt",
+  "replit"
+ ],
  "website": "https://base44.com",
  "affiliate": false,
- "pricingNote": "Not yet researched; no pricing is shown until verified."
+ "pricingNote": "Every paid price above is the annual rate shown on the pricing page. The FAQ says annual billing saves 20%, but the month-to-month amounts were not displayed."
 }

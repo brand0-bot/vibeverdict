@@ -1,16 +1,43 @@
 {
  "name": "Zapier",
  "category": "agent-frameworks",
- "verdict": "Review in progress. Pricing has not been verified yet.",
- "rating": "pending",
- "pricing": [],
- "pricingSource": "https://zapier.com",
- "lastVerified": null,
- "verified": false,
- "pros": [],
- "cons": [],
- "alternatives": [],
+ "verdict": "The easiest way to automate without code, but the free plan is 100 tasks and paid tiers climb fast.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0 (100 tasks/mo, two-step Zaps)"
+  },
+  {
+   "plan": "Professional",
+   "price": "From $19.99/mo annual or $29.99/mo (750 tasks)"
+  },
+  {
+   "plan": "Team",
+   "price": "From $69/mo annual or $103.50/mo (2,000 tasks, 25 users)"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Contact sales"
+  }
+ ],
+ "pricingSource": "https://zapier.com/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Huge app catalog and a real free tier",
+  "Multi-step Zaps, webhooks, and AI start on Professional"
+ ],
+ "cons": [
+  "You pay for tasks, and AI steps can cost more than one",
+  "Team starts at 2,000 tasks, not the cheap Professional tiers"
+ ],
+ "alternatives": [
+  "n8n",
+  "crewai",
+  "langchain"
+ ],
  "website": "https://zapier.com",
  "affiliate": false,
- "pricingNote": "Not yet researched; no pricing is shown until verified."
+ "pricingNote": "Self-serve prices scale with the task tier up to 2 million tasks a month. Annual is the lower figure and is billed yearly. Amounts above are the entry tier for each plan."
 }

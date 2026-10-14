@@ -1,32 +1,45 @@
 {
  "name": "n8n",
  "category": "agent-frameworks",
- "verdict": "The best automation tool for builders: self-host it for free or use the reasonably priced cloud plans.",
+ "verdict": "Still the builder's automation tool: cloud Starter is €20 a month billed annually, and you can self-host the community edition.",
  "rating": "worth-it",
  "pricing": [
   {
-   "plan": "Self-hosted Community",
-   "price": "Free"
+   "plan": "Cloud Free",
+   "price": "€0"
   },
   {
    "plan": "Starter",
-   "price": "\u20ac24/mo or \u20ac20/mo annual (2,500 executions)"
+   "price": "€24/mo or €20/mo billed annually (2,500 executions)"
   },
   {
    "plan": "Pro",
-   "price": "\u20ac60/mo or \u20ac50/mo annual (10k executions)"
+   "price": "€60/mo or €50/mo billed annually (10,000 executions)"
+  },
+  {
+   "plan": "Business",
+   "price": "€800/mo or €667/mo billed annually (40,000 executions, self-hosted)"
+  },
+  {
+   "plan": "Community",
+   "price": "Royalty-free to self-host for internal or non-commercial use"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
   }
  ],
  "pricingSource": "https://n8n.io/pricing/",
  "lastVerified": "2026-10-14",
  "verified": true,
  "pros": [
-  "Self-hostable",
-  "Charges per execution, not per step"
+  "You pay per workflow run, not per step",
+  "Unlimited users on the cloud plans",
+  "Community edition is royalty-free for internal use"
  ],
  "cons": [
-  "Prices in EUR",
-  "Steeper learning curve than Zapier"
+  "Prices are in euros",
+  "Business is a big jump and is the self-hosted paid plan"
  ],
  "alternatives": [
   "zapier",
@@ -35,5 +48,5 @@
  ],
  "website": "https://n8n.io",
  "affiliate": false,
- "pricingNote": ""
+ "pricingNote": "The pricing page shows the annual rates (€20, €50, €667). Monthly amounts and execution caps are in that same page's plan data. Larger Pro and Business execution packs cost more. The community license is the Sustainable Use License on github.com/n8n-io/n8n."
 }

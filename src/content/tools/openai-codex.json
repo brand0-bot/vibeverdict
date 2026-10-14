@@ -1,27 +1,41 @@
 {
  "name": "OpenAI Codex",
  "category": "coding-agents",
- "verdict": "OpenAI's coding agent comes bundled with ChatGPT Plus and above, so it's a great deal if you already pay for ChatGPT.",
+ "verdict": "Codex is included with ChatGPT, and Plus at $20 is enough for a few focused coding sessions a week.",
  "rating": "worth-it",
  "pricing": [
   {
-   "plan": "Included with ChatGPT Plus",
+   "plan": "Free",
+   "price": "$0/mo"
+  },
+  {
+   "plan": "Go",
+   "price": "$8/mo"
+  },
+  {
+   "plan": "Plus",
    "price": "$20/mo"
   },
   {
-   "plan": "Pro tiers",
-   "price": "$100 / $200 / $500 per month"
+   "plan": "Pro",
+   "price": "$100, $200, or $500/mo"
+  },
+  {
+   "plan": "API key",
+   "price": "Pay API rates (no cloud features)"
   }
  ],
- "pricingSource": "https://openai.com/index/introducing-chatgpt-go/",
- "lastVerified": null,
- "verified": false,
+ "pricingSource": "https://developers.openai.com/codex/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
  "pros": [
-  "Bundled with ChatGPT",
-  "Cloud and CLI agent"
+  "Included with the ChatGPT plan you already pay for",
+  "Plus covers web, CLI, IDE, and iOS",
+  "Pro has no five-hour limit"
  ],
  "cons": [
-  "Limits depend on ChatGPT plan"
+  "Allowances are ranges, not a fixed message count",
+  "Fast mode burns the included allowance at 2.5x"
  ],
  "alternatives": [
   "claude-code",
@@ -30,5 +44,5 @@
  ],
  "website": "https://openai.com/codex",
  "affiliate": false,
- "pricingNote": "Inclusion in Plus is verified; exact Codex usage limits per plan are unverified."
+ "pricingNote": "The pricing page gives local-message estimates per five hours for Plus, not fixed caps: GPT-6 Astra 5–45, GPT-6.1 Sol 15–160, GPT-6 Sol 15–150, GPT-6 Luna 350–3,000. Cloud tasks cost more of the same allowance, and weekly limits may also apply. Business and Enterprise share Codex, but this page does not list a Business dollar price."
 }

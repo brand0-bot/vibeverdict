@@ -1,16 +1,40 @@
 {
  "name": "LangChain / LangGraph",
  "category": "agent-frameworks",
- "verdict": "Review in progress. Pricing has not been verified yet.",
- "rating": "pending",
- "pricing": [],
- "pricingSource": "https://www.langchain.com",
- "lastVerified": null,
- "verified": false,
- "pros": [],
- "cons": [],
- "alternatives": [],
+ "verdict": "The pricing page sells LangSmith, not the libraries: Plus is $39 a seat, then you pay for traces.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Developer",
+   "price": "$0/seat (1 seat, 5k base traces/mo, then pay as you go)"
+  },
+  {
+   "plan": "Plus",
+   "price": "$39/seat/mo (10k base traces/mo, then pay as you go)"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  }
+ ],
+ "pricingSource": "https://www.langchain.com/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Developer plan is free for one seat",
+  "Plus includes a small serverless deployment",
+  "Traces are billed for what you use"
+ ],
+ "cons": [
+  "A seat is only the start; traces and LSUs add up",
+  "1 LSU is $1, and Engine runs can use many of them"
+ ],
+ "alternatives": [
+  "crewai",
+  "n8n",
+  "zapier"
+ ],
  "website": "https://www.langchain.com",
  "affiliate": false,
- "pricingNote": "Not yet researched; no pricing is shown until verified."
+ "pricingNote": "This is LangSmith pricing. The page does not list a separate price for the open-source LangChain or LangGraph libraries."
 }

@@ -1,7 +1,7 @@
 {
  "name": "Windsurf",
  "category": "coding-agents",
- "verdict": "A capable Cursor alternative at the same $20, now sold under Devin.",
+ "verdict": "Windsurf no longer has its own price list: windsurf.com/pricing redirects to Devin, where Pro is $20.",
  "rating": "depends",
  "pricing": [
   {
@@ -13,20 +13,28 @@
    "price": "$20/mo"
   },
   {
+   "plan": "Max",
+   "price": "$200/mo"
+  },
+  {
    "plan": "Teams",
-   "price": "$80/mo min + $40/seat"
+   "price": "$80/mo minimum + $40/mo per full seat"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Contact sales"
   }
  ],
- "pricingSource": "https://windsurf.com/blog/windsurf-pricing-plans",
+ "pricingSource": "https://devin.ai/pricing",
  "lastVerified": "2026-10-14",
  "verified": true,
  "pros": [
-  "Same price as Cursor Pro",
-  "Good agent flow"
+  "Pro matches the usual $20 coding-agent price",
+  "Same quotas as Devin, including Desktop"
  ],
  "cons": [
-  "Branding and ownership changes",
-  "Smaller ecosystem"
+  "The Windsurf pricing URL now lands on Devin",
+  "Teams has an $80 minimum"
  ],
  "alternatives": [
   "cursor",
@@ -35,5 +43,5 @@
  ],
  "website": "https://windsurf.com",
  "affiliate": false,
- "pricingNote": ""
+ "pricingNote": "On 2026-10-14, windsurf.com and windsurf.com/pricing both redirected to devin.ai. A March 2026 Devin blog listed Windsurf Teams at $40 per seat; the live pricing page does not."
 }

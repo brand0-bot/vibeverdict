@@ -1,28 +1,28 @@
 {
  "name": "Aider",
  "category": "coding-agents",
- "verdict": "Open-source coding agent: the tool is free and you pay your model provider directly.",
+ "verdict": "A free Apache-2.0 terminal pair programmer; the only bill is the model API key you bring.",
  "rating": "depends",
  "pricing": [
   {
-   "plan": "Tool",
-   "price": "Free / open source (unverified)"
+   "plan": "Aider",
+   "price": "Free (Apache-2.0)"
   },
   {
    "plan": "Model usage",
    "price": "Pay your API provider"
   }
  ],
- "pricingSource": "https://aider.chat",
- "lastVerified": null,
- "verified": false,
+ "pricingSource": "https://github.com/Aider-AI/aider/blob/main/LICENSE.txt",
+ "lastVerified": "2026-10-14",
+ "verified": true,
  "pros": [
-  "Open source",
-  "Bring your own model"
+  "No seat fee",
+  "Works in the terminal against your own repo"
  ],
  "cons": [
-  "API costs can add up",
-  "More setup required"
+  "You pay token prices with no included allowance",
+  "Less polished than an editor subscription"
  ],
  "alternatives": [
   "claude-code",
@@ -31,5 +31,5 @@
  ],
  "website": "https://aider.chat",
  "affiliate": false,
- "pricingNote": "Pricing not yet verified from the official source."
+ "pricingNote": "aider.chat shows install-and-bring-a-key usage and does not list a paid plan. The Apache-2.0 license is on the official GitHub repository."
 }

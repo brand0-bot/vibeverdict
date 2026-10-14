@@ -1,16 +1,40 @@
 {
  "name": "Zed",
  "category": "coding-agents",
- "verdict": "Review in progress. Pricing has not been verified yet.",
- "rating": "pending",
- "pricing": [],
- "pricingSource": "https://zed.dev",
- "lastVerified": null,
- "verified": false,
- "pros": [],
- "cons": [],
- "alternatives": [],
+ "verdict": "The editor itself is free forever; Pro at $10 only includes $5 of hosted tokens before usage billing.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Personal",
+   "price": "$0"
+  },
+  {
+   "plan": "Pro",
+   "price": "$10/mo ($5 of hosted tokens, then API list +10%)"
+  },
+  {
+   "plan": "Business",
+   "price": "$30/seat/mo (no bundled token credit)"
+  }
+ ],
+ "pricingSource": "https://zed.dev/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Fast editor and multiplayer are free",
+  "Bring your own API keys on the free plan",
+  "14-day Pro trial with no card"
+ ],
+ "cons": [
+  "Pro's included tokens are only $5",
+  "Hosted usage is API list plus 10%"
+ ],
+ "alternatives": [
+  "cursor",
+  "windsurf",
+  "cline"
+ ],
  "website": "https://zed.dev",
  "affiliate": false,
- "pricingNote": "Not yet researched; no pricing is shown until verified."
+ "pricingNote": ""
 }

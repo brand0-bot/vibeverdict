@@ -1,32 +1,37 @@
 {
  "name": "Replit",
  "category": "app-builders",
- "verdict": "An all-in-one cloud IDE plus agent; Core at $25 is fine for hobby builds.",
+ "verdict": "An all-in-one cloud IDE plus agent; Core is $20 a month, or $18 if you pay annually.",
  "rating": "depends",
  "pricing": [
   {
    "plan": "Starter",
-   "price": "$0"
+   "price": "Free"
   },
   {
    "plan": "Core",
-   "price": "$25/mo or $20/mo annual"
+   "price": "$20/mo or $18/mo billed annually"
   },
   {
    "plan": "Pro",
-   "price": "$100/mo or $95/mo annual"
+   "price": "$100/mo or $90/mo billed annually"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
   }
  ],
- "pricingSource": "https://docs.replit.com/help/pricing-and-plans",
+ "pricingSource": "https://replit.com/pricing",
  "lastVerified": "2026-10-14",
  "verified": true,
  "pros": [
-  "Hosting included",
-  "Agent builds and deploys"
+  "Hosting and the agent are in the same place",
+  "Core includes $20 toward stronger models",
+  "Yearly billing is about 10% off"
  ],
  "cons": [
-  "Usage credits run out",
-  "Effort-based agent pricing"
+  "Paid agent work is effort-priced and can add up",
+  "Core credits do not roll over"
  ],
  "alternatives": [
   "lovable",
@@ -35,5 +40,5 @@
  ],
  "website": "https://replit.com",
  "affiliate": false,
- "pricingNote": ""
+ "pricingNote": "Core and Pro prices are the cards on replit.com/pricing. The free Starter plan is described on docs.replit.com/help/pricing-and-plans; that page does not print a dollar amount for it."
 }

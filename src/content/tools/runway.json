@@ -1,16 +1,44 @@
 {
  "name": "Runway",
  "category": "media",
- "verdict": "Review in progress. Pricing has not been verified yet.",
- "rating": "pending",
- "pricing": [],
- "pricingSource": "https://runwayml.com",
- "lastVerified": null,
- "verified": false,
- "pros": [],
- "cons": [],
- "alternatives": [],
+ "verdict": "The best-known AI video tool, but Standard's 625 monthly credits disappear quickly and do not roll over.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0 (125 credits, one time)"
+  },
+  {
+   "plan": "Standard",
+   "price": "$15/mo or $12/mo billed annually (625 credits/mo)"
+  },
+  {
+   "plan": "Pro",
+   "price": "$35/mo or $28/mo billed annually (2,250 credits/mo)"
+  },
+  {
+   "plan": "Max",
+   "price": "$95/mo or $76/mo billed annually (9,500 credits/mo)"
+  }
+ ],
+ "pricingSource": "https://runwayml.com/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Gen-4.5 video plus image and audio models",
+  "Free credits do not expire",
+  "Max rolls one month of unused credits"
+ ],
+ "cons": [
+  "Standard and Pro credits reset each cycle",
+  "Gen-4.5 is 60 credits per 5 seconds"
+ ],
+ "alternatives": [
+  "midjourney",
+  "suno",
+  "elevenlabs"
+ ],
  "website": "https://runwayml.com",
  "affiliate": false,
- "pricingNote": "Not yet researched; no pricing is shown until verified."
+ "pricingNote": ""
 }

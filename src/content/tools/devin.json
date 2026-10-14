@@ -1,16 +1,48 @@
 {
  "name": "Devin",
  "category": "coding-agents",
- "verdict": "Review in progress. Pricing has not been verified yet.",
- "rating": "pending",
- "pricing": [],
- "pricingSource": "https://devin.ai",
- "lastVerified": null,
- "verified": false,
- "pros": [],
- "cons": [],
- "alternatives": [],
+ "verdict": "Pro is $20 a month, but the quota is opaque and Teams has an $80 minimum before you add seats.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0"
+  },
+  {
+   "plan": "Pro",
+   "price": "$20/mo"
+  },
+  {
+   "plan": "Max",
+   "price": "$200/mo"
+  },
+  {
+   "plan": "Teams",
+   "price": "$80/mo minimum + $40/mo per full seat"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Contact sales"
+  }
+ ],
+ "pricingSource": "https://devin.ai/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Desktop, CLI, and cloud agents on one plan",
+  "Flex seats on Teams are free",
+  "Extra usage is API pricing, not a mystery credit"
+ ],
+ "cons": [
+  "Included quota is not a published message count",
+  "Teams costs $80 even with no full seats"
+ ],
+ "alternatives": [
+  "cursor",
+  "claude-code",
+  "windsurf"
+ ],
  "website": "https://devin.ai",
  "affiliate": false,
- "pricingNote": "Not yet researched; no pricing is shown until verified."
+ "pricingNote": "Docs at docs.devin.ai match these prices. Flex seats are $0 and draw from shared on-demand credits. SWE-2 is free in Devin Desktop and the CLI through October 16, 2026."
 }

@@ -1,31 +1,37 @@
 {
  "name": "Gamma",
  "category": "writing",
- "verdict": "The fastest way to make a good-looking deck; Plus at $12 removes the branding.",
- "rating": "worth-it",
+ "verdict": "Fast decks with a real free plan, but the Plus and Pro dollar prices were not on the pages we could open.",
+ "rating": "pending",
  "pricing": [
   {
    "plan": "Free",
-   "price": "$0"
+   "price": "$0 (400 starting credits; they do not refresh)"
   },
   {
    "plan": "Plus",
-   "price": "$12/seat/mo"
+   "price": "Dollar amount not listed (1,000 credits/mo)"
   },
   {
    "plan": "Pro",
-   "price": "$25/seat/mo"
+   "price": "Dollar amount not listed (4,000 credits/mo)"
+  },
+  {
+   "plan": "Ultra",
+   "price": "Dollar amount not listed (20,000 credits/mo)"
   }
  ],
- "pricingSource": "https://gamma.app/pricing",
- "lastVerified": "2026-10-14",
- "verified": true,
+ "pricingSource": "https://help.gamma.app/en/articles/8077107-how-can-i-upgrade-my-gamma-subscription",
+ "lastVerified": null,
+ "verified": false,
  "pros": [
-  "Decks in minutes",
-  "Web-page export"
+  "Free plan is not time-limited",
+  "Plus removes the Gamma badge",
+  "Annual plans are 28% off when you can see the price"
  ],
  "cons": [
-  "Credits limit heavy use"
+  "Official pricing page did not load",
+  "Credits still gate heavy generation"
  ],
  "alternatives": [
   "notion-ai",
@@ -34,5 +40,5 @@
  ],
  "website": "https://gamma.app",
  "affiliate": false,
- "pricingNote": ""
+ "pricingNote": "gamma.app/pricing timed out, and a direct download returned HTTP 403, on 2026-10-14. The help center lists these credit amounts and a 28% annual discount, and says Ultra is monthly-only for now. It does not state Plus or Pro dollar prices, so earlier $12 and $25 figures are not confirmed."
 }

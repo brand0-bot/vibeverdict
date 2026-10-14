@@ -1,7 +1,7 @@
 {
  "name": "Cursor",
  "category": "coding-agents",
- "verdict": "The most polished AI code editor, but its plan lineup is changing, so check current pricing first.",
+ "verdict": "New buyers get Cursor inside the X Subscription from $8 a month; the docs still list a separate Pro plan at $20.",
  "rating": "depends",
  "pricing": [
   {
@@ -9,29 +9,41 @@
    "price": "$0"
   },
   {
-   "plan": "Pro (per docs)",
-   "price": "$20/mo"
+   "plan": "Plus",
+   "price": "$8/mo (Grok models only)"
   },
   {
-   "plan": "Pro+ (per docs)",
-   "price": "$60/mo"
+   "plan": "Premium",
+   "price": "$30/mo"
+  },
+  {
+   "plan": "Super",
+   "price": "$100/mo"
   },
   {
    "plan": "Ultra",
    "price": "$200/mo"
+  },
+  {
+   "plan": "Teams",
+   "price": "From $30/user/mo"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
   }
  ],
- "pricingSource": "https://cursor.com/docs/account/pricing",
- "lastVerified": null,
- "verified": false,
+ "pricingSource": "https://cursor.com/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
  "pros": [
-  "Deep codebase context",
-  "Strong agent and tab completion",
-  "Multiple frontier models"
+  "Agent, cloud agents, and Bugbot from Premium up",
+  "Third-party models are available at API list price",
+  "Usage pool refreshes weekly"
  ],
  "cons": [
-  "Usage-based overages can surprise you",
-  "Pricing in flux"
+  "Plus cannot use third-party models",
+  "A second, older plan list is still in the docs"
  ],
  "alternatives": [
   "windsurf",
@@ -40,5 +52,5 @@
  ],
  "website": "https://cursor.com",
  "affiliate": false,
- "pricingNote": "CONFLICT: cursor.com/docs lists Pro $20 / Pro+ $60 / Ultra $200, but cursor.com/pricing currently shows Plus $8 / Premium $30 / Super $100 / Ultra $200. Treat as unverified until reconciled."
+ "pricingNote": "cursor.com/pricing is The X Subscription, which also includes Grok and X. The docs at cursor.com/docs/account/pricing still list legacy plans: Start ₹649/mo (India only), Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, and Teams at $40 or $120 per user. x.ai says existing Cursor plans continue and switching is optional."
 }
