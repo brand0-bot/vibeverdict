@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { tools, bySlug, categories, label } from '../../lib/data.js';
+import Base from '../../layouts/Base.astro'; import { tools, bySlug, categories, label, visitUrl } from '../../lib/data.js';
 export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
 const { t } = Astro.props;
 const schema=[{"@context":"https://schema.org","@type":"SoftwareApplication",name:t.name,applicationCategory:categories[t.category],url:t.website,
@@ -17,7 +17,10 @@ const schema=[{"@context":"https://schema.org","@type":"SoftwareApplication",nam
 <h2>Pricing</h2>
 {t.pricing.length? <table><tr><th>Plan</th><th>Price</th></tr>{t.pricing.map(p=>(<tr><td>{p.plan}</td><td>{p.price}{!t.verified && <span class="mut"> (unverified)</span>}</td></tr>))}</table> : <p class="mut">Pricing hasn't been researched yet. We don't publish prices we haven't verified.</p>}
 {t.pros.length>0 && <div class="grid" style="margin-top:24px"><div class="card"><h3 style="margin-top:0;color:var(--ok)">Pros</h3><ul>{t.pros.map(p=><li>{p}</li>)}</ul></div><div class="card"><h3 style="margin-top:0;color:var(--bad)">Cons</h3><ul>{t.cons.map(p=><li>{p}</li>)}</ul></div></div>}
-{t.alternatives.length>0 && <><h2>Alternatives</h2><div class="grid">{t.alternatives.filter(a=>bySlug[a]).map(a=>(<a class="card" href={`/tools/${a}/`}><b>{bySlug[a].name}</b><div class="mut" style="font-size:13px">{bySlug[a].verdict}</div></a>))}</div></>}
-<p style="margin-top:28px"><a class="btn" href={t.website} rel={t.affiliate?"sponsored nofollow":"nofollow"}>Visit {t.name} →</a></p>
-<p class="mut" style="font-size:13px">{t.affiliate?'Disclosure: this may become an affiliate link (program verified, link not yet active). It never affects our verdict.':'Disclosure: we have no affiliate relationship with this tool.'} <a href="/about/">How we rate</a></p>
+{t.alternatives.length>0 && <><h2>Alternatives</h2><div class="grid">{t.alternatives.filter(a=>bySlug[a]).map(a=>{ const alt=bySlug[a]; return alt.affiliateUrl
+ ? <a class="card" href={alt.affiliateUrl} rel="sponsored nofollow noopener" target="_blank"><b>{alt.name}</b><div class="mut" style="font-size:13px">{alt.verdict}</div></a>
+ : <a class="card" href={`/tools/${a}/`}><b>{alt.name}</b><div class="mut" style="font-size:13px">{alt.verdict}</div></a>; })}</div>
+{t.alternatives.some(a=>bySlug[a]?.affiliateUrl) && <p class="mut" style="font-size:13px">We may earn a commission if you sign up through this link. It never affects our verdict. <a href="/disclosure/">Affiliate disclosure</a></p>}</>}
+<p style="margin-top:28px"><a class="btn" href={visitUrl(t)} rel={t.affiliateUrl?"sponsored nofollow noopener":"nofollow"} target={t.affiliateUrl?"_blank":undefined}>Visit {t.name} →</a></p>
+<p class="mut" style="font-size:13px">{t.affiliateUrl?'We may earn a commission if you sign up through this link. It never affects our verdict.':t.affiliate?'Disclosure: this may become an affiliate link (program verified, link not yet active). It never affects our verdict.':'Disclosure: we have no affiliate relationship with this tool.'} {t.affiliateUrl?<a href="/disclosure/">Affiliate disclosure</a>:<a href="/about/">How we rate</a>}</p>
 </Base>
