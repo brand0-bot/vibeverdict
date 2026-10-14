@@ -1,7 +1,7 @@
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const WINDOW_MS = 10 * 24 * 60 * 60 * 1000;
 const REFRESH_MINUTES = 30;
-const CACHE_URL = "https://vibeverdict.ai/api/ai-news-media";
+const CACHE_URL = "https://vibeverdict.ai/api/ai-news-covers";
 const OG_CACHE_PREFIX = "https://vibeverdict.ai/og-image-cache/v1/";
 const OG_FETCH_LIMIT = 12;
 const OG_HOSTS = new Set([
@@ -31,6 +31,42 @@ const SOURCES = [
 ];
 
 const AI_TITLE = /\b(AI|A\.I\.|LLM|LLMs|GPT|OpenAI|ChatGPT|Claude|Gemini|Anthropic|DeepMind|machine learning|artificial intelligence|generative)\b/i;
+
+const TOPICS = [
+  { id: "hardware", label: "Chips", pattern: /\b(gpus?|nvidia|geforce|cuda|tpus?|chips?|chipmakers?|microchips?|semiconductors?|hbm|wafer|foundry|asics?|tsmc|blackwell|hardware)\b/i },
+  { id: "robotics", label: "Robotics", pattern: /\b(robots?|robotics|humanoids?|drones?|embodied)\b/i },
+  { id: "security", label: "Security", pattern: /\b(security|privacy|deepfakes?|cyber|hack(?:ed|ers|ing)?|vulnerabilit(?:y|ies)|malware|ransomware|encryption|surveillance|phishing|infosec)\b/i },
+  { id: "policy", label: "Policy", pattern: /\b(regulations?|regulatory|laws?|lawyers?|legal|government|policy|policies|congress|senate|parliament|legislation|antitrust|lawsuits?|court|copyright|white house)\b/i },
+  { id: "money", label: "Business", pattern: /\b(funding|fundrais\w*|stocks?|shares?|ipo|valuation|invest(?:or|ors|ment|ing)?|revenue|profits?|startup|startups|business|markets?|debt|acqui(?:re|sition|red)|layoffs?|earnings|venture)\b/i },
+  { id: "research", label: "Research", pattern: /\b(research|scientists?|science|stud(?:y|ies)|health|healthcare|medical|clinical|papers?|physics|biology|journal|patients?|diagnos\w*|disease|neuroimaging|neuroscience|brain|dataset|preprint)\b/i },
+  { id: "creative", label: "Creative", pattern: /\b(images?|videos?|music|songs?|audio|voice|arts?|midjourney|sora|runway|films?|cinema|photos?|youtube|creative|animation|podcasts?)\b/i },
+  { id: "opensource", label: "Open source", pattern: /\b(open[- ]source|huggingface|hugging face|ollama|gguf|local (?:models?|llms?)|weights|mistral|qwen|deepseek|llama|on-device|self-host(?:ed|ing)?)\b/i },
+  { id: "coding", label: "Coding", pattern: /\b(cod(?:e|ing)|developers?|programming|github|copilot|software|engineers?|agents?|cursor|vscode|devtools?|pull requests?)\b/i },
+  { id: "models", label: "Models", pattern: /\b(llms?|gpts?|openai|anthropic|claude|gemini|chatgpt|deepmind|language models?|foundation models?|meta|google|models?)\b/i },
+];
+
+function clipText(value, max) {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  if (text.length <= max) return text;
+  return text.slice(0, max).trim();
+}
+
+function summaryFromBlock(block) {
+  const description = tagText(block, "description");
+  const summary = tagText(block, "summary");
+  const body = tagText(block, "content:encoded");
+  const lead = description || summary;
+  if (lead && lead.length >= 80) return clipText(lead, 700);
+  return clipText(`${lead} ${body}`.trim(), 700);
+}
+
+export function topicFor(title, summary) {
+  const hay = `${title || ""}\n${summary || ""}`;
+  for (const topic of TOPICS) {
+    if (topic.pattern.test(hay)) return topic;
+  }
+  return { id: "ai", label: "AI" };
+}
 
 function decode(value) {
   return String(value || "")
@@ -154,6 +190,7 @@ function itemsFromXml(xml, source) {
       publishedAt: new Date(publishedAt).toISOString(),
       popularity: source.hotRank ? Math.max(1, 12 - index) * 2 : 0,
       image: imageFromBlock(block),
+      summary: summaryFromBlock(block),
     });
   });
   return items;
@@ -178,6 +215,7 @@ function itemsFromReddit(payload, source) {
       publishedAt: new Date(created * 1000).toISOString(),
       popularity: Number.isFinite(score) && score > 0 ? score : 0,
       image: imageFromReddit(row),
+      summary: clipText(decode(row.selftext || "").replace(/^\[(removed|deleted)\]$/, ""), 700),
     });
   }
   return items;
@@ -200,6 +238,7 @@ function itemsFromHn(payload) {
       region: "Community",
       publishedAt: new Date(publishedAt).toISOString(),
       popularity: Number.isFinite(points) && points > 0 ? points : 0,
+      summary: clipText(decode(hit.story_text || ""), 700),
     });
   }
   return items;
@@ -243,6 +282,7 @@ export function rankItems(items, now = Date.now()) {
     const count = counts.get(item.source) || 0;
     if (count >= 4) continue;
     counts.set(item.source, count + 1);
+    const topic = topicFor(item.title, item.summary);
     kept.push({
       title: item.title,
       url: item.url,
@@ -250,6 +290,8 @@ export function rankItems(items, now = Date.now()) {
       region: item.region,
       publishedAt: item.publishedAt,
       image: acceptImage(item.image, 0) || null,
+      topic: topic.id,
+      topicLabel: topic.label,
     });
     if (kept.length >= 40) break;
   }

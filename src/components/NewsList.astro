@@ -36,6 +36,214 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         return "";
       }
     }
+    var THEMES = {
+      hardware: { label: "Chips", colors: ["#5b21b6", "#7c3aed", "#0e7490"], accent: "#67e8f9" },
+      robotics: { label: "Robotics", colors: ["#6d28d9", "#c026d3", "#ea580c"], accent: "#fdba74" },
+      security: { label: "Security", colors: ["#7e22ce", "#be185d", "#312e81"], accent: "#fda4af" },
+      policy: { label: "Policy", colors: ["#4c1d95", "#7c3aed", "#b45309"], accent: "#fcd34d" },
+      money: { label: "Business", colors: ["#5b21b6", "#7c3aed", "#047857"], accent: "#6ee7b7" },
+      creative: { label: "Creative", colors: ["#a21caf", "#7c3aed", "#db2777"], accent: "#f9a8d4" },
+      research: { label: "Research", colors: ["#3730a3", "#6d28d9", "#0369a1"], accent: "#7dd3fc" },
+      opensource: { label: "Open source", colors: ["#0f766e", "#6d28d9", "#115e59"], accent: "#5eead4" },
+      coding: { label: "Coding", colors: ["#4338ca", "#6d28d9", "#312e81"], accent: "#c4b5fd" },
+      models: { label: "Models", colors: ["#6d28d9", "#a855f7", "#db2777"], accent: "#e9d5ff" },
+      ai: { label: "AI", colors: ["#6d28d9", "#8b5cf6", "#c026d3"], accent: "#ddd6fe" }
+    };
+    function esc(value) {
+      return String(value || "").replace(/[&<>"']/g, function (ch) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" }[ch];
+      });
+    }
+    function hashCode(value) {
+      var h = 2166136261;
+      var text = String(value || "");
+      for (var i = 0; i < text.length; i++) {
+        h ^= text.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      return h >>> 0;
+    }
+    function measure(text, font) {
+      var canvas = measure.canvas || (measure.canvas = document.createElement("canvas"));
+      var ctx = canvas.getContext("2d");
+      ctx.font = font;
+      return ctx.measureText(String(text || "")).width;
+    }
+    function shrink(text, font, maxWidth) {
+      var cut = String(text || "");
+      if (measure(cut, font) <= maxWidth) return cut;
+      while (cut.length > 1 && measure(cut + "…", font) > maxWidth) cut = cut.slice(0, -1);
+      return cut.replace(/\s+$/, "") + "…";
+    }
+    function wrapText(text, font, maxWidth, maxLines) {
+      var words = String(text || "").trim().split(/\s+/).filter(Boolean);
+      if (!words.length) return [];
+      var lines = [];
+      var current = "";
+      for (var i = 0; i < words.length; i++) {
+        var word = shrink(words[i], font, maxWidth);
+        var next = current ? current + " " + word : word;
+        if (measure(next, font) <= maxWidth) {
+          current = next;
+          continue;
+        }
+        if (lines.length === maxLines - 1) {
+          lines.push(shrink((current ? current + " " : "") + words.slice(i).join(" "), font, maxWidth));
+          return lines;
+        }
+        if (current) lines.push(current);
+        current = word;
+      }
+      if (current) lines.push(current);
+      return lines.slice(0, maxLines);
+    }
+    function icon(id, accent) {
+      var ink = "#f8f7ff";
+      if (id === "hardware") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linecap="round">'
+          + '<rect x="48" y="42" width="84" height="84" rx="14" fill="' + accent + '" fill-opacity="0.28"/>'
+          + '<rect x="70" y="64" width="40" height="40" rx="6"/>'
+          + '<path d="M68 42V22M90 42V22M112 42V22M68 126v20M90 126v20M112 126v20M48 62H28M48 84H28M48 106H28M132 62h20M132 84h20M132 106h20"/>'
+          + "</g>";
+      }
+      if (id === "robotics") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linecap="round">'
+          + '<path d="M90 18v16"/><circle cx="90" cy="14" r="6" fill="' + accent + '" stroke="none"/>'
+          + '<rect x="50" y="36" width="80" height="62" rx="20" fill="' + accent + '" fill-opacity="0.28"/>'
+          + '<circle cx="74" cy="64" r="6" fill="' + ink + '" stroke="none"/>'
+          + '<circle cx="106" cy="64" r="6" fill="' + ink + '" stroke="none"/>'
+          + '<path d="M72 82h36"/>'
+          + '<path d="M42 112h96v28a8 8 0 0 1-8 8H50a8 8 0 0 1-8-8z" fill="' + accent + '" fill-opacity="0.2"/>'
+          + '<path d="M28 124h14M138 124h14"/>'
+          + "</g>";
+      }
+      if (id === "security") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round">'
+          + '<path d="M90 16l58 20v42c0 34-24 56-58 70-34-14-58-36-58-70V36z" fill="' + accent + '" fill-opacity="0.28"/>'
+          + '<rect x="74" y="70" width="32" height="26" rx="5"/>'
+          + '<path d="M82 70v-8a8 8 0 0 1 16 0v8" stroke-linecap="round"/>'
+          + '<circle cx="90" cy="83" r="2.5" fill="' + ink + '" stroke="none"/>'
+          + "</g>";
+      }
+      if (id === "policy") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'
+          + '<path d="M90 24v92"/><path d="M46 132h88"/>'
+          + '<circle cx="90" cy="24" r="6" fill="' + accent + '" stroke="none"/>'
+          + '<path d="M90 46L48 78M90 46l42 32"/>'
+          + '<path d="M30 78h40l-20 30z" fill="' + accent + '" fill-opacity="0.35"/>'
+          + '<path d="M110 78h40l-20 30z" fill="' + accent + '" fill-opacity="0.35"/>'
+          + "</g>";
+      }
+      if (id === "money") {
+        return '<g stroke-linecap="round">'
+          + '<path d="M36 132h120" stroke="' + ink + '" stroke-width="3"/>'
+          + '<rect x="44" y="88" width="22" height="44" rx="5" fill="' + accent + '"/>'
+          + '<rect x="78" y="62" width="22" height="70" rx="5" fill="' + ink + '" fill-opacity="0.9"/>'
+          + '<rect x="112" y="36" width="22" height="96" rx="5" fill="' + accent + '"/>'
+          + '<path d="M40 78l28-24 24 16 40-36" fill="none" stroke="' + ink + '" stroke-width="3"/>'
+          + '<path d="M116 34h20v20" fill="none" stroke="' + ink + '" stroke-width="3"/>'
+          + "</g>";
+      }
+      if (id === "creative") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round">'
+          + '<rect x="34" y="40" width="112" height="84" rx="16" fill="' + accent + '" fill-opacity="0.25"/>'
+          + '<path d="M78 62l36 20-36 20z" fill="' + ink + '" stroke="none"/>'
+          + '<circle cx="132" cy="36" r="14" fill="' + accent + '" stroke="' + ink + '"/>'
+          + "</g>";
+      }
+      if (id === "research") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3">'
+          + '<ellipse cx="90" cy="78" rx="58" ry="22"/>'
+          + '<ellipse cx="90" cy="78" rx="58" ry="22" transform="rotate(60 90 78)"/>'
+          + '<ellipse cx="90" cy="78" rx="58" ry="22" transform="rotate(120 90 78)"/>'
+          + '<circle cx="90" cy="78" r="8" fill="' + accent + '" stroke="none"/>'
+          + "</g>";
+      }
+      if (id === "opensource") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linecap="round">'
+          + '<path d="M46 108V70M90 58v62M134 96V58"/>'
+          + '<circle cx="46" cy="118" r="14" fill="' + accent + '" fill-opacity="0.4"/>'
+          + '<circle cx="90" cy="46" r="16" fill="' + accent + '"/>'
+          + '<circle cx="134" cy="108" r="14" fill="' + accent + '" fill-opacity="0.75"/>'
+          + '<path d="M104 52h18l-10-12"/>'
+          + "</g>";
+      }
+      if (id === "coding") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'
+          + '<rect x="30" y="36" width="132" height="96" rx="14" fill="' + accent + '" fill-opacity="0.18"/>'
+          + '<circle cx="50" cy="54" r="4" fill="#fda4af" stroke="none"/>'
+          + '<circle cx="64" cy="54" r="4" fill="#fde68a" stroke="none"/>'
+          + '<circle cx="78" cy="54" r="4" fill="#86efac" stroke="none"/>'
+          + '<path d="M52 92l16 14-16 14M84 120h36"/>'
+          + "</g>";
+      }
+      if (id === "models") {
+        return '<g fill="none" stroke="' + ink + '" stroke-width="3" stroke-linecap="round">'
+          + '<path d="M48 48l42 24 42-24M48 48l42 72M90 72l42 48M132 48l-42 72"/>'
+          + '<circle cx="48" cy="48" r="12" fill="' + accent + '"/>'
+          + '<circle cx="132" cy="48" r="12" fill="' + accent + '" fill-opacity="0.75"/>'
+          + '<circle cx="90" cy="72" r="12" fill="' + ink + '"/>'
+          + '<circle cx="48" cy="120" r="12" fill="' + accent + '" fill-opacity="0.55"/>'
+          + '<circle cx="132" cy="120" r="12" fill="' + accent + '"/>'
+          + "</g>";
+      }
+      return '<g fill="' + ink + '" stroke="none">'
+        + '<path d="M90 18l8 28 28 8-28 8-8 28-8-28-28-8 28-8z" fill="' + accent + '"/>'
+        + '<path d="M138 36l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/>'
+        + '<path d="M40 112l3 10 10 3-10 3-3 10-3-10-10-3 10-3z" fill-opacity="0.8"/>'
+        + "</g>";
+    }
+    function coverSvg(item) {
+      var theme = THEMES[item.topic] || THEMES.ai;
+      var n = hashCode(item.url || item.title);
+      var pid = "vv" + n.toString(16);
+      var colors = theme.colors;
+      var headlineFont = "800 34px Inter, system-ui, sans-serif";
+      var sourceFont = "700 18px Inter, system-ui, sans-serif";
+      var lines = wrapText(item.title, headlineFont, 372, 3);
+      var source = shrink(String(item.source || "AI news").toUpperCase(), sourceFont, 340);
+      var label = theme.label;
+      var labelWidth = Math.ceil(measure(label, "700 16px Inter, system-ui, sans-serif")) + 28;
+      var tspans = lines.map(function (line, index) {
+        return '<tspan x="36" dy="' + (index === 0 ? 0 : 42) + '">' + esc(line) + "</tspan>";
+      }).join("");
+      var glowX = 62 + (n % 28);
+      var glowY = 12 + ((n >> 6) % 30);
+      var blob = 70 + ((n >> 3) % 36);
+      return '<svg class="vv-news-cover" data-topic="' + esc(label) + '" viewBox="0 0 640 360" width="640" height="360" role="presentation" focusable="false" aria-hidden="true">'
+        + "<defs>"
+        + '<linearGradient id="' + pid + 'bg" x1="0" y1="0" x2="1" y2="1">'
+        + '<stop offset="0" stop-color="' + colors[0] + '"/>'
+        + '<stop offset="0.52" stop-color="' + colors[1] + '"/>'
+        + '<stop offset="1" stop-color="' + colors[2] + '"/>'
+        + "</linearGradient>"
+        + '<radialGradient id="' + pid + 'glow" cx="' + glowX + '%" cy="' + glowY + '%" r="58%">'
+        + '<stop offset="0" stop-color="#f5f3ff" stop-opacity="0.5"/>'
+        + '<stop offset="1" stop-color="#f5f3ff" stop-opacity="0"/>'
+        + "</radialGradient>"
+        + '<pattern id="' + pid + 'grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity="0.1"/></pattern>'
+        + '<filter id="' + pid + 'shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#1a0b2e" flood-opacity="0.7"/></filter>'
+        + "</defs>"
+        + '<rect width="640" height="360" fill="url(#' + pid + 'bg)"/>'
+        + '<rect width="640" height="360" fill="url(#' + pid + 'glow)"/>'
+        + '<rect width="640" height="360" fill="url(#' + pid + 'grid)"/>'
+        + '<circle cx="520" cy="70" r="' + blob + '" fill="' + theme.accent + '" fill-opacity="0.22"/>'
+        + '<circle cx="590" cy="250" r="' + Math.round(blob * 0.72) + '" fill="#fff" fill-opacity="0.08"/>'
+        + '<g transform="translate(456 78)" filter="url(#' + pid + 'shadow)">' + icon(THEMES[item.topic] ? item.topic : "ai", theme.accent) + "</g>"
+        + '<rect x="36" y="28" width="' + labelWidth + '" height="32" rx="16" fill="#fff" fill-opacity="0.16" stroke="#fff" stroke-opacity="0.35"/>'
+        + '<text x="50" y="49" fill="#f8f7ff" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700">' + esc(label) + "</text>"
+        + '<text x="36" y="86" fill="' + theme.accent + '" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="1.2">' + esc(source) + "</text>"
+        + '<text x="36" y="132" fill="#f8f7ff" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="800" filter="url(#' + pid + 'shadow)">' + tspans + "</text>"
+        + "</svg>";
+    }
+    function mountCover(media, item, card) {
+      var theme = THEMES[item.topic] || THEMES.ai;
+      if (card) card.setAttribute("data-cover", theme.label);
+      var parsed = new DOMParser().parseFromString(coverSvg(item), "image/svg+xml");
+      var svg = parsed.documentElement;
+      if (!svg || svg.nodeName.toLowerCase() === "parsererror" || svg.querySelector("parsererror")) return;
+      media.replaceChildren(document.importNode(svg, true));
+    }
     function fail(root, message) {
       var status = root.parentElement && root.parentElement.querySelector("[data-news-status]");
       if (status) status.textContent = message;
@@ -62,12 +270,6 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         var media = document.createElement("div");
         media.className = "vv-news-media";
         media.setAttribute("aria-hidden", "true");
-        function placeholder() {
-          var span = document.createElement("span");
-          span.className = "vv-news-ph";
-          span.textContent = item.source || "AI news";
-          return span;
-        }
         var image = safeUrl(item.image || "");
         if (image) {
           var img = document.createElement("img");
@@ -80,12 +282,12 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
           img.src = image;
           img.addEventListener("error", function () {
             li.removeAttribute("data-photo");
-            img.replaceWith(placeholder());
+            mountCover(media, item, li);
           });
           media.appendChild(img);
           li.setAttribute("data-photo", "1");
         } else {
-          media.appendChild(placeholder());
+          mountCover(media, item, li);
         }
         var title = document.createElement("span");
         title.className = "vv-news-title";
@@ -112,7 +314,7 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         root.appendChild(li);
       });
     }
-    fetch("/api/ai-news-media", { headers: { accept: "application/json" } })
+    fetch("/api/ai-news-covers", { headers: { accept: "application/json" } })
       .then(function (response) {
         if (!response.ok) throw new Error("news");
         return response.json();
@@ -151,20 +353,7 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
     background: #10141d;
   }
   .vv-news-media > * { grid-area: 1 / 1; width: 100%; height: 100%; min-width: 0; }
-  .vv-news-media img { object-fit: cover; display: block; }
-  .vv-news-ph {
-    display: flex;
-    align-items: flex-end;
-    box-sizing: border-box;
-    padding: 12px 14px;
-    background:
-      radial-gradient(85% 90% at 100% 0%, rgba(139, 92, 246, 0.42), transparent 56%),
-      linear-gradient(165deg, #1c2436 0%, #0c1018 68%);
-    color: #ddd6fe;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-  }
+  .vv-news-media img, .vv-news-cover { object-fit: cover; display: block; }
   .vv-news-title { color: var(--text); font-weight: 700; line-height: 1.35; }
   .vv-news-link:hover .vv-news-title { color: #c4b5fd; }
   .vv-news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 8px 4px 2px; font-size: 12px; color: var(--mut); }
