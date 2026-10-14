@@ -210,7 +210,7 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
       var glowX = 62 + (n % 28);
       var glowY = 12 + ((n >> 6) % 30);
       var blob = 70 + ((n >> 3) % 36);
-      return '<svg class="vv-news-cover" data-topic="' + esc(label) + '" viewBox="0 0 640 360" width="640" height="360" role="presentation" focusable="false" aria-hidden="true">'
+      return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">'
         + "<defs>"
         + '<linearGradient id="' + pid + 'bg" x1="0" y1="0" x2="1" y2="1">'
         + '<stop offset="0" stop-color="' + colors[0] + '"/>'
@@ -239,10 +239,15 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
     function mountCover(media, item, card) {
       var theme = THEMES[item.topic] || THEMES.ai;
       if (card) card.setAttribute("data-cover", theme.label);
-      var parsed = new DOMParser().parseFromString(coverSvg(item), "image/svg+xml");
-      var svg = parsed.documentElement;
-      if (!svg || svg.nodeName.toLowerCase() === "parsererror" || svg.querySelector("parsererror")) return;
-      media.replaceChildren(document.importNode(svg, true));
+      var img = document.createElement("img");
+      img.className = "vv-news-cover";
+      img.alt = "";
+      img.width = 640;
+      img.height = 360;
+      img.decoding = "async";
+      img.setAttribute("data-topic", theme.label);
+      img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(coverSvg(item));
+      media.replaceChildren(img);
     }
     function fail(root, message) {
       var status = root.parentElement && root.parentElement.querySelector("[data-news-status]");
@@ -346,14 +351,20 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
   }
   .vv-news-link { display: flex; flex-direction: column; gap: 10px; color: inherit; text-decoration: none; }
   .vv-news-media {
-    display: grid;
+    position: relative;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
     overflow: hidden;
-    background: #10141d;
+    background: #24143f;
   }
-  .vv-news-media > * { grid-area: 1 / 1; width: 100%; height: 100%; min-width: 0; }
-  .vv-news-media img, .vv-news-cover { object-fit: cover; display: block; }
+  .vv-news-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   .vv-news-title { color: var(--text); font-weight: 700; line-height: 1.35; }
   .vv-news-link:hover .vv-news-title { color: #c4b5fd; }
   .vv-news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 8px 4px 2px; font-size: 12px; color: var(--mut); }
