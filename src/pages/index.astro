@@ -1,11 +1,11 @@
 ---
-import Base from '../layouts/Base.astro'; import { tools, categories, label } from '../lib/data.js';
+import Base from '../layouts/Base.astro'; import NewsletterForm from '../components/NewsletterForm.astro'; import { tools, categories, label } from '../lib/data.js';
 const schema={"@context":"https://schema.org","@type":"WebSite",name:"VibeVerdict",url:"https://vibeverdict.ai"};
 ---
 <Base title="VibeVerdict: Is this AI tool worth it?" description="Pricing, one-line verdicts, pros/cons and alternatives for AI, agent and vibe-coding tools, always dated and verified." schema={schema}>
 <section style="padding:56px 0 28px"><h1 style="font-size:46px;margin:0">Is this AI tool <span style="color:var(--acc)">worth it?</span></h1>
 <p class="mut" style="font-size:19px;max-width:640px">One-line verdicts, real pricing with sources, and better alternatives for {tools.length} AI, agent and vibe-coding tools. Every price shows the date it was last verified.</p>
-<form action="/newsletter/" style="display:flex;gap:8px;flex-wrap:wrap"><input placeholder="you@email.com" type="email"/><button class="btn">Get the weekly verdicts</button></form></section>
+<NewsletterForm /></section>
 {Object.entries(categories).map(([k,v])=>(<section><h2>{v} <a style="font-size:14px" href={`/category/${k}/`}>see all →</a></h2><div class="grid">
 {tools.filter(t=>t.category===k).map(t=>(<a class="card" href={`/tools/${t.slug}/`} style="color:inherit;text-decoration:none"><div style="display:flex;justify-content:space-between"><b>{t.name}</b><span class={`pill ${t.rating}`}>{label[t.rating]}</span></div><p class="mut" style="font-size:14px;margin:8px 0 0">{t.verdict}</p><div style="font-size:12px;margin-top:8px" class="mut">{t.verified?`✓ Verified ${t.lastVerified}`:'⚠ Pricing unverified'}</div></a>))}</div></section>))}
 </Base>

@@ -1,5 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 ---
-<Base title="The VibeVerdict weekly" description="What changed in AI tool pricing this week."><h1>The weekly verdict</h1><p class="mut">Price changes, new tools and one honest pick every week. (Signup placeholder: the provider isn't connected yet.)</p>
-<form onsubmit="event.preventDefault();this.querySelector('p').hidden=false"><input type="email" required placeholder="you@email.com"/> <button class="btn">Subscribe</button><p hidden class="mut">Thanks! Signups open soon.</p></form></Base>
+<Base title="The VibeVerdict weekly" description="What changed in AI tool pricing this week.">
+  <h1>The weekly verdict</h1>
+  <p class="mut">Price changes, new tools, and one honest pick every week.</p>
+  <NewsletterForm />
+</Base>
