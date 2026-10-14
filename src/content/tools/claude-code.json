@@ -32,6 +32,7 @@
  "alternatives": [
   "openai-codex",
   "cursor",
+  "warp",
   "aider"
  ],
  "website": "https://claude.com/product/claude-code",

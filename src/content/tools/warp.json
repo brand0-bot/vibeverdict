@@ -1,0 +1,49 @@
+{
+ "name": "Warp",
+ "category": "coding-agents",
+ "verdict": "Build is $20 a month and includes $20 of agent usage at API rates, so extra use is pay-as-you-go. The free plan still includes the terminal and the agent CLI.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0/mo"
+  },
+  {
+   "plan": "Build",
+   "price": "$20/mo, or $18/mo on the annual plan ($20 of agent usage included each month)"
+  },
+  {
+   "plan": "Max",
+   "price": "$200/mo, or $180/mo on the annual plan ($200 of agent usage included each month)"
+  },
+  {
+   "plan": "Business",
+   "price": "$50/user/mo, or $45/user/mo on the annual plan, up to 25 seats ($20 of usage per seat)"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  }
+ ],
+ "pricingSource": "https://www.warp.dev/pricing",
+ "lastVerified": "2026-10-14",
+ "verified": true,
+ "pros": [
+  "Free plan includes the terminal and the Warp Agent CLI",
+  "Included agent usage is stated in dollars at API rates",
+  "Free plan can use your own API keys or a custom endpoint"
+ ],
+ "cons": [
+  "Build's included usage equals the $20 price, and extra use is pay-as-you-go",
+  "Free add-on usage is priced 20% higher than on paid plans",
+  "Business stops at 25 seats"
+ ],
+ "alternatives": [
+  "github-copilot",
+  "claude-code",
+  "cursor"
+ ],
+ "website": "https://www.warp.dev",
+ "affiliate": false,
+ "pricingNote": "On 2026-10-14, https://www.warp.dev/pricing returned HTTP 200 with the title Pricing | Warp. The terminal and agents section listed Free at $0/month, Build at $20/month or $18/month on the annual plan, Max at $200/month or $180/month on the annual plan, Business at $50/user/month or $45/user/month on the annual plan for up to 25 seats, and Enterprise as custom. The FAQ on that page says Build includes $20 of agent usage each month, Business $20 per seat, and Max $200, and that Free add-on prices are 20% higher than paid-plan prices. The same page prices Warp Factories separately: pay as you go $0/month with usage at 20% above API rates, Build $20/month with usage at API rates, Business $50/user/month, Enterprise custom. It says factory usage is billed separately. It does not state a yearly dollar total, so none is shown."
+}

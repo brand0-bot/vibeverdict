@@ -40,7 +40,8 @@
  "alternatives": [
   "cursor",
   "windsurf",
-  "claude-code"
+  "claude-code",
+  "warp"
  ],
  "website": "https://github.com/features/copilot",
  "affiliate": false,
