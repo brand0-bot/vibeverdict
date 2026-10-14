@@ -1,47 +1,27 @@
 {
  "name": "Windsurf",
  "category": "coding-agents",
- "verdict": "Windsurf no longer has its own price list: windsurf.com/pricing redirects to Devin, where Pro is $20.",
- "rating": "depends",
+ "verdict": "Windsurf no longer sells a standalone plan. Its pricing page redirects to Devin.",
+ "rating": "pending",
  "pricing": [
   {
-   "plan": "Free",
-   "price": "$0"
-  },
-  {
-   "plan": "Pro",
-   "price": "$20/mo"
-  },
-  {
-   "plan": "Max",
-   "price": "$200/mo"
-  },
-  {
-   "plan": "Teams",
-   "price": "$80/mo minimum + $40/mo per full seat"
-  },
-  {
-   "plan": "Enterprise",
-   "price": "Contact sales"
+   "plan": "Standalone",
+   "price": "Not offered"
   }
  ],
- "pricingSource": "https://devin.ai/pricing",
- "lastVerified": "2026-10-14",
- "verified": true,
- "pros": [
-  "Pro matches the usual $20 coding-agent price",
-  "Same quotas as Devin, including Desktop"
- ],
+ "pricingSource": "https://windsurf.com/pricing",
+ "lastVerified": null,
+ "verified": false,
+ "pros": [],
  "cons": [
-  "The Windsurf pricing URL now lands on Devin",
-  "Teams has an $80 minimum"
+  "There is no Windsurf checkout of its own"
  ],
  "alternatives": [
+  "devin",
   "cursor",
-  "github-copilot",
-  "cline"
+  "github-copilot"
  ],
  "website": "https://windsurf.com",
  "affiliate": false,
- "pricingNote": "On 2026-10-14, windsurf.com and windsurf.com/pricing both redirected to devin.ai. A March 2026 Devin blog listed Windsurf Teams at $40 per seat; the live pricing page does not."
+ "pricingNote": "Windsurf no longer sells standalone. On 2026-10-14, windsurf.com/pricing returned HTTP 308 with Location https://devin.ai/pricing, and windsurf.com returned HTTP 308 to https://devin.ai/desktop. Devin's prices are not repeated here."
 }

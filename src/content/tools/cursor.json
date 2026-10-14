@@ -1,49 +1,33 @@
 {
  "name": "Cursor",
  "category": "coding-agents",
- "verdict": "New buyers get Cursor inside the X Subscription from $8 a month; the docs still list a separate Pro plan at $20.",
+ "verdict": "Docs still list Pro at $20, Pro Plus at $60, and Ultra at $200, but the public pricing page shows a different bundled lineup.",
  "rating": "depends",
  "pricing": [
   {
-   "plan": "Free",
-   "price": "$0"
+   "plan": "Pro",
+   "price": "$20/mo"
   },
   {
-   "plan": "Plus",
-   "price": "$8/mo (Grok models only)"
-  },
-  {
-   "plan": "Premium",
-   "price": "$30/mo"
-  },
-  {
-   "plan": "Super",
-   "price": "$100/mo"
+   "plan": "Pro Plus",
+   "price": "$60/mo"
   },
   {
    "plan": "Ultra",
    "price": "$200/mo"
-  },
-  {
-   "plan": "Teams",
-   "price": "From $30/user/mo"
-  },
-  {
-   "plan": "Enterprise",
-   "price": "Custom"
   }
  ],
- "pricingSource": "https://cursor.com/pricing",
- "lastVerified": "2026-10-14",
- "verified": true,
+ "pricingSource": "https://cursor.com/docs/models-and-pricing",
+ "lastVerified": null,
+ "verified": false,
  "pros": [
-  "Agent, cloud agents, and Bugbot from Premium up",
-  "Third-party models are available at API list price",
-  "Usage pool refreshes weekly"
+  "Deep codebase context",
+  "Strong agent and tab completion",
+  "Multiple frontier models"
  ],
  "cons": [
-  "Plus cannot use third-party models",
-  "A second, older plan list is still in the docs"
+  "The public pricing page does not match the docs",
+  "Usage past the included pool is pay-as-you-go"
  ],
  "alternatives": [
   "windsurf",
@@ -52,5 +36,5 @@
  ],
  "website": "https://cursor.com",
  "affiliate": false,
- "pricingNote": "cursor.com/pricing is The X Subscription, which also includes Grok and X. The docs at cursor.com/docs/account/pricing still list legacy plans: Start ₹649/mo (India only), Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, and Teams at $40 or $120 per user. x.ai says existing Cursor plans continue and switching is optional."
+ "pricingNote": "Unconfirmed, docs-sourced. On 2026-10-14, cursor.com/pricing (HTTP 200, title \"Cursor · Pricing\", no redirect) did not list Pro, Pro Plus, or these dollar amounts. It listed Free $0/month, Plus $8/month, Premium $30/month, Super $100/month, Ultra $200/month, and Teams $30+/user/month, mixed with Grok and X features, so those tiers are not shown here. The prices above are quoted from cursor.com/docs/models-and-pricing, which cursor.com/docs/account/pricing redirects to: \"Pro $20/mo\", \"Pro Plus $60/mo\", \"Ultra $200/mo\"."
 }
