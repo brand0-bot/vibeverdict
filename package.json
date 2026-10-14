@@ -12,10 +12,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^5.18.2",
     "playwright": "^1.64.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "wrangler": "^4.151.0"
+  }
 }

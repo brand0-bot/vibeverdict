@@ -9,13 +9,15 @@ npm install
 npm run dev
 ```
 
-## Deploy on Cloudflare Pages
+## Deploy on Cloudflare Workers
 
-The site is a static [Astro](https://astro.build) build.
+The site is a static [Astro](https://astro.build) build. `wrangler.jsonc` names the Worker `vibeverdict` and serves `./dist` with no Worker script. Node.js is pinned to 22.19.0 in `.node-version`.
+
+For Git-connected Cloudflare Workers Builds:
 
 | Setting | Value |
 | --- | --- |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
+| Deploy command | `npx wrangler deploy` |
 
-Connect this repository in Cloudflare Pages, use those build settings, and deploy. `astro.config.mjs` sets the canonical site to `https://vibeverdict.ai`.
+`astro.config.mjs` sets the canonical site to `https://vibeverdict.ai`.

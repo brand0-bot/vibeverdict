@@ -1,0 +1,8 @@
+{
+  "name": "vibeverdict",
+  // Current date. Workers uses this to select compatibility behavior.
+  "compatibility_date": "2026-10-14",
+  "assets": {
+    "directory": "./dist"
+  }
+}
