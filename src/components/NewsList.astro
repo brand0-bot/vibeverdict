@@ -393,12 +393,12 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
     overflow: hidden;
     text-overflow: ellipsis;
     pointer-events: none;
-    background-color: color-mix(in srgb, color-mix(in srgb, var(--pill, #4c1d95) 62%, #0a0616) 70%, transparent);
-    border: 1px solid color-mix(in srgb, var(--pill-ink, #ffffff) 70%, transparent);
-    box-shadow: 0 1px 3px rgba(8, 4, 20, 0.4);
-    backdrop-filter: blur(8px) saturate(1.25);
-    -webkit-backdrop-filter: blur(8px) saturate(1.25);
-    text-shadow: 0 1px 1px rgba(8, 4, 20, 0.7);
+    background-color: color-mix(in srgb, color-mix(in srgb, var(--pill, #4c1d95) 62%, #0a0616) 40%, transparent);
+    border: 1px solid color-mix(in srgb, var(--pill-ink, #ffffff) 40%, transparent);
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    text-shadow: 0 1px 2px rgba(8, 4, 20, 0.85);
   }
   @media (min-width: 700px) {
     .vv-news-pill {
