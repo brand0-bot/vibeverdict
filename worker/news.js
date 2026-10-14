@@ -1,7 +1,7 @@
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const WINDOW_MS = 10 * 24 * 60 * 60 * 1000;
 const REFRESH_MINUTES = 30;
-const CACHE_URL = "https://vibeverdict.ai/api/ai-news-covers";
+const CACHE_URL = "https://vibeverdict.ai/api/ai-news-clean";
 const OG_CACHE_PREFIX = "https://vibeverdict.ai/og-image-cache/v1/";
 const OG_FETCH_LIMIT = 12;
 const OG_HOSTS = new Set([
@@ -196,26 +196,95 @@ function itemsFromXml(xml, source) {
   return items;
 }
 
+const REDDIT_MIN_SCORE = 5;
+const REDDIT_MIN_COMMENTS = 2;
+const HN_MIN_POINTS = 30;
+const SUBSTANTIVE_CHARS = 400;
+const BAD_FLAIR = /\b(memes?|shitposts?|humou?r|satire|comedy|fluff|rants?|low[- ]?effort)\b/i;
+const PREFERRED_FLAIR = /\b(news|discussion)\b/i;
+const BLOCKED_TITLE = /\b(?:niggers?|niggas?|fagg?ots?|fags?|retards?|trann(?:y|ies)|kikes?|spics?|chinks?|wetbacks?|cunts?|sluts?|whores?|bitches?|bastards?|assholes?|dumbasses?|dipshits?|shitheads?|motherfuckers?|fuck(?:ing|er|ers)?|shits?|bullshit|porn|porno|nudes?|nsfw|xxx|hentai|onlyfans|dicks?|cocks?|puss(?:y|ies)|blowjobs?)\b/i;
+const INSULT_TITLE = /\b(?:idiots?|morons?|imbeciles?|jackasses?)\b/i;
+const APPEARANCE_TITLE = /\b(?:(?:gay|ugly|hot|sexy|fat|gross|weird|dumb)est\s+looking|(?:ugly|hideous|gross)\s+(?:face|person|guy|man|woman|dude)|looks?\s+(?:so\s+)?(?:ugly|gay|fat|gross|hideous)|looking\s+(?:person|guy|girl|man|woman|dude))\b/i;
+const RANT_TITLE = /\b(?:shitposts?|memes?|unpopular opinion|hot take|is it just me|am i the only|anyone else|lmao|lmfao|rofl|omg|wtf|stfu)\b|!{2,}|\?{3,}/i;
+
+function isAllLowerTitle(title) {
+  return /[a-z]/.test(title) && !/[A-Z]/.test(title);
+}
+
+function isVeryShortTitle(title) {
+  const words = String(title || "").trim().split(/\s+/).filter(Boolean);
+  return words.length < 5 || String(title || "").trim().length < 28;
+}
+
+function blockedTitleReason(title) {
+  const text = String(title || "");
+  if (APPEARANCE_TITLE.test(text)) return "appearance";
+  if (BLOCKED_TITLE.test(text)) return "blocked";
+  if (INSULT_TITLE.test(text)) return "insult";
+  return "";
+}
+
+function communityStyleReason(title) {
+  const text = String(title || "").trim();
+  if (isAllLowerTitle(text)) return "lowercase";
+  if (isVeryShortTitle(text)) return "short";
+  if (RANT_TITLE.test(text)) return "rant";
+  return "";
+}
+
+function redditSelfText(row) {
+  return decode(row && row.selftext || "").replace(/^\[(removed|deleted)\]$/, "").trim();
+}
+
+function externalRedditPost(row) {
+  if (!row || row.is_self) return false;
+  const domain = String(row.domain || "").toLowerCase().replace(/^www\./, "");
+  if (!domain || domain.startsWith("self.")) return false;
+  if (domain === "i.redd.it" || domain === "v.redd.it" || domain === "preview.redd.it") return false;
+  if (domain === "reddit.com" || domain.endsWith(".reddit.com")) return false;
+  return true;
+}
+
+export function redditRejection(row) {
+  if (!row || row.removed_by_category || row.banned_by) return "removed";
+  if (row.over_18) return "nsfw";
+  const title = decode(row.title);
+  if (!title) return "empty";
+  const blocked = blockedTitleReason(title);
+  if (blocked) return blocked;
+  const style = communityStyleReason(title);
+  if (style) return style;
+  const flair = String(row.link_flair_text || "");
+  if (BAD_FLAIR.test(flair)) return "flair";
+  const score = Number(row.score);
+  const comments = Number(row.num_comments);
+  if (!(score >= REDDIT_MIN_SCORE) || !(comments >= REDDIT_MIN_COMMENTS)) return "engagement";
+  if (!externalRedditPost(row) && redditSelfText(row).length < SUBSTANTIVE_CHARS) return "low-effort";
+  return "";
+}
+
 function itemsFromReddit(payload, source) {
   const rows = payload && Array.isArray(payload.data) ? payload.data : [];
   const items = [];
   for (const row of rows.slice(0, 15)) {
-    if (!row || row.removed_by_category || row.banned_by) continue;
+    if (redditRejection(row)) continue;
     const title = decode(row.title);
     const permalink = String(row.permalink || "");
     const url = safeUrl(permalink.startsWith("http") ? permalink : `https://www.reddit.com${permalink}`);
     const created = Number(row.created_utc);
     if (!title || !url || !created) continue;
     const score = Number(row.score);
+    const flair = String(row.link_flair_text || "");
+    const preferred = externalRedditPost(row) && PREFERRED_FLAIR.test(flair);
     items.push({
       title,
       url,
       source: source.name,
       region: source.region,
       publishedAt: new Date(created * 1000).toISOString(),
-      popularity: Number.isFinite(score) && score > 0 ? score : 0,
+      popularity: (Number.isFinite(score) && score > 0 ? score : 0) + (preferred ? 30 : 0),
       image: imageFromReddit(row),
-      summary: clipText(decode(row.selftext || "").replace(/^\[(removed|deleted)\]$/, ""), 700),
+      summary: clipText(redditSelfText(row), 700),
     });
   }
   return items;
@@ -227,10 +296,12 @@ function itemsFromHn(payload) {
   for (const hit of hits) {
     const title = decode(hit.title);
     if (!title || !AI_TITLE.test(title)) continue;
+    if (blockedTitleReason(title) || communityStyleReason(title)) continue;
     const url = safeUrl(hit.url) || safeUrl(hit.story_url) || safeUrl(`https://news.ycombinator.com/item?id=${hit.objectID || ""}`);
     const publishedAt = Date.parse(hit.created_at);
     if (!url || !publishedAt) continue;
     const points = Number(hit.points);
+    if (!(points >= HN_MIN_POINTS)) continue;
     items.push({
       title,
       url,
@@ -278,6 +349,8 @@ export function rankItems(items, now = Date.now()) {
   const kept = [];
   const counts = new Map();
   for (const item of fresh) {
+    if (blockedTitleReason(item.title)) continue;
+    if (item.region === "Community" && communityStyleReason(item.title)) continue;
     if (kept.some((other) => sameStory(other, item))) continue;
     const count = counts.get(item.source) || 0;
     if (count >= 4) continue;

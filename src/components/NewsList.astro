@@ -314,7 +314,7 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         root.appendChild(li);
       });
     }
-    fetch("/api/ai-news-covers", { headers: { accept: "application/json" } })
+    fetch("/api/ai-news-clean", { headers: { accept: "application/json" } })
       .then(function (response) {
         if (!response.ok) throw new Error("news");
         return response.json();
