@@ -202,8 +202,6 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
       var sourceFont = "700 18px Inter, system-ui, sans-serif";
       var lines = wrapText(item.title, headlineFont, 372, 3);
       var source = shrink(String(item.source || "AI news").toUpperCase(), sourceFont, 340);
-      var label = theme.label;
-      var labelWidth = Math.ceil(measure(label, "700 16px Inter, system-ui, sans-serif")) + 28;
       var tspans = lines.map(function (line, index) {
         return '<tspan x="36" dy="' + (index === 0 ? 0 : 42) + '">' + esc(line) + "</tspan>";
       }).join("");
@@ -230,8 +228,6 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         + '<circle cx="520" cy="70" r="' + blob + '" fill="' + theme.accent + '" fill-opacity="0.22"/>'
         + '<circle cx="590" cy="250" r="' + Math.round(blob * 0.72) + '" fill="#fff" fill-opacity="0.08"/>'
         + '<g transform="translate(456 78)" filter="url(#' + pid + 'shadow)">' + icon(THEMES[item.topic] ? item.topic : "ai", theme.accent) + "</g>"
-        + '<rect x="36" y="28" width="' + labelWidth + '" height="32" rx="16" fill="#fff" fill-opacity="0.16" stroke="#fff" stroke-opacity="0.35"/>'
-        + '<text x="50" y="49" fill="#f8f7ff" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700">' + esc(label) + "</text>"
         + '<text x="36" y="86" fill="' + theme.accent + '" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="1.2">' + esc(source) + "</text>"
         + '<text x="36" y="132" fill="#f8f7ff" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="800" filter="url(#' + pid + 'shadow)">' + tspans + "</text>"
         + "</svg>";
@@ -248,6 +244,17 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
       img.setAttribute("data-topic", theme.label);
       img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(coverSvg(item));
       media.replaceChildren(img);
+    }
+    function mountPill(media, item) {
+      var theme = THEMES[item.topic] || THEMES.ai;
+      var pill = document.createElement("span");
+      pill.className = "vv-news-pill";
+      pill.textContent = item.topicLabel || theme.label;
+      pill.style.setProperty("--pill", theme.colors[0]);
+      pill.style.setProperty("--pill-ink", theme.accent);
+      var previous = media.querySelector(".vv-news-pill");
+      if (previous) previous.remove();
+      media.appendChild(pill);
     }
     function fail(root, message) {
       var status = root.parentElement && root.parentElement.querySelector("[data-news-status]");
@@ -288,12 +295,14 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
           img.addEventListener("error", function () {
             li.removeAttribute("data-photo");
             mountCover(media, item, li);
+            mountPill(media, item);
           });
           media.appendChild(img);
           li.setAttribute("data-photo", "1");
         } else {
           mountCover(media, item, li);
         }
+        mountPill(media, item);
         var title = document.createElement("span");
         title.className = "vv-news-title";
         title.textContent = item.title;
@@ -364,6 +373,43 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+  .vv-news-pill {
+    position: absolute;
+    z-index: 2;
+    top: 8px;
+    left: 8px;
+    max-width: calc(100% - 16px);
+    margin: 0;
+    padding: 3px 10px 4px;
+    border-radius: 999px;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    color: #f8f7ff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)),
+      color-mix(in srgb, var(--pill, #4c1d95) 58%, rgba(10, 6, 22, 0.82));
+    border: 1px solid color-mix(in srgb, var(--pill-ink, #ffffff) 58%, rgba(255, 255, 255, 0.42));
+    box-shadow: 0 1px 3px rgba(8, 4, 20, 0.55);
+    backdrop-filter: blur(8px) saturate(1.25);
+    -webkit-backdrop-filter: blur(8px) saturate(1.25);
+    text-shadow: 0 1px 1px rgba(8, 4, 20, 0.7);
+  }
+  @media (min-width: 700px) {
+    .vv-news-pill {
+      top: 14px;
+      left: 16px;
+      max-width: calc(100% - 32px);
+      padding: 5px 13px 6px;
+      font-size: 15px;
+    }
   }
   .vv-news-title { color: var(--text); font-weight: 700; line-height: 1.35; }
   .vv-news-link:hover .vv-news-title { color: #c4b5fd; }
