@@ -94,3 +94,16 @@ export function guidesFor(slug, bySlug) {
   }
   return pages;
 }
+
+export function guidesForTools(slugs, bySlug, excludeHref) {
+  const seen = new Set();
+  const pages = [];
+  for (const slug of slugs) {
+    for (const page of guidesFor(slug, bySlug)) {
+      if (page.href === excludeHref || seen.has(page.href)) continue;
+      seen.add(page.href);
+      pages.push(page);
+    }
+  }
+  return pages;
+}

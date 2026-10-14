@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import ToolOffer from '../../components/ToolOffer.astro';
 import { bySlug } from '../../lib/data.js';
-import { comparisons, comparisonTitle } from '../../lib/guides.js';
+import { comparisons, comparisonTitle, guidesForTools } from '../../lib/guides.js';
 
 export function getStaticPaths() {
   return comparisons.map(page => ({
@@ -16,6 +16,7 @@ const title = comparisonTitle(page, bySlug);
 const description = page.description || `${title}: verdicts side by side. Prices appear only when we verified them on the vendor's site.`;
 const verdict = page.verdict || tools.map(t => t.verdict).join(' ');
 const pageUrl = `https://vibeverdict.ai/compare/${page.slug}/`;
+const related = guidesForTools(page.tools, bySlug, `/compare/${page.slug}/`);
 const schema = [
   {
     '@context': 'https://schema.org',
@@ -58,5 +59,5 @@ const schema = [
 <h1>{title}</h1>
 <div class="card" style="font-size:19px"><b>{verdict}</b></div>
 <div class="grid" style="margin-top:18px">{tools.map(t => <ToolOffer t={t} />)}</div>
-{page.related?.length > 0 && <p>Related: {page.related.map((link, i) => <><a href={link.href}>{link.title}</a>{i < page.related.length - 1 ? ' · ' : ''}</>)}</p>}
+{related.length > 0 && <><h2>Related</h2><ul>{related.map(r => <li><a href={r.href}>{r.title}</a></li>)}</ul></>}
 </Base>

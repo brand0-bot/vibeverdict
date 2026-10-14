@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { tools, categories, label } from '../../lib/data.js';
+import { tools, categories, label, bySlug } from '../../lib/data.js';
+import { guidesForTools } from '../../lib/guides.js';
 export function getStaticPaths(){ return Object.keys(categories).map(c=>({params:{cat:c}})); }
 const { cat } = Astro.params;
 const list = tools.filter(t => t.category === cat);
@@ -14,6 +15,7 @@ const blurbs = {
   'writing': 'Writing and docs verdicts and pricing for Notion AI, Gamma, Jasper, Beautiful.ai, and Tome. Prices we could not verify are marked.'
 };
 const description = blurbs[cat];
+const related = guidesForTools(list.map(t => t.slug), bySlug);
 const schema = [
   { '@context': 'https://schema.org', '@type': 'ItemList', name, itemListElement: list.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: `https://vibeverdict.ai/tools/${t.slug}/` })) },
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -27,4 +29,5 @@ const schema = [
 <p class="mut">{description}</p>
 <table><tr><th>Tool</th><th>Verdict</th><th>Status</th></tr>
 {list.map(t=>(<tr><td><a href={`/tools/${t.slug}/`}><b>{t.name}</b></a></td><td><span class={`pill ${t.rating}`}>{label[t.rating]}</span> {t.verdict}</td><td class="mut" style="font-size:13px">{t.verified?`✓ ${t.lastVerified}`:'⚠ unverified'}</td></tr>))}</table>
+{related.length > 0 && <><h2>Comparisons and roundups</h2><ul>{related.map(r => <li><a href={r.href}>{r.title}</a></li>)}</ul></>}
 </Base>

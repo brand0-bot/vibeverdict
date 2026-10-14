@@ -9,8 +9,8 @@ const schema={"@context":"https://schema.org","@type":"WebSite",name:"VibeVerdic
 <NewsletterForm /></section>
 <section><h2>Comparisons and roundups</h2><div class="grid">
 {roundups.map(page => <a class="card" href={`/best/${page.slug}/`}><b>{page.title}</b><p class="mut" style="font-size:14px;margin:8px 0 0">{page.verdict}</p></a>)}
-{comparisons.filter(page => page.verdict).map(page => <a class="card" href={`/compare/${page.slug}/`}><b>{comparisonTitle(page, bySlug)}</b><p class="mut" style="font-size:14px;margin:8px 0 0">{page.description}</p></a>)}
+{comparisons.map(page => <a class="card" href={`/compare/${page.slug}/`}><b>{comparisonTitle(page, bySlug)}</b><p class="mut" style="font-size:14px;margin:8px 0 0">{page.description || 'Side-by-side verdicts. Prices appear only when verified on the vendor site.'}</p></a>)}
 </div><p><a href="/compare/">All comparisons</a> · <a href="/best/">All roundups</a></p></section>
-{Object.entries(categories).map(([k,v])=>(<section><h2>{v} <a style="font-size:14px" href={`/category/${k}/`}>see all →</a></h2><div class="grid">
+{Object.entries(categories).map(([k,v])=>(<section><h2>{v}</h2><p class="mut"><a href={`/category/${k}/`}>See all {v}</a></p><div class="grid">
 {tools.filter(t=>t.category===k).map(t=>(<a class="card" href={`/tools/${t.slug}/`} style="color:inherit;text-decoration:none"><div style="display:flex;justify-content:space-between"><b>{t.name}</b><span class={`pill ${t.rating}`}>{label[t.rating]}</span></div><p class="mut" style="font-size:14px;margin:8px 0 0">{t.verdict}</p><div style="font-size:12px;margin-top:8px" class="mut">{t.verified?`✓ Verified ${t.lastVerified}`:'⚠ Pricing unverified'}</div></a>))}</div></section>))}
 </Base>
