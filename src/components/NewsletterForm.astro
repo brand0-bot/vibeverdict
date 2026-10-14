@@ -1,9 +1,41 @@
 <div class="beehiiv-slot">
   <p class="beehiiv-pending mut">Weekly signup is loading.</p>
-  <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="f99e0aaf-6091-4c8c-8644-24b908d02966"></script>
+  <script is:inline data-beehiiv-form="f99e0aaf-6091-4c8c-8644-24b908d02966">
+    (function () {
+      var slot = document.currentScript && document.currentScript.parentNode;
+      if (!slot) return;
+      var pending = slot.querySelector(".beehiiv-pending");
+      function shown() {
+        var iframe = slot.querySelector("iframe");
+        if (!iframe) return false;
+        if (iframe.getAttribute("data-bhv-sized")) return true;
+        var wrap = iframe.parentElement;
+        if (!wrap || !wrap.style) return false;
+        var h = wrap.style.height;
+        return h !== "0" && h !== "0px";
+      }
+      function hide() {
+        if (pending && shown()) pending.hidden = true;
+      }
+      new MutationObserver(hide).observe(slot, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["style", "data-bhv-sized"]
+      });
+      setTimeout(function () {
+        if (pending) pending.hidden = true;
+      }, 8000);
+    })();
+  </script>
+  <p class="beehiiv-fallback">
+    <a class="btn" href="https://vibeverdict.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe on Beehiiv</a>
+  </p>
 </div>
 <style>
   .beehiiv-slot { max-width: 480px; min-height: 88px; margin: 16px 0; }
-  .beehiiv-pending { margin: 0; font-size: 14px; }
+  .beehiiv-pending { margin: 0 0 10px; font-size: 14px; }
   .beehiiv-slot:has(iframe[data-bhv-sized]) .beehiiv-pending { display: none; }
+  .beehiiv-fallback { margin: 12px 0 0; }
+  .beehiiv-fallback a { display: inline-block; text-decoration: none; }
 </style>
