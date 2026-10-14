@@ -1,7 +1,22 @@
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const WINDOW_MS = 10 * 24 * 60 * 60 * 1000;
 const REFRESH_MINUTES = 30;
-const CACHE_URL = "https://vibeverdict.ai/api/ai-news";
+const CACHE_URL = "https://vibeverdict.ai/api/ai-news-media";
+const OG_CACHE_PREFIX = "https://vibeverdict.ai/og-image-cache/v1/";
+const OG_FETCH_LIMIT = 12;
+const OG_HOSTS = new Set([
+  "techcrunch.com",
+  "www.theverge.com",
+  "theverge.com",
+  "www.theguardian.com",
+  "theguardian.com",
+  "www.theregister.com",
+  "theregister.com",
+  "www.nature.com",
+  "nature.com",
+  "www.lemonde.fr",
+  "lemonde.fr",
+]);
 
 const SOURCES = [
   { id: "techcrunch", name: "TechCrunch", region: "US", url: "https://techcrunch.com/category/artificial-intelligence/feed/" },
@@ -59,6 +74,68 @@ function safeUrl(value) {
   }
 }
 
+function attr(fragment, name) {
+  const match = String(fragment || "").match(new RegExp(`\\b${name}\\s*=\\s*["']([^"']*)["']`, "i"));
+  return match ? decode(match[1]) : "";
+}
+
+function acceptImage(value, width) {
+  const url = safeUrl(value);
+  if (!url) return "";
+  if (width && width < 80) return "";
+  if (/favicon|sprite|pixel|spacer|1x1|blank\.gif|emoji/i.test(url)) return "";
+  return url;
+}
+
+function imageFromBlock(block) {
+  const found = [];
+  const tagRe = /<(media:content|media:thumbnail|enclosure)\b([^>]*)\/?>/gi;
+  let match;
+  while ((match = tagRe.exec(block))) {
+    const kind = match[1].toLowerCase();
+    const attrs = match[2];
+    const type = attr(attrs, "type").toLowerCase();
+    const medium = attr(attrs, "medium").toLowerCase();
+    if (medium && medium !== "image") continue;
+    if (type && !type.startsWith("image/")) continue;
+    const url = attr(attrs, "url");
+    if (kind === "enclosure" && !type && !/\.(?:jpe?g|png|webp|gif|avif)(?:$|\?)/i.test(url)) continue;
+    if (url) found.push({ url, width: Number(attr(attrs, "width")) || 0 });
+  }
+  const imgRe = /<img\b[^>]*>/gi;
+  while ((match = imgRe.exec(block))) {
+    const url = attr(match[0], "src");
+    if (url) found.push({ url, width: Number(attr(match[0], "width")) || 0 });
+  }
+  found.sort((a, b) => (b.width || 0) - (a.width || 0));
+  for (const candidate of found) {
+    const image = acceptImage(candidate.url, candidate.width);
+    if (image) return image;
+  }
+  return "";
+}
+
+function redditPreviewUrl(image) {
+  const options = [];
+  if (image && image.source && image.source.url) options.push(image.source);
+  if (image && Array.isArray(image.resolutions)) options.push(...image.resolutions);
+  const usable = options.filter((option) => option && option.url && Number(option.width) >= 480);
+  usable.sort((a, b) => Math.abs(Number(a.width) - 960) - Math.abs(Number(b.width) - 960));
+  return usable.length ? String(usable[0].url) : "";
+}
+
+function imageFromReddit(row) {
+  const images = row && row.preview && Array.isArray(row.preview.images) ? row.preview.images : [];
+  if (images.length) {
+    const source = images[0] && images[0].source;
+    const image = acceptImage(decode(redditPreviewUrl(images[0])), Number(source && source.width) || 0);
+    if (image) return image;
+  }
+  const thumb = String(row && row.thumbnail || "");
+  if (/^https?:\/\//i.test(thumb)) return acceptImage(thumb, Number(row.thumbnail_width) || 0);
+  return "";
+}
+
 function itemsFromXml(xml, source) {
   const chunks = String(xml || "").split(/<(?:item|entry)\b/i).slice(1);
   const items = [];
@@ -76,6 +153,7 @@ function itemsFromXml(xml, source) {
       region: source.region,
       publishedAt: new Date(publishedAt).toISOString(),
       popularity: source.hotRank ? Math.max(1, 12 - index) * 2 : 0,
+      image: imageFromBlock(block),
     });
   });
   return items;
@@ -99,6 +177,7 @@ function itemsFromReddit(payload, source) {
       region: source.region,
       publishedAt: new Date(created * 1000).toISOString(),
       popularity: Number.isFinite(score) && score > 0 ? score : 0,
+      image: imageFromReddit(row),
     });
   }
   return items;
@@ -170,6 +249,7 @@ export function rankItems(items, now = Date.now()) {
       source: item.source,
       region: item.region,
       publishedAt: item.publishedAt,
+      image: acceptImage(item.image, 0) || null,
     });
     if (kept.length >= 40) break;
   }
@@ -193,6 +273,115 @@ async function loadSource(source) {
   return itemsFromXml(await response.text(), source);
 }
 
+function ogHostAllowed(pageUrl) {
+  try {
+    return OG_HOSTS.has(new URL(pageUrl).hostname.toLowerCase());
+  } catch {
+    return false;
+  }
+}
+
+function ogCacheRequest(pageUrl) {
+  return new Request(OG_CACHE_PREFIX + encodeURIComponent(pageUrl));
+}
+
+async function readCachedOg(pageUrl) {
+  try {
+    if (typeof caches === "undefined" || !caches.default) return null;
+    const hit = await caches.default.match(ogCacheRequest(pageUrl));
+    if (!hit) return null;
+    const data = await hit.json();
+    return acceptImage(data && data.image, 0);
+  } catch {
+    return null;
+  }
+}
+
+async function storeCachedOg(pageUrl, image) {
+  const ttl = image ? 7 * 24 * 3600 : 12 * 3600;
+  const response = new Response(JSON.stringify({ image: image || "" }), {
+    headers: {
+      "content-type": "application/json",
+      "cache-control": `public, max-age=${ttl}`,
+    },
+  });
+  try {
+    if (typeof caches === "undefined" || !caches.default) return;
+    await caches.default.put(ogCacheRequest(pageUrl), response);
+  } catch { /* a missed cache still returns the image for this response */ }
+}
+
+async function readHead(response) {
+  if (!response.body || typeof response.body.getReader !== "function") {
+    return (await response.text()).slice(0, 65536);
+  }
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let html = "";
+  try {
+    while (html.length < 65536) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      html += decoder.decode(value, { stream: true });
+      if (/<\/head>/i.test(html)) break;
+    }
+  } finally {
+    try { await reader.cancel(); } catch { /* the body may already be closed */ }
+  }
+  return html;
+}
+
+function extractOg(html, pageUrl) {
+  const patterns = [
+    /<meta\b[^>]*\bproperty\s*=\s*["']og:image(?::secure_url|:url)?["'][^>]*>/gi,
+    /<meta\b[^>]*\bname\s*=\s*["']twitter:image(?::src)?["'][^>]*>/gi,
+  ];
+  for (const pattern of patterns) {
+    let match;
+    while ((match = pattern.exec(html))) {
+      const content = attr(match[0], "content");
+      let absolute = "";
+      try { absolute = new URL(content, pageUrl).href; } catch { absolute = ""; }
+      const image = acceptImage(absolute, 0);
+      if (image) return image;
+    }
+  }
+  return "";
+}
+
+async function fetchOgImage(pageUrl) {
+  const response = await fetch(pageUrl, {
+    headers: { "user-agent": UA, accept: "text/html,application/xhtml+xml" },
+    redirect: "follow",
+    signal: AbortSignal.timeout(6000),
+  });
+  if (!response.ok) return { image: "", cache: response.status === 404 || response.status === 410 };
+  const type = response.headers.get("content-type") || "";
+  if (type && !/html|xml/i.test(type)) return { image: "", cache: true };
+  const html = await readHead(response);
+  return { image: extractOg(html, response.url || pageUrl), cache: true };
+}
+
+async function attachOgImages(items) {
+  const pending = [];
+  for (const item of items) {
+    if (item.image || !ogHostAllowed(item.url)) continue;
+    const cached = await readCachedOg(item.url);
+    if (cached !== null) {
+      item.image = cached || null;
+      continue;
+    }
+    pending.push(item);
+  }
+  await Promise.all(pending.slice(0, OG_FETCH_LIMIT).map(async (item) => {
+    try {
+      const found = await fetchOgImage(item.url);
+      item.image = found.image || null;
+      if (found.cache) await storeCachedOg(item.url, found.image);
+    } catch { /* leave the card on the placeholder */ }
+  }));
+}
+
 export async function buildNews() {
   const results = await Promise.all(SOURCES.map(async (source) => {
     try {
@@ -203,6 +392,9 @@ export async function buildNews() {
   }));
   const failed = results.filter((result) => !result.ok).length;
   const items = rankItems(results.flatMap((result) => result.items));
+  try {
+    await attachOgImages(items);
+  } catch { /* headlines still render without thumbnails */ }
   return {
     ok: failed < SOURCES.length,
     updatedAt: new Date().toISOString(),

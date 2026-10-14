@@ -55,11 +55,43 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         var li = document.createElement("li");
         li.className = "vv-news-item";
         var link = document.createElement("a");
-        link.className = "vv-news-title";
+        link.className = "vv-news-link";
         link.href = safeUrl(item.url);
         link.target = "_blank";
         link.rel = "noopener noreferrer";
-        link.textContent = item.title;
+        var media = document.createElement("div");
+        media.className = "vv-news-media";
+        media.setAttribute("aria-hidden", "true");
+        function placeholder() {
+          var span = document.createElement("span");
+          span.className = "vv-news-ph";
+          span.textContent = item.source || "AI news";
+          return span;
+        }
+        var image = safeUrl(item.image || "");
+        if (image) {
+          var img = document.createElement("img");
+          img.alt = "";
+          img.width = 640;
+          img.height = 360;
+          img.loading = "lazy";
+          img.decoding = "async";
+          img.referrerPolicy = "no-referrer";
+          img.src = image;
+          img.addEventListener("error", function () {
+            li.removeAttribute("data-photo");
+            img.replaceWith(placeholder());
+          });
+          media.appendChild(img);
+          li.setAttribute("data-photo", "1");
+        } else {
+          media.appendChild(placeholder());
+        }
+        var title = document.createElement("span");
+        title.className = "vv-news-title";
+        title.textContent = item.title;
+        link.appendChild(media);
+        link.appendChild(title);
         var meta = document.createElement("p");
         meta.className = "vv-news-meta";
         [item.source, item.region].forEach(function (label) {
@@ -80,7 +112,7 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         root.appendChild(li);
       });
     }
-    fetch("/api/ai-news", { headers: { accept: "application/json" } })
+    fetch("/api/ai-news-media", { headers: { accept: "application/json" } })
       .then(function (response) {
         if (!response.ok) throw new Error("news");
         return response.json();
@@ -108,10 +140,33 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 12px 14px;
+    padding: 10px;
   }
-  .vv-news-title { color: var(--text); font-weight: 700; text-decoration: none; }
-  .vv-news-title:hover { color: #c4b5fd; }
-  .vv-news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 6px 0 0; font-size: 12px; color: var(--mut); }
+  .vv-news-link { display: flex; flex-direction: column; gap: 10px; color: inherit; text-decoration: none; }
+  .vv-news-media {
+    display: grid;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #10141d;
+  }
+  .vv-news-media > * { grid-area: 1 / 1; width: 100%; height: 100%; min-width: 0; }
+  .vv-news-media img { object-fit: cover; display: block; }
+  .vv-news-ph {
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    background:
+      radial-gradient(85% 90% at 100% 0%, rgba(139, 92, 246, 0.42), transparent 56%),
+      linear-gradient(165deg, #1c2436 0%, #0c1018 68%);
+    color: #ddd6fe;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .vv-news-title { color: var(--text); font-weight: 700; line-height: 1.35; }
+  .vv-news-link:hover .vv-news-title { color: #c4b5fd; }
+  .vv-news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 8px 4px 2px; font-size: 12px; color: var(--mut); }
   .vv-news-region { color: #c4b5fd; font-weight: 700; }
 </style>
