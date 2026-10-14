@@ -1,7 +1,7 @@
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const WINDOW_MS = 10 * 24 * 60 * 60 * 1000;
 const REFRESH_MINUTES = 30;
-const CACHE_URL = "https://vibeverdict.ai/api/news";
+const CACHE_URL = "https://vibeverdict.ai/api/headlines";
 
 const SOURCES = [
   { id: "techcrunch", name: "TechCrunch", region: "US", url: "https://techcrunch.com/category/artificial-intelligence/feed/" },
@@ -191,7 +191,8 @@ function newsResponse(payload, ttl) {
   return new Response(JSON.stringify(payload), {
     headers: {
       "content-type": "application/json; charset=utf-8",
-      "cache-control": `public, max-age=120, s-maxage=${ttl}`,
+      "cache-control": "public, max-age=120",
+      "cdn-cache-control": `public, max-age=${ttl}`,
     },
   });
 }

@@ -80,7 +80,7 @@ const { limit = 30, heading = "", more = "" } = Astro.props;
         root.appendChild(li);
       });
     }
-    fetch("/api/news", { headers: { accept: "application/json" } })
+    fetch("/api/headlines", { headers: { accept: "application/json" } })
       .then(function (response) {
         if (!response.ok) throw new Error("news");
         return response.json();
