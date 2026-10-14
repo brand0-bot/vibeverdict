@@ -48,12 +48,12 @@ const schema = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://vibeverdict.ai/' },
       { '@type': 'ListItem', position: 2, name: 'Comparisons', item: 'https://vibeverdict.ai/compare/' },
-      { '@type': 'ListItem', position: 3, name: title }
+      { '@type': 'ListItem', position: 3, name: title, item: pageUrl }
     ]
   }
 ];
 ---
-<Base title={`${title}: which is worth it? (2026)`} description={description} schema={schema}>
+<Base title={`${title}: which is worth it?`} description={description} schema={schema}>
 <p class="mut" style="margin-top:24px"><a href="/">Home</a> / <a href="/compare/">Comparisons</a></p>
 <h1>{title}</h1>
 <div class="card" style="font-size:19px"><b>{verdict}</b></div>

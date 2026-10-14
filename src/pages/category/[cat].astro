@@ -1,10 +1,30 @@
 ---
-import Base from '../../layouts/Base.astro'; import { tools, categories, label } from '../../lib/data.js';
+import Base from '../../layouts/Base.astro';
+import { tools, categories, label } from '../../lib/data.js';
 export function getStaticPaths(){ return Object.keys(categories).map(c=>({params:{cat:c}})); }
-const { cat } = Astro.params; const list=tools.filter(t=>t.category===cat);
-const schema={"@context":"https://schema.org","@type":"ItemList",name:categories[cat],itemListElement:list.map((t,i)=>({"@type":"ListItem",position:i+1,url:`https://vibeverdict.ai/tools/${t.slug}/`}))};
+const { cat } = Astro.params;
+const list = tools.filter(t => t.category === cat);
+const name = categories[cat];
+const blurbs = {
+  'coding-agents': 'Coding agent verdicts and pricing for Cursor, Claude Code, GitHub Copilot, Windsurf, and the other tools in this category.',
+  'app-builders': 'App builder verdicts and pricing for Lovable, Bolt.new, v0, Replit, and Base44. A price is shown only after we verify it on the vendor site.',
+  'chat': 'Chat and LLM verdicts and pricing for ChatGPT, Claude, Gemini, Grok, and Perplexity, with the date each price was last checked.',
+  'agent-frameworks': 'Agent and automation verdicts and pricing for n8n, Zapier, Make, CrewAI, and LangChain. Unverified prices are left off the page.',
+  'media': 'Image, voice, and music verdicts and pricing for ElevenLabs, Murf, Midjourney, Runway, and Suno. Each price links to the official source.',
+  'writing': 'Writing and docs verdicts and pricing for Notion AI, Gamma, Jasper, Beautiful.ai, and Tome. Prices we could not verify are marked.'
+};
+const description = blurbs[cat];
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'ItemList', name, itemListElement: list.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: `https://vibeverdict.ai/tools/${t.slug}/` })) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://vibeverdict.ai/' },
+    { '@type': 'ListItem', position: 2, name, item: `https://vibeverdict.ai/category/${cat}/` }
+  ] }
+];
 ---
-<Base title={`Best ${categories[cat]} tools: are they worth it? (2026)`} description={`Verdicts and verified pricing for ${categories[cat]}.`} schema={schema}>
-<h1>{categories[cat]}</h1><table><tr><th>Tool</th><th>Verdict</th><th>Status</th></tr>
+<Base title={`${name}: are they worth it?`} description={description} schema={schema}>
+<h1>{name}</h1>
+<p class="mut">{description}</p>
+<table><tr><th>Tool</th><th>Verdict</th><th>Status</th></tr>
 {list.map(t=>(<tr><td><a href={`/tools/${t.slug}/`}><b>{t.name}</b></a></td><td><span class={`pill ${t.rating}`}>{label[t.rating]}</span> {t.verdict}</td><td class="mut" style="font-size:13px">{t.verified?`✓ ${t.lastVerified}`:'⚠ unverified'}</td></tr>))}</table>
 </Base>

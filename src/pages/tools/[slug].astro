@@ -4,13 +4,12 @@ import { guidesFor } from '../../lib/guides.js';
 export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
 const { t } = Astro.props;
 const related = guidesFor(t.slug, bySlug);
-const schema=[{"@context":"https://schema.org","@type":"SoftwareApplication",name:t.name,applicationCategory:categories[t.category],url:t.website,
- ...(t.verified?{offers:t.pricing.map(p=>({"@type":"Offer",name:p.plan,description:p.price}))}:{}),
- review:{"@type":"Review",author:{"@type":"Organization",name:"VibeVerdict"},reviewBody:t.verdict,...(t.lastVerified?{datePublished:t.lastVerified}:{})}},
- {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://vibeverdict.ai/"},{"@type":"ListItem",position:2,name:categories[t.category],item:`https://vibeverdict.ai/category/${t.category}/`},{"@type":"ListItem",position:3,name:t.name}]},
+const pageUrl = `https://vibeverdict.ai/tools/${t.slug}/`;
+const schema=[{"@context":"https://schema.org","@type":"SoftwareApplication",name:t.name,applicationCategory:categories[t.category],url:t.website},
+ {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://vibeverdict.ai/"},{"@type":"ListItem",position:2,name:categories[t.category],item:`https://vibeverdict.ai/category/${t.category}/`},{"@type":"ListItem",position:3,name:t.name,item:pageUrl}]},
  {"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:`Is ${t.name} worth it?`,acceptedAnswer:{"@type":"Answer",text:t.verdict}}]}];
 ---
-<Base title={`Is ${t.name} worth it? Pricing, verdict & alternatives (2026)`} description={t.verdict} schema={schema}>
+<Base title={`Is ${t.name} worth it? | VibeVerdict`} description={t.verdict} schema={schema}>
 <p class="mut" style="margin-top:24px"><a href="/">Home</a> / <a href={`/category/${t.category}/`}>{categories[t.category]}</a></p>
 <h1 style="font-size:38px;margin:6px 0">Is {t.name} worth it?</h1>
 <div class="card" style="font-size:19px"><span class={`pill ${t.rating}`}>{label[t.rating]}</span> <b>{t.verdict}</b></div>
