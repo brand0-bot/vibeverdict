@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Zapier is for people who want to connect apps without writing the integration. The verdict calls it the easiest way to automate without code, and then it warns you: the free plan is 100 tasks and paid tiers climb fast. A huge app catalog is the reason to try it. The task meter is the reason to leave if the workflow is chatty.",
+    "It is a poor fit for a high-volume back office that wants a cheap unlimited runner. You pay for tasks, and AI steps can cost more than one. A team plan is a different product from the cheap Professional starting price. If you want to self-host, this is not that tool."
+  ],
+  "features": [
+    "Free is $0 a month and includes 100 tasks. Professional starts from $19.99 a month. Team starts from $69 a month. Enterprise is contact for pricing. Those are the cards from 14 October 2026. Starting from means the card is a floor. It is not a promise that the plan you need stays at that floor.",
+    "Multi-step Zaps, webhooks, and AI start on Professional. The free plan is the catalog sample. The pro that matters, the huge app list, is real on the free tier. The automation you actually want may sit behind the $19.99 door.",
+    "A real free tier is still a pro next to tools that hide every paid number. You can spend 100 tasks and see if the apps you care about are in the catalog before anyone talks about Enterprise."
+  ],
+  "limitations": [
+    "You pay for tasks, and AI steps can cost more than one. A five-step Zap is not automatically five tasks, and an AI step is not automatically one. We do not have a per-step rate card beyond that warning, so we do not invent a multiplier.",
+    "The cons say Team starts at 2,000 tasks, not the cheap Professional tiers. The pricing note says a separate higher monthly rate and the paid task caps were not on the page, so earlier cap figures are omitted. We will not treat 2,000 as a verified cap when the note says the caps were not on the cards. Read it as a cons warning that Team is not the cheap Professional ladder, and check the live card for the actual task number.",
+    "The rating is Depends. Easiest is not the same as cheapest once the tasks climb. Depends means use the free 100 tasks, buy Professional only if the starting price still looks like your volume, and do not assume Team is $69 for a large workload."
+  ],
+  "pricingNotes": [
+    "On 14 October 2026 the plan cards said Free is $0 a month with 100 tasks, Professional starts from $19.99 a month, and Team starts from $69 a month. Enterprise is contact for pricing.",
+    "A separate higher monthly rate and the paid task caps were not on the page, so those earlier figures are omitted. AI steps can cost more than one task. No annual price is printed, because the cards we recorded are monthly starting prices."
+  ],
+  "alternatives": [
+    {
+      "slug": "n8n",
+      "text": "is the builder's tool, including a self-hosted community edition. Cloud Starter is €24 a month, or €20 billed annually, for 2,500 executions. You pay per execution, not per step. Worth it if you will own the workflow. The prices are in euros."
+    },
+    {
+      "slug": "make",
+      "text": "is the other visual builder. The free plan is 1,000 credits a month, and most actions consume one credit. Paid dollar prices were not in the text we could read, so that page is Pending. Credits expire at the end of the term."
+    },
+    {
+      "slug": "crewai",
+      "text": "is a multi-agent product, not an app catalog. Basic is free for 50 executions a month and 2 automations. Anything past that is enterprise, with no published price in between."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Professional $19.99?",
+      "a": "It starts from $19.99 a month. That is a floor, not a cap. The cards did not show the higher monthly rate, so we do not print one. Free is $0 for 100 tasks."
+    },
+    {
+      "q": "Do AI steps cost one task?",
+      "a": "Not necessarily. The cons say you pay for tasks, and AI steps can cost more than one. We do not have a fixed multiplier to publish."
+    },
+    {
+      "q": "Does Team include 2,000 tasks?",
+      "a": "The cons say Team starts at 2,000 tasks, not the cheap Professional tiers. The pricing note says paid task caps were not on the cards, so we are not treating 2,000 as a verified cap. Confirm it on the live page. The price we will stand behind is starting from $69 a month."
+    },
+    {
+      "q": "Why not just use the free plan?",
+      "a": "One hundred tasks is enough to see the catalog. Multi-step Zaps, webhooks, and AI start on Professional. If the workflow is more than a sample, the free plan is the limit the verdict is warning you about."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Claude is for people who will pay for writing and coding quality and want Claude Code on the same Pro plan. The verdict says it is the best pick for that work, and that Pro at $20 includes Claude Code. Free at $0 is the way to see the voice. It is not the way to get the coding agent.",
+    "It is a poor fit if you need a fixed monthly quota written as a message count. The only cons line is rolling usage limits. The page does not convert those limits into a number, and this review will not invent one."
+  ],
+  "features": [
+    "Free is $0. Pro is $20 a month, or $17 a month annual. Max 5x is $100 a month. Max 20x is $200 a month. Team is $20-25 a seat a month. Strong writing and coding, plus Claude Code included, are the pros. That is the product the Worth it rating is about.",
+    "The annual lever is real on this table, unlike ChatGPT. Pro at $17 a month annual is the published yearly rate next to $20 month-to-month. We are not multiplying $20 by twelve and calling it a discount. The table already states both.",
+    "Max is how you buy more usage. The 5x row is $100. The 20x row is $200. Those are the chat product's rows. The Claude Code review is stricter about what the Max card itself listed, and it does not copy a separate 20x subscription price. Read that page before you treat the two tables as one sentence."
+  ],
+  "limitations": [
+    "Rolling usage limits mean a heavy week can stop you on Pro even though you paid $20. That is why Max exists. It is also why a light writer should not start on Max 20x at $200.",
+    "Team at $20-25 a seat is a range, not a single quote. The table does not say which seat lands on which number. Do not budget a 10-person team as a computed total. The range is the published price.",
+    "The rating stays Worth it. Worth it is about writing and coding quality at the Pro price, with Claude Code included. It is not a claim that Max is cheap, and it is not a claim that the free plan includes the agent."
+  ],
+  "pricingNotes": [
+    "From claude.com/pricing, checked 14 October 2026. Free is $0. Pro is $20 a month or $17 a month annual. Max 5x is $100 a month. Max 20x is $200 a month. Team is $20-25 a seat a month.",
+    "The Claude Code record of the same site says the Max card offers 5x or 20x more usage than Pro from $100 and does not list a separate Max 20x subscription price. This chat table does list Max 20x at $200. Both are in the repo. We are not merging them into a new price."
+  ],
+  "alternatives": [
+    {
+      "slug": "chatgpt",
+      "text": "is the all-rounder. Plus is $20 a month, the same month-to-month number as Claude Pro, with no annual billing. Go is $8 and includes ads. The verdict there calls Plus the sweet spot."
+    },
+    {
+      "slug": "gemini",
+      "text": "bundles AI with Google storage. Google AI Pro is $19.99 a month. It is the better buy if you already live in Google's apps. It is not the writing pick this verdict is making."
+    },
+    {
+      "slug": "grok",
+      "text": "is an X Subscription now, not a standalone SuperGrok plan. Premium is $30 a month, or $300 a year. The cons say you also buy Cursor and X, not Grok alone. Depends, for that bundle."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Claude Pro include Claude Code?",
+      "a": "Yes. The verdict says Pro at $20 includes Claude Code. The free plan is $0 and, on the Claude Code page, does not include the agent. Annual Pro is $17 a month."
+    },
+    {
+      "q": "What is the difference between Max 5x and Max 20x?",
+      "a": "On this table, Max 5x is $100 a month and Max 20x is $200 a month. They are more usage than Pro. The Claude Code pricing note says the Max card it read did not list a separate 20x subscription price. Check the live card before you rely on the $200 row alone."
+    },
+    {
+      "q": "How many messages do I get?",
+      "a": "The data does not say. The cons line is rolling usage limits, without a count. We do not print a cap that is not in the table."
+    },
+    {
+      "q": "Is Team $20 or $25?",
+      "a": "The price is written as $20-25 a seat a month. That range is the published figure. We do not pick one end and call it the quote."
+    }
+  ]
+}

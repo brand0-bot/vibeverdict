@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Grok is for people who already want an X subscription and are choosing how much Grok comes with it. The verdict says new Grok access is the X Subscription, not a standalone SuperGrok plan, and that Premium at $30 is the useful tier. If you wanted a chatbot and nothing else, you are buying a bundle.",
+    "It is a poor fit if you are trying to buy Grok alone. The cons say you also buy Cursor and X, not Grok alone. Third-party models in Cursor are billed extra. Plus does not include Grok Bot. Those three limits decide the plan more than the model demo does."
+  ],
+  "features": [
+    "Free is $0. Plus is $8 a month, or $80 a year, which the card states as $7 a month. Premium is $30 a month, or $300 a year, stated as $25 a month. Super is $100 a month, or $1,000 a year, stated as $84 a month. Ultra is $200 a month, or $2,000 a year, stated as $167 a month. The annual rates are from the X subscription pricing docs.",
+    "Live web and X search, plus image, video, and voice in the same chat, are the pros. Premium and up include Grok Bot. That is why the verdict calls Premium the useful tier and not Plus. Plus is the cheap X door. It is not the Grok Bot door.",
+    "Usage is a shared weekly pool. Premium is 4x Plus, Super is 15x, and Ultra is 50x. Those multiples are the docs' comparison, not a message cap. Existing SuperGrok plans continue unless you switch. Teams seats match the individual Premium, Super, and Ultra prices."
+  ],
+  "limitations": [
+    "You also buy Cursor and X, not Grok alone. That cons line is the reason the rating is Depends. A $30 Premium seat is not a $30 Grok-only product in this data. Third-party models in Cursor are billed extra, so the bundle is not an all-models pass.",
+    "Plus at $8 does not include Grok Bot. If the bot is why you are looking at Grok, Plus is the plan that leaves it out. The annual Plus price is $80 a year, stated as $7 a month, and it still does not add the bot.",
+    "We are not telling existing SuperGrok customers to switch. The note says those plans continue unless you switch. Switching is a choice, and this page does not have a migration credit to offer."
+  ],
+  "pricingNotes": [
+    "From x.ai/pricing, with annual rates from docs.x.ai/x-subscription/pricing, checked 14 October 2026. Free is $0. Plus is $8 a month or $80 a year ($7 a month). Premium is $30 a month or $300 a year ($25 a month). Super is $100 a month or $1,000 a year ($84 a month). Ultra is $200 a month or $2,000 a year ($167 a month).",
+    "The weekly pool is Premium 4x Plus, Super 15x, Ultra 50x. Existing SuperGrok plans continue unless you switch. Teams seats match the individual Premium, Super, and Ultra prices. Plus does not include Grok Bot."
+  ],
+  "alternatives": [
+    {
+      "slug": "chatgpt",
+      "text": "is the all-rounder you can buy without an X subscription. Plus is $20 a month. Go is $8 and includes ads. There is no annual billing. The verdict there is Worth it at the Plus price."
+    },
+    {
+      "slug": "claude",
+      "text": "is the writing and coding plan. Pro is $20 a month or $17 annual, and it includes Claude Code. You are not also buying Cursor and X as part of that seat."
+    },
+    {
+      "slug": "gemini",
+      "text": "is the Google bundle at $19.99 a month for Google AI Pro, with storage if you use that ecosystem. It is a different bundle, and the plan names change often."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I buy Grok without X?",
+      "a": "New access is the X Subscription, not a standalone SuperGrok plan. The cons say you also buy Cursor and X, not Grok alone. Premium at $30 a month is the tier the verdict calls useful."
+    },
+    {
+      "q": "Does Plus include Grok Bot?",
+      "a": "No. Premium and up include Grok Bot. Plus is $8 a month, or $80 a year, and the cons say it does not include the bot."
+    },
+    {
+      "q": "What happens to an old SuperGrok plan?",
+      "a": "It continues unless you switch. This page is about new access. Switching is optional, and we do not list a credit for doing it."
+    },
+    {
+      "q": "How is the usage pool split?",
+      "a": "It is a shared weekly pool. Premium is 4x Plus, Super is 15x, and Ultra is 50x. Those are multiples from the docs, not a published message count."
+    }
+  ]
+}

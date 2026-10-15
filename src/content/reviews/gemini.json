@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Gemini is for people who already live in Google's apps and want the AI plan to come with storage. The verdict says it is great value in that ecosystem: you get AI plus storage for $19.99. If your files, mail, and docs are somewhere else, the bundle is just another chatbot at a similar price to Plus.",
+    "It is a shaky fit if you need the plan name to stay still. The cons say plan names change often. Google AI Pro at $19.99 is the name and the price in this table. Ultra 5x and Ultra 20x are the heavy rows. A renamed plan next month is something we will not pretend to have priced."
+  ],
+  "features": [
+    "Free is $0. Google AI Pro is $19.99 a month. Ultra 5x is $99.99 a month. Ultra 20x is $199.99 a month. The source is the Google AI plans page, checked 14 October 2026. There is no extra pricing note and no annual rate in the table.",
+    "Bundled with Google One storage, and deep Workspace integration, are the pros. The verdict's value claim is that pair, not a claim that the model beats every other $20 seat at writing. We do not have a storage size in the data, so we do not print one.",
+    "The $19.99 price sits next to ChatGPT Plus at $20 and Claude Pro at $20. You are not saving a meaningful amount on the seat. You are buying the Google bundle. That is the only reason the verdict says great value."
+  ],
+  "limitations": [
+    "Plan names change often. If the checkout says something other than Google AI Pro, Ultra 5x, or Ultra 20x, do not assume the old name still costs these numbers. This page will not keep a glossary of retired names.",
+    "Outside Google's ecosystem the storage and Workspace pros do not apply. You would be paying $19.99 for the model alone, and Claude or ChatGPT may be the more honest buy. The rating does not say Gemini is the best writer.",
+    "Ultra 5x at $99.99 and Ultra 20x at $199.99 are a long way from the value story. The Worth it verdict is the $19.99 bundle. It is not a recommendation to start on Ultra."
+  ],
+  "pricingNotes": [
+    "From the Google AI plans page, checked 14 October 2026. Free is $0. Google AI Pro is $19.99 a month. Ultra 5x is $99.99 a month. Ultra 20x is $199.99 a month.",
+    "No annual price is in the table, so none is printed. Storage is part of the verdict and the pros, and no gigabyte figure is in the data, so none is added."
+  ],
+  "alternatives": [
+    {
+      "slug": "chatgpt",
+      "text": "is the all-rounder at Plus for $20 a month. Go is $8 and includes ads. There is no annual billing. Choose it when you are not trying to bundle Google storage."
+    },
+    {
+      "slug": "claude",
+      "text": "is the writing and coding pick. Pro is $20 a month or $17 annual, and it includes Claude Code. Max 5x is $100. The quality verdict there is stronger. The Google bundle is not."
+    },
+    {
+      "slug": "perplexity",
+      "text": "is cited search. Free is $0 and Education Pro is $10 a month with SheerID. Consumer Pro and Max prices did not load, so it stays Pending. Use it when you need the source more than the Workspace hook."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Google AI Pro worth $19.99?",
+      "a": "If you live in Google's ecosystem, that is the verdict: AI plus storage for $19.99. If you do not, it is a chatbot near the same price as ChatGPT Plus at $20 and Claude Pro at $20."
+    },
+    {
+      "q": "How much storage is included?",
+      "a": "The pros say it is bundled with Google One storage. The data does not state a size, so this page does not state one either."
+    },
+    {
+      "q": "What are Ultra 5x and Ultra 20x?",
+      "a": "The heavy plans. Ultra 5x is $99.99 a month. Ultra 20x is $199.99 a month. The value claim in the verdict is the $19.99 plan, not these."
+    },
+    {
+      "q": "Do the plan names stay the same?",
+      "a": "The cons say they change often. The names in the table are the ones we verified. A new name on the checkout is a reason to re-read the price, not to trust this page forever."
+    }
+  ]
+}

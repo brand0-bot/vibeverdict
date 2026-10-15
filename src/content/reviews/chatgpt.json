@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "ChatGPT is for people who want one account that writes, searches, codes, and makes images without picking a specialist first. The verdict calls it the default all-rounder. Plus at $20 is the sweet spot. Go at $8 is fine for light use. If you already know you only need cited search or a long writing session, the alternatives are narrower and sometimes better.",
+    "It is a weak fit if ads in the cheap paid tier bother you, or if you wanted to pay yearly. Go includes ads. There is no annual billing. Those two cons are the reasons a light user might still skip Go and stay on Free at $0."
+  ],
+  "features": [
+    "Free is $0. Go is $8 a month. Plus is $20 a month. Pro is $100, $200, or $500 a month. The ladder is the whole pricing story. There is no pricing note underneath it, and no annual column to decode.",
+    "Broad features are the pro: Codex, images, and research sit on the same account. Plus is where the verdict says that bundle makes sense. You are not buying Codex as a second subscription. The Codex review says the same Plus price is enough for a few focused coding sessions a week.",
+    "Go at $8 is the cheap paid door, and it is a real plan, not a trial. Light use is the verdict's own limit on it. If you are in it every day, you are describing Plus, not Go."
+  ],
+  "limitations": [
+    "Go includes ads. That is a product limit on the $8 tier, not a footnote about the free plan. If you are paying to get away from ads, Go is the wrong $8.",
+    "No annual billing means the $20 and the $8 are month-to-month prices, full stop. Claude Pro can be $17 a month on an annual plan. ChatGPT does not offer that lever. Do not invent a yearly ChatGPT total.",
+    "Pro at $100, $200, or $500 is the heavy tier, and the verdict does not call it the sweet spot. Plus is. The rating stays Worth it because of that $20 seat, not because every Pro rung is a good default."
+  ],
+  "pricingNotes": [
+    "Checked against the ChatGPT Pro tiers help article, 14 October 2026. Free is $0. Go is $8 a month. Plus is $20 a month. Pro is $100, $200, or $500 a month.",
+    "Go includes ads. There is no annual billing in the cons or the table, so no yearly price is shown. No separate Business dollar amount is in this tool's data."
+  ],
+  "alternatives": [
+    {
+      "slug": "claude",
+      "text": "is the writing and coding pick. Pro is $20 a month, or $17 a month annual, and it includes Claude Code. Max 5x is $100. Max 20x is $200. Choose it when the draft quality matters more than the all-rounder bundle."
+    },
+    {
+      "slug": "gemini",
+      "text": "is the Google bundle. Google AI Pro is $19.99 a month and includes AI plus storage if you already live in that ecosystem. The verdict there is Worth it on that condition."
+    },
+    {
+      "slug": "perplexity",
+      "text": "is cited search. Free is $0. Education Pro is $10 a month with SheerID. Consumer Pro and Max prices were not on the pages we could open, so that review stays Pending. Use it when the citation is the product."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Plus the plan to buy?",
+      "a": "Yes, for the way the verdict is written. Plus at $20 a month is the sweet spot. Go at $8 is fine for light use. Pro starts at $100 and is not the default."
+    },
+    {
+      "q": "Does Go have ads?",
+      "a": "Yes. The cons say Go includes ads. Free is $0. If the point of paying is to skip ads, Go is the wrong tier."
+    },
+    {
+      "q": "Can I pay yearly?",
+      "a": "No. The cons say there is no annual billing. The prices in the table are monthly. Claude is the comparison that actually lists an annual rate."
+    },
+    {
+      "q": "Does Plus include Codex?",
+      "a": "Codex is included with ChatGPT, and the Codex verdict says Plus at $20 is enough for a few focused coding sessions a week. Allowances there are ranges, not a fixed message count."
+    }
+  ]
+}

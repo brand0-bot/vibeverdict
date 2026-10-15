@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "CrewAI is for people who want to try a multi-agent workflow without a self-serve price ladder. The verdict says it is fine to try on the free cloud plan, and that anything past 50 executions a month is an enterprise conversation. Two automations on that free plan is the other cap. If you need a published paid tier in the middle, it is not here.",
+    "It is a poor fit for a team that wants to swipe a card when the free plan runs out. Enterprise is custom. There is no published paid price between free and enterprise. That gap is the cons line, and it is the reason the rating is Depends rather than a simple yes."
+  ],
+  "features": [
+    "Basic is free: 50 workflow executions a month and 2 automations. The visual editor and GitHub integration are on that free plan. You can see the product without a sales call. That is the pro worth using.",
+    "No self-serve surprise tiers is the other pro, and it cuts both ways. You will not discover a $29 middle plan we forgot to list, because the table does not have one. You also cannot upgrade in place when execution 51 shows up.",
+    "The pricing source is crewai.com/pricing, checked 14 October 2026, and the table is verified. Verified here means the free cap and the custom enterprise row are what the page showed. It does not mean we were given a dollar quote."
+  ],
+  "limitations": [
+    "Fifty executions a month is a small production budget. A workflow that runs every weekday is already over it. Two automations means the free plan is a sample of the visual editor, not a back office.",
+    "The missing middle price is the real limit. We will not invent a Team or Pro dollar amount to fill the gap. If sales will not say a number, this page will not say one either.",
+    "The rating is Depends. Try Basic. If 50 executions is the whole job, you are done. If it is not, you are in an enterprise conversation, which is a different purchase from a self-serve seat."
+  ],
+  "pricingNotes": [
+    "Basic is free, with 50 workflow executions a month and 2 automations. Enterprise is custom. Checked on crewai.com/pricing on 14 October 2026. No dollar figure sits between those rows in our data.",
+    "The visual editor and GitHub integration are on the free plan. There is no annual discount to calculate, because there is no published paid price to discount."
+  ],
+  "alternatives": [
+    {
+      "slug": "langchain",
+      "text": "sells LangSmith seats, not a library license. Developer is $0 for one seat, with 5,000 base traces, then pay as you go. Plus is $39 a seat with 10,000 base traces. The libraries themselves have no separate price. Traces are the meter."
+    },
+    {
+      "slug": "n8n",
+      "text": "is the builder's automation tool with a published cloud ladder. Starter is €24 a month, or €20 billed annually, for 2,500 executions. You can self-host the community edition. The verdict there is Worth it. The currency is euros, and we do not convert it."
+    },
+    {
+      "slug": "zapier",
+      "text": "is the no-code catalog. Free is $0 for 100 tasks. Professional starts from $19.99 a month. Team starts from $69 a month. Paid task caps were not on the cards, so we do not fill them in. It is easier, and the tasks climb."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What happens after 50 executions?",
+      "a": "The verdict says anything past 50 executions a month is an enterprise conversation. Enterprise is custom. There is no published price between Basic and that call."
+    },
+    {
+      "q": "How many automations are on the free plan?",
+      "a": "Two. Basic is free and includes 50 workflow executions a month and 2 automations, plus the visual editor and GitHub integration."
+    },
+    {
+      "q": "Is there a self-serve paid tier?",
+      "a": "Not in the data. The cons say there is no published paid price between free and enterprise. We do not invent one."
+    },
+    {
+      "q": "Why is the rating Depends?",
+      "a": "Because the free plan is fine to try and the next step is a sales conversation. Depends is the grade for that gap, not a claim that the editor is bad."
+    }
+  ]
+}

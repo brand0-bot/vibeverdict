@@ -1,0 +1,48 @@
+{
+  "audience": [
+    "Make is for people who want a visual automation builder and will start on a free credit plan while the paid prices stay unread. The verdict says there is a free 1,000-credit plan, and the paid dollar prices were not in the pricing page text we could read. If you need a number before you talk to the vendor, this page cannot give you one.",
+    "It is a reasonable comparison when you already know n8n or Zapier and you want the visual canvas. It is a bad place to guess a Core, Pro, or Teams price. Those names are on the page. Their dollars were not in the text."
+  ],
+  "features": [
+    "The free plan includes 1,000 credits a month. That figure is from the pricing page FAQ on 14 October 2026. Most actions consume one credit, which is the pro that makes the allowance legible. A scenario of single-credit actions is about a thousand actions, not a thousand scenarios full of hidden steps.",
+    "Core, Pro, and Teams are named, and annual billing is cheaper. Those are facts from the note. Cheaper is not a percentage we were given, so we do not print one. The paid row in our table says see the vendor site.",
+    "The free plan being stated on the pricing page is the other pro. You can open an account and spend the thousand credits without us inventing a checkout. That is as far as the verified text goes."
+  ],
+  "limitations": [
+    "Paid dollar amounts were not in the page text. A direct HTML download of the same URL was a Cloudflare challenge. We will not fill Core, Pro, or Teams with prices from memory or from a blocked page. The rating is Pending because of that hole.",
+    "Credits expire at the end of the term. Unused free credits do not become a savings account. A quiet month is a lost month. Plan the work inside the term you are in.",
+    "Verified on the tool means we verified the free credit line and the fact that paid dollars were missing. It does not mean the paid plans were confirmed. Last verified is 14 October 2026 for that reading. The paid cells stay see the vendor site."
+  ],
+  "pricingNotes": [
+    "On 14 October 2026 the pricing page FAQ said the Free plan includes 1,000 credits a month. Core, Pro, and Teams are named, and annual billing is cheaper, but their dollar prices were not in the text we could read. A direct HTML download was a Cloudflare challenge.",
+    "Most actions consume one credit. Credits expire at the end of the term. No Make dollar amount is printed, because none was in the text. See the vendor site before paying."
+  ],
+  "alternatives": [
+    {
+      "slug": "n8n",
+      "text": "has the published ladder Make did not show us. Cloud Starter is €24 a month, or €20 billed annually, for 2,500 executions. Pro is €60 or €50 annual. You can self-host the community edition. The verdict is Worth it. We do not convert those euros into dollars."
+    },
+    {
+      "slug": "zapier",
+      "text": "prints a free tier and two starting prices. Free is $0 for 100 tasks. Professional starts from $19.99 a month. Team starts from $69 a month. The task caps on the paid cards were not listed, and tasks can cost more when a step uses AI."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much does Make Pro cost?",
+      "a": "We do not know from the text we could read. Core, Pro, and Teams are named, annual billing is cheaper, and the dollar prices were not in the page. The table says see the vendor site."
+    },
+    {
+      "q": "What is the free plan?",
+      "a": "1,000 credits a month. Most actions consume one credit. Credits expire at the end of the term, so they do not roll over."
+    },
+    {
+      "q": "Why is the rating Pending if the free plan is verified?",
+      "a": "Because the verdict is about the missing paid prices, not about the existence of a free tier. Pending means do not treat a blocked price page as a quote."
+    },
+    {
+      "q": "Is annual billing a specific discount?",
+      "a": "The note says annual billing is cheaper. It does not say how much cheaper. We do not turn that into a percent."
+    }
+  ]
+}

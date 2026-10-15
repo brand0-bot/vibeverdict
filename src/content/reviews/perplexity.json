@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Perplexity is for people who want an answer with the sources attached. The verdict still calls it the best cited AI search. That part is the product. The other half of the verdict is the reason this page is Pending: the consumer Pro monthly price was not on the pages we could open.",
+    "Buy only the rows we could actually read. Free is $0. Education Pro is $10 a month if you can pass SheerID. Enterprise Pro starts at $40 a month, or $400 a year, per seat. If you are a consumer looking for the ordinary Pro button, we do not have a price to defend."
+  ],
+  "features": [
+    "Answers come with citations. That is the pro that separates this from a chat window that may or may not link out. For research, the citation is the feature, not a decoration.",
+    "Education Pro is a published $10 discount, which is the other pro. It requires SheerID verification. It is not a coupon code, and it is not the consumer Pro plan under another name.",
+    "Enterprise Pro is the paid row with a number: from $40 a month or $400 a year per seat. From means the card is a starting price. We do not have the higher seat prices, so we do not draw a ladder above $40."
+  ],
+  "limitations": [
+    "Consumer Pro and Max prices did not load. perplexity.ai/pro returned HTTP 403 on 14 October 2026. The help-center plan article does not list a consumer Pro or Max dollar amount. Earlier consumer figures are not confirmed, and this review does not repeat them.",
+    "Enterprise starts at $40 a seat. That is a real price and a high door for a person who wanted a personal subscription. A team that needs the enterprise contract can read the $40 and the $400 yearly seat. Everyone else should stay on Free until the consumer price is on a page we can open.",
+    "The rating is Pending. The search quality line in the verdict is not a buy recommendation at an unpublished price. Last verified is empty because the missing number is the number that matters."
+  ],
+  "pricingNotes": [
+    "The help-center plan article lists Education Pro at $10 a month with SheerID, and Enterprise Pro from $40 a month or $400 a year per seat. Free is $0. Checked 14 October 2026.",
+    "perplexity.ai/pro returned HTTP 403 that day. Consumer Pro and Max dollar amounts are not in the help-center article, so they are not in this table. Do not use an old consumer price from memory."
+  ],
+  "alternatives": [
+    {
+      "slug": "chatgpt",
+      "text": "is the all-rounder with a published Plus price of $20 a month. Go is $8 and includes ads. There is no annual billing. Use it when you want the bundle and can live without Perplexity's citations."
+    },
+    {
+      "slug": "gemini",
+      "text": "is Google AI Pro at $19.99 a month, with storage if you are in that ecosystem. The plan names change often. The price, on the day we checked, was on the page."
+    },
+    {
+      "slug": "claude",
+      "text": "is the writing plan. Pro is $20 a month or $17 annual, and it includes Claude Code. It is not a cited-search product. It is the alternative when the draft matters more than the footnotes."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much is Perplexity Pro?",
+      "a": "The consumer Pro monthly price was not on the pages we could open. perplexity.ai/pro returned HTTP 403. We are not publishing an unconfirmed consumer price. Education Pro is $10 a month with SheerID. Enterprise Pro starts at $40 a month per seat."
+    },
+    {
+      "q": "Is there a free plan?",
+      "a": "Yes. Free is $0. It is enough to see the citations. It is not a substitute for a Pro price we could not read."
+    },
+    {
+      "q": "Who gets the $10 plan?",
+      "a": "Education Pro, with SheerID verification. It is a published discount in the pros. It is not the general consumer Pro tier."
+    },
+    {
+      "q": "Why is the rating Pending?",
+      "a": "Because the verdict's own second clause is the missing consumer price. The cited-search praise does not fill in a number the site would not show us."
+    }
+  ]
+}
