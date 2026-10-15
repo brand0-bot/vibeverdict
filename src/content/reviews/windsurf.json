@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "This page is for people who still have a Windsurf bookmark and want to know what to buy. The verdict is the whole story: Windsurf no longer sells a standalone plan. Its pricing page redirects to Devin. If you wanted a Windsurf checkout, it is not there.",
+    "It is not a review of Devin's tiers. Devin's prices are not repeated here, on purpose. The pricing note says so. If the redirect is where you meant to go, open the Devin review and read that quota with your eyes open. If you wanted an editor subscription that still has its own price, look at the alternatives."
+  ],
+  "features": [
+    "There is no feature list to sell. The pros on the tool are empty. The only plan row is Standalone, and the price is Not offered. That is the accurate table. A feature tour of a product that will not take your card would be filler.",
+    "What we checked is the redirect. On 14 October 2026, windsurf.com/pricing returned HTTP 308 with Location https://devin.ai/pricing. windsurf.com itself returned HTTP 308 to https://devin.ai/desktop. The old site is a pointer, not a pricing page.",
+    "The useful act is to decide what you actually needed from Windsurf. An editor with completions is GitHub Copilot. A terminal agent with a stated plan is Claude Code. An IDE whose two price pages disagree is Cursor. A cloud agent with an opaque quota is the page the redirect opens."
+  ],
+  "limitations": [
+    "There is no Windsurf checkout of its own. That is the only cons line, and it is decisive. We will not reconstruct an old Windsurf price from memory. It is not in the current data.",
+    "Repeating Devin's dollar amounts on this page would hide the fact that Windsurf did not publish them. The Devin review has the verified table. This page stops at the redirect.",
+    "The rating is Pending. Pending means we will not grade a product that does not sell itself. Last verified is empty. The pricing source is the Windsurf URL that no longer stays on Windsurf."
+  ],
+  "pricingNotes": [
+    "Windsurf no longer sells standalone. On 14 October 2026, windsurf.com/pricing returned HTTP 308 to https://devin.ai/pricing, and windsurf.com returned HTTP 308 to https://devin.ai/desktop. The table says Not offered.",
+    "Devin's prices are not copied onto this page. There is no annual Windsurf figure, no credit pack, and no free Windsurf tier in the data. Do not pay an invoice that still says Windsurf without reading who the merchant is."
+  ],
+  "alternatives": [
+    {
+      "slug": "devin",
+      "text": "is where the pricing URL now sends you. The verdict there is Depends: Pro is a real monthly price, the included quota is not a published message count, and Teams has a minimum before you add seats. Read that page for the numbers. They are intentionally not reprinted here."
+    },
+    {
+      "slug": "cursor",
+      "text": "still has an editor you can evaluate. The docs list Pro, Pro Plus, and Ultra, and the public pricing page showed a different lineup on the day we checked. The rating is Depends because those pages disagree."
+    },
+    {
+      "slug": "github-copilot",
+      "text": "still sells a clear seat. Pro is $10 a month, and Free includes 2,000 completions a month. The verdict is Worth it on value, inside the editor you already use."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I still buy Windsurf?",
+      "a": "Not as a standalone plan. The pricing URL redirects to Devin, and the site root redirects to Devin Desktop. The only row in our table is Not offered."
+    },
+    {
+      "q": "Why don't you list Devin's prices here?",
+      "a": "Because this page is about Windsurf, and the note says Devin's prices are not repeated here. The Devin review has the verified table. Copying it would make a dead checkout look like a product line."
+    },
+    {
+      "q": "What should I use instead?",
+      "a": "GitHub Copilot Pro at $10 a month if you want completions in your editor. Claude Code if you want a terminal agent on a Claude plan. Devin if you meant to follow the redirect and you accept an opaque quota."
+    },
+    {
+      "q": "Why is the rating Pending?",
+      "a": "There is no Windsurf plan to judge. Pending is the grade for a redirect, not a quiet way of saying the old product was bad."
+    }
+  ]
+}

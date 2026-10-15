@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Zed is for people who want a fast editor and multiplayer without paying, and who will bring their own keys. The verdict says the editor itself is free forever, and Pro at $10 only includes $5 of hosted tokens before usage billing. If the editor is the product you wanted, Personal at $0 is the plan.",
+    "Pro is for people who want Zed's hosted tokens and accept that $5 is a small pool. Business is for a team that will pay $30 a seat with no bundled token credit at all. If you wanted an included agent allowance the size of the seat, this is the wrong shape."
+  ],
+  "features": [
+    "Personal is $0. The pros say the fast editor and multiplayer are free, and you can bring your own API keys on the free plan. That is a complete editor, not a trial that locks the file tree.",
+    "Pro is $10 a month and includes $5 of hosted tokens, then API list plus 10%. The 14-day Pro trial does not need a card. Business is $30 per seat a month and includes no bundled token credit. Hosted usage on Pro is the list price plus 10%, which is a markup, not a subsidy.",
+    "The trial is the right way to see the hosted side. Fourteen days, no card, then you are back on Personal unless you want the $5 pool. Do not start the trial if a card-on-file later would bother you. This one does not ask for the card up front."
+  ],
+  "limitations": [
+    "Pro's included tokens are only $5. The seat is $10. You pay $10 to receive $5 of hosted tokens, and then you pay API list plus 10%. The verdict is written that way so nobody mistakes Pro for a discounted API plan.",
+    "Business does not fix it with a bigger bundle. It has no bundled token credit at $30 a seat. A team on Business is paying for the seat and then paying for tokens in full.",
+    "The rating is Depends. The editor is the easy yes at $0. The hosted tokens are the part that depends on whether a $5 pool and a 10% markup are acceptable. Bring your own key on Personal if they are not."
+  ],
+  "pricingNotes": [
+    "From zed.dev/pricing, checked 14 October 2026. Personal is $0. Pro is $10 a month, with $5 of hosted tokens, then API list plus 10%. Business is $30 per seat a month, with no bundled token credit.",
+    "The Pro trial is 14 days and does not require a card. No annual price is in the table, so none is printed. The 10% figure is the markup after the included $5, not a discount."
+  ],
+  "alternatives": [
+    {
+      "slug": "cursor",
+      "text": "is the other AI editor. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page showed a different lineup. Zed Personal at $0 is the clearer free editor. Cursor is the one with the disputed paid list."
+    },
+    {
+      "slug": "cline",
+      "text": "is a free Apache-2.0 agent you connect to any provider, including a local model. There is no included token credit. API bills can pass a $20 editor subscription. Use it when you want the agent, not Zed's editor."
+    },
+    {
+      "slug": "windsurf",
+      "text": "no longer has a standalone plan. The pricing page redirects to Devin. Zed still has a checkout of its own, and the free editor is the part that is actually free forever."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the Zed editor free?",
+      "a": "Yes. Personal is $0, and the verdict says the editor itself is free forever. Multiplayer is included. Bring your own API keys on that plan."
+    },
+    {
+      "q": "What does Pro's $10 include?",
+      "a": "$5 of hosted tokens. After that, usage is API list price plus 10%. The seat costs more than the included tokens."
+    },
+    {
+      "q": "Does Business include tokens?",
+      "a": "No. Business is $30 per seat a month with no bundled token credit. You pay the seat, then you pay for usage."
+    },
+    {
+      "q": "Does the Pro trial need a card?",
+      "a": "No. It is 14 days with no card. After that, Personal at $0 is still there."
+    }
+  ]
+}

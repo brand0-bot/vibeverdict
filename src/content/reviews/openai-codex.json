@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "OpenAI Codex is for people who already pay for ChatGPT, or who should, and want the coding agent included. The verdict says Codex is included with ChatGPT, and Plus at $20 is enough for a few focused coding sessions a week. Web, CLI, IDE, and iOS are the surfaces the pros list for Plus.",
+    "It is a poor fit if you wanted a published message cap. The cons say allowances are ranges, not a fixed message count. It is also a poor fit if you only have an API key and expected the cloud product. The API-key row is pay API rates, with no cloud features."
+  ],
+  "features": [
+    "The plans match ChatGPT's ladder. Free is $0 a month. Go is $8 a month. Plus is $20 a month. Pro is $100, $200, or $500 a month. The API key is a separate door. You are not buying a second subscription called Codex on top of Plus.",
+    "Pro has no five-hour limit. That is the pro that separates it from Plus. Plus is the plan the verdict recommends for a few focused sessions a week. Pro is the plan when that window is the problem, and it starts at $100.",
+    "Fast mode is the other meter. It burns the included allowance at 2.5x. That is a multiplier, not a dollar surcharge we calculated. Leave it off if you are trying to make Plus last."
+  ],
+  "limitations": [
+    "The pricing page gives local-message estimates per five hours for Plus, and it calls them estimates, not caps. GPT-6 Astra is 5 to 45. GPT-6.1 Sol is 15 to 160. GPT-6 Sol is 15 to 150. GPT-6 Luna is 350 to 3,000. Cloud tasks cost more of the same allowance, and weekly limits may also apply. Do not budget a sprint against the top of a range.",
+    "Business and Enterprise share Codex, and this page does not list a Business dollar price. We will not borrow one. A team that needs a seat price in writing does not have it here.",
+    "The rating is Worth it for Plus at $20 as a few sessions a week. Worth it does not mean the ranges are a guarantee, and it does not mean Go at $8 is the coding plan. Go is on the ladder. The verdict names Plus."
+  ],
+  "pricingNotes": [
+    "From developers.openai.com/codex/pricing, checked 14 October 2026. Free is $0 a month. Go is $8 a month. Plus is $20 a month. Pro is $100, $200, or $500 a month. An API key is pay API rates and has no cloud features.",
+    "Plus local-message figures are estimates per five hours, not fixed caps: GPT-6 Astra 5 to 45, GPT-6.1 Sol 15 to 160, GPT-6 Sol 15 to 150, GPT-6 Luna 350 to 3,000. Fast mode burns the allowance at 2.5x. No Business dollar price is listed."
+  ],
+  "alternatives": [
+    {
+      "slug": "claude-code",
+      "text": "is the other bundled terminal agent. Claude Pro is $20 a month, or $17 annual with $200 up front, and it includes Claude Code. The free Claude plan does not. Heavy users are sent to Max from $100."
+    },
+    {
+      "slug": "github-copilot",
+      "text": "is the editor seat at $10 a month. Free includes 2,000 completions a month. The verdict there is best value for most developers. The agent is less deep, and the credit model is complex."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the IDE with the split price list. Docs say Pro $20, Pro Plus $60, and Ultra $200. The public pricing page showed something else. Depends, until you see which page you are billed from."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need a separate Codex subscription?",
+      "a": "No. Codex is included with ChatGPT. Plus at $20 a month is the plan the verdict calls enough for a few focused coding sessions a week. Go is $8. Pro starts at $100."
+    },
+    {
+      "q": "Are the message numbers a cap?",
+      "a": "No. They are local-message estimates per five hours for Plus. The ranges are wide, cloud tasks cost more of the same allowance, and weekly limits may also apply."
+    },
+    {
+      "q": "What does an API key get me?",
+      "a": "API rates, and no cloud features. If you wanted the web, CLI, IDE, and iOS product, that is the Plus plan, not the key."
+    },
+    {
+      "q": "What is fast mode?",
+      "a": "A way to burn the included allowance at 2.5x. It is not a separate dollar fee in the table. Turn it off if you are stretching Plus."
+    }
+  ]
+}

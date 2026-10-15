@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Warp is for people who want a terminal and an agent CLI, and who want the included agent usage written in dollars. The verdict says Build is $20 a month and includes $20 of agent usage at API rates, so extra use is pay-as-you-go. The free plan still includes the terminal and the agent CLI.",
+    "It is a poor fit if you wanted a big team on one bill. Business stops at 25 seats. It is also a poor fit if you expected the free plan's add-ons to cost the same as paid. They do not. Free add-on prices are 20% higher than paid-plan prices."
+  ],
+  "features": [
+    "Free is $0 a month and includes the terminal and the Warp Agent CLI. You can use your own API keys or a custom endpoint on the free plan. That is a real free product, not a disabled shell.",
+    "Build is $20 a month, or $18 a month on the annual plan, and includes $20 of agent usage each month. Max is $200 a month, or $180 on the annual plan, and includes $200 of usage. Business is $50 per user a month, or $45 on the annual plan, up to 25 seats, with $20 of usage per seat. Enterprise is custom.",
+    "The included usage is stated at API rates. Build's included usage equals the $20 price. You are prepaying a usage pool that matches the seat, and anything past it is pay-as-you-go. That is easy to understand and easy to outgrow."
+  ],
+  "limitations": [
+    "A $20 seat that includes $20 of usage is not a discount. It is a prepaid pool. The cons say extra use is pay-as-you-go. If your agent month is larger than $20 of API rates, Build is a down payment.",
+    "Warp Factories are billed separately. Pay as you go is $0 a month with usage at 20% above API rates. Factories Build is $20 a month with usage at API rates. Factories Business is $50 per user a month. Enterprise is custom. The page says factory usage is billed separately. Do not assume the terminal plan covers it.",
+    "The page does not state a yearly dollar total, so none is shown. The annual figures we print are the monthly equivalents already on the card: $18, $180, and $45. The rating is Depends because the pool equals the price."
+  ],
+  "pricingNotes": [
+    "From warp.dev/pricing on 14 October 2026, HTTP 200, title Pricing | Warp. Free is $0 a month. Build is $20 a month or $18 on the annual plan, with $20 of agent usage. Max is $200 a month or $180 annual, with $200 of usage. Business is $50 per user or $45 annual, up to 25 seats, with $20 of usage per seat. Enterprise is custom.",
+    "The FAQ says Free add-on prices are 20% higher than paid-plan prices. Factories are separate: pay as you go at 20% above API rates, Build at $20 with usage at API rates, Business at $50 per user, Enterprise custom. No yearly dollar total is stated."
+  ],
+  "alternatives": [
+    {
+      "slug": "github-copilot",
+      "text": "is the editor plan at $10 a month, half of Warp Build, without a dollar-denominated usage pool in the row. Free includes 2,000 completions a month. The credit model is the part that stays complicated."
+    },
+    {
+      "slug": "claude-code",
+      "text": "bundles the terminal agent with Claude Pro at $20 a month, or $17 annual with $200 up front. Max is from $100. You are buying a usage multiple, not a prepaid API dollar pool."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the IDE. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200. The public pricing page listed a different bundle, including Grok and X features. Depends, for the mismatch."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Build include more usage than it costs?",
+      "a": "No. Build is $20 a month and includes $20 of agent usage at API rates. Extra use is pay-as-you-go. The annual Build price is $18 a month, and the included usage in the FAQ is still $20."
+    },
+    {
+      "q": "Is the free plan a demo terminal?",
+      "a": "No. Free is $0 and includes the terminal and the Warp Agent CLI, plus your own API keys or a custom endpoint. Add-on prices on Free are 20% higher than on paid plans."
+    },
+    {
+      "q": "Are Warp Factories included?",
+      "a": "No. Factory usage is billed separately. Pay as you go is 20% above API rates. Factories Build is $20 a month at API rates. Factories Business is $50 per user a month."
+    },
+    {
+      "q": "How many seats can Business have?",
+      "a": "Up to 25. Past that, the table says Enterprise and custom. Business is $50 per user a month, or $45 on the annual plan, with $20 of usage per seat."
+    }
+  ]
+}

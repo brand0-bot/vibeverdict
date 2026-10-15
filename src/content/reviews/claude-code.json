@@ -1,0 +1,56 @@
+{
+  "audience": [
+    "Claude Code is for people who want a terminal coding agent and are willing to pay for a Claude plan to get it. The verdict calls it a top-tier terminal coding agent that comes bundled with Claude plans, and says heavy users will want Max. Pro is the door. Free is not.",
+    "It is a poor fit if you wanted a $0 agent. The free plan is $0 and Claude Code is not included. It is also a poor fit if you need a fixed message count in the contract. Session usage limits on Pro are a cons line, and the page does not turn those limits into a number we can reprint."
+  ],
+  "features": [
+    "Excellent multi-file reasoning is the reason the verdict is Worth it, not the price. It runs in the terminal, against the repo, which is the same shape as Aider and a different bill. Included with Claude Pro means you are not buying a second coding product on top of the chat plan.",
+    "Pro is $20 a month, or $17 a month with annual billing and $200 billed up front. That annual pair is what claude.com/pricing showed on 14 October 2026. Max is from $100 a month. The Max card says to choose 5x or 20x more usage than Pro. It also says Max includes $100 to $200 a month in API credits.",
+    "The 5x and 20x choice is usage, not two invented subscription prices. The pricing note is explicit: the Max card does not list a separate Max 20x subscription price, so none is shown in this table. Do not copy a $200 Max price onto this page from the chat product's table."
+  ],
+  "limitations": [
+    "No free tier for Claude Code. You can open a free Claude account and still not have this tool. The first real plan is Pro at $20, or $17 annual.",
+    "Session usage limits on Pro are why the verdict points heavy users at Max. Max from $100 is a large jump from $20. The included API credits on Max are $100 to $200 a month, which can match or exceed the subscription and still is not a blank check. We are not describing what happens after those credits, because the note does not.",
+    "The rating stays Worth it. Worth it here means the agent is good enough that Pro is a reasonable buy, and that heavy use belongs on Max. It does not mean every developer needs Max."
+  ],
+  "pricingNotes": [
+    "From claude.com/pricing on 14 October 2026. Free is $0 and does not include Claude Code. Pro, which includes Claude Code, is $20 a month or $17 a month annual, with $200 billed up front on the annual plan. Max is from $100 a month, with a choice of 5x or 20x more usage than Pro, and includes $100 to $200 a month in API credits.",
+    "No separate Max 20x subscription price is listed on that card, so this review does not print one. The chat Claude table elsewhere on the site lists its own Max rows. Those are not copied here."
+  ],
+  "alternatives": [
+    {
+      "slug": "openai-codex",
+      "text": "is included with ChatGPT. Plus is $20 a month, the same seat price as Claude Pro, and the verdict there says Plus is enough for a few focused coding sessions a week. Codex allowances are ranges, not a fixed message count. Fast mode burns the allowance at 2.5x."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the IDE. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page showed a different bundled lineup. Depends, until those two pages agree."
+    },
+    {
+      "slug": "warp",
+      "text": "prices the agent in dollars of usage. Build is $20 a month and includes $20 of agent usage. The free plan still includes the terminal and the agent CLI. Extra use is pay-as-you-go."
+    },
+    {
+      "slug": "aider",
+      "text": "has no seat. It is Apache-2.0, and you pay your API provider with no included allowance. Use it when you want the terminal workflow without a Claude subscription."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Claude Code on the free Claude plan?",
+      "a": "No. Free is $0 and the table says Claude Code is not included. Pro at $20 a month, or $17 annual, is the plan that includes it."
+    },
+    {
+      "q": "What does Max cost?",
+      "a": "From $100 a month. You choose 5x or 20x more usage than Pro. The card includes $100 to $200 a month in API credits. It does not list a separate Max 20x subscription price, so we do not show one."
+    },
+    {
+      "q": "Is annual Pro $17 or $200?",
+      "a": "Both, in the way the page states them. The equivalent is $17 a month, and the annual plan bills $200 up front. Month-to-month Pro is $20."
+    },
+    {
+      "q": "Who should buy Max?",
+      "a": "Heavy users. The verdict says so because Pro has session usage limits. If a few sessions a week fit inside Pro, Max is extra money."
+    }
+  ]
+}

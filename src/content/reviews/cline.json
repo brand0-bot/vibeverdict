@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Cline is for people who want an agent in the editor or the CLI and refuse a seat fee. The verdict says the agent is free and Apache-2.0, and you pay whatever model provider you connect. That includes a local model. If you already manage API keys, you are the audience.",
+    "It is a poor fit if you want someone else to cap the bill. The cons are blunt: API bills can pass a $20 editor subscription, and you set up keys and approvals yourself. A developer who wants one login and a known monthly price should buy that subscription instead of pretending a free agent is the same thing."
+  ],
+  "features": [
+    "The Cline row is Free under Apache-2.0. Model usage is pay your API provider. There is no second paid tier hiding under a contact-sales button in our table. The pricing source is cline.bot, checked 14 October 2026.",
+    "Open source, with a CLI and an IDE extension, is the practical pro. You can point it at any provider. A local model is allowed, which is the escape hatch when you do not want a hosted key at all.",
+    "Approvals are part of the product. You watch the agent and you allow the step. That is slower than a fire-and-forget cloud agent, and it is also how you keep a free tool from rewriting a repo you did not mean to touch."
+  ],
+  "limitations": [
+    "The $20 comparison in the cons is the whole pricing story. Claude Pro is $20 a month and includes Claude Code. GitHub Copilot Pro is $10 a month. If your provider invoice is already higher than those, Cline's free license is not saving you money. It is only saving you a seat.",
+    "You set up keys and approvals yourself. There is no included token credit in the table, and we will not invent one. A local model avoids the API line and adds the cost of running it, which is not a Cline price.",
+    "The rating is Depends. Depends is the honest grade for a free agent with an uncapped provider bill. The license is not a verdict that every month will be cheap."
+  ],
+  "pricingNotes": [
+    "Cline is Free under Apache-2.0. Model usage is pay your API provider. No dollar plan is listed, so none is printed. The page was verified on 14 October 2026.",
+    "The only dollar figure we attach to this decision is the comparison the cons already make: API bills can pass a $20 editor subscription. That $20 is a ceiling to notice, not a Cline plan."
+  ],
+  "alternatives": [
+    {
+      "slug": "claude-code",
+      "text": "bundles the terminal agent with Claude. Pro is $20 a month, or $17 annual with $200 billed up front. Max is from $100 a month. The free Claude plan does not include Claude Code. Buy this when you want the allowance included."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the editor people compare against the $20 seat. Docs still list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page disagreed. Read that page before you treat any of those as the checkout you will see."
+    },
+    {
+      "slug": "aider",
+      "text": "is the other free Apache-2.0 terminal pair programmer. Same shape: no seat, you pay the key. Pick Aider for a terminal-only repo workflow. Pick Cline if you want the IDE extension too."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Cline actually free?",
+      "a": "The agent is free under Apache-2.0. The model is not, unless you run a local one. The table's second row is pay your API provider."
+    },
+    {
+      "q": "Can the API bill cost more than a $20 editor plan?",
+      "a": "Yes. That is the cons line. Claude Pro is $20 a month and GitHub Copilot Pro is $10 a month. If your key spend is past those, the free license is not the cheaper product."
+    },
+    {
+      "q": "Can I use a local model?",
+      "a": "Yes. The pros say any provider, including a local model. That removes the hosted API line. It does not add a Cline fee."
+    },
+    {
+      "q": "Why is the rating Depends?",
+      "a": "Because the software is free and the usage is not capped by Cline. Depends means use it if you will watch the key, and buy a seat with an allowance if you will not."
+    }
+  ]
+}

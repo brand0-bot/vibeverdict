@@ -1,0 +1,56 @@
+{
+  "audience": [
+    "Cursor is for people who want an editor with deep codebase context, tab completion, and an agent that can use more than one frontier model. That product description is the pros list, and it is why people compare it with Copilot and Claude Code. The verdict is not about the editor being bad. It is about the price list.",
+    "Buy it only if you can stand a Depends rating. On 14 October 2026 the docs still listed Pro at $20, Pro Plus at $60, and Ultra at $200. The public pricing page did not list those names or those dollar amounts. If you need the checkout to match the docs before you pay, wait."
+  ],
+  "features": [
+    "Deep codebase context and a strong agent are the features people are actually buying. Multiple frontier models are the other pro. None of that is in dispute. The dispute is which plan name you type into a budget.",
+    "The table on this page is docs-sourced and unconfirmed. cursor.com/docs/models-and-pricing, which the older account pricing URL redirects to, says Pro $20 a month, Pro Plus $60 a month, and Ultra $200 a month. That is the only price table we print.",
+    "Usage past the included pool is pay-as-you-go. The cons say so, and they do not give the overage rate. We do not invent one. A plan price is the start of the invoice if you leave the pool."
+  ],
+  "limitations": [
+    "The public page, cursor.com/pricing, returned HTTP 200 with the title Cursor · Pricing and did not redirect. It did not list Pro, Pro Plus, or the docs dollar amounts. It listed Free at $0 a month, Plus at $8 a month, Premium at $30 a month, Super at $100 a month, Ultra at $200 a month, and Teams at $30+ per user a month, mixed with Grok and X features. Those tiers are not shown in our table. Do not treat that public lineup as Cursor's plan list, and do not treat the docs list as the page a buyer sees today.",
+    "Ultra at $200 appears in both places, which is not the same as the lineups matching. The names around it do not match. A shared number is not a confirmation.",
+    "The rating is Depends, and last verified is empty, because we will not stamp a date on a price the two official pages disagree about. The verdict stays the mismatch."
+  ],
+  "pricingNotes": [
+    "Unconfirmed, docs-sourced, checked 14 October 2026. The table quotes cursor.com/docs/models-and-pricing: Pro $20 a month, Pro Plus $60 a month, Ultra $200 a month. The public pricing page did not list Pro, Pro Plus, or those docs amounts.",
+    "What the public page did list, mixed with Grok and X features, was Free $0, Plus $8, Premium $30, Super $100, Ultra $200, and Teams $30+ per user. Those are recorded so you can see the conflict. They are not a second recommended price table. There is no annual figure in the docs quotes, so none is printed."
+  ],
+  "alternatives": [
+    {
+      "slug": "github-copilot",
+      "text": "is the straightforward seat. Pro is $10 a month, inside the editor you already use. The verdict there is Worth it on value. Free includes 2,000 completions a month. The usage-credit model is still complex, and the agent is less deep."
+    },
+    {
+      "slug": "claude-code",
+      "text": "is the terminal agent on a Claude plan. Pro is $20 a month, or $17 annual with $200 up front, and it includes Claude Code. Max is from $100. The price page agreed with itself on the day we checked."
+    },
+    {
+      "slug": "warp",
+      "text": "states agent usage in dollars. Build is $20 a month and includes $20 of usage. Max is $200 a month and includes $200 of usage. The free plan includes the terminal and the agent CLI."
+    },
+    {
+      "slug": "windsurf",
+      "text": "no longer sells a standalone plan. Its pricing URL redirects to Devin. There is no Windsurf checkout to compare against these docs prices."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Cursor Pro $20?",
+      "a": "The docs we quote say Pro is $20 a month, Pro Plus is $60, and Ultra is $200. The public pricing page on 14 October 2026 did not list those plan names or those amounts. The table is the docs list, marked unconfirmed."
+    },
+    {
+      "q": "What did the public pricing page show?",
+      "a": "Free at $0, Plus at $8, Premium at $30, Super at $100, Ultra at $200, and Teams at $30+ per user, mixed with Grok and X features. Those tiers are not the table on this page."
+    },
+    {
+      "q": "Why is the rating Depends?",
+      "a": "Because the two official pages disagree. The editor can still be the right tool. The price you will be charged is not something we will pretend is settled."
+    },
+    {
+      "q": "Does usage past the pool cost extra?",
+      "a": "Yes. The cons say usage past the included pool is pay-as-you-go. The rate is not in our data, so it is not printed."
+    }
+  ]
+}

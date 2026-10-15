@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Aider is for people who already live in a terminal and want a pair programmer on their own repo without a seat fee. The verdict is specific: it is a free Apache-2.0 tool, and the only bill is the model API key you bring. If you like git diffs and you already pay an API provider, this is the fit.",
+    "It is a poor fit if you want a polished editor subscription with an included allowance. The cons say it is less polished than an editor subscription, and you pay token prices with no included allowance. A person who wants one invoice and a chat sidebar should look at a hosted plan instead."
+  ],
+  "features": [
+    "There is no Aider seat. The plan named Aider is Free under the Apache-2.0 license. The other row is model usage, and that price is pay your API provider. aider.chat shows install-and-bring-a-key usage and does not list a paid plan. The license text is the pricing source we checked.",
+    "It works in the terminal against your own repo. That is the pro that matters. You are not uploading a project into someone else's IDE just to get a suggestion. The edits land where the code already is.",
+    "Because the tool itself is free, the decision is which model key you attach. A cheap model and an expensive model are different products that happen to share the same command. Try one task you already understand before you leave a key pointed at a large repo."
+  ],
+  "limitations": [
+    "No included allowance means a quiet month can still be a bill if you leave it running, and a busy month is entirely the provider's rate. We do not reprint a vendor token price here, because Aider does not publish one.",
+    "Cline's own cons note that API bills can pass a $20 editor subscription. Aider has the same shape. GitHub Copilot Pro is $10 a month. Claude Pro, which includes Claude Code, is $20 a month. If your key spend is already past those seats, the free license is not the cheaper product.",
+    "The rating is Depends. Depends means the terminal workflow is the reason to use it, and the open API bill is the reason to hesitate. The license does not change that."
+  ],
+  "pricingNotes": [
+    "Checked 14 October 2026. Aider is Free under Apache-2.0. Model usage is pay your API provider. The pricing note on the tool says aider.chat does not list a paid plan, and the Apache-2.0 license is on the official GitHub repository.",
+    "There is no annual Aider discount to calculate, and no credit pack. Any dollar figure on an invoice is the model provider's, not a plan we omitted."
+  ],
+  "alternatives": [
+    {
+      "slug": "claude-code",
+      "text": "is the terminal agent that comes with a Claude plan. Pro is $20 a month, or $17 a month billed annually with $200 up front, and it includes Claude Code. Max starts from $100 a month. Choose it when you want an included allowance instead of a raw key."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the editor with the disputed price list. The docs we quote still say Pro $20, Pro Plus $60, and Ultra $200. The public pricing page showed a different lineup, so the rating there is Depends. Use it if you want the IDE, and read that mismatch before you pay."
+    },
+    {
+      "slug": "cline",
+      "text": "is the other Apache-2.0 agent. The tool is free and you pay the provider, including a local model if you connect one. It is the closer cousin. The difference is the IDE extension and the CLI, not a cheaper seat."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Aider have a paid plan?",
+      "a": "No. The table is Free under Apache-2.0, plus model usage billed by your API provider. aider.chat does not list a paid Aider plan."
+    },
+    {
+      "q": "Is the free license the whole cost?",
+      "a": "The license is free. The model key is not. There is no included allowance, which is the cons line. Compare a month of key spend with GitHub Copilot Pro at $10 or Claude Pro at $20 before you assume free means cheaper."
+    },
+    {
+      "q": "Who is Aider for?",
+      "a": "Someone who already works in a terminal on their own repo and is willing to bring a key. If you want a polished editor with a stated allowance, this is the wrong default."
+    },
+    {
+      "q": "Does the Depends rating mean skip it?",
+      "a": "No. Depends means the tool is free and the bill is the key. For a terminal workflow that is a fair trade. For everyone else it is not an automatic yes."
+    }
+  ]
+}

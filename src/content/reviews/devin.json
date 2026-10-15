@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Devin is for people who want desktop, CLI, and cloud agents on one plan and can live with a quota that is not a message count. The verdict says Pro is $20 a month, the quota is opaque, and Teams has an $80 minimum before you add seats. If you need the invoice to say how many tasks you bought, this is the wrong page.",
+    "It is a reasonable fit for a team that wants flex seats at $0 and is willing to pay the $80 floor. Flex seats draw from shared on-demand credits. A solo developer who only needs an editor should compare that $20 Pro seat with Copilot and Claude before they take the opaque quota."
+  ],
+  "features": [
+    "Free is $0. Pro is $20 a month. Max is $200 a month. Teams is an $80 a month minimum plus $40 a month per full seat. Enterprise is contact sales. Docs at docs.devin.ai match these prices. That match is why the table is verified.",
+    "Desktop, CLI, and cloud agents on one plan is the pro that justifies a product this broad. Extra usage is API pricing, not a mystery credit. The included quota is the mystery. The overage unit is the clearer part, and we still do not have a per-call rate to print.",
+    "SWE-2 is free in Devin Desktop and the CLI through 16 October 2026. That is a dated promotion in the pricing note, not a permanent free agent. After that date, assume it is gone unless the docs still say it."
+  ],
+  "limitations": [
+    "Included quota is not a published message count. Pro at $20 can be a bargain or a short month, and the page does not give you the number that decides which. The verdict calls that out on purpose.",
+    "Teams costs $80 even with no full seats. Full seats are $40 on top. Flex seats are $0 and still draw from the shared credits, so free seats are not free work. Do not add a headcount and forget the minimum.",
+    "The rating is Depends. Depends means the $20 Pro price is real and the amount of work inside it is not published. Max at $200 does not fix the opacity. It raises the stake."
+  ],
+  "pricingNotes": [
+    "From devin.ai/pricing, with docs.devin.ai matching, checked 14 October 2026. Free is $0. Pro is $20 a month. Max is $200 a month. Teams is an $80 a month minimum plus $40 a month per full seat. Enterprise is contact sales.",
+    "Flex seats are $0 and draw from shared on-demand credits. Extra usage is API pricing. SWE-2 is free in Devin Desktop and the CLI through 16 October 2026. No message-count quota is published, so none is printed."
+  ],
+  "alternatives": [
+    {
+      "slug": "cursor",
+      "text": "is the editor people cross-shop at a similar docs price. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page showed a different lineup. Both reviews are Depends, for different reasons."
+    },
+    {
+      "slug": "claude-code",
+      "text": "puts the agent on a Claude plan with a stated usage multiple. Pro is $20 a month, or $17 annual with $200 up front. Max is from $100 and offers 5x or 20x more usage than Pro. The free Claude plan does not include Claude Code."
+    },
+    {
+      "slug": "windsurf",
+      "text": "does not sell a standalone plan. windsurf.com/pricing redirects to Devin. If you arrived from a Windsurf bookmark, this is the price list you actually landed on, and it is still an opaque quota."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Devin Pro $20 enough?",
+      "a": "The price is $20 a month. The included quota is not a published message count, which is why the verdict does not call it enough. Try Free at $0, then decide if the opaque quota is acceptable."
+    },
+    {
+      "q": "Why is Teams $80 with no full seats?",
+      "a": "The card is an $80 a month minimum plus $40 a month per full seat. The minimum applies before you add seats. Flex seats are $0 and draw from shared on-demand credits."
+    },
+    {
+      "q": "Is SWE-2 free?",
+      "a": "In Devin Desktop and the CLI, through 16 October 2026. That is the note. It is not a standing free plan."
+    },
+    {
+      "q": "Is extra usage a credit bundle?",
+      "a": "The pros say extra usage is API pricing, not a mystery credit. The included quota is the part that is not a published count. We do not print a per-request API rate."
+    }
+  ]
+}

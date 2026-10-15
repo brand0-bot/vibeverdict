@@ -1,0 +1,56 @@
+{
+  "audience": [
+    "GitHub Copilot is for developers who already have an editor and want completions and some agent usage without a research project. The verdict says it is the best value for most developers, and that $10 gets you solid completions and agent usage inside the editor you already use. VS Code, JetBrains, and the CLI are the places it runs.",
+    "It is a weaker fit if you wanted the deepest agent and you are willing to babysit a disputed price page. The cons say it has less agentic depth than Cursor. If the job is a long multi-file agent session, read Claude Code too. If the job is everyday completion, start here."
+  ],
+  "features": [
+    "The ladder is simple, which is rare in this category. Free is $0 and includes 2,000 completions a month. Pro is $10 a month. Pro+ is $39 a month. Max is $100 a month. Business is $19 per user a month. Those are the rows in the billing docs we checked on 14 October 2026.",
+    "A generous free tier is a real pro. Two thousand completions is enough to learn whether the suggestions match your codebase. It is not a promise about agent credits. The cons say the usage-credit model is complex, and this page does not reprint a credit formula the billing doc's plan rows do not state.",
+    "Cheap entry is the point of the verdict. Pro at $10 undercuts Claude Pro at $20 and the Cursor docs price of $20. You are paying less, and you should expect the agent to be less deep. That trade is the review."
+  ],
+  "limitations": [
+    "The usage-credit model is complex. We will not invent a translation from completions to agent tasks. If your team needs a hard cap written in tasks, this plan list does not give you one.",
+    "Less agentic depth than Cursor is a product limit, not a pricing complaint. Cursor's own price list is in dispute, so the deeper agent is not automatically the better buy. It is a different risk.",
+    "Business at $19 per user is the team door in the table. We do not have a separate enterprise dollar amount, so we do not add one. The Worth it verdict is about the individual Pro seat at $10."
+  ],
+  "pricingNotes": [
+    "From the GitHub Copilot billing docs, checked 14 October 2026. Free is $0 for 2,000 completions a month. Pro is $10 a month. Pro+ is $39 a month. Max is $100 a month. Business is $19 per user a month.",
+    "There is no pricing note on the tool beyond those rows, and no annual price in the table, so none is printed. The usage-credit model is called complex in the cons and is not expanded into a rate card here."
+  ],
+  "alternatives": [
+    {
+      "slug": "cursor",
+      "text": "goes deeper on the agent and the codebase. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200. The public pricing page showed a different lineup, so that review is Depends. Pay the extra only if you accept the mismatch."
+    },
+    {
+      "slug": "claude-code",
+      "text": "is the terminal agent. Pro is $20 a month, or $17 annual with $200 up front, and the free Claude plan does not include it. Heavy users are pointed at Max from $100."
+    },
+    {
+      "slug": "warp",
+      "text": "is a terminal with the agent priced in included dollars. Build is $20 a month and includes $20 of agent usage. The free plan includes the terminal and the agent CLI."
+    },
+    {
+      "slug": "windsurf",
+      "text": "does not have a standalone checkout. The pricing URL redirects to Devin. There is no Windsurf price to set next to Copilot Pro at $10."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Copilot Pro enough at $10?",
+      "a": "For most developers, that is the verdict. Pro is $10 a month for completions and agent usage in the editor you already use. Pro+ at $39 and Max at $100 are there if the credit model runs out, not as the default."
+    },
+    {
+      "q": "What does the free plan include?",
+      "a": "Free is $0 and includes 2,000 completions a month. It is a real trial of the suggestions. It is not described here as an agent allowance, because the row does not say that."
+    },
+    {
+      "q": "How do usage credits work?",
+      "a": "The cons say the model is complex. We do not publish a conversion that is not in the plan rows. Read the billing docs before you assume completions and agent tasks draw the same meter."
+    },
+    {
+      "q": "Is there an affiliate link on this verdict?",
+      "a": "No. There is no affiliate relationship in the data. The Worth it rating is the $10 value, not a commission."
+    }
+  ]
+}
