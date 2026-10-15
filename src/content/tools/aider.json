@@ -27,7 +27,8 @@
  "alternatives": [
   "claude-code",
   "cursor",
-  "cline"
+  "cline",
+  "opencode"
  ],
  "website": "https://aider.chat",
  "affiliate": false,

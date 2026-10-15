@@ -1,0 +1,56 @@
+{
+  "audience": [
+    "OpenCode is for people who want a coding agent in the terminal, a desktop app, or a local web UI, and who are willing to bring a model. The verdict is specific: the agent is free under the MIT license, and the bill is either your own provider or OpenCode Go at $10 a month. Go Plus is $40 a month when the $10 caps are too small.",
+    "It is a poor fit if you wanted one shared allowance and a team on the same Go workspace. The Go docs say a workspace with a Go subscription cannot invite members, and each model has its own monthly dollar limit."
+  ],
+  "features": [
+    "The OpenCode row is Free under the MIT license on github.com/anomalyco/opencode. The v2 docs describe a terminal interface, a desktop app, and a local web UI opened with the opencode pair command. You do not buy a seat to install it.",
+    "Go is $10 a month. Go Plus is $40 a month. Both figures are on opencode.ai/go, checked 15 October 2026. The docs say Go is optional and works like any other provider: you subscribe, copy a key, and connect it. You can also point OpenCode at a provider you already pay.",
+    "Zen is the pay-as-you-go catalog. opencode.ai/zen says to add a $20 balance, plus a $1.23 card fee, and that another $20 is added when the balance reaches $5. The v2 billing page lists Console packs of $10, $50, and $100, a processing fee of 4.6% plus $0.31, and no seat fee. That $1.23 on a $20 top-up is the same fee formula, not a second price we invented."
+  ],
+  "limitations": [
+    "Go limits are monthly dollar amounts per model. The docs say 20% of a model's monthly limit can be used in any 5 hours, and 50% in a week. A $10 plan can still stop you on one model while another model has room left. We do not reprint the per-model table, because it is a long list and it is not one pool.",
+    "A Go workspace is for a single member. Teams that want seats should look at a product that sells them. OpenCode 1 and OpenCode 2 both use the opencode command and cannot be installed side by side under that default command, which the docs say outright.",
+    "The rating is Depends. Depends means the client is free and the model is not. Claude Pro, which includes Claude Code, is $20 a month. GitHub Copilot Pro is $10 a month. If your key spend is already past those seats, the MIT license is not the cheaper product."
+  ],
+  "pricingNotes": [
+    "Checked 15 October 2026. OpenCode is Free under MIT. Go is $10 a month and Go Plus is $40 a month on opencode.ai/go. Zen starts with a $20 balance plus a $1.23 card fee on opencode.ai/zen. Your own provider is pay that provider. No annual Go price is printed on the Go page, so none is shown.",
+    "The Go docs define the caps as monthly dollar amounts per model, with a 5-hour slice of 20% and a weekly slice of 50%. Console credit packs of $10, $50, and $100, and the 4.6% plus $0.31 processing fee, are on the v2 billing docs. Requests fail when a prepaid balance hits zero."
+  ],
+  "alternatives": [
+    {
+      "slug": "claude-code",
+      "text": "is the terminal agent that comes with a Claude plan. Pro is $20 a month, or $17 a month billed annually with $200 up front, and it includes Claude Code. Max starts from $100 a month. Choose it when you want an included allowance instead of a per-model Go cap."
+    },
+    {
+      "slug": "aider",
+      "text": "is the other free terminal tool. It is Apache-2.0, and you pay your API provider with no included allowance. OpenCode adds a $10 Go plan and a desktop app. Aider stays a terminal pair programmer with no seat."
+    },
+    {
+      "slug": "cline",
+      "text": "is Apache-2.0 as well. The tool is free and you pay the provider, including a local model if you connect one. It is the closer cousin if you want an IDE extension and a CLI without a Go subscription."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the editor. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page showed a different lineup. Depends, until those two pages agree. Use it when you want the IDE, and read that mismatch before you pay."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is OpenCode free?",
+      "a": "The agent is free under the MIT license. Go, the optional model plan, is $10 a month. Go Plus is $40 a month. Zen is a prepaid balance, starting at $20 plus a $1.23 card fee. A provider you connect yourself bills you directly."
+    },
+    {
+      "q": "What is the difference between Go and Go Plus?",
+      "a": "The price is $10 a month versus $40 a month. The docs say both plans reach the same models, and Go Plus has higher monthly dollar limits on those models. The limits are still per model."
+    },
+    {
+      "q": "Can a team share one Go plan?",
+      "a": "No. The Go docs say Go and Go Plus are for a workspace with a single member, and a workspace with a Go subscription cannot invite members."
+    },
+    {
+      "q": "Does OpenCode have an affiliate link?",
+      "a": "No. We did not find a public publisher affiliate signup on opencode.ai. The Visit button goes to opencode.ai."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+ "name": "OpenCode",
+ "category": "coding-agents",
+ "verdict": "A free MIT coding agent for the terminal, desktop, and a local web UI; the models are your own bill, or a $10 Go plan with a separate cap per model.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "OpenCode",
+   "price": "Free (MIT)"
+  },
+  {
+   "plan": "Go",
+   "price": "$10/mo"
+  },
+  {
+   "plan": "Go Plus",
+   "price": "$40/mo"
+  },
+  {
+   "plan": "Zen",
+   "price": "$20 starting balance (+$1.23 card fee)"
+  },
+  {
+   "plan": "Your provider",
+   "price": "Pay your API provider"
+  }
+ ],
+ "pricingSource": "https://opencode.ai/go",
+ "lastVerified": "2026-10-15",
+ "verified": true,
+ "pros": [
+  "The agent itself is MIT licensed",
+  "Terminal, desktop app, and a local web UI",
+  "Go is optional if you already have a provider"
+ ],
+ "cons": [
+  "Go limits are a dollar cap per model, not one shared pool",
+  "A Go workspace cannot invite members"
+ ],
+ "alternatives": [
+  "claude-code",
+  "aider",
+  "cline",
+  "cursor"
+ ],
+ "website": "https://opencode.ai",
+ "affiliate": false,
+ "pricingNote": "Checked 2026-10-15. opencode.ai/go lists Go at $10/month and Go Plus at $40/month. opencode.ai/docs/go says Go is optional, a Go workspace cannot invite members, and each model has its own monthly dollar limit, with 20% of that limit in any 5 hours and 50% in a week. Those per-model amounts are not one pool, so they are not collapsed into a single figure here. The MIT license is at github.com/anomalyco/opencode. Zen, on opencode.ai/zen, is pay as you go: a $20 starting balance plus a $1.23 card fee, and another $20 when the balance reaches $5. The v2 billing docs list Console credit packs of $10, $50, and $100 with a processing fee of 4.6% + $0.31, and no seat fee. Usage through your own provider is billed by that provider."
+}
