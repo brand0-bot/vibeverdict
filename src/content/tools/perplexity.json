@@ -31,7 +31,8 @@
  "alternatives": [
   "chatgpt",
   "gemini",
-  "claude"
+  "claude",
+  "manus"
  ],
  "website": "https://perplexity.ai",
  "affiliate": false,

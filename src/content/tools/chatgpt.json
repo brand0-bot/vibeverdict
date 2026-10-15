@@ -35,7 +35,8 @@
  "alternatives": [
   "claude",
   "gemini",
-  "perplexity"
+  "perplexity",
+  "manus"
  ],
  "website": "https://chatgpt.com",
  "affiliate": false,

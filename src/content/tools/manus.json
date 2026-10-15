@@ -1,0 +1,45 @@
+{
+ "name": "Manus",
+ "category": "agent-frameworks",
+ "verdict": "An agent for research, slides, and browser tasks; $20 buys 4,000 credits, and Manus does not publish what one task costs.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "4,000 credits",
+   "price": "$20/mo or $17/mo billed yearly"
+  },
+  {
+   "plan": "8,000 credits",
+   "price": "$40/mo or $34/mo billed yearly"
+  },
+  {
+   "plan": "40,000 credits",
+   "price": "$200/mo or $167/mo billed yearly"
+  },
+  {
+   "plan": "Team",
+   "price": "$20/seat/mo or $200/seat/year (4,000 credits/seat)"
+  }
+ ],
+ "pricingSource": "https://manus.im/pricing",
+ "lastVerified": "2026-10-15",
+ "verified": true,
+ "pros": [
+  "One agent for research, slides, sites, and browser tasks",
+  "Annual monthly prices are on the pricing toggle",
+  "Team credits sit in a shared pool"
+ ],
+ "cons": [
+  "No published credit price for a single task",
+  "The 8,000 and 40,000 cards are selectors, and only the open step is listed"
+ ],
+ "alternatives": [
+  "chatgpt",
+  "claude",
+  "perplexity",
+  "n8n"
+ ],
+ "website": "https://manus.im",
+ "affiliate": true,
+ "pricingNote": "Checked 2026-10-15. manus.im/pricing, monthly view, showed $20/month for 4,000 credits, $40/month for 8,000 credits, and $200/month for 40,000 credits. Each card also lists 300 refresh credits every day, 20 concurrent tasks, and 20 scheduled tasks. The annual toggle is labeled Save 17% and showed $17, $34, and $167 per month, billed yearly, for those same credit amounts. The 8,000 and 40,000 cards have a credit selector; other steps were not open, so they are omitted. Team, on manus.im/team, is $20 per seat a month or $200 per seat a year, with 4,000 credits per seat a month in a shared pool. A help-center article lists a Free plan at $0 with 300 daily credits; that card was not on the pricing page we rendered, so it is not in this table. manus.im/help/credits says a task's cost depends on complexity and duration, across tokens, virtual machines, and third-party APIs, and does not publish a per-task rate."
+}

@@ -1,0 +1,56 @@
+{
+  "audience": [
+    "Emergent is for someone who wants a web or mobile app from a prompt, with building, hosting, and GitHub on the paid plans. The verdict is the price shape: Standard is $20 a month for 100 credits, and the next plan is $200. A first project fits the question the free plan can answer. A large product is a credit question before it is a feature question.",
+    "It is a poor fit if you already live in a Next.js repo and only need components. v0 is the closer tool for that. It is also a poor fit if you wanted the pack prices for extra credits before you subscribe. The pricing page says you can buy more credits on Standard and does not list those prices."
+  ],
+  "features": [
+    "Free is $0 a month with 10 free monthly credits. That is the number on emergent.sh/pricing, checked 15 October 2026. Ten credits is enough to see how a prompt spends the meter. It is not a month of building.",
+    "Standard is $20 a month, or $17 a month on the annual price. The card says Save $36. It includes 100 credits a month, web and mobile apps, private project hosting, and GitHub integration. Pro is $200 a month, or $167 a month annual, and the card says Save $396. Pro lists 750 monthly credits, a 1M context window, and custom agents. Enterprise is Custom.",
+    "The annual dollar amounts are on the page, in the annual price block. We are not deriving $17 or $167 from a percentage. The same is true of the $36 and $396 savings labels."
+  ],
+  "limitations": [
+    "Pro is ten times the Standard monthly price, for 750 credits against Standard's 100. That is 7.5 times the credits at 10 times the price. Buy Pro for the context window and the other Pro features, and read the credit ratio yourself.",
+    "Extra credits are mentioned and not priced on the pricing page. Help-center pages elsewhere on the site list pack prices that do not match each other, so this review does not print a top-up price. If you need a number, it has to be on emergent.sh/pricing.",
+    "The rating is Depends. Depends means the $20 Standard card is a real entry price for a prompt-to-app product, and the $200 step is the reason to hesitate. Emergent has an affiliate program and no affiliate URL in our data, so the Visit button goes to emergent.sh. That program does not move the verdict."
+  ],
+  "pricingNotes": [
+    "From emergent.sh/pricing on 15 October 2026. Free is $0 a month with 10 free monthly credits. Standard is $20 a month or $17 a month annual, labeled Save $36, with 100 credits a month. Pro is $200 a month or $167 a month annual, labeled Save $396, with 750 monthly credits. Enterprise is Custom.",
+    "The Standard card says you can purchase extra credits as needed. No pack price is on that page, so none is in the table."
+  ],
+  "alternatives": [
+    {
+      "slug": "lovable",
+      "text": "is the hosted full-stack builder people cross-shop. Pro is $25 a month for 100 credits, or $21 a month annual. Free is 5 credits a day, max 30 a month. Lovable's entry price is close to Emergent Standard. Lovable is Worth it for the deploy loop. Emergent is Depends because Pro is $200."
+    },
+    {
+      "slug": "bolt",
+      "text": "is the in-browser builder with token billing. Free is $0 with 300,000 tokens a day and 1 million a month. Pro is $25 a month billed monthly, starting at 10 million tokens. Teams is $30 per member a month billed monthly. The pricing page said yearly billing saves up to 28% and did not list the yearly dollar amounts."
+    },
+    {
+      "slug": "v0",
+      "text": "is the React and Next.js generator that deploys to Vercel. Plus is $30 per user a month. Business is $100 per user a month. Choose v0 when the stack is already Vercel. Choose Emergent when the brief is a web or mobile app from a prompt."
+    },
+    {
+      "slug": "replit",
+      "text": "is a cloud IDE plus an agent. Core is $20 a month, or $18 billed annually. Pro is $100 a month, or $90 billed annually. Starter is free. It is the better pick when you want a general coding environment at a $20 seat, not a 100-credit app plan."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How many credits does Emergent Free include?",
+      "a": "10 free monthly credits, at $0 a month, on emergent.sh/pricing. Standard is the first paid plan, at $20 a month or $17 annual, for 100 credits."
+    },
+    {
+      "q": "Why is Pro $200?",
+      "a": "That is the price on the card: $200 a month, or $167 a month billed annually, for 750 monthly credits. Standard is $20 for 100 credits. The jump is the reason the rating is Depends."
+    },
+    {
+      "q": "Can I buy more credits, and for how much?",
+      "a": "The Standard card says you can purchase extra credits. It does not list a pack price. We do not print one."
+    },
+    {
+      "q": "Is the Visit button an affiliate link?",
+      "a": "Not yet. Emergent's affiliate program is public, and there is no affiliate URL in our data, so Visit goes to emergent.sh. A future affiliate link would not change the verdict."
+    }
+  ]
+}

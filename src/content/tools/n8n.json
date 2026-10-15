@@ -44,7 +44,8 @@
  "alternatives": [
   "zapier",
   "make",
-  "langchain"
+  "langchain",
+  "manus"
  ],
  "website": "https://n8n.io",
  "affiliate": false,

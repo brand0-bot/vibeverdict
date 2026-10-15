@@ -1,0 +1,45 @@
+{
+ "name": "Emergent",
+ "category": "app-builders",
+ "verdict": "A prompt-to-app builder for web and mobile; Standard is $20 a month for 100 credits, and the next plan is $200.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0/mo (10 credits)"
+  },
+  {
+   "plan": "Standard",
+   "price": "$20/mo or $17/mo annual (100 credits)"
+  },
+  {
+   "plan": "Pro",
+   "price": "$200/mo or $167/mo annual (750 credits)"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  }
+ ],
+ "pricingSource": "https://emergent.sh/pricing",
+ "lastVerified": "2026-10-15",
+ "verified": true,
+ "pros": [
+  "Web and mobile apps from a prompt",
+  "Free plan to see the credit meter",
+  "Annual prices are printed on the card"
+ ],
+ "cons": [
+  "Pro is ten times the Standard price",
+  "Extra-credit pack prices are not on the pricing page"
+ ],
+ "alternatives": [
+  "lovable",
+  "bolt",
+  "v0",
+  "replit"
+ ],
+ "website": "https://emergent.sh",
+ "affiliate": true,
+ "pricingNote": "On emergent.sh/pricing, checked 2026-10-15. Free is $0 a month with 10 free monthly credits. Standard is $20 a month, or $17 a month on the annual price, which the card labels Save $36, with 100 credits a month. Pro is $200 a month, or $167 a month annual, labeled Save $396, with 750 monthly credits. Enterprise is Custom. Standard says you can purchase extra credits and does not list the pack prices, so none are shown."
+}

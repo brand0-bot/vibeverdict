@@ -27,7 +27,8 @@
  "alternatives": [
   "claude-code",
   "cursor",
-  "aider"
+  "aider",
+  "opencode"
  ],
  "website": "https://cline.bot",
  "affiliate": false,

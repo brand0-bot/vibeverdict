@@ -33,7 +33,8 @@
   "openai-codex",
   "cursor",
   "warp",
-  "aider"
+  "aider",
+  "opencode"
  ],
  "website": "https://claude.com/product/claude-code",
  "affiliate": false,

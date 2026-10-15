@@ -1,0 +1,56 @@
+{
+  "audience": [
+    "Manus is for people who want one agent to research a topic, make slides, and carry out browser tasks, and who can live with a credit balance instead of a message count. The verdict names the entry card: $20 a month buys 4,000 credits. The catch is on Manus's own credits page. A task costs credits based on complexity and duration, and there is no published price for one task.",
+    "It is a poor fit if the invoice has to say how many tasks you bought. n8n prices workflow executions. ChatGPT Plus is a $20 seat with a different meter. If you need the cost before you press go, this is the wrong page."
+  ],
+  "features": [
+    "The pricing page, rendered 15 October 2026, showed three individual cards. $20 a month is 4,000 credits. $40 a month is 8,000 credits. $200 a month is 40,000 credits. Each card also lists 300 refresh credits every day, 20 concurrent tasks, and 20 scheduled tasks. The annual toggle is labeled Save 17% and showed $17, $34, and $167 per month, billed yearly, for those same credit amounts.",
+    "Team is on manus.im/team, not as a dollar amount on the individual cards. It is $20 per seat a month, or $200 per seat a year, with 4,000 credits per seat a month in a shared pool. The page also shows a seat calculator. A total such as 80,000 credits or $4,000 a year is that calculator, not a separate plan, so it is not in the table.",
+    "The work the cards describe is in-depth research, websites, slides, and Wide Research. That is the practical meaning of a general-purpose agent. It is grouped with Agents and Automation on this site because that is the category for agent products, beside the chat models."
+  ],
+  "limitations": [
+    "manus.im/help/credits says credits are consumed from LLM tokens, virtual machines, and third-party APIs, and that the amount depends on the task's complexity and duration. There is no rate card. A 4,000-credit month can be a lot of short tasks or one long one, and the page does not tell you which before you run it.",
+    "The 8,000 and 40,000 cards are selectors. We list the step that was open. Other steps in the menu were not displayed, so they are omitted rather than guessed. The help center lists a Free plan at $0 with 300 daily credits. That card was not on the pricing page we rendered, so Free is not in the table.",
+    "The rating is Depends. Depends means the $20 price is real and the amount of work inside 4,000 credits is not published. The $200 card does not fix that. It raises the stake. Manus has a public affiliate signup and a business partner program, and no affiliate URL in our data. The Visit button goes to manus.im. Neither program moves the verdict."
+  ],
+  "pricingNotes": [
+    "From manus.im/pricing on 15 October 2026. Monthly cards: $20 for 4,000 credits, $40 for 8,000 credits, $200 for 40,000 credits, each with 300 refresh credits a day. Annual toggle, labeled Save 17%: $17, $34, and $167 per month, billed yearly. Team, from manus.im/team: $20 per seat a month or $200 per seat a year, with 4,000 credits per seat a month.",
+    "The help-center membership article lists Free at $0 a month with 300 daily refresh credits. It was not a card on the pricing page, so it is omitted from the table. Subscription credits reset on the billing cycle. The credits article does not publish a per-task rate."
+  ],
+  "alternatives": [
+    {
+      "slug": "chatgpt",
+      "text": "is the default general assistant. Plus is $20 a month, the same entry price as the Manus 4,000-credit card. Go is $8 a month. Free is $0. Choose ChatGPT when you want the broad product. Choose Manus when the job is a multi-step agent task and you accept an unpublished credit rate."
+    },
+    {
+      "slug": "claude",
+      "text": "is the writing and coding model. Pro is $20 a month, or $17 a month annual, and it includes Claude Code. Max 5x is $100 a month and Max 20x is $200 a month. Claude's meter is a usage limit on a chat plan, which is a different contract from a Manus credit."
+    },
+    {
+      "slug": "perplexity",
+      "text": "is the cited search product. The consumer Pro monthly price was not on the pages we could open, so it is not repeated here. Education Pro is $10 a month with verification, and Enterprise Pro is from $40 a month or $400 a year per seat. Use it when the output you want is a sourced answer."
+    },
+    {
+      "slug": "n8n",
+      "text": "prices the thing that runs. Cloud Starter is €24 a month, or €20 billed annually, for 2,500 workflow executions, and you can self-host the community edition. It is the better pick when you want a visible per-run price instead of a credit balance."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does $20 on Manus buy?",
+      "a": "The pricing page showed $20 a month for 4,000 credits, plus 300 refresh credits every day, 20 concurrent tasks, and 20 scheduled tasks. The annual toggle showed $17 a month, billed yearly, for the same 4,000 credits."
+    },
+    {
+      "q": "Why is there no price for a single task?",
+      "a": "The credits help page says consumption depends on complexity and duration, from tokens, virtual machines, and third-party APIs. It does not list a credit cost per task. That is why the verdict stops at the plan price."
+    },
+    {
+      "q": "Is there a free Manus plan?",
+      "a": "The help center lists Free at $0 a month with 300 daily refresh credits. That card was not on the pricing page we rendered on 15 October 2026, so it is not in the table. Check manus.im/pricing before you assume the free tier is still offered."
+    },
+    {
+      "q": "What does Team cost?",
+      "a": "$20 per seat a month, or $200 per seat a year, with 4,000 credits per seat a month in a shared pool. Those figures are on manus.im/team. A larger total on that page is the seat calculator, not another plan."
+    }
+  ]
+}
