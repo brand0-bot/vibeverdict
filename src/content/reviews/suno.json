@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Suno is for people who want a finished song from a description, not a DAW session. Hobbyists, marketers who need a bed of music, and creators who want a chorus they can actually hum are the fit. The verdict calls it the most fun AI music generator, and Pro at $10 a month, or $8 billed yearly, is the plan that includes commercial use.",
+    "It is the wrong tool if you need a spoken narrator or a video edit. The free plan is $0 with 50 credits a day and no commercial rights. If the track has to ship in an ad or a product, you are on Pro or Premier, and you still have to read Suno's terms. A plan that says commercial use is not a blank check."
+  ],
+  "features": [
+    "You describe a style, a mood, or lyrics, and you get a song. That loop is the product. Pro includes commercial use rights, which is the line that separates a toy from something you can publish. Premier is the same idea with a larger credit pile: 10,000 credits instead of Pro's 2,500.",
+    "Yearly billing is 20% off. The pricing page shows the yearly rates, $8 and $24, and says yearly saves $24 on Pro and $72 on Premier. Monthly is that saving added back, which is how the table gets to $10 and $30. We are not inventing a third discount.",
+    "Free is the audition. Fifty credits a day is enough to learn whether the model likes your genre. It does not include commercial rights. Treat free output as practice."
+  ],
+  "limitations": [
+    "Included credits do not roll over. A quiet month is wasted money if you paid for 2,500 or 10,000 credits and did not spend them. That is in the cons, and it is the opposite of a banked allowance.",
+    "Commercial use still has terms-of-service limits. The pros line and the cons line are both true. Pro includes commercial use rights, and those rights still have edges. Read them before you put a track under a brand.",
+    "Suno does not replace a voice tool or a video tool. If the job is narration, the price to compare is a voice plan. If the job is a clip, compare a video plan. A catchy song is a different deliverable."
+  ],
+  "pricingNotes": [
+    "Checked on suno.com/pricing. Free is $0 with 50 credits a day and no commercial rights. Pro is $10 a month, or $8 a month billed yearly, for 2,500 credits. Premier is $30 a month, or $24 a month billed yearly, for 10,000 credits.",
+    "The pricing page shows the yearly rates of $8 and $24 and says yearly saves $24 on Pro and $72 on Premier, which is the 20% annual discount. Monthly is that saving added back. Credits do not roll over."
+  ],
+  "alternatives": [
+    {
+      "slug": "elevenlabs",
+      "text": "is voice, not songs. Starter is $6 a month for 30,000 credits. Use it for narration. The Visit button there can be an affiliate link, which does not make it a music tool."
+    },
+    {
+      "slug": "runway",
+      "text": "is video. Standard is $15 a month, or $12 billed annually, for 625 credits that reset. Max is the plan that rolls one month of unused credits. Different meter, different job."
+    },
+    {
+      "slug": "midjourney",
+      "text": "is images. There is no free plan. Standard is $30 a month, which the verdict calls the sweet spot. Annual billing is 20% off. It will not write you a chorus."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Suno Free include commercial rights?",
+      "a": "No. Free is $0 with 50 credits a day and no commercial rights. Pro at $10 a month, or $8 billed yearly, is the plan that includes commercial use, still subject to the terms."
+    },
+    {
+      "q": "Do Suno credits roll over?",
+      "a": "No. Included credits do not roll over on the plans we verified. Unused Pro or Premier credits expire with the cycle."
+    },
+    {
+      "q": "Why is yearly Pro $8 if the monthly price is $10?",
+      "a": "The pricing page shows the yearly rate of $8 and says yearly saves $24 on Pro, which is the 20% discount. Monthly at $10 is that saving added back. Premier yearly is $24 against $30 monthly, a $72 yearly saving."
+    },
+    {
+      "q": "Is Suno worth it if I only need background music?",
+      "a": "The verdict is Worth it, and Pro at $10 is the commercial plan. If you never publish the audio, the free daily credits are enough to play. The rating does not change because a track is short."
+    }
+  ]
+}

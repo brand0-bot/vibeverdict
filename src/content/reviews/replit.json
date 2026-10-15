@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Replit is for people who want the editor, the hosting, and the agent in one cloud IDE. Students, teachers, and developers who refuse to install a toolchain are the obvious fit. The verdict prices the decision: Core is $20 a month, or $18 if you pay annually. If you only need a generated UI, you do not need this whole environment.",
+    "It is a weaker fit when the agent bill is open-ended. Paid agent work is effort-priced and can add up. Core includes $20 toward stronger models, and those credits do not roll over. A spiky month can cost more than the seat."
+  ],
+  "features": [
+    "Starter is free. The dollar amount is not printed on the docs page we used, so the table says Free and does not invent $0 as a separate researched figure beyond that word. Core and Pro prices are the cards on replit.com/pricing. Core is $20 a month, or $18 billed annually. Pro is $100 a month, or $90 billed annually. Enterprise is custom.",
+    "Hosting and the agent are in the same place. That is the pro that justifies the product against a local editor plus a separate host. Yearly billing is about 10% off, which is how $20 becomes $18 and $100 becomes $90. We are reading those pairs off the cards, not applying a generic discount.",
+    "Core includes $20 toward stronger models. The included amount matches the monthly price, which is a useful coincidence and also a ceiling. When it is gone, effort-priced agent work is extra."
+  ],
+  "limitations": [
+    "Core credits do not roll over. A quiet month does not stockpile the $20 of model credit. If your agent use is bursty, Pro at $100, or $90 annually, is the plan to read before you assume Core will stretch.",
+    "Paid agent work is effort-priced. We do not have a per-task dollar rate in the data, so we will not invent one. The warning is the point: the seat is not a cap on the agent.",
+    "The rating is Depends. The IDE is convenient. The agent meter is the condition. Depends means try Starter, buy Core if $20 is the budget, and watch the effort pricing."
+  ],
+  "pricingNotes": [
+    "Core and Pro prices are the cards on replit.com/pricing, checked 14 October 2026. Core is $20 a month, or $18 a month billed annually. Pro is $100 a month, or $90 a month billed annually. Enterprise is custom. Starter is free. The docs describe Starter and do not print a dollar amount for it.",
+    "Yearly billing is about 10% off, which matches the pairs above. Core includes $20 toward stronger models, and those credits do not roll over. No separate agent rate card is copied here."
+  ],
+  "alternatives": [
+    {
+      "slug": "lovable",
+      "text": "is prompt-to-app, not a general IDE. Pro is $25 a month for 100 credits, or $21 annual. Use it to ship a small full-stack app. Use Replit when you expect to keep coding."
+    },
+    {
+      "slug": "bolt",
+      "text": "is the browser builder on tokens. Pro is $25 a month billed monthly, starting at 10 million tokens. It is lighter than a cloud IDE and harsher on big codebases."
+    },
+    {
+      "slug": "v0",
+      "text": "is React UI on Vercel. Plus is $30 per user a month. It is the pick when the output has to be that stack, not a general environment."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much is Replit Core if I pay yearly?",
+      "a": "Core is $18 a month billed annually, against $20 month-to-month. Pro is $90 a month billed annually, against $100. That is the about 10% yearly discount, taken from the cards, not calculated as a new price."
+    },
+    {
+      "q": "Do Core credits roll over?",
+      "a": "No. Core includes $20 toward stronger models, and those credits do not roll over. A quiet month does not bank them."
+    },
+    {
+      "q": "Is Starter $0?",
+      "a": "Starter is free. The docs page does not print a dollar amount, so the table says Free and stops there."
+    },
+    {
+      "q": "Why Depends?",
+      "a": "Because the IDE and hosting are genuinely convenient at $20, and the agent is effort-priced on top. The seat is not the whole bill."
+    }
+  ]
+}

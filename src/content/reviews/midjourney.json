@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Midjourney is for people who care about how an image looks and will pay before they try it. There is no free plan. Illustrators, art directors, and anyone who has already bounced off a chat box that draws muddy hands are the audience. The verdict says it is still the leader in aesthetic image quality, and Standard at $30 is the sweet spot.",
+    "It is a bad fit for a one-off image you hoped to generate for nothing, and for video-first work. Basic at $10 exists if you want the cheapest door. If you need a clip, that is a different product."
+  ],
+  "features": [
+    "The plans are a simple ladder. Basic is $10 a month. Standard is $30 a month. Pro is $60 a month. Mega is $120 a month. Standard is the one the verdict names. You are paying for the look, and for GPU time, not for a seat in a docs tool.",
+    "Annual billing is 20% off. The pros line says that, and this page does not turn it into a second set of invented monthly equivalents. If you want the annual sticker, read the plan comparison the pricing source points at. The monthly numbers above are the ones in our table.",
+    "GPU-hour limits are the meter. The cons say so. A fast mode and a relaxed mode do not change the fact that the plan caps compute. Heavy upscaling and long sessions are how people hit the cap on a cheaper plan and wonder why Standard was the recommendation."
+  ],
+  "limitations": [
+    "No free tier means you pay to find out if you like it. Basic at $10 is the cheap experiment. It is not a promise that Basic has the same GPU room as Standard. The verdict's sweet spot is $30, not $10.",
+    "GPU-hour limits are real. We do not reprint a hours-per-plan table that is not in our pricing data. If the docs article lists hours, use that article. Do not trust a round number from a forum.",
+    "An image tool does not become a video tool because the pictures are good. Runway is the video comparison. Gamma is decks. ElevenLabs is voice. Midjourney's job is the picture."
+  ],
+  "pricingNotes": [
+    "Plans compared on the Midjourney docs article we cite, checked 14 October 2026. Basic is $10 a month. Standard is $30 a month. Pro is $60 a month. Mega is $120 a month. There is no free plan in the table.",
+    "Annual billing is 20% off, from the pros list. We do not print a calculated annual total. GPU-hour limits apply. The rating stays Worth it because of the image quality at the Standard price, not because of a commission. There is no affiliate relationship in the data."
+  ],
+  "alternatives": [
+    {
+      "slug": "runway",
+      "text": "is video, with a free one-time grant of 125 credits. Standard is $15 a month, or $12 billed annually, for 625 credits that reset. Use it for a shot. Use Midjourney for a still."
+    },
+    {
+      "slug": "gamma",
+      "text": "drafts decks. Free is $0 with 400 starting credits that do not refresh. Paid dollar prices were not on the pages we could open, so Gamma stays Pending. It is not an image-quality leader."
+    },
+    {
+      "slug": "elevenlabs",
+      "text": "is voice. Starter is $6 a month for 30,000 credits. It belongs in the same media budget only if the project needs sound."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a free Midjourney plan?",
+      "a": "No. The cons say there is no free tier. Basic is $10 a month. Standard, the sweet spot in the verdict, is $30 a month."
+    },
+    {
+      "q": "What does 20% off annual mean in dollars?",
+      "a": "The pros list says annual billing is 20% off. We do not multiply that into a new price. The verified monthly prices are Basic $10, Standard $30, Pro $60, and Mega $120."
+    },
+    {
+      "q": "Why not just buy Basic?",
+      "a": "Basic is the cheap door at $10. The verdict calls Standard at $30 the sweet spot because of GPU-hour limits on the way people actually generate. If your volume is tiny, Basic is the honest cheaper test."
+    },
+    {
+      "q": "Does Midjourney have an affiliate link?",
+      "a": "No. The data says there is no affiliate relationship. The Worth it rating is about image quality and the Standard price."
+    }
+  ]
+}

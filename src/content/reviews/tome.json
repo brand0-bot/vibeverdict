@@ -1,0 +1,48 @@
+{
+  "audience": [
+    "Nobody should buy Tome from this page, because there is nothing to buy that we could open. The verdict is the whole story: no price to publish. On 14 October 2026, tome.app and its pricing URL did not resolve. If you landed here from a roundup, the useful act is to look at a tool whose pricing page returned a price.",
+    "A past user who still has an account is not who this review can help. We cannot see a plan, a credit, or a checkout. Pending is the rating because the site failed, not because the product was judged and found wanting. A dead pricing URL is not a Skip. It is an absence."
+  ],
+  "features": [
+    "There is no feature list we are willing to sell you. Older write-ups described Tome as an AI presentation tool. That history is not a current spec. The only checked fact is that the site and the pricing URL returned errors.",
+    "The cons line is the feature, unfortunately: the pricing page returned deployment not found. tome.app and https://tome.app/pricing returned HTTP 404. https://tome.com/pricing returned HTTP 500. Three checks, no plan table.",
+    "If Tome comes back, this page should grow a real feature section and a price. Until then, pretending to review a generator we could not load would be filler, and filler is the thing this site is trying not to publish."
+  ],
+  "limitations": [
+    "You cannot compare Tome on price. There is no price. Any dollar figure on another site is not confirmed here. We will not repeat one.",
+    "A 404 on the app and a 500 on the other domain means we also cannot confirm that a login still works. Do not migrate a deck into a URL that did not resolve on the day we checked.",
+    "Pending means check again later. It does not mean the product is recommended, and it does not mean it is condemned. It means we refuse to invent a plan."
+  ],
+  "pricingNotes": [
+    "On 14 October 2026, https://tome.app and https://tome.app/pricing returned HTTP 404, deployment not found. https://tome.com/pricing returned HTTP 500. No plan and no price are shown. See the vendor site. Last verified is empty because there was nothing to verify.",
+    "We do not estimate a monthly price from memory, from an archive, or from a competing slide tool. Beautiful.ai is the priced comparison. Gamma is the free-plan comparison with an unpublished paid price."
+  ],
+  "alternatives": [
+    {
+      "slug": "gamma",
+      "text": "still has a free plan we could describe: $0 and 400 starting credits that do not refresh. Its paid dollar prices were not on the pages we could open, so it is Pending too, but the product URL was not a deployment error."
+    },
+    {
+      "slug": "beautiful-ai",
+      "text": "is the one with a number. Pro is $14.50 a month billed annually, with unlimited AI slides. Team is $40 per user billed annually or $50 billed monthly. The trial needs a card. If you need slides this week, start there."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much does Tome cost?",
+      "a": "No price to publish. The pricing URL returned deployment not found on 14 October 2026, and tome.com/pricing returned HTTP 500."
+    },
+    {
+      "q": "Is Tome shut down?",
+      "a": "We know the URLs we checked returned 404 and 500. We do not know the company's status beyond that. Pending is the rating until a pricing page loads."
+    },
+    {
+      "q": "Should I enter a credit card on a mirror site?",
+      "a": "No. If the official pricing URL does not resolve, do not pay a lookalike. Use Beautiful.ai or Gamma, which we could at least request."
+    },
+    {
+      "q": "Will this page get a price later?",
+      "a": "Only if we can read one on the vendor's site. We will not backfill a number from an old review."
+    }
+  ]
+}

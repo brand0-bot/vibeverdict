@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "v0 is for people who want React and Next.js UI and a one-click deploy to Vercel. Front-end developers who already use shadcn, and teams that do not want a second hosting story, are the fit. The verdict is specific: best for React and Next.js UI generation. If you need a database and auth from the same prompt, Lovable is the other conversation.",
+    "It is a poor fit if you are not on the Vercel stack and do not want to be. The cons say it is tied to that stack. A Python backend shop will feel the walls immediately."
+  ],
+  "features": [
+    "The output looks like the React code you would have written with shadcn, which is the pro that matters. You are not unpacking a mystery framework. Plus is $30 per user a month. Business is $100 per user a month. Free is $0. Those are the current cards.",
+    "Deploy is part of the pitch. Generating a component and shipping it to Vercel is one motion. That is why a team already on Vercel should try v0 before they buy a general app builder. The integration is the product, not a plugin.",
+    "The Premium plan is sunset for new users and is not listed as a current plan. Do not hunt for a $20 Premium checkout. If you still have it, that is a legacy seat, and this page will not quote it as something you can buy."
+  ],
+  "limitations": [
+    "Tied to the Vercel stack means the nice path is Next.js. If the design must land in a different framework, you are copying code out and the one-click deploy stops being the point.",
+    "Plus is per user at $30, so a five-person team pays that seat price five times. Business at $100 per user is the expensive row. We are not adding a platform fee that is not in the table, and we are not printing a team total the pricing card does not show.",
+    "The rating is Worth it inside its lane. It is not a verdict that v0 is the best app builder for every stack. Outside React and Vercel, the lane ends."
+  ],
+  "pricingNotes": [
+    "Free is $0. Plus is $30 per user a month. Business is $100 per user a month. Premium is sunset for new users and is not listed as a current plan, so no Premium price is shown.",
+    "There is no annual figure in our data, so none is printed. The Worth it verdict is about the React output and the Vercel deploy, at the Plus price, not about a discount."
+  ],
+  "alternatives": [
+    {
+      "slug": "lovable",
+      "text": "builds a hosted full-stack app. Pro is $25 a month for 100 credits, or $21 annual. Choose Lovable when you do not already have a Vercel app to drop UI into."
+    },
+    {
+      "slug": "bolt",
+      "text": "is token-metered in the browser. Pro is $25 a month billed monthly, starting at 10 million tokens. It is less opinionated about React on Vercel and more opinionated about short bursts."
+    },
+    {
+      "slug": "replit",
+      "text": "is a cloud IDE. Core is $20 a month, or $18 billed annually. Use it when the agent should live next to a general editor, not a UI generator."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is v0 Premium still for sale?",
+      "a": "No. Premium is sunset for new users and is not a current plan in our table. The current paid doors are Plus at $30 per user a month and Business at $100 per user a month."
+    },
+    {
+      "q": "Who should skip v0?",
+      "a": "Anyone who does not want the Vercel and React path. The cons say it is tied to that stack. Lovable is the prompt-to-app alternative if the stack is the problem."
+    },
+    {
+      "q": "Is there a free plan?",
+      "a": "Yes. Free is $0. It is enough to see the UI quality. Plus at $30 per user is the plan teams actually buy."
+    },
+    {
+      "q": "Does v0 have an affiliate link?",
+      "a": "No. There is no affiliate relationship in the data. The Worth it rating is about the React output and the deploy, not a commission."
+    }
+  ]
+}

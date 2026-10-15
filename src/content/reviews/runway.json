@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Runway is for people making AI video who accept a credit meter. Editors, motion designers, and marketers who need a short clip are the fit. The verdict calls it the best-known AI video tool, and then warns that Standard's 625 monthly credits disappear quickly and do not roll over. If you generate one experiment a week, do that math before you pick Standard.",
+    "It is a poor fit if you wanted images only, a song, or a voice. Those are other tools with other prices. Runway's free plan is $0 with 125 credits, one time. That is a sample, not a monthly allowance."
+  ],
+  "features": [
+    "The paid plans are a ladder of credits. Standard is $15 a month, or $12 a month billed annually, for 625 credits a month. Pro is $35 a month, or $28 billed annually, for 2,250 credits a month. Max is $95 a month, or $76 billed annually, for 9,500 credits a month. Gen-4.5 video is in the pros, along with image and audio models.",
+    "Free credits do not expire. That is specific to the free grant of 125 credits. Paid Standard and Pro credits reset each cycle. Max rolls one month of unused credits. If you generate in bursts, Max is the plan that matches that habit. Standard is the plan that punishes a quiet week followed by a heavy one, because the quiet week still expires.",
+    "Gen-4.5 is 60 credits per 5 seconds. That rate is in the cons, and it is how 625 credits disappear. A handful of short clips is the Standard month. Longer cuts belong on Pro or Max, or you buy the month knowing you will stop early."
+  ],
+  "limitations": [
+    "Standard and Pro credits reset. The verdict is about that reset, not about image quality. A tool can be the best-known and still be a bad subscription if your volume does not match 625 credits.",
+    "We do not reprint a per-second price beyond the Gen-4.5 rate in the cons: 60 credits per 5 seconds. Other models may cost a different number of credits. If the pricing page adds a model we have not copied, do not assume it is also 60.",
+    "The rating is Depends. Quality is not the objection. The credit reset is. Max at $95 a month, or $76 billed annually, is the plan that softens it by rolling one month. That is a lot of money for a rollover of a single month, and it is still the published deal."
+  ],
+  "pricingNotes": [
+    "From runwayml.com/pricing. Free is $0 for 125 credits, one time. Standard is $15 a month, or $12 a month billed annually, for 625 credits a month. Pro is $35 a month, or $28 billed annually, for 2,250 credits a month. Max is $95 a month, or $76 billed annually, for 9,500 credits a month.",
+    "Free credits do not expire. Standard and Pro credits reset each cycle. Max rolls one month of unused credits. Gen-4.5 is 60 credits per 5 seconds. No other unit rate is printed here."
+  ],
+  "alternatives": [
+    {
+      "slug": "midjourney",
+      "text": "is still images. There is no free plan. Basic is $10 a month, Standard is $30, Pro is $60, Mega is $120. Annual billing is 20% off. Use it for a picture, not a shot."
+    },
+    {
+      "slug": "suno",
+      "text": "is music. Pro is $10 a month, or $8 billed yearly, with commercial use. It will not render a video."
+    },
+    {
+      "slug": "elevenlabs",
+      "text": "is voice. Starter is $6 a month for 30,000 credits. Pair it with Runway if the clip needs a narrator. It is not a video plan."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do Runway Standard credits roll over?",
+      "a": "No. Standard's 625 monthly credits reset each cycle. Pro resets too. Max rolls one month of unused credits. Free credits, the one-time 125, do not expire."
+    },
+    {
+      "q": "How fast do 625 credits go?",
+      "a": "Gen-4.5 is 60 credits per 5 seconds. That is the published rate behind the verdict. A few short clips can spend a Standard month. Other models are not given a second rate on this page."
+    },
+    {
+      "q": "Is the annual price just the monthly price times twelve?",
+      "a": "No. The table already shows the annual monthly rates: Standard $12, Pro $28, Max $76. Those are the billed-annually figures, not a discount we calculated."
+    },
+    {
+      "q": "Why is the rating Depends if Runway is the best-known video tool?",
+      "a": "Because Standard credits disappear and do not roll over. Fame is not the verdict. Depends means the tool is worth it only if the credit math matches how you actually generate."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Jasper is for teams that want brand voice and campaign workflows, and that can justify Pro at $69 a month. Marketing teams with a style guide are the fit the verdict describes. A person who only needs a chatbot should not pay that. The verdict says Pro is a lot if a chatbot is the job.",
+    "It is a poor fit for a wiki. Notion Business at $20 a seat includes the agent where the docs already are. Jasper is a writing suite. If you do not have campaigns, you do not have the problem it is priced for."
+  ],
+  "features": [
+    "Pro is $69 a month, or $59 a month billed yearly. The trial is 7 days free. You can cancel monthly Pro anytime, which matters at this price. Annual Pro saves about 20%, and the yearly rate in the table is the $59 figure, not a percentage we applied ourselves.",
+    "Brand voice and campaign workflows are the pros. You are paying so the drafts sound like the brand and so a campaign is a workflow, not a pile of chats. Agents and the GEO Hub burn extra credits. The seat is not an all-you-can-eat meter for those.",
+    "Business is custom, with an annual commitment. One Pro seat is the self-serve door. More people means Business. That cons line is a purchasing rule: do not share one Pro login and call it a team plan."
+  ],
+  "limitations": [
+    "Pro at $69 is the objection in the verdict. ChatGPT Plus is $20. Claude Pro is $20. If the work is one person talking to a model, Jasper is the expensive seat. The brand tools have to be worth the gap.",
+    "Extra credits for agents and the GEO Hub mean the invoice can move. We do not have a per-credit dollar rate in the data, so we do not print one. Know that the $69 is not a ceiling.",
+    "The rating is Depends. Depends means the suite is justified for a brand team and wasteful as a personal chatbot. The 7-day trial is the way to tell those apart without a theory."
+  ],
+  "pricingNotes": [
+    "Checked on jasper.ai/pricing on 14 October 2026. The Pro trial is 7 days free. Pro is $69 a month, or $59 a month billed yearly. Business is custom, with an annual commitment. There is no other self-serve tier in the table.",
+    "Annual Pro saves about 20%, which lines up with $69 versus $59. Monthly Pro can be cancelled anytime. Agents and the GEO Hub burn extra credits on top of the seat. One Pro seat; more people means Business."
+  ],
+  "alternatives": [
+    {
+      "slug": "notion-ai",
+      "text": "puts the agent in the wiki. Business is $20 per member a month and includes Notion Agent. Free and Plus only include a trial. It is cheaper per seat and worse if you do not work in Notion."
+    },
+    {
+      "slug": "gamma",
+      "text": "is decks, with a free plan of 400 starting credits that do not refresh. Paid dollar prices were not verified. It is not a brand-voice suite."
+    },
+    {
+      "slug": "chatgpt",
+      "text": "is the chatbot comparison. Plus is $20 a month. Go is $8. If that is all you needed, the Jasper verdict already told you Pro is a lot."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Jasper Pro $69 or $59?",
+      "a": "Both. $69 is the monthly price. $59 is the monthly price when billed yearly. The trial is 7 days. Monthly Pro can be cancelled anytime."
+    },
+    {
+      "q": "Can a team share one Pro seat?",
+      "a": "The cons say one Pro seat, and more people means Business. Business is custom and needs an annual commitment. Do not treat Pro as a team plan."
+    },
+    {
+      "q": "Are agents included in the $69?",
+      "a": "The seat is $69, or $59 yearly. Agents and the GEO Hub burn extra credits. We do not have a published per-credit price to add on."
+    },
+    {
+      "q": "Does the affiliate flag change Depends?",
+      "a": "No. Jasper is marked affiliate. Depends is about the $69 seat versus a chatbot. A commission does not make Pro cheaper or the verdict kinder."
+    }
+  ]
+}

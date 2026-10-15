@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Bolt.new is for people who want to build an app in the browser in short bursts. The verdict says token-based pricing suits that pattern. Freelancers knocking out a prototype, and developers who do not want a local install, are the fit. If the work is a hosted full-stack app from one long conversation, Lovable is the comparison. If the work is React that must land on Vercel, look at v0.",
+    "It is a weak fit for a huge existing repo. The cons say tokens drain on big codebases. A greenfield weekend project matches the meter. A monorepo does not."
+  ],
+  "features": [
+    "Free is $0 with 300,000 tokens a day and 1 million a month. That is a real ceiling, and it is daily, so a binge still stops. Pro removes the daily token cap. Pro is $25 a month billed monthly, starting at 10 million tokens. Tokens roll over one month, which is the other pro. A quiet week is not a total loss.",
+    "Teams is $30 per member a month, billed monthly. Enterprise is custom. The pricing page on 14 October 2026 said yearly billing saves up to 28%. It did not list the yearly dollar amounts, or the older Pro 50 and Pro 100 tiers, so those are omitted. Do not budget a yearly total we did not read.",
+    "The builder runs in the browser. You are not buying an editor seat. You are buying tokens that turn into code. Short bursts are cheap relative to leaving a long agent running on a giant repo, which is the point of the verdict."
+  ],
+  "limitations": [
+    "Tokens drain on big codebases. Pasting a large project and asking for a refactor is how a 10 million token start disappears. Pro starts at 10 million. It does not promise that every Pro account stays at that number if the page sells add-on token packs we did not verify. We only print the start.",
+    "Yearly savings of up to 28% are an advertisement on the page, not a computed price. Until the yearly dollar amount is listed, this review will not multiply $25 by 0.72 and call it a plan.",
+    "The rating is Depends. The tool is solid. The meter only suits short work. If your week is one long codebase, the token bill is the reason to pick something else."
+  ],
+  "pricingNotes": [
+    "Checked on bolt.new/pricing on 14 October 2026. Free is $0 with 300,000 tokens a day and 1 million a month. Pro is $25 a month billed monthly, starting at 10 million tokens. Teams is $30 per member a month billed monthly. Enterprise is custom.",
+    "The page said yearly billing saves up to 28% and did not list the yearly dollar amounts. Older Pro 50 and Pro 100 tiers were not on the page, so they are omitted. Paid plans have no daily token cap, and tokens roll over one month."
+  ],
+  "alternatives": [
+    {
+      "slug": "lovable",
+      "text": "ships a hosted full-stack app. Pro is $25 a month for 100 credits, or $21 annual. That $25 matches Bolt Pro's monthly price and buys a different meter. Lovable is Worth it for the deploy loop. Bolt is Depends for token bursts."
+    },
+    {
+      "slug": "v0",
+      "text": "is React and Next.js on Vercel. Plus is $30 per user a month. Business is $100 per user a month. Choose it when the stack is already Vercel."
+    },
+    {
+      "slug": "replit",
+      "text": "is a cloud IDE. Core is $20 a month, or $18 billed annually. Pro is $100 a month, or $90 billed annually. It is the better home if you expect to keep editing after the generator stops."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does Bolt Pro include?",
+      "a": "Pro is $25 a month billed monthly and starts at 10 million tokens. Paid plans drop the daily token cap. Tokens roll over one month. The yearly dollar amount was not listed."
+    },
+    {
+      "q": "Is the free plan enough to try it?",
+      "a": "Free is $0 with 300,000 tokens a day and 1 million a month. That is enough to see a small build. It is not the plan for a large codebase, which is where tokens drain."
+    },
+    {
+      "q": "How much is yearly billing?",
+      "a": "The page said yearly billing saves up to 28% and did not list the yearly prices. We do not calculate them. Teams is $30 per member a month billed monthly."
+    },
+    {
+      "q": "Why Depends instead of Worth it?",
+      "a": "Because token pricing suits short bursts and drains on big codebases. The product is fine. The meter is the condition."
+    }
+  ]
+}

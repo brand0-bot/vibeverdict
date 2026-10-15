@@ -1,0 +1,48 @@
+{
+  "audience": [
+    "Beautiful.ai is for people who want AI slides with a price they can put in a spreadsheet. The verdict is the price: Pro is $14.50 a month billed annually, with unlimited AI slides, and a 14-day trial that needs a card. Individuals who present often, and small teams of 2 to 20, are the buyers the page describes.",
+    "It is a bad fit if you refuse to enter a card to try it, or if you need a monthly individual price. That monthly Pro price was not shown. Students with a .edu email get a year free, which is the exception printed on the pricing page."
+  ],
+  "features": [
+    "Pro is unlimited AI content generation, PowerPoint import and export, and the $14.50 annual rate. Unlimited is the word that separates it from Gamma's credit gate. You are not counting generations. You are paying for the year.",
+    "Team is for 2 to 20 people. It is $40 per user a month billed annually, or $50 per user billed monthly. That is the one place a monthly rate exists in our data. Enterprise is custom. The 14-day trial covers Pro or Team and requires a credit card.",
+    "Import and export to PowerPoint matters if the deck has to leave the tool. A beautiful file your client cannot open is not a deliverable. That pro is more important than another theme."
+  ],
+  "limitations": [
+    "The trial requires a credit card. A 14-day clock plus a card is how people get billed after they meant to look. Cancel inside the trial if you are only comparing it with Gamma's free plan, which does not need a card and also does not have a verified paid price.",
+    "A monthly individual price was not listed. Pro at $14.50 is the annual rate. We will not gross it up into a month-to-month sticker. If you need to cancel any month, Team's $50 monthly per-user rate is the monthly number we actually have, and it is for teams, not for a solo Pro seat.",
+    "The rating is Depends. The price is real and the unlimited AI slides are real. Depends is about the annual commitment and the card on the trial, not about hiding a defect in the slides."
+  ],
+  "pricingNotes": [
+    "Checked on beautiful.ai/pricing on 14 October 2026. Pro is $14.50 per month for individuals, billed annually. Teams of 2 to 20 pay $40 per user per month billed annually, or $50 billed monthly. Enterprise is custom. Students with a .edu email get a year free.",
+    "A monthly individual price was not listed, so it is not estimated. The 14-day trial of Pro or Team needs a credit card. Unlimited AI content generation is on Pro."
+  ],
+  "alternatives": [
+    {
+      "slug": "gamma",
+      "text": "has a real free plan: $0 and 400 starting credits that do not refresh. Plus, Pro, and Ultra credit amounts are in the help center. The dollar prices were not on the pages we could open, so Gamma is Pending. Use it to try a deck with no card. Use Beautiful.ai when you need the $14.50 number."
+    },
+    {
+      "slug": "tome",
+      "text": "has no price to publish. On 14 October 2026 the pricing URL returned deployment not found. It is not a budget alternative until a page loads."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Beautiful.ai Pro $14.50 if I pay monthly?",
+      "a": "The verified Pro price is $14.50 a month billed annually. A monthly individual price was not listed. Team is the plan with a monthly rate: $50 per user, against $40 per user billed annually."
+    },
+    {
+      "q": "Does the trial need a card?",
+      "a": "Yes. The 14-day trial of Pro or Team requires a credit card. Students with a .edu email get a year free, which is a different offer."
+    },
+    {
+      "q": "Are AI slides metered?",
+      "a": "Pro includes unlimited AI content generation. That is the contrast with Gamma, where credits gate heavy generation and the paid dollar price was not verified."
+    },
+    {
+      "q": "Why Depends if the price is this clear?",
+      "a": "Because the clear price is an annual individual rate, and the trial needs a card. The slides can still be the right buy. Depends means read the billing term before you start the trial."
+    }
+  ]
+}
