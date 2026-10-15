@@ -38,7 +38,6 @@ const software = {
   name: t.name,
   description: t.verdict,
   applicationCategory: categories[t.category],
-  operatingSystem: 'Web',
   url: t.website,
   ...(t.verified && t.pricing?.length ? { offers: t.pricing.map(offerFromPlan) } : {})
 };

@@ -1,4 +1,4 @@
-import { tools, categories, bySlug } from '../lib/data.js';
+import { tools, categories, categoryBlurbs, bySlug } from '../lib/data.js';
 import { comparisons, comparisonTitle, roundups } from '../lib/guides.js';
 
 export function GET() {
@@ -19,6 +19,17 @@ export function GET() {
     '',
     '## Roundups',
     ...roundups.map(page => `- [${page.title}](https://vibeverdict.ai/best/${page.slug}/): ${page.verdict}`),
+    '',
+    '## Categories',
+    ...Object.entries(categories).map(([slug, name]) => `- [${name}](https://vibeverdict.ai/category/${slug}/): ${categoryBlurbs[slug] || name + ' verdicts and verified pricing.'}`),
+    '',
+    '## More',
+    '- [AI news](https://vibeverdict.ai/news/): Recent AI headlines from public feeds, shown as the outlet published them.',
+    '- [Newsletter](https://vibeverdict.ai/newsletter/): The weekly email: price changes, new tools, and one honest pick. The signup box is on this page.',
+    '- [About](https://vibeverdict.ai/about/): How VibeVerdict rates tools. Prices are read from the vendor site, dated, and marked when unverified.',
+    '- [Affiliate disclosure](https://vibeverdict.ai/disclosure/): Some links earn a commission. A commission never changes a verdict.',
+    '- [Advertise](https://vibeverdict.ai/advertise/): Labeled sponsorships. The price is on request, and a sponsorship never changes a verdict.',
+    '- [Contact](https://vibeverdict.ai/contact/): Email hello@vibeverdict.ai. Advertising inquiries go to the advertise page.',
     ''
   ];
   return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
