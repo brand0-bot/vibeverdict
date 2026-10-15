@@ -24,4 +24,5 @@ const schema = [
 <table><tr><th>Tool</th><th>Verdict</th><th>Status</th></tr>
 {list.map(t=>(<tr><td><a href={`/tools/${t.slug}/`}><b>{t.name}</b></a></td><td><span class={`pill ${t.rating}`}>{label[t.rating]}</span> {t.verdict}</td><td class="mut" style="font-size:13px">{t.verified?`✓ ${t.lastVerified}`:'⚠ unverified'}</td></tr>))}</table>
 {related.length > 0 && <><h2>Comparisons and roundups</h2><ul>{related.map(r => <li><a href={r.href}>{r.title}</a></li>)}</ul></>}
+<p>Built an AI tool? <a href="/submit/">Submit it</a>.</p>
 </Base>

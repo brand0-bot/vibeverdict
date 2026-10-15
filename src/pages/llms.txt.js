@@ -29,6 +29,7 @@ export function GET() {
     '- [About](https://vibeverdict.ai/about/): How VibeVerdict rates tools. Prices are read from the vendor site, dated, and marked when unverified.',
     '- [Affiliate disclosure](https://vibeverdict.ai/disclosure/): Some links earn a commission. A commission never changes a verdict.',
     '- [Advertise](https://vibeverdict.ai/advertise/): Labeled sponsorships. The price is on request, and a sponsorship never changes a verdict.',
+    '- [Submit your tool](https://vibeverdict.ai/submit/): Free submission, a $49 one-time fast-track review within 7 days, or featured placement at $99 a month ($79 a month for the first 3 months). Payment buys speed and visibility, never the verdict.',
     '- [Contact](https://vibeverdict.ai/contact/): Email hello@vibeverdict.ai. Advertising inquiries go to the advertise page.',
     ''
   ];
