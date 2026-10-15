@@ -1,0 +1,76 @@
+<div class="vv-consent" data-vv-consent hidden>
+  <p>We store your cookie choice on this device. Advertising cookies are not loaded. If we add Google ads later, accepting allows their cookies. <a href="/privacy/">Privacy</a></p>
+  <div class="vv-consent-actions">
+    <button type="button" data-vv-consent-decline>Decline</button>
+    <button type="button" data-vv-consent-accept>Accept</button>
+  </div>
+</div>
+<script is:inline>
+  (function () {
+    var key = "vv-cookie-consent";
+    var root = document.querySelector("[data-vv-consent]");
+    if (!root) return;
+    var stored = "";
+    try { stored = localStorage.getItem(key) || ""; } catch (error) { stored = ""; }
+    if (stored === "accepted" || stored === "declined") return;
+    root.hidden = false;
+    function save(value) {
+      try { localStorage.setItem(key, value); } catch (error) {}
+      root.hidden = true;
+    }
+    var accept = root.querySelector("[data-vv-consent-accept]");
+    var decline = root.querySelector("[data-vv-consent-decline]");
+    if (accept) accept.addEventListener("click", function () { save("accepted"); });
+    if (decline) decline.addEventListener("click", function () { save("declined"); });
+  })();
+</script>
+<style is:global>
+  .vv-consent[hidden] { display: none !important; }
+  .vv-consent {
+    position: fixed;
+    z-index: 30;
+    right: 16px;
+    bottom: 16px;
+    width: min(420px, calc(100vw - 32px));
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 10px 12px;
+    background: #161022;
+    color: var(--text);
+    border: 1px solid #3b2760;
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(8, 4, 20, 0.45);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .vv-consent p { margin: 0; }
+  .vv-consent-actions { display: flex; flex-shrink: 0; gap: 8px; }
+  .vv-consent button {
+    font: inherit;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 7px 12px;
+    cursor: pointer;
+  }
+  .vv-consent button[data-vv-consent-decline] {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--line);
+  }
+  .vv-consent button[data-vv-consent-accept] {
+    background: #6d28d9;
+    color: #fff;
+    border: 0;
+  }
+  .vv-consent button:focus-visible { outline: 2px solid #c4b5fd; outline-offset: 3px; }
+  @media (max-width: 640px) {
+    .vv-consent { left: 12px; right: 12px; width: auto; flex-direction: column; align-items: stretch; }
+    .vv-consent-actions { justify-content: flex-end; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .vv-consent { transition: none; }
+  }
+</style>
