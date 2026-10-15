@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "ElevenLabs is for people who need a spoken voice that does not sound like a demo. YouTubers, course makers, podcasters who want one consistent narrator, and small studios dubbing a short clip are the usual buyers. If you record every line yourself and only need to hear the quality, the free plan is the right first step. If the voice is the product, Starter is the plan the verdict is pointing at.",
+    "A product team wiring voice into an app is a different purchase. Scale and Business add seats. A solo creator does not need three or ten seats, and a bigger credit number is not a reason to jump there. Buy a team plan when more than one person has to manage the workspace."
+  ],
+  "features": [
+    "The reason people stay is the voice. The catalog covers narration and character reads, and you can clone a voice from audio you are allowed to use. You steer the delivery instead of accepting one flat take. That is the practical gap behind the verdict calling it the best AI voice, not a longer feature list.",
+    "It is more than a single voiceover button. Credits meter the work on the account, and the higher plans are how a team shares a library. A short social clip and a long course do not belong on the same plan. That is why the table moves from 30,000 credits on Starter to 121,000 on Creator, then to 600,000 on Pro.",
+    "You can start without paying. Free is $0 and includes 10,000 credits a month. Paste your own script, not a slogan from the homepage. If the free read is wooden on your material, paying will not fix the writing."
+  ],
+  "limitations": [
+    "Credits are the real limit. The cons line is right: they go fast on long audio. The pricing page does not give a minutes-per-plan figure we are willing to reprint, so do not treat 30,000 credits as a specific runtime. Generate a sample of the script you actually ship, on the free allowance, and pick the plan from that.",
+    "A plan price is not a license to clone someone else's voice or to ignore the vendor's commercial terms. Ads, product UI, and republished audio sit in ElevenLabs' own terms. Read those before you ship. We do not restate their legal policy here.",
+    "The first-month discounts are a promotion with an end date. The pricing page labeled Starter at $1 and Creator at $11 until 18 October 2026. Those are not the standing prices. The table prices are."
+  ],
+  "pricingNotes": [
+    "Checked on elevenlabs.io/pricing on 14 October 2026. Free is $0 for 10,000 credits a month. Starter is $6 a month for 30,000 credits. Creator is $22 a month for 121,000 credits. Pro is $99 a month for 600,000 credits. Scale is $299 a month for 1.8 million credits and 3 seats. Business is $990 a month for 6 million credits and 10 seats.",
+    "Annual billing on that page is the monthly price times 10. The page states equivalent monthly rates of $5, $18.33, $82.50, $249.17, and $825. We are not printing a separate yearly total on top of that. After 18 October 2026, assume Starter is $6 and Creator is $22 unless the page still shows the first-month offer."
+  ],
+  "alternatives": [
+    {
+      "slug": "murf",
+      "text": "is the pay-as-you-go voice API. On the page we opened, Falcon is $0.01 per 1,000 characters, Gen2 is $0.03 per 1,000 characters, and the trial is $10 of API credit with no card. There was no flat studio subscription. Use Murf to meter an API. Use ElevenLabs Starter at $6 when you want a creator plan."
+    },
+    {
+      "slug": "suno",
+      "text": "is music, not a narrator. Pro is $10 a month, or $8 billed yearly, and that plan includes commercial use. It does not replace a voiceover."
+    },
+    {
+      "slug": "runway",
+      "text": "is video. Standard is $15 a month, or $12 billed annually, for 625 credits that do not roll over. Use it when the job is a clip, not a voice track."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the $6 Starter plan enough?",
+      "a": "For short narration and social clips, Starter at $6 a month for 30,000 credits is the plan the verdict calls a no-brainer. Long courses and daily production move you to Creator at $22 a month for 121,000 credits. Test your own script on the free 10,000 credits before you guess."
+    },
+    {
+      "q": "Do ElevenLabs credits roll over?",
+      "a": "The verified table lists a monthly credit amount for each plan. It does not say unused credits roll over. Plan on using the month you pay for."
+    },
+    {
+      "q": "Is the $1 first month the real Starter price?",
+      "a": "No. The pricing page labeled Starter at $1 and Creator at $11 as a first-month discount until 18 October 2026. The standing Starter price is $6 a month."
+    },
+    {
+      "q": "Does the affiliate link change this verdict?",
+      "a": "No. The Visit button can be an affiliate link. The verdict and these prices come from the pricing page, not from a commission."
+    }
+  ]
+}

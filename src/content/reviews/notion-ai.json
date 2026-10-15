@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Notion AI is for teams that already keep the work in Notion and want the agent, meeting notes, and search in that same workspace. The verdict is specific: the agent comes with Business at $20 a seat, and Free and Plus only include an AI trial. If your company is already on Business, you are not buying a separate AI add-on. If you are on Free or Plus, the trial is not the product.",
+    "It is the wrong buy if you wanted a standalone writing app and you do not want a wiki. You pay for the workspace, not for AI alone. A solo writer who needs a chatbot can look at Claude. A team that lives in docs, tasks, and meeting notes is who this page is for."
+  ],
+  "features": [
+    "The useful part is location. The agent, meeting notes, and search sit on the pages you already have, instead of a separate chat window you paste into. Business at $20 per member a month includes Notion Agent. That is a normal seat price. The pros list is right that it is not a second subscription stacked on the wiki.",
+    "Free is $0 per member a month and includes a Notion AI trial. Plus is $10 per member a month and also includes a trial, not the full agent. Do not upgrade to Plus expecting the agent. The agent is the Business line. Enterprise is custom.",
+    "Custom agents are metered after the trial. The price in the table is $10 per 1,000 monthly Notion credits. That is a usage bill on top of the seat, and it is the cons line: custom agents need extra credits. If you are not building custom agents, ignore that row. If you are, put it in the budget before the first month of runs."
+  ],
+  "limitations": [
+    "You cannot buy the agent without the workspace plan that includes it. A five-person team that only wanted AI still pays five Business seats at $20 each, which is $100 a month before any custom-agent credits. We are multiplying the published seat price by a headcount you choose. We are not inventing a cheaper AI-only plan. There isn't one in the table.",
+    "Annual billing is mentioned on the pricing page and a separate annual rate is not shown. This page does not print a discounted yearly seat price. If the toggle on notion.com/pricing shows one, use that number, not a guess.",
+    "The rating is Depends. The product is good when the docs are already in Notion. It is a bad deal when you are paying Business seats only to reach an AI trial you could have had, briefly, on Free. Know which row you are on."
+  ],
+  "pricingNotes": [
+    "Checked on notion.com/pricing on 14 October 2026. These are monthly per-member prices. Free is $0 and includes a Notion AI trial. Plus is $10 per member a month and includes a trial. Business is $20 per member a month and includes Notion Agent. Enterprise is custom. Custom agents are $10 per 1,000 monthly Notion credits.",
+    "The pricing page mentions annual billing and does not show a separate annual rate, so none is printed here. The $20 Business seat is the price behind the verdict. The $10 credit price is only for custom agents after the trial."
+  ],
+  "alternatives": [
+    {
+      "slug": "jasper",
+      "text": "is a writing product with its own plans, not a wiki seat. Pro is $69 a month, or $59 a month billed yearly, after a 7-day trial. Business is custom, with an annual commitment. Choose Jasper when the job is campaigns and brand voice. Choose Notion when the job is the workspace you already pay for."
+    },
+    {
+      "slug": "gamma",
+      "text": "is decks. The free plan is $0 with 400 starting credits that do not refresh. Plus, Pro, and Ultra have monthly credit amounts in the help center, and the dollar prices were not on the pages we could open. It is not a substitute for a team wiki."
+    },
+    {
+      "slug": "claude",
+      "text": "is the writing model without the Notion seat. Pro is $20 a month, or $17 a month annual. Max 5x is $100 a month. Max 20x is $200 a month. Team is $20 to $25 a seat a month. Use Claude when you want the model. Use Notion Business when the agent has to see the docs."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Which Notion plan includes the AI agent?",
+      "a": "Business, at $20 per member a month, includes Notion Agent. Free at $0 and Plus at $10 per member a month include a Notion AI trial, not that agent. Enterprise is custom."
+    },
+    {
+      "q": "Is Notion AI a separate add-on?",
+      "a": "Not on the current cards. The agent comes with the Business seat. Custom agents are extra: $10 per 1,000 monthly Notion credits after the trial. You still pay for the workspace."
+    },
+    {
+      "q": "What is the annual price?",
+      "a": "The pricing page mentions annual billing and does not show a separate annual rate. We do not calculate one. Use the monthly per-member prices until the page prints another number."
+    },
+    {
+      "q": "Does a commission change the Depends rating?",
+      "a": "No. Depends means the agent is worth the Business seat if you already work in Notion, and a poor standalone purchase if you do not. Affiliate relationships do not move ratings."
+    }
+  ]
+}

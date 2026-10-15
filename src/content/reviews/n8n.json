@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "n8n is for people who want to see the workflow and keep the option to host it. Developers and technical operators who already think in triggers, branches, and HTTP requests get more from it than someone who wants a finished recipe for every app. If you only need one or two no-code zaps and you never want a server, start with Zapier instead and come back if the task bill bothers you.",
+    "The cloud plans are for a team that wants n8n without running it. The community edition is for internal or non-commercial self-hosting under the Sustainable Use License. Those are different decisions. Do not self-host because a blog said it is free, then discover the license does not cover the way you sell it."
+  ],
+  "features": [
+    "You pay for a workflow execution, not for every step inside it. That is the main reason builders pick n8n over tools that meter each action. A five-step flow that runs once is one execution. On Zapier, multi-step work and AI steps can cost more than one task. The verdict calls n8n the builder's automation tool for that reason.",
+    "Cloud plans include unlimited users. You are not buying a seat for every person who edits a workflow. Starter is the entry cloud plan: €24 a month, or €20 a month billed annually, for 2,500 executions. Pro is €60 a month, or €50 billed annually, for 10,000 executions.",
+    "The community edition is royalty-free to self-host for internal or non-commercial use. The license on github.com/n8n-io/n8n is the Sustainable Use License. Business is the paid self-hosted plan: €800 a month, or €667 billed annually, for 40,000 executions. Enterprise is custom. Larger Pro and Business execution packs cost more than the base caps in the table."
+  ],
+  "limitations": [
+    "Prices are in euros. If you budget in dollars, convert at the rate you actually pay, not at a round number we invent. The pricing page is the source, and it shows both the monthly amount and the annual rate.",
+    "Business is a jump, not a gentle next tier. Pro's annual rate is €50 a month for 10,000 cloud executions. Business's annual rate is €667 a month, and that plan is the self-hosted paid plan with 40,000 executions. If you do not need to host it yourself, do not climb to Business just to get a bigger cloud cap. The page says larger packs exist, and it does not give us a second price to print.",
+    "Self-hosting is work. You patch, you back up, and you watch the license. Community is not a blank check for a commercial hosted product. If you are reselling automation, read the Sustainable Use License before you deploy."
+  ],
+  "pricingNotes": [
+    "Checked on n8n.io/pricing. Cloud Free is €0. Starter is €24 a month, or €20 a month billed annually, for 2,500 executions. Pro is €60 a month, or €50 a month billed annually, for 10,000 executions. Business is €800 a month, or €667 a month billed annually, for 40,000 executions, and it is the self-hosted paid plan. Community is royalty-free to self-host for internal or non-commercial use. Enterprise is custom.",
+    "The pricing page shows the annual rates of €20, €50, and €667. Monthly amounts and the execution caps are in that same page's plan data. We do not print a dollar conversion. We also do not print the price of the larger execution packs, because the page says they cost more and does not give a figure we are copying here."
+  ],
+  "alternatives": [
+    {
+      "slug": "zapier",
+      "text": "is the no-code catalog. Free is $0 a month for 100 tasks. Professional starts from $19.99 a month. Team starts from $69 a month. The paid task caps and a separate higher monthly rate were not on the cards we read, so they are not repeated. Choose Zapier when you want the app directory and you accept paying per task."
+    },
+    {
+      "slug": "make",
+      "text": "has a free plan of 1,000 credits a month, confirmed in the pricing FAQ. Core, Pro, and Teams are named, and annual billing is cheaper, but their dollar prices were not in the text we could read. A direct download of the pricing page was a Cloudflare challenge. We are not guessing those dollars."
+    },
+    {
+      "slug": "langchain",
+      "text": "is a different job. The pricing page sells LangSmith, not a no-code automation catalog. Plus is $39 a seat, and traces are extra. Use it when you are building and tracing agents, not when you are connecting SaaS apps."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is n8n Cloud Starter €20 or €24?",
+      "a": "Both appear on the pricing page. €24 is the monthly rate. €20 is the monthly rate when you pay annually. The verdict quotes the annual figure because that is the rate the page leads with. The table shows both."
+    },
+    {
+      "q": "Can I self-host n8n for free?",
+      "a": "The community edition is royalty-free for internal or non-commercial use under the Sustainable Use License. It is not a promise that every commercial deployment is free. Business is the paid self-hosted plan at €800 a month, or €667 billed annually."
+    },
+    {
+      "q": "Do I pay per step?",
+      "a": "No. Cloud plans meter workflow executions. A run counts once, not once per node. That is the difference with Zapier, where tasks and AI steps can add up inside one Zap."
+    },
+    {
+      "q": "Does a pending affiliate program change the verdict?",
+      "a": "No. n8n is rated Worth it because of the execution pricing and the self-host option, not because of a commission. Sponsorship and affiliate relationships never buy a verdict."
+    }
+  ]
+}

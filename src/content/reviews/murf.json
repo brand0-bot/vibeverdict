@@ -1,0 +1,44 @@
+{
+  "audience": [
+    "Murf, on the page we could price, is for developers metering a voice API. The verdict says it is pay-as-you-go with a published per-character rate, not a flat creator plan. If you are building a product that speaks, and you want a unit price, this is the sheet. If you wanted a studio subscription with a monthly seat, that price was not on the page we opened, so we will not pretend it was.",
+    "The free trial is the way to find out if the voice fits. It is $10 of API credit and it does not need a card. That is enough to run a real request against Falcon or Gen2 and see the bill in units you understand. A creator comparing monthly plans should look at ElevenLabs Starter at $6 before they reverse-engineer Murf into a fake bundle."
+  ],
+  "features": [
+    "The rates are simple, which is rare. Falcon text to speech is $0.01 per 1,000 characters. Gen2 text to speech is $0.03 per 1,000 characters. Translation is $0.02 per 1,000 characters. Voice changer is $0.10 per minute. Enterprise is contact sales. You can estimate a feature from the character count of the script instead of from a credit nickname.",
+    "Purchased API credit does not expire. That is in the pros, and it matters if your traffic is spiky. A monthly creator plan that burns unused minutes is a different shape. The trial credit is separate: $10, no card, to see the API. Do not confuse the trial with a purchased balance.",
+    "There is no studio subscription in the table because there was not one on murf.ai/pricing the day we checked. The product people remember, a timeline editor with a narrator, may still exist. We do not have a price for it. The honest review is the API rate card."
+  ],
+  "limitations": [
+    "You cannot compare Murf to a flat monthly creator plan using only this page. ElevenLabs Starter is $6 a month for 30,000 credits. Murf Falcon is a tenth of a cent per character-thousand. Those units do not convert without a seconds-per-credit figure Murf's pricing page did not give us, and we will not invent one.",
+    "Voice changer is priced per minute at $0.10, and the speech models are priced per 1,000 characters. Mixing them in one estimate is fine if you do the arithmetic from those rates. It is not fine to call the result a monthly plan. Enterprise is the only row that says contact sales.",
+    "The rating is Depends. The API is clear. The missing studio price is why it is not Worth it next to ElevenLabs for a creator who wanted a subscription. Depends means: buy the API if the rate is the product you need."
+  ],
+  "pricingNotes": [
+    "Checked on murf.ai/pricing on 14 October 2026. The API free trial is $10 of API credit, no card. Falcon text to speech is $0.01 per 1,000 characters. Gen2 text to speech is $0.03 per 1,000 characters. Voice changer is $0.10 per minute. Translation is $0.02 per 1,000 characters. Enterprise is contact sales.",
+    "A creator or studio subscription price was not on that page. Purchased API credit does not expire. We do not convert these rates into a monthly bundle, and we do not copy a studio price from memory or from another review."
+  ],
+  "alternatives": [
+    {
+      "slug": "elevenlabs",
+      "text": "is the creator plan. Free is $0 for 10,000 credits a month. Starter is $6 a month for 30,000 credits. Creator is $22 a month for 121,000 credits. Pro is $99 a month for 600,000 credits. If you want a monthly voiceover plan with a seat-like price, start there. The ElevenLabs Visit button can be an affiliate link. That does not make it the API choice. Murf is the API choice when you want a per-character rate."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Murf monthly creator plan?",
+      "a": "Not on the pricing page we opened on 14 October 2026. We list the API rates and a $10 trial credit. A studio subscription price is omitted on purpose."
+    },
+    {
+      "q": "How much is 100,000 characters on Falcon?",
+      "a": "Falcon is $0.01 per 1,000 characters. 100,000 characters is 100 times that unit, which is $1. Gen2 is $0.03 per 1,000 characters, so the same length is $3. That arithmetic uses only the published rate."
+    },
+    {
+      "q": "Does the trial need a credit card?",
+      "a": "No. The trial is $10 of API credit and the page said no card. Purchased credit, once you buy it, does not expire."
+    },
+    {
+      "q": "Should I pick Murf or ElevenLabs?",
+      "a": "Pick Murf to meter an API at the rates above. Pick ElevenLabs Starter at $6 a month if you want the creator plan. The ElevenLabs affiliate link does not decide that. See the voice comparison on this site if you want both prices side by side."
+    }
+  ]
+}

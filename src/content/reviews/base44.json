@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Base44 is for people who want a full-stack app from a chat, including auth and a database, and who are willing to pay the annual rate printed on the pricing page. Indie hackers and small teams prototyping up to a handful of apps fit the free plan. The free tier includes auth, a database, and up to 5 apps, which is more concrete than a vague trial.",
+    "It is a weaker fit if you need a month-to-month price before you commit. The paid cards we verified are the annual rates. The FAQ says annual billing saves 20%, and the month-to-month amounts were not displayed. We will not invent them by dividing. If you might cancel in a month, get that number from the vendor before you enter a card."
+  ],
+  "features": [
+    "The builder is a message thread that produces an app, not only a frontend mock. Auth and a database on the free plan are why it belongs next to Lovable and Bolt rather than next to a slide tool. You can export the code to GitHub, so you are not locked to the editor if the credits run out. That export is one of the pros, and it matters more than another template.",
+    "Message credits are the meter. Free is $0 for 25 message credits a month. Starter is $16 a month billed annually for 100 message credits. Builder is $40 a month billed annually for 250. Pro is $80 a month billed annually for 500. Elite is $160 a month billed annually for 1,200. Enterprise is contact sales. The steps are even: more credits, higher annual rate.",
+    "Annual billing is the price in the table. The page says annual billing is 20% off. Because the month-to-month stickers were not shown, the 20% is a claim on the FAQ, not a second column we can print. Export to GitHub is the escape hatch if you outgrow the credits."
+  ],
+  "limitations": [
+    "Message credits run out on bigger builds. Twenty-five a month on Free is a taste. One hundred on Starter is a small project if each message is a real change. Do not plan a client build on Free and discover the cap in week two.",
+    "We do not publish a monthly, non-annual price. The verdict says paid plans on the page are the annual rates, starting at $16 a month. Starting at $16 means Starter billed annually, not a promise that month-to-month is $16. If the toggle on the live page shows another number, that number is newer than this review.",
+    "The rating is Depends, not Worth it. The free tier is real, the GitHub export is real, and the missing month-to-month price is also real. Depends means: fine if the annual rate is the deal you want, not fine as a casual monthly tool until that price is on the page."
+  ],
+  "pricingNotes": [
+    "Checked on base44.com/pricing on 14 October 2026. Free is $0 for 25 message credits a month. Starter is $16 a month billed annually for 100 message credits. Builder is $40 a month billed annually for 250 message credits. Pro is $80 a month billed annually for 500 message credits. Elite is $160 a month billed annually for 1,200 message credits. Enterprise is contact sales.",
+    "Every paid price above is the annual rate shown on the pricing page. The FAQ says annual billing saves 20%. The month-to-month amounts were not displayed, so they are not estimated here. Free includes auth, a database, and up to 5 apps, which is a product limit from the pros list, not a price."
+  ],
+  "alternatives": [
+    {
+      "slug": "lovable",
+      "text": "is the closest prompt-to-app product. Pro is $25 a month for 100 credits, or $21 a month annual. Business is $50 a month for the same 100 credits, or $42 annual. Free is 5 credits a day, max 30 a month. Lovable is Worth it for speed. Base44 is Depends because of how the annual prices are presented."
+    },
+    {
+      "slug": "bolt",
+      "text": "bills tokens. Free is $0 with 300,000 tokens a day and 1 million a month. Pro is $25 a month billed monthly, starting at 10 million tokens. Teams is $30 per member a month. Yearly savings are advertised at up to 28% without yearly dollar amounts on the page. Bolt is the better fit for short bursts in the browser."
+    },
+    {
+      "slug": "replit",
+      "text": "is a cloud IDE with an agent, not only a generator. Core is $20 a month, or $18 billed annually. Pro is $100 a month, or $90 billed annually. Choose Replit when you expect to keep coding in the environment. Choose Base44 when the chat and the GitHub export are the workflow."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Base44 Starter $16 a month if I pay monthly?",
+      "a": "The verified price is $16 a month billed annually, for 100 message credits. The month-to-month amount was not on the page. The FAQ says annual billing saves 20%, which is not the same as printing the monthly sticker. Do not assume $16 is the month-to-month rate."
+    },
+    {
+      "q": "What is on the free plan?",
+      "a": "Free is $0 for 25 message credits a month. The pros list includes auth, a database, and up to 5 apps. Credits still run out on bigger builds."
+    },
+    {
+      "q": "Can I leave with the code?",
+      "a": "Yes. You can export the code to GitHub. That does not make the credits unlimited. It means you are not stuck in the editor if you stop paying."
+    },
+    {
+      "q": "Does an affiliate relationship decide the Depends rating?",
+      "a": "No. Depends is about the annual-only prices we could verify and the credit caps. A commission would not move it to Worth it."
+    }
+  ]
+}

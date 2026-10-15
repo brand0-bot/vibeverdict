@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Lovable is for someone who wants a working full-stack app from a prompt, with hosting and a backend already in the product. Founders prototyping, designers who do not want to stand up a server, and developers who would rather edit a generated app than start from a blank repo are the fit. If you already live in a Next.js repo and only need a component, v0 is the closer tool.",
+    "It is a poor fit when the project is a large existing codebase. Credits burn while you iterate, and the verdict says they run out quickly on big projects. A weekend prototype is the sweet spot. A six-month rewrite is not."
+  ],
+  "features": [
+    "The output is a deployed app, not a zip you have to host yourself. That is the practical meaning of the verdict: idea to a deployed full-stack app. The UI tends to come out looking finished, which is why the pros list calls out the interface. You can click around a real URL instead of imagining the screen from a code block.",
+    "Free is enough to see the loop. It is $0, with 5 credits a day and a maximum of 30 a month. That cap is the point. You learn how a credit feels on your prompt before you buy Pro. Pro is $25 a month for 100 credits, or $21 a month if you pay annually.",
+    "Business is $50 a month for the same 100 credits, or $42 a month on the annual plan. You are paying twice the Pro price for the same credit count, which is why the cons line says Business costs twice for the same credits. Buy Business for the team controls, not because you think it includes more generation. The docs table also lists much larger credit tiers, up to 10,000 a month: Pro at $2,250 a month ($1,875 annual) and Business at $4,300 a month ($3,584 annual). Enterprise is contact sales."
+  ],
+  "limitations": [
+    "Iteration is the bill. Every correction spends credits. A vague first prompt followed by twenty fixes is how a 100-credit month disappears. Write a tighter spec, or accept that Pro at 100 credits is a prototype plan, not an agency retainer.",
+    "The annual prices are the ones in the docs, not a discount we calculated. Pro annual is $21 a month. Business annual is $42 a month. The high credit tiers are a different product decision: thousands of dollars a month. Do not stumble into the 10,000-credit row because the slider was already there.",
+    "Lovable has an affiliate flag and no affiliate URL in our data, so the Visit button goes to lovable.dev. That relationship does not move the verdict. Worth it means the product is the fastest path we have seen from a prompt to a hosted app, with the credit warning attached."
+  ],
+  "pricingNotes": [
+    "Entry tiers are from docs.lovable.dev/introduction/subscription-plans, checked 14 October 2026. Free is $0 with 5 credits a day, max 30 a month. Pro is $25 a month for 100 credits, or $21 a month annual. Business is $50 a month for 100 credits, or $42 a month annual. Enterprise is contact sales.",
+    "The same table lists larger credit tiers up to 10,000 a month. At that top row, Pro is $2,250 a month, or $1,875 a month annual, and Business is $4,300 a month, or $3,584 a month annual. Those are published tiers, not an estimate. If your bill does not match one of these rows, the docs changed and this page is stale."
+  ],
+  "alternatives": [
+    {
+      "slug": "bolt",
+      "text": "is the in-browser builder with token billing. Free is $0 with 300,000 tokens a day and 1 million a month. Pro is $25 a month billed monthly, starting at 10 million tokens. Teams is $30 per member a month billed monthly. The pricing page said yearly billing saves up to 28% and did not list the yearly dollar amounts, so we do not print them. Tokens suit short bursts. Lovable suits a hosted app."
+    },
+    {
+      "slug": "v0",
+      "text": "is the React and Next.js generator that deploys to Vercel. Plus is $30 per user a month. Business is $100 per user a month. Choose v0 when the stack is already Vercel. Choose Lovable when you want the backend and hosting without assembling that stack."
+    },
+    {
+      "slug": "replit",
+      "text": "is a cloud IDE plus an agent. Core is $20 a month, or $18 billed annually. Pro is $100 a month, or $90 billed annually. Starter is free. It is the better pick when you want a general coding environment, not a prompt-to-app product."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why is Lovable Business twice the price for the same credits?",
+      "a": "The docs list Business at $50 a month, or $42 annual, for 100 credits. Pro is $25 a month, or $21 annual, also for 100 credits. The extra money is not more generation at the entry tier. Read the plan differences on the docs page before you upgrade. The verdict already flags this."
+    },
+    {
+      "q": "Will 100 credits build a whole product?",
+      "a": "Enough for a focused prototype. The verdict says credits run out quickly on big projects. The free plan, 5 a day and 30 a month, shows you the burn rate on your own prompts."
+    },
+    {
+      "q": "What does the 10,000-credit tier cost?",
+      "a": "On the same docs table, Pro at that tier is $2,250 a month, or $1,875 a month billed annually. Business is $4,300 a month, or $3,584 a month billed annually. Do not treat the $25 Pro card as that plan."
+    },
+    {
+      "q": "Is there an affiliate link on the Visit button?",
+      "a": "Not yet. Lovable is marked affiliate, and there is no affiliate URL in the data, so Visit goes to the official site. A future affiliate link would not change the verdict."
+    }
+  ]
+}

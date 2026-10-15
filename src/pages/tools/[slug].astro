@@ -1,8 +1,10 @@
 ---
-import Base from '../../layouts/Base.astro'; import { tools, bySlug, categories, label, visitUrl } from '../../lib/data.js';
+import Base from '../../layouts/Base.astro'; import { tools, bySlug, categories, label, visitUrl, reviews } from '../../lib/data.js';
 import { guidesFor } from '../../lib/guides.js';
 export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
 const { t } = Astro.props;
+const review = reviews[t.slug] || {};
+const paras = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
 const related = guidesFor(t.slug, bySlug);
 const pageUrl = `https://vibeverdict.ai/tools/${t.slug}/`;
 
@@ -40,9 +42,13 @@ const software = {
   url: t.website,
   ...(t.verified && t.pricing?.length ? { offers: t.pricing.map(offerFromPlan) } : {})
 };
+const faqItems = [
+  { q: `Is ${t.name} worth it?`, a: t.verdict },
+  ...paras(review.faqs).filter((item) => item && item.q && item.a)
+];
 const schema=[software,
  {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://vibeverdict.ai/"},{"@type":"ListItem",position:2,name:categories[t.category],item:`https://vibeverdict.ai/category/${t.category}/`},{"@type":"ListItem",position:3,name:t.name,item:pageUrl}]},
- {"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:`Is ${t.name} worth it?`,acceptedAnswer:{"@type":"Answer",text:t.verdict}}]}];
+ {"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqItems.map((item) => ({"@type":"Question",name:item.q,acceptedAnswer:{"@type":"Answer",text:item.a}}))}];
 ---
 <Base title={`Is ${t.name} worth it? | VibeVerdict`} description={t.verdict} schema={schema}>
 <p class="mut" style="margin-top:24px"><a href="/">Home</a> / <a href={`/category/${t.category}/`}>{categories[t.category]}</a></p>
@@ -50,11 +56,16 @@ const schema=[software,
 <div class="card" style="font-size:19px"><span class={`pill ${t.rating}`}>{label[t.rating]}</span> <b>{t.verdict}</b></div>
 <p class="mut" style="font-size:14px">{t.verified?<>✓ Last verified <b>{t.lastVerified}</b> from <a href={t.pricingSource} rel="nofollow">the official source</a></>:<>⚠ <b>Pricing not verified.</b> Check the <a href={t.pricingSource} rel="nofollow">official site</a> before buying.</>}</p>
 {t.pricingNote && <p class="warn">{t.pricingNote}</p>}
+{paras(review.audience).length > 0 && <><h2>Who it's for</h2>{paras(review.audience).map((paragraph) => <p>{paragraph}</p>)}</>}
+{paras(review.features).length > 0 && <><h2>Standout features</h2>{paras(review.features).map((paragraph) => <p>{paragraph}</p>)}</>}
+{paras(review.limitations).length > 0 && <><h2>Limitations</h2>{paras(review.limitations).map((paragraph) => <p>{paragraph}</p>)}</>}
 <h2>Pricing</h2>
 {t.pricing.length? <table><tr><th>Plan</th><th>Price</th></tr>{t.pricing.map(p=>(<tr><td>{p.plan}</td><td>{p.price}{!t.verified && <span class="mut"> (unverified)</span>}</td></tr>))}</table> : <p class="mut">Pricing hasn't been researched yet. We don't publish prices we haven't verified.</p>}
+{paras(review.pricingNotes).length > 0 && <><h2>Pricing notes</h2>{paras(review.pricingNotes).map((paragraph) => <p>{paragraph}</p>)}</>}
 {t.pros.length>0 && <div class="grid" style="margin-top:24px"><div class="card"><h3 style="margin-top:0;color:var(--ok)">Pros</h3><ul>{t.pros.map(p=><li>{p}</li>)}</ul></div><div class="card"><h3 style="margin-top:0;color:var(--bad)">Cons</h3><ul>{t.cons.map(p=><li>{p}</li>)}</ul></div></div>}
+{faqItems.length > 1 && <><h2>FAQ</h2>{faqItems.map((item) => <><h3>{item.q}</h3><p>{item.a}</p></>)}</>}
 {related.length>0 && <><h2>Comparisons</h2><ul>{related.map(r => <li><a href={r.href}>{r.title}</a></li>)}</ul></>}
-{t.alternatives.length>0 && <><h2>Alternatives</h2><div class="grid">{t.alternatives.filter(a=>bySlug[a]).map(a=>{ const alt=bySlug[a]; return alt.affiliateUrl
+{t.alternatives.length>0 && <><h2>Alternatives</h2>{paras(review.alternatives).map((bit) => bySlug[bit.slug] && <p><a href={`/tools/${bit.slug}/`}>{bySlug[bit.slug].name}</a> {bit.text}</p>)}<div class="grid">{t.alternatives.filter(a=>bySlug[a]).map(a=>{ const alt=bySlug[a]; return alt.affiliateUrl
  ? <a class="card" href={alt.affiliateUrl} rel="sponsored nofollow noopener" target="_blank"><b>{alt.name}</b><div class="mut" style="font-size:13px">{alt.verdict}</div></a>
  : <a class="card" href={`/tools/${a}/`}><b>{alt.name}</b><div class="mut" style="font-size:13px">{alt.verdict}</div></a>; })}</div>
 {t.alternatives.some(a=>bySlug[a]?.affiliateUrl) && <p class="mut" style="font-size:13px">We may earn a commission if you sign up through this link. It never affects our verdict. <a href="/disclosure/">Affiliate disclosure</a></p>}</>}

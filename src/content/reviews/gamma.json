@@ -1,0 +1,52 @@
+{
+  "audience": [
+    "Gamma is for people who need a deck, a one-pager, or a simple site quickly and are willing to start on a free plan while the paid dollar price is unclear. Students, founders sketching a pitch, and marketers who would rather generate slides than fight a template are the fit. If you need a contract with a published seat price before you roll it out, this is the wrong week to standardize on Gamma.",
+    "It is a bad fit if your buying process requires the number on gamma.app/pricing. On 14 October 2026 that page timed out, and a direct download returned HTTP 403. We will not fill the gap with an old $12 or $25 figure. Those earlier numbers are not confirmed."
+  ],
+  "features": [
+    "The free plan is not a timed trial. It is $0 with 400 starting credits, and those credits do not refresh. You can learn the editor and ship a small deck without a card. That is why the verdict says there is a real free plan, and why the rating stays Pending instead of Skip.",
+    "Plus is the plan that removes the Gamma badge. The help center lists Plus at 1,000 credits a month, Pro at 4,000 credits a month, and Ultra at 20,000 credits a month. Ultra is monthly-only for now. Annual plans are 28% off when you can see the price. The help center does not state the Plus or Pro dollar amount, so this page does not either.",
+    "Generation is the product. You describe the deck and Gamma drafts the cards. That is faster than building slide by slide, and it is also why credits exist. A heavy generation habit hits the gate even if the dollar price is hidden. The cons line says that plainly."
+  ],
+  "limitations": [
+    "We do not know what Plus or Pro costs in dollars today. The official pricing page did not load. Publishing a guessed price would be worse than the Pending rating. Check the vendor before you pay, and treat any number you see only on a review site, including an older version of this one, as unverified.",
+    "Free credits do not refresh. 400 starting credits is a pile, not a monthly allowance. When they are gone, you are on a paid plan or you are done. Plus, Pro, and Ultra are monthly credit amounts, which is a different meter. Do not mix those up when you compare Gamma with a tool that bills a flat seat.",
+    "The Gamma badge stays on the free plan. If the deck is client-facing, that watermark is the reason to look at Plus, and Plus is also the plan whose price we could not read. Beautiful.ai is the alternative with a number."
+  ],
+  "pricingNotes": [
+    "gamma.app/pricing timed out on 14 October 2026, and a direct download returned HTTP 403. The help center article on upgrading lists the credit amounts: Free is $0 with 400 starting credits that do not refresh. Plus is a dollar amount not listed, at 1,000 credits a month. Pro is a dollar amount not listed, at 4,000 credits a month. Ultra is a dollar amount not listed, at 20,000 credits a month, and it is monthly-only for now.",
+    "The same help center says annual plans are 28% off. It does not state Plus or Pro dollar prices, so the 28% cannot be turned into a dollar figure here. Earlier $12 and $25 figures are not confirmed and are not in the table. Last verified is empty on purpose. The pricing row is marked unverified."
+  ],
+  "alternatives": [
+    {
+      "slug": "beautiful-ai",
+      "text": "is the deck tool with a price we could read. Pro is $14.50 a month billed annually, with unlimited AI slides. Team is $40 per user a month billed annually, or $50 per user billed monthly. The 14-day trial needs a card. A monthly individual price was not listed. Students with a .edu email get a year free. If you need a number in the budget, start here."
+    },
+    {
+      "slug": "tome",
+      "text": "is not a priced alternative right now. On 14 October 2026, tome.app and tome.app/pricing returned HTTP 404, deployment not found. tome.com/pricing returned HTTP 500. There is no price to compare."
+    },
+    {
+      "slug": "notion-ai",
+      "text": "is docs first, not a slide product. Business is $20 per member a month and includes the Notion Agent. Free and Plus only include an AI trial. Use it when the work lives in a wiki. Use Gamma when the work is a deck and you can tolerate an unpublished paid price."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much is Gamma Plus?",
+      "a": "We do not know. The help center lists 1,000 credits a month for Plus and does not state a dollar price. gamma.app/pricing did not load on 14 October 2026. The verdict stays Pending until that page can be read."
+    },
+    {
+      "q": "Does the free plan expire?",
+      "a": "The plan itself is not described as time-limited. The 400 starting credits do not refresh. When the credits are gone, the free generation is gone with them."
+    },
+    {
+      "q": "Is Ultra billed annually?",
+      "a": "The help center says Ultra is monthly-only for now. Plus and Pro can be annual, at 28% off, but only once you can see the price. We are not calculating that discount into dollars."
+    },
+    {
+      "q": "Why is Gamma not rated Worth it?",
+      "a": "The product is fine to try, and the free plan is real. A Worth it rating needs a price we verified. We do not have one for Plus or Pro. Pending is the honest rating, and a pending affiliate program would not promote it."
+    }
+  ]
+}
