@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+
+const mail = (subject) => {
+  const body = 'Tool name:\nURL:\nContact:\n';
+  return `mailto:hello@vibeverdict.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+const offers = [
+  {
+    name: 'Free submission',
+    price: '$0',
+    note: 'Reviewed when we get to it',
+    points: [
+      'Tell us the tool name, URL, and a contact.',
+      'There is no queue promise and no guarantee we will list it.',
+      'If we do review it, the verdict is the same standard as every other tool.'
+    ],
+    cta: 'Submit for free',
+    href: mail('Free submission: [tool name]')
+  },
+  {
+    name: 'Fast-track review',
+    price: '$49',
+    note: 'One time. Reviewed within 7 days.',
+    points: [
+      'We review the tool within 7 days of payment.',
+      'The $49 is refunded if we do not list it.',
+      'A listing can still be Depends, Skip, or Pending. A negative verdict is not a refund.'
+    ],
+    cta: 'Request a fast-track review',
+    href: mail('Fast-track review: [tool name]')
+  },
+  {
+    name: 'Featured placement',
+    price: '$99/month',
+    note: 'Founding rate $79/month for the first 3 months.',
+    points: [
+      'Shown at the top of the matching category page.',
+      'The card is labeled Sponsored.',
+      'This buys the placement. It does not buy a Worth it rating.'
+    ],
+    cta: 'Request featured placement',
+    href: mail('Featured placement: [tool name]')
+  }
+];
+---
+<Base title="Submit your tool | VibeVerdict" description="Submit an AI tool to VibeVerdict. Free review when we get to it, a $49 fast-track within 7 days, or featured placement from $79 a month. Payment never buys the verdict.">
+<h1>Submit your tool</h1>
+<p class="mut">For people who built an AI tool and want it considered for VibeVerdict.</p>
+<p class="warn"><b>Payment buys speed and visibility, never the verdict.</b> A review can still be negative. Worth it, Depends, Skip, and Pending stay editorial. There is no checkout on this page. Each button opens an email to <a href="mailto:hello@vibeverdict.ai">hello@vibeverdict.ai</a>.</p>
+<div class="grid">
+  {offers.map((offer) => (
+    <article class="card">
+      <h2 style="margin-top:0">{offer.name}</h2>
+      <p style="font-size:28px;font-weight:800;margin:0">{offer.price}</p>
+      <p class="mut" style="margin-top:6px">{offer.note}</p>
+      <ul>
+        {offer.points.map((point) => <li>{point}</li>)}
+      </ul>
+      <p style="margin-bottom:0"><a class="btn" href={offer.href}>{offer.cta}</a></p>
+    </article>
+  ))}
+</div>
+<p class="mut" style="margin-top:22px">Put the tool name in the subject, where it says [tool name], and fill in the tool name, URL, and contact in the email. We reply with whether we can take it and, for the paid options, how to pay. Read <a href="/about/">how we rate</a> and the <a href="/disclosure/">affiliate disclosure</a>.</p>
+</Base>
