@@ -1,74 +1,74 @@
 [
   {
-    "author": "Anthropic",
-    "handle": "AnthropicAI",
-    "summary": "Anthropic opens applications for STEM and conceptual-reasoning fellowships starting January 2027.",
-    "url": "https://x.com/AnthropicAI/status/2110720940665372825",
-    "date": "2026-10-15",
-    "likes": 883,
-    "reposts": 60
-  },
-  {
-    "author": "Mistral AI",
-    "handle": "MistralAI",
-    "summary": "Mistral and CERN team up on a Large Physics Model trained on billions of simulated particle collisions.",
-    "url": "https://x.com/MistralAI/status/2110684732103041474",
-    "date": "2026-10-15",
-    "likes": 1061,
-    "reposts": 134
-  },
-  {
-    "author": "0xMarioNawfal",
-    "handle": "RoundtableSpace",
-    "summary": "A new CLI-Anything layer lets Claude Code drive desktop apps like GIMP and Blender, not just codebases.",
-    "url": "https://x.com/RoundtableSpace/status/2110645603029889500",
-    "date": "2026-10-15",
-    "likes": 205,
-    "reposts": 25
-  },
-  {
-    "author": "Justine Moore",
-    "handle": "venturetwins",
-    "summary": "Moore says GPT-6 Astra and Opus 5.5 feel like a creative-work leap akin to last year’s coding jump.",
-    "url": "https://x.com/venturetwins/status/2110560717514678624",
-    "date": "2026-10-15",
-    "likes": 254,
-    "reposts": 5
-  },
-  {
     "author": "AI at Meta",
     "handle": "AIatMeta",
-    "summary": "Meta pitches Muse Wonder and Muse Wonder Full as state-of-the-art for personal and professional agent tasks.",
-    "url": "https://x.com/AIatMeta/status/2110517571149807685",
-    "date": "2026-10-14",
-    "likes": 357,
-    "reposts": 32
-  },
-  {
-    "author": "Ethan Mollick",
-    "handle": "emollick",
-    "summary": "Mollick argues AI is reshaping games—from major studios speeding up to indie communities mixed on AI tools.",
-    "url": "https://x.com/emollick/status/2110473584317513936",
-    "date": "2026-10-14",
-    "likes": 586,
-    "reposts": 32
+    "summary": "Meta releases Muse Spark Open, an 816B open-weight model built for coding and long-horizon agent work.",
+    "url": "https://x.com/AIatMeta/status/2110779754274292212",
+    "date": "2026-10-15",
+    "likes": 10657,
+    "reposts": 1114
   },
   {
     "author": "OpenAI",
     "handle": "OpenAI",
-    "summary": "OpenAI says more than half of its EU business AI usage now involves agents, with small-business users up 8×.",
-    "url": "https://x.com/OpenAI/status/2110442001749659890",
-    "date": "2026-10-14",
-    "likes": 2556,
-    "reposts": 201
+    "summary": "OpenAI rolls out GPT-Live-1.1 with new multilingual voices and fewer \"checking…\" moments in ChatGPT Voice.",
+    "url": "https://x.com/OpenAI/status/2110797830361436604",
+    "date": "2026-10-15",
+    "likes": 10148,
+    "reposts": 726
   },
   {
-    "author": "Google DeepMind",
-    "handle": "GoogleDeepMind",
-    "summary": "DeepMind highlights early Gemini 4 Argon wins spanning quantum computing, fusion research, and protein design.",
-    "url": "https://x.com/GoogleDeepMind/status/2110421861435879476",
-    "date": "2026-10-14",
-    "likes": 2165,
-    "reposts": 269
+    "author": "OpenAI",
+    "handle": "OpenAI",
+    "summary": "OpenAI pledges $5 million to a Simons Foundation effort helping mathematicians build on AI-assisted results.",
+    "url": "https://x.com/OpenAI/status/2110741355739963884",
+    "date": "2026-10-15",
+    "likes": 5708,
+    "reposts": 450
+  },
+  {
+    "author": "Anthropic",
+    "handle": "AnthropicAI",
+    "summary": "Anthropic gives METR employee-like access to assess its safety practices and explains how third-party evaluators work.",
+    "url": "https://x.com/AnthropicAI/status/2110784662071398807",
+    "date": "2026-10-15",
+    "likes": 3441,
+    "reposts": 229
+  },
+  {
+    "author": "OpenAI",
+    "handle": "OpenAI",
+    "summary": "OpenAI expands GPT-Rosalind for academic biology labs with sponsored access for eligible U.S. universities.",
+    "url": "https://x.com/OpenAI/status/2110841898076418336",
+    "date": "2026-10-15",
+    "likes": 2547,
+    "reposts": 233
+  },
+  {
+    "author": "Anthropic",
+    "handle": "AnthropicAI",
+    "summary": "Anthropic commits $5 million to help mathematicians figure out how best to use AI in scientific research.",
+    "url": "https://x.com/AnthropicAI/status/2110846112152105136",
+    "date": "2026-10-15",
+    "likes": 2090,
+    "reposts": 153
+  },
+  {
+    "author": "Ethan Mollick",
+    "handle": "emollick",
+    "summary": "Mollick argues small accuracy gains compound on long-horizon tasks, so frontier models still matter as orchestrators.",
+    "url": "https://x.com/emollick/status/2110918113550307778",
+    "date": "2026-10-16",
+    "likes": 780,
+    "reposts": 61
+  },
+  {
+    "author": "Mistral AI",
+    "handle": "MistralAI",
+    "summary": "Mistral says Large 4 scores well on Ulam’s private STEMBench for engineering and astronomy.",
+    "url": "https://x.com/MistralAI/status/2111056939841163336",
+    "date": "2026-10-16",
+    "likes": 717,
+    "reposts": 53
   }
 ]
