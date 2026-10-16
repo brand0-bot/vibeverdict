@@ -1,5 +1,10 @@
-<div class="beehiiv-slot">
+---
+const { headline, subline } = Astro.props;
+---
+<div class:list={["beehiiv-slot", { "beehiiv-slot-break": headline }]}>
   <form class="vv-signup" method="post" action="https://vibeverdict.beehiiv.com/create" novalidate>
+    {headline && <h2 class="vv-signup-title">{headline}</h2>}
+    {subline && <p class="vv-signup-sub">{subline}</p>}
     <div class="vv-signup-row">
       <input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@email.com" aria-label="Email address"/>
       <button type="submit">Subscribe</button>
@@ -73,6 +78,9 @@
 </script>
 <style>
   .beehiiv-slot { max-width: 480px; margin: 16px 0; }
+  .beehiiv-slot-break { margin: 36px 0; max-width: 560px; }
+  .vv-signup-title { margin: 0 0 4px; font-size: 20px; line-height: 1.25; }
+  .vv-signup-sub { margin: 0 0 12px; color: var(--mut); font-size: 14px; }
   .vv-signup {
     margin: 0 0 14px;
     padding: 14px;

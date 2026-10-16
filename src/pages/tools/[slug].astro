@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro'; import { tools, bySlug, categories, label, visitUrl, reviews } from '../../lib/data.js';
+import Base from '../../layouts/Base.astro'; import NewsletterForm from '../../components/NewsletterForm.astro'; import { tools, bySlug, categories, label, visitUrl, reviews } from '../../lib/data.js';
 import { guidesFor } from '../../lib/guides.js';
 export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
 const { t } = Astro.props;
@@ -62,6 +62,7 @@ const schema=[software,
 {t.pricing.length? <table><tr><th>Plan</th><th>Price</th></tr>{t.pricing.map(p=>(<tr><td>{p.plan}</td><td>{p.price}{!t.verified && <span class="mut"> (unverified)</span>}</td></tr>))}</table> : <p class="mut">Pricing hasn't been researched yet. We don't publish prices we haven't verified.</p>}
 {paras(review.pricingNotes).length > 0 && <><h2>Pricing notes</h2>{paras(review.pricingNotes).map((paragraph) => <p>{paragraph}</p>)}</>}
 {t.pros.length>0 && <div class="grid" style="margin-top:24px"><div class="card"><h3 style="margin-top:0;color:var(--ok)">Pros</h3><ul>{t.pros.map(p=><li>{p}</li>)}</ul></div><div class="card"><h3 style="margin-top:0;color:var(--bad)">Cons</h3><ul>{t.cons.map(p=><li>{p}</li>)}</ul></div></div>}
+<NewsletterForm headline="Get the weekly verdict" subline="New AI tools, honest verdicts, once a week. Free." />
 {faqItems.length > 1 && <><h2>FAQ</h2>{faqItems.map((item) => <><h3>{item.q}</h3><p>{item.a}</p></>)}</>}
 {related.length>0 && <><h2>Comparisons</h2><ul>{related.map(r => <li><a href={r.href}>{r.title}</a></li>)}</ul></>}
 {t.alternatives.length>0 && <><h2>Alternatives</h2>{paras(review.alternatives).map((bit) => bySlug[bit.slug] && <p><a href={`/tools/${bit.slug}/`}>{bySlug[bit.slug].name}</a> {bit.text}</p>)}<div class="grid">{t.alternatives.filter(a=>bySlug[a]).map(a=>{ const alt=bySlug[a]; return alt.affiliateUrl
