@@ -1,0 +1,56 @@
+{
+  "audience": [
+    "Rill is for someone who already pays for Claude Code or Codex and wants that agent in a Mac browser, next to the page they are reading. The verdict is the bill: Rill is free, and the AI charge stays with Anthropic or OpenAI. The homepage says there is no new subscription and no API keys.",
+    "It is a poor fit on Windows or Linux, and on an Intel Mac. The page says Apple silicon and macOS 14 or later. It is also a poor fit if you do not have Claude Code or Codex and expected Rill to include a model. Browsing works without them. The AI features do not."
+  ],
+  "features": [
+    "The FAQ \"What does it cost?\" on rill.love, checked 16 October 2026, says Rill is free and AI features run on your Claude Code or Codex plan. You sign in to one or both. Rill looks up projects from that history. There is no Rill price to compare with a $20 editor seat, because Rill does not sell one.",
+    "The agent work is the point of the product: ask about a page, send a task from any page, and keep a journal of what got done. New tasks are read-only until you allow edits, and in a git repository each edit can be undone. A web task is told to stop before a step that pays, places an order, sends, posts, or deletes, unless you told it to go through with that step.",
+    "History is files on the Mac. Passwords go in the Keychain. Tab sorting and day summaries can be turned off. Talking, which is hold Fn and speak, is in beta inside Settings."
+  ],
+  "limitations": [
+    "Free does not mean the model is free. Claude Pro, which includes Claude Code, is $20 a month, or $17 a month with $200 billed up front. Codex comes with ChatGPT, and Plus is $20 a month. Those are the plans Rill runs on. If you do not already pay one of them, Rill's $0 is a browser.",
+    "It is beta, and the Mac requirement is narrow: Apple silicon, macOS 14 or later. Prompt injection is called out on the page itself. Agents read pages as untrusted text. That lowers the risk and does not remove it.",
+    "The rating is Depends. Depends means the client is free and the usefulness sits on a Claude Code or Codex plan you already have. There is no affiliate relationship. The Visit button goes to rill.love."
+  ],
+  "pricingNotes": [
+    "From rill.love on 16 October 2026. Rill is Free. AI features use your Claude Code or Codex plan. The page says no new subscription and no API keys. Beta. Apple silicon, macOS 14 or later.",
+    "No Rill dollar amount appears on the page, so the table does not invent one. Claude Code and Codex prices stay on their own reviews."
+  ],
+  "alternatives": [
+    {
+      "slug": "claude-code",
+      "text": "is the agent Rill can sign into. Pro is $20 a month, or $17 a month billed annually with $200 up front, and it includes Claude Code. Max is from $100 a month. The free Claude plan does not include Claude Code. Use Claude Code in the terminal when you do not want a separate browser."
+    },
+    {
+      "slug": "openai-codex",
+      "text": "is the other sign-in. It is included with ChatGPT. Plus is $20 a month. Go is $8 a month. Pro is $100, $200, or $500 a month. Rill does not replace that subscription. It uses it."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the editor. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page showed a different lineup. Depends, until those two pages agree. Cursor is the pick when the work lives in an IDE rather than beside a browser tab."
+    },
+    {
+      "slug": "warp",
+      "text": "is the terminal with a stated usage pool. Build is $20 a month, or $18 on the annual plan, and includes $20 of agent usage. The free plan still includes the terminal and the agent CLI. Warp sells its own agent usage. Rill does not."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Rill cost anything?",
+      "a": "Rill is free. The FAQ says AI features run on your Claude Code or Codex plan. There is no Rill subscription and no API key to add."
+    },
+    {
+      "q": "Can I browse without Claude Code or Codex?",
+      "a": "Yes. The page says browsing works without them. The AI features need one of those plans."
+    },
+    {
+      "q": "Which Macs run Rill?",
+      "a": "Apple silicon, on macOS 14 or later. It is in beta."
+    },
+    {
+      "q": "Does Rill have an affiliate link?",
+      "a": "No. rill.love does not list an affiliate or partner program. The contact address on the page is contact@rill.love. The Visit button goes to rill.love."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+ "name": "Amp",
+ "category": "coding-agents",
+ "verdict": "Hobby is free if you bring keys or a ChatGPT or Claude subscription; Megawatt is $20 a month for orb time, and Gigawatt is $200.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Hobby",
+   "price": "Free (pay-as-you-go orbs, or your own runners)"
+  },
+  {
+   "plan": "Megawatt",
+   "price": "$20/mo (45,000 minutes of orb time)"
+  },
+  {
+   "plan": "Gigawatt",
+   "price": "$200/mo (480,000 minutes of orb time)"
+  },
+  {
+   "plan": "Teams",
+   "price": "No extra charge"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  }
+ ],
+ "pricingSource": "https://ampcode.com/docs/pricing",
+ "lastVerified": "2026-10-16",
+ "verified": true,
+ "pros": [
+  "Hobby can use a ChatGPT or Claude subscription, or your own keys",
+  "The page says individuals pay provider API prices with no Amp markup",
+  "Teams adds no separate seat price"
+ ],
+ "cons": [
+  "Orb time and model credits are different meters",
+  "Purchased credits expire twelve months after purchase"
+ ],
+ "alternatives": [
+  "cursor",
+  "claude-code",
+  "openai-codex",
+  "windsurf",
+  "opencode"
+ ],
+ "website": "https://ampcode.com",
+ "affiliate": false,
+ "pricingNote": "Checked 2026-10-16 on ampcode.com/docs/pricing. Hobby is Free: pay-as-you-go orbs, or your own runners for free, plus ChatGPT, Claude, and other subscriptions, BYOK, and no Amp token fees or limits. The Individual card has two prices. Megawatt is $20 a month and includes 45,000 minutes of orb time. Gigawatt is $200 a month and includes 480,000 minutes of orb time. Teams is no extra charge. Enterprise is Custom. Included usage resets each month and does not roll over. Past the included agent usage you buy credits; for individuals and non-enterprise workspaces Amp does not mark up provider API prices, and non-model tools such as web search also consume credits. Purchased credits expire twelve months after purchase. The page does not print a token count for included agent usage, so none is shown. A per-minute orb rate beyond the included minutes was not on this page, so none is shown."
+}

@@ -34,7 +34,9 @@
   "cursor",
   "warp",
   "aider",
-  "opencode"
+  "opencode",
+  "rill",
+  "amp"
  ],
  "website": "https://claude.com/product/claude-code",
  "affiliate": false,

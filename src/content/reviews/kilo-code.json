@@ -1,0 +1,60 @@
+{
+  "audience": [
+    "Kilo Code is for someone who wants a coding agent in VS Code, JetBrains, or the CLI without a seat fee, and who will pay for models separately. The verdict splits the bill on purpose. The individual platform is free. Teams is $15 a user a month. Inference is another line: your own keys, local models, the gateway at provider rates, or Kilo Pass from $19 a month.",
+    "It is a poor fit if you wanted one number that covers the editor and the model. The pricing page separates platform, inference, and cloud compute. A quiet month on the free platform can still be a model bill, and a cloud agent hour is on top of that."
+  ],
+  "features": [
+    "Individual platform access is free. The page says the VS Code, JetBrains, and CLI extensions are open source, and that usage is billed separately. It does not name the license on the pricing page, so this review does not name one. Teams is $15 per user a month and comes with a 14-day Enterprise trial. Enterprise is Custom, with SSO, audit logs, and an SLA on that card.",
+    "Inference has its own cards, checked 16 October 2026. Auto Free, BYOK, or local is $0 a month. Kilo Gateway is $0 a month plus usage at exact provider rates, with no markup. Kilo Pass is the subscription: Starter $19 a month, Pro $49 a month, Expert $199 a month. The calculator says those tiers are worth up to $26.60, $68.60, and $278.60 a month in credits. Those are bonus illustrations, not a second price you pay.",
+    "Cloud compute is listed beside that. Code Review is $0.33 an hour. Cloud Agent Docker and Cloud Agent Small are $0.60 an hour. Cloud Agent Standard is $1.20 an hour. The page says this is billed per second, with no rounding up and no minimum, and that model inference is charged separately."
+  ],
+  "limitations": [
+    "A 5% processing fee applies to credit purchases, on the comparison table for Individual, Teams, and Enterprise. That fee is not inside the $19, $49, or $199 Pass prices. A credit top-up costs more than the credit balance it adds.",
+    "The annual toggle is labeled \"50% bonus\" and the calculator shows a 12-month \"you pay\" figure that follows the tier you select. We do not print that figure as an annual plan price. It is an example total, not a named yearly rate.",
+    "The rating is Depends. Depends means the agent client is free and the invoice is not. Cline is the same shape: the tool is free and the provider bills you. Kilo adds Teams at $15 and a Pass if you want prepaid credits. A partner program exists at kilo.ai/partners. There is no affiliate URL in our data, so the Visit button goes to kilocode.ai. The program does not move the verdict."
+  ],
+  "pricingNotes": [
+    "From kilocode.ai/pricing on 16 October 2026. Individual is free, usage billed separately. Teams is $15 per user a month, with a 14-day Enterprise trial. Enterprise is Custom. Auto Free, BYOK, or local is $0 a month. Kilo Gateway is $0 a month plus provider rates. Kilo Pass is $19, $49, or $199 a month for Starter, Pro, and Expert. Credit purchases add a 5% processing fee.",
+    "Cloud compute: Code Review $0.33 an hour, Docker and Small $0.60 an hour, Standard $1.20 an hour, billed per second, inference separate. Bonus-credit amounts on the Pass calculator are not copied into the price column."
+  ],
+  "alternatives": [
+    {
+      "slug": "cline",
+      "text": "is the other free IDE agent. It is Apache-2.0, and you pay the provider, including a local model. Kilo's individual platform is the same idea, then adds Teams at $15 a user and a Pass from $19 a month."
+    },
+    {
+      "slug": "opencode",
+      "text": "is the MIT terminal, desktop, and local web agent. Go is $10 a month and Go Plus is $40 a month, with a separate dollar cap per model. Zen starts at a $20 balance plus a $1.23 card fee. OpenCode is the closer pick when you want the terminal. Kilo is the closer pick when you want VS Code or JetBrains."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the editor with the disputed price list. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200. The public pricing page showed a different lineup, so that rating is Depends. Cursor is one product price. Kilo is a free client plus a model bill."
+    },
+    {
+      "slug": "claude-code",
+      "text": "puts the agent on a Claude plan. Pro is $20 a month, or $17 a month with $200 billed up front, and it includes Claude Code. Max is from $100 a month. The free Claude plan does not include it. Choose Claude Code when you want the allowance inside the subscription."
+    },
+    {
+      "slug": "aider",
+      "text": "is Apache-2.0 in the terminal, and you pay your API provider with no included allowance and no Teams seat. Use it when you do not want a $15 team plan or a Pass."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Kilo Code free?",
+      "a": "The individual platform is free: open source VS Code, JetBrains, and CLI, with usage billed separately. Teams is $15 per user a month. Models are extra, through your own keys, local models, the gateway at provider rates, or Kilo Pass from $19 a month."
+    },
+    {
+      "q": "What does Kilo Pass cost?",
+      "a": "Starter is $19 a month, Pro is $49 a month, and Expert is $199 a month, on the Pass calculator. The \"up to\" credit figures next to them are bonus illustrations. The 12-month calculator total is not listed here as its own plan."
+    },
+    {
+      "q": "What does an hour of cloud agent cost?",
+      "a": "Docker and Small are $0.60 an hour. Standard is $1.20 an hour. Code Review is $0.33 an hour. Billing is per second, and model inference is separate."
+    },
+    {
+      "q": "Does Kilo Code have an affiliate link?",
+      "a": "Not on this page. A partner program is open at kilo.ai/partners, and the contact there is affiliates@kilocode.ai. We do not have a tracking URL, so Visit goes to kilocode.ai. A future affiliate link would not change the verdict."
+    }
+  ]
+}
