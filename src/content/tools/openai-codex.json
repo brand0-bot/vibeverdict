@@ -40,7 +40,8 @@
  "alternatives": [
   "claude-code",
   "github-copilot",
-  "cursor"
+  "cursor",
+  "rill"
  ],
  "website": "https://openai.com/codex",
  "affiliate": false,

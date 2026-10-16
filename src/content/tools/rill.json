@@ -1,0 +1,37 @@
+{
+ "name": "Rill",
+ "category": "coding-agents",
+ "verdict": "A free Mac browser that runs Claude Code or Codex beside your tabs; the AI bill stays with Anthropic or OpenAI.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Rill",
+   "price": "Free"
+  },
+  {
+   "plan": "AI features",
+   "price": "Your Claude Code or Codex plan"
+  }
+ ],
+ "pricingSource": "https://rill.love",
+ "lastVerified": "2026-10-16",
+ "verified": true,
+ "pros": [
+  "No Rill subscription and no API keys",
+  "Browsing works without an agent",
+  "History stays on the Mac"
+ ],
+ "cons": [
+  "AI features need a Claude Code or Codex plan you already pay for",
+  "Beta, and only Apple silicon Macs on macOS 14 or later"
+ ],
+ "alternatives": [
+  "claude-code",
+  "openai-codex",
+  "cursor",
+  "warp"
+ ],
+ "website": "https://rill.love",
+ "affiliate": false,
+ "pricingNote": "Checked 2026-10-16. The FAQ on rill.love, under \"What does it cost?\", says Rill is free and AI features run on your Claude Code or Codex plan. The same page says there is no new subscription and no API keys, that it is in beta, and that it runs on Apple silicon Macs with macOS 14 or later. It does not list a Rill dollar price, so none is shown. Claude Code and Codex prices are on their own pages."
+}

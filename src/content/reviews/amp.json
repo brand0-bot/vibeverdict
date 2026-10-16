@@ -1,0 +1,60 @@
+{
+  "audience": [
+    "Amp is for someone who wants a coding agent that can use a ChatGPT or Claude subscription, or keys they already have, and who will watch a second meter for orb time. Hobby is free. The Individual card then splits: Megawatt is $20 a month with 45,000 minutes of orb time, and Gigawatt is $200 a month with 480,000 minutes.",
+    "It is a poor fit if you wanted the model included the way Claude Code is included with Claude Pro. Amp says there are no Amp token fees or limits when you bring a subscription or a key. The orb clock is still Amp's. Past the included agent usage, you buy credits."
+  ],
+  "features": [
+    "Hobby is Free on ampcode.com/docs/pricing, checked 16 October 2026. Orbs are pay as you go, or you use your own runners for free. You can link ChatGPT, Claude, and other subscriptions, or bring your own keys. The card says no Amp token fees or limits.",
+    "Megawatt is $20 a month and includes 45,000 minutes of orb time. Gigawatt is $200 a month and includes 480,000 minutes. Both sit on the Individual card. Switching the tier changes the price and the minutes. Both include unlimited public and private repositories and your own domains for portals. Included usage resets each month and does not roll over.",
+    "Teams is no extra charge. Members can be on different tiers, the page says Hobby, Megawatt, or Gigawatt, with shared billing and pooled credits. Enterprise is Custom. For individuals and non-enterprise workspaces, Amp does not add a markup to provider API prices. The page's own example is a thread with $2 of Anthropic usage and $0.50 of OpenAI usage, which deducts $2.50 from credits."
+  ],
+  "limitations": [
+    "Orb time and model credits are not the same pool. Amp bills orbs by the minute and pauses an orb 5 minutes after the agent stops working, or 20 minutes after you last interacted with it, whichever comes later. A paused orb costs nothing. Larger orbs use the allowance faster. The pricing page does not print a dollar rate per orb minute, so this review does not invent one.",
+    "The card says paid tiers include agent usage and does not print a token count for it. When that included usage is gone, paid credits continue the thread. Non-model tools such as web search also consume those credits. Purchased credits expire twelve months after purchase. They do not require a paid tier.",
+    "The rating is Depends. Depends means Hobby is a real free start if you already pay OpenAI or Anthropic, and Megawatt at $20 is only the orb allowance, not a promise that the model is included. Gigawatt at $200 is the same product with a larger clock. We did not find a public affiliate program on the pricing docs. Visit goes to ampcode.com."
+  ],
+  "pricingNotes": [
+    "From ampcode.com/docs/pricing on 16 October 2026. Hobby is Free. Megawatt is $20 a month with 45,000 minutes of orb time. Gigawatt is $200 a month with 480,000 minutes of orb time. Teams is no extra charge. Enterprise is Custom.",
+    "Included usage resets monthly and does not roll over. Purchased credits expire twelve months after purchase. No markup on provider API prices for individuals and non-enterprise workspaces. No per-minute orb dollar rate and no included token count were printed on the page, so neither is in the table."
+  ],
+  "alternatives": [
+    {
+      "slug": "cursor",
+      "text": "is the editor people compare at a similar docs price. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page showed a different lineup. Both reviews are Depends. Cursor's argument is the IDE. Amp's argument is Hobby plus your existing ChatGPT or Claude subscription."
+    },
+    {
+      "slug": "claude-code",
+      "text": "is included with Claude. Pro is $20 a month, or $17 a month with $200 billed up front. Max is from $100 a month. The free Claude plan does not include Claude Code. Amp can link a Claude subscription for Claude Code mode. That link does not make the Claude plan free."
+    },
+    {
+      "slug": "openai-codex",
+      "text": "is included with ChatGPT. Plus is $20 a month, Go is $8, and Pro is $100, $200, or $500. Amp's page says you can link a ChatGPT subscription for more GPT usage. Codex is the subscription. Amp is the extra client and the orb clock."
+    },
+    {
+      "slug": "windsurf",
+      "text": "does not sell a standalone plan. windsurf.com/pricing redirects to Devin, so there is no Windsurf checkout to compare with Megawatt. If you arrived from a Windsurf bookmark, the price list you need is Devin's, and it is a different product."
+    },
+    {
+      "slug": "opencode",
+      "text": "is the MIT agent. The client is free. Go is $10 a month and Go Plus is $40 a month, with per-model caps, or you bring a key. OpenCode is the pick when you want the terminal and a license. Amp is the pick when you want Hobby on a subscription you already pay."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Amp free?",
+      "a": "Hobby is free. You can use pay-as-you-go orbs, your own runners, a ChatGPT or Claude subscription, or your own keys. Megawatt is $20 a month for 45,000 minutes of orb time. Gigawatt is $200 a month for 480,000 minutes."
+    },
+    {
+      "q": "Why are there two prices on the Individual card?",
+      "a": "The card toggles between Megawatt at $20 a month and Gigawatt at $200 a month. The minutes change with the toggle: 45,000 on Megawatt and 480,000 on Gigawatt. Both figures are on ampcode.com/docs/pricing."
+    },
+    {
+      "q": "Do Teams seats cost extra?",
+      "a": "The Teams card says no extra charge. Members can be on Hobby, Megawatt, or Gigawatt, and billing and credits can be shared. Enterprise is Custom."
+    },
+    {
+      "q": "Does Amp have an affiliate link?",
+      "a": "No. The pricing docs do not list an affiliate or partner signup, and we do not have a tracking URL. Visit goes to ampcode.com."
+    }
+  ]
+}

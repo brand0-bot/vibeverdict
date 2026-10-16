@@ -1,0 +1,74 @@
+{
+ "name": "Kilo Code",
+ "category": "coding-agents",
+ "verdict": "A free open-source coding agent for VS Code, JetBrains, and the CLI; individuals pay model usage, and Teams is $15 a seat.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Individual",
+   "price": "Free (open source; usage billed separately)"
+  },
+  {
+   "plan": "Teams",
+   "price": "$15/user/mo"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  },
+  {
+   "plan": "Auto Free, BYOK, or local",
+   "price": "$0/mo"
+  },
+  {
+   "plan": "Kilo Gateway",
+   "price": "$0/mo + usage at provider rates"
+  },
+  {
+   "plan": "Kilo Pass Starter",
+   "price": "$19/mo"
+  },
+  {
+   "plan": "Kilo Pass Pro",
+   "price": "$49/mo"
+  },
+  {
+   "plan": "Kilo Pass Expert",
+   "price": "$199/mo"
+  },
+  {
+   "plan": "Code Review",
+   "price": "$0.33/hour"
+  },
+  {
+   "plan": "Cloud Agent Docker or Small",
+   "price": "$0.60/hour"
+  },
+  {
+   "plan": "Cloud Agent Standard",
+   "price": "$1.20/hour"
+  }
+ ],
+ "pricingSource": "https://kilocode.ai/pricing",
+ "lastVerified": "2026-10-16",
+ "verified": true,
+ "pros": [
+  "The editor extensions and CLI are free for individuals",
+  "BYOK, local models, and a gateway at provider rates",
+  "Cloud compute is billed per second"
+ ],
+ "cons": [
+  "Model usage, Kilo Pass, and cloud compute are separate bills",
+  "Credit purchases add a 5% processing fee"
+ ],
+ "alternatives": [
+  "cline",
+  "opencode",
+  "cursor",
+  "claude-code",
+  "aider"
+ ],
+ "website": "https://kilocode.ai",
+ "affiliate": false,
+ "pricingNote": "Checked 2026-10-16 on kilocode.ai/pricing. Individual platform access is free and open source for VS Code, JetBrains, and the CLI, with usage billed separately. Teams is $15 per user a month and includes a 14-day Enterprise trial. Enterprise is Custom. Inference is separate: Auto Free, BYOK, or local is $0 a month; Kilo Gateway is $0 a month plus usage at exact provider rates; Kilo Pass lists Starter at $19 a month, Pro at $49 a month, and Expert at $199 a month. The comparison table lists a 5% processing fee on credit purchases. Cloud compute on the same page: Code Review $0.33 an hour, Cloud Agent Docker and Small $0.60 an hour, Cloud Agent Standard $1.20 an hour, billed per second, with inference charged separately. The Pass calculator also shows bonus-credit illustrations and a 12-month \"you pay\" example that changes with the selected tier, so that example total is not a plan row."
+}
