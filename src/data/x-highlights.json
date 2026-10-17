@@ -1,74 +1,74 @@
 [
   {
-    "author": "AI at Meta",
-    "handle": "AIatMeta",
-    "summary": "Meta releases Muse Spark Open, an 816B open-weight model built for coding and long-horizon agent work.",
-    "url": "https://x.com/AIatMeta/status/2110779754274292212",
-    "date": "2026-10-15",
-    "likes": 10657,
-    "reposts": 1114
+    "author": "Claude",
+    "handle": "claudeai",
+    "summary": "Claude spotlights six recent community builds, led by a wildfire-spread mapping prototype made with Opus 5.5.",
+    "url": "https://x.com/claudeai/status/2111177834127601902",
+    "date": "2026-10-16",
+    "likes": 24969,
+    "reposts": 1618
+  },
+  {
+    "author": "DeepSeek",
+    "handle": "deepseek_ai",
+    "summary": "DeepSeek ships V4.1-Flash-1017, claiming better benchmarks, faster task completion, and shorter answers at lower cost.",
+    "url": "https://x.com/deepseek_ai/status/2111375640717033777",
+    "date": "2026-10-17",
+    "likes": 19575,
+    "reposts": 2343
   },
   {
     "author": "OpenAI",
     "handle": "OpenAI",
-    "summary": "OpenAI rolls out GPT-Live-1.1 with new multilingual voices and fewer \"checking…\" moments in ChatGPT Voice.",
-    "url": "https://x.com/OpenAI/status/2110797830361436604",
-    "date": "2026-10-15",
-    "likes": 10148,
-    "reposts": 726
-  },
-  {
-    "author": "OpenAI",
-    "handle": "OpenAI",
-    "summary": "OpenAI pledges $5 million to a Simons Foundation effort helping mathematicians build on AI-assisted results.",
-    "url": "https://x.com/OpenAI/status/2110741355739963884",
-    "date": "2026-10-15",
-    "likes": 5708,
-    "reposts": 450
+    "summary": "OpenAI speeds up GPT-6 Astra Pro in ChatGPT, improves tool use, and lets several agents work on one task in parallel.",
+    "url": "https://x.com/OpenAI/status/2111192259073094035",
+    "date": "2026-10-16",
+    "likes": 10099,
+    "reposts": 526
   },
   {
     "author": "Anthropic",
     "handle": "AnthropicAI",
-    "summary": "Anthropic gives METR employee-like access to assess its safety practices and explains how third-party evaluators work.",
-    "url": "https://x.com/AnthropicAI/status/2110784662071398807",
-    "date": "2026-10-15",
-    "likes": 3441,
-    "reposts": 229
-  },
-  {
-    "author": "OpenAI",
-    "handle": "OpenAI",
-    "summary": "OpenAI expands GPT-Rosalind for academic biology labs with sponsored access for eligible U.S. universities.",
-    "url": "https://x.com/OpenAI/status/2110841898076418336",
-    "date": "2026-10-15",
-    "likes": 2547,
-    "reposts": 233
-  },
-  {
-    "author": "Anthropic",
-    "handle": "AnthropicAI",
-    "summary": "Anthropic commits $5 million to help mathematicians figure out how best to use AI in scientific research.",
-    "url": "https://x.com/AnthropicAI/status/2110846112152105136",
-    "date": "2026-10-15",
-    "likes": 2090,
-    "reposts": 153
-  },
-  {
-    "author": "Ethan Mollick",
-    "handle": "emollick",
-    "summary": "Mollick argues small accuracy gains compound on long-horizon tasks, so frontier models still matter as orchestrators.",
-    "url": "https://x.com/emollick/status/2110918113550307778",
+    "summary": "Anthropic says Claude Mythos 5 designed quantum circuits that beat the best published designs, sometimes by 10x or more.",
+    "url": "https://x.com/AnthropicAI/status/2111152183240511640",
     "date": "2026-10-16",
-    "likes": 780,
-    "reposts": 61
+    "likes": 4610,
+    "reposts": 497
   },
   {
-    "author": "Mistral AI",
-    "handle": "MistralAI",
-    "summary": "Mistral says Large 4 scores well on Ulam’s private STEMBench for engineering and astronomy.",
-    "url": "https://x.com/MistralAI/status/2111056939841163336",
+    "author": "Google Gemini",
+    "handle": "GeminiApp",
+    "summary": "Gemini's Canvas can now turn dense PDFs into interactive, animated web apps using Gemini 4 Argon.",
+    "url": "https://x.com/GeminiApp/status/2111147479248855484",
     "date": "2026-10-16",
-    "likes": 717,
-    "reposts": 53
+    "likes": 2630,
+    "reposts": 219
+  },
+  {
+    "author": "Google DeepMind",
+    "handle": "GoogleDeepMind",
+    "summary": "A team of four Gemini 4 Argon agents finished Minecraft from scratch in 27 hours, coordinating entirely through code and chat.",
+    "url": "https://x.com/GoogleDeepMind/status/2111127991401247033",
+    "date": "2026-10-16",
+    "likes": 2182,
+    "reposts": 170
+  },
+  {
+    "author": "Cursor",
+    "handle": "cursor_ai",
+    "summary": "Cursor's cloud agents can now build interactive canvases, like dashboards or reports, that you share with a link.",
+    "url": "https://x.com/cursor_ai/status/2111193957527146711",
+    "date": "2026-10-16",
+    "likes": 2034,
+    "reposts": 106
+  },
+  {
+    "author": "OpenAI Developers",
+    "handle": "OpenAIDevs",
+    "summary": "OpenAI shows how its own engineers use Codex to explore their codebase and work down the maintenance backlog.",
+    "url": "https://x.com/OpenAIDevs/status/2111213093577691337",
+    "date": "2026-10-16",
+    "likes": 1535,
+    "reposts": 74
   }
 ]
