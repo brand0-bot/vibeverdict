@@ -1,37 +1,13 @@
 ---
 import Base from '../../layouts/Base.astro'; import NewsletterForm from '../../components/NewsletterForm.astro'; import { tools, bySlug, categories, label, visitUrl, reviews } from '../../lib/data.js';
 import { guidesFor } from '../../lib/guides.js';
+import { offersForTool } from '../../lib/offers.js';
 export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
 const { t } = Astro.props;
 const review = reviews[t.slug] || {};
 const paras = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
 const related = guidesFor(t.slug, bySlug);
 const pageUrl = `https://vibeverdict.ai/tools/${t.slug}/`;
-
-// A single leading $ or € amount, plus an optional billing suffix and one parenthetical.
-// Ranges, "or"/"from" alternatives, and unit rates stay text-only so we never invent a price.
-function parseOfferPrice(price) {
-  const text = String(price ?? '').trim();
-  const amounts = [...text.matchAll(/[$€]\d+(?:,\d{3})*(?:\.\d+)?/g)];
-  if (amounts.length !== 1 || amounts[0].index !== 0) return null;
-  if (/[$€]\d[\d,]*(?:\.\d+)?\s*[-–—]\s*\d/.test(text)) return null;
-  const m = amounts[0][0].match(/^([$€])(\d+(?:,\d{3})*(?:\.\d+)?)$/);
-  const raw = m[2].replace(/,/g, '');
-  if (!/^\d+(?:\.\d{1,2})?$/.test(raw)) return null;
-  const rest = text.slice(amounts[0][0].length).trim().replace(/\s*\([^)]*\)\s*$/, '').trim();
-  const billing = /^(?:(?:\/(?:user|seat|member))?(?:\/(?:mo|month|yr|year))?|per\s+(?:user|seat|member)(?:\s*\/\s*|\s+per\s+)(?:mo|month|yr|year)|per\s+(?:month|year|user|seat|member))(?:\s+billed\s+(?:monthly|annually|yearly))?$/i;
-  if (rest && !billing.test(rest)) return null;
-  return { price: raw, priceCurrency: m[1] === '€' ? 'EUR' : 'USD' };
-}
-function offerFromPlan(p) {
-  const offer = { '@type': 'Offer', name: p.plan, description: p.price };
-  const parsed = parseOfferPrice(p.price);
-  if (parsed) {
-    offer.price = parsed.price;
-    offer.priceCurrency = parsed.priceCurrency;
-  }
-  return offer;
-}
 const software = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -39,7 +15,7 @@ const software = {
   description: t.verdict,
   applicationCategory: categories[t.category],
   url: t.website,
-  ...(t.verified && t.pricing?.length ? { offers: t.pricing.map(offerFromPlan) } : {})
+  offers: offersForTool(t)
 };
 const faqItems = [
   { q: `Is ${t.name} worth it?`, a: t.verdict },
