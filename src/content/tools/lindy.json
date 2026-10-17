@@ -1,0 +1,47 @@
+{
+ "name": "Lindy",
+ "category": "agent-frameworks",
+ "verdict": "Team starts at $29.99 per active user a month, and a Slack @mention counts as an active user.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0 (starts with $50 in free credits)"
+  },
+  {
+   "plan": "Team",
+   "price": "From $29.99 per active user/mo (3,000 credits)"
+  },
+  {
+   "plan": "Credit top-up",
+   "price": "$10 per 1,000 credits"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  }
+ ],
+ "pricingSource": "https://www.lindy.ai/pricing",
+ "lastVerified": "2026-10-17",
+ "verified": true,
+ "pros": [
+  "Free start is $50 in credits and needs no credit card",
+  "When credits run out, Lindy pauses instead of charging more",
+  "Top-up credits last until they are used"
+ ],
+ "cons": [
+  "Every active user is billed, including Slack @mentions",
+  "The free credits last 7 days",
+  "Monthly credits do not roll over"
+ ],
+ "alternatives": [
+  "n8n",
+  "zapier",
+  "make",
+  "manus",
+  "crewai"
+ ],
+ "website": "https://www.lindy.ai",
+ "affiliate": false,
+ "pricingNote": "Prices were checked Oct 17, 2026 (17 October 2026) on https://www.lindy.ai/pricing. Free is $0 and starts with $50 in free credits, with no credit card. The FAQ says those free credits last 7 days. Team is from $29.99 per active user per month, with 3,000 credits each, pooled across the team. Top-ups are $10 per 1,000 credits. Enterprise is Custom, with HIPAA and BAA, SSO and SCIM, and audit logs. Every active user in the workspace is billed, including people who @mention Lindy in Slack. Slack joiners get a 7-day free trial. Direct signups are billed right away. Monthly credits do not roll over. Top-up credits do not expire until used. When credits run out, Lindy pauses. The credit guide on the page says everyday asks are 2 to 250 credits, deep work is 250 to 1,000, and big builds are 1,000 to 2,500."
+}

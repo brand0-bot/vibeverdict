@@ -1,0 +1,48 @@
+{
+ "name": "Krea",
+ "category": "media",
+ "verdict": "Free is 100 compute units a day; Pro is $35 a month or $21 billed yearly, and those units do not roll over.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Free",
+   "price": "$0/mo (100 compute units/day)"
+  },
+  {
+   "plan": "Pro",
+   "price": "$35/mo or $21/mo billed yearly (20,000 units/mo)"
+  },
+  {
+   "plan": "Max",
+   "price": "$105/mo or $63/mo billed yearly (60,000 units/mo)"
+  },
+  {
+   "plan": "Business",
+   "price": "$200/mo or $160/mo billed yearly (80,000 units/mo)"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Custom"
+  }
+ ],
+ "pricingSource": "https://www.krea.ai/pricing",
+ "lastVerified": "2026-10-17",
+ "verified": true,
+ "pros": [
+  "Free plan needs no credit card, and the daily units refill",
+  "Pro includes a commercial license",
+  "Business includes up to 50 seats at no extra per-seat cost"
+ ],
+ "cons": [
+  "Pro and Max compute units do not roll over",
+  "Free has image concurrency of 1 and no video concurrency",
+  "One-time compute pack prices are behind sign-in"
+ ],
+ "alternatives": [
+  "midjourney",
+  "runway"
+ ],
+ "website": "https://www.krea.ai",
+ "affiliate": false,
+ "pricingNote": "Prices were checked Oct 17, 2026 (17 October 2026) on https://www.krea.ai/pricing. Free is $0 a month: 100 compute units a day, no credit card, limited model access, image concurrency 1, and no video concurrency. The daily allowance refills each day. Pro is $35 a month billed monthly, or $21 a month billed yearly, with 20,000 units a month. The page says that is ~257 Nano Banana 2 generations or ~83 Seedance 2.0 videos. Pro includes a commercial license and video concurrency of 4. Max is $105 a month billed monthly, or $63 a month billed yearly, at the default 60,000 units a month. The Max card has a units slider of 40,000, 60,000, 80,000, and 100,000. Only the 60,000-unit price is listed here. Max includes LoRA training up to 2,000 images. Business is $200 a month billed monthly, or $160 a month billed yearly, at 80,000 units a month, with up to 50 seats included at no extra per-seat cost. Enterprise is Custom. The page says \"Save 40% on yearly plans\" for individual plans. Pro and Max compute units do not roll over. Unused credits roll over on Business and Enterprise. One-time compute packs from 2,000 to 50,000 units are valid 90 days. Pack prices require sign-in, so none are shown. A limited-time promo gives 14 days of unlimited Krea 3 with a qualifying Pro or Max annual purchase."
+}

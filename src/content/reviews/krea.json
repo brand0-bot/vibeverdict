@@ -1,0 +1,48 @@
+{
+  "audience": [
+    "Krea is for someone who wants image, video, and 3D generation on one compute balance. Free is $0 a month and gives 100 compute units a day, with no credit card. Pro is $35 a month billed monthly, or $21 a month billed yearly, for 20,000 units. The verdict is the rollover. Pro and Max units do not roll over.",
+    "It is a poor fit if you only need still images, or only need video, and you already pay for a tool that does that one job. Free is a daily allowance, not a video plan. Image concurrency is 1, and there is no video concurrency on Free."
+  ],
+  "features": [
+    "Krea generates images, video, and 3D. Krea 3 is the in-house image model, built for editing. Prices were checked Oct 17, 2026 (17 October 2026) on https://www.krea.ai/pricing. Free refills 100 units each day and limits which models you can use. Pro adds a commercial license and video concurrency of 4. The page says 20,000 units is ~257 Nano Banana 2 generations or ~83 Seedance 2.0 videos.",
+    "Max is $105 a month billed monthly, or $63 a month billed yearly, at the default 60,000 units a month. The card has a units slider of 40,000, 60,000, 80,000, and 100,000. Prices for the other slider steps are not in this table. Max includes LoRA training up to 2,000 images.",
+    "Business is $200 a month billed monthly, or $160 a month billed yearly, at 80,000 units a month. Up to 50 seats are included at no extra per-seat cost. Enterprise is Custom. Unused credits roll over on Business and Enterprise. The page says \"Save 40% on yearly plans\" for individual plans. The yearly prices above are the ones printed on the page."
+  ],
+  "limitations": [
+    "Pro and Max compute units do not roll over. A quiet month does not save units for a heavy one. Unused credits roll over on Business and Enterprise. Business is $200 a month billed monthly, or $160 a month billed yearly.",
+    "One-time compute packs run from 2,000 to 50,000 units and are valid 90 days. The pack prices require sign-in, so this page shows none. A missing pack price is not a free pack.",
+    "The rating is Depends. Depends means the free daily allowance is real, and the paid meter expires on Pro and Max. A limited-time promo gives 14 days of unlimited Krea 3 with a qualifying Pro or Max annual purchase. That promo is time-limited. It is not a line in the price table. There is no affiliate relationship. Visit goes to krea.ai."
+  ],
+  "pricingNotes": [
+    "Prices were checked Oct 17, 2026 (17 October 2026) on https://www.krea.ai/pricing. Free is $0 a month with 100 compute units a day. Pro is $35 a month billed monthly, or $21 a month billed yearly, for 20,000 units. Max is $105 a month billed monthly, or $63 a month billed yearly, at 60,000 units. Business is $200 a month billed monthly, or $160 a month billed yearly, at 80,000 units. Enterprise is Custom.",
+    "Prices were checked Oct 17, 2026 (17 October 2026) on https://www.krea.ai/pricing. Pro and Max units do not roll over. Unused credits roll over on Business and Enterprise. The Max slider also shows 40,000, 80,000, and 100,000 units. Only the 60,000-unit price is in the table. Pack prices are behind sign-in, so none are shown. \"Save 40% on yearly plans\" is the label for individual plans."
+  ],
+  "alternatives": [
+    {
+      "slug": "midjourney",
+      "text": "is still images, and there is no free plan. Basic is $10 a month, Standard is $30, Pro is $60, and Mega is $120. Annual billing is 20% off. Use Midjourney for a picture. Use Krea when the same balance should also cover video or 3D."
+    },
+    {
+      "slug": "runway",
+      "text": "is the video tool. Free is $0 with 125 credits, one time. Standard is $15 a month, or $12 billed annually, for 625 credits that reset. Pro is $35 a month, or $28 billed annually. Krea Pro is also $35 a month when billed monthly, and Krea Pro units do not roll over either."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Krea free?",
+      "a": "Free is $0 a month with 100 compute units a day, and it does not ask for a credit card. The allowance refills each day. Image concurrency is 1, and there is no video concurrency. Pro is $35 a month billed monthly, or $21 a month billed yearly."
+    },
+    {
+      "q": "Do Krea credits roll over?",
+      "a": "Pro and Max compute units do not roll over. Unused credits roll over on Business and Enterprise. Business is $200 a month billed monthly, or $160 a month billed yearly, at 80,000 units, and it includes up to 50 seats at no extra per-seat cost."
+    },
+    {
+      "q": "What does the Max units slider cost?",
+      "a": "The card lists 40,000, 60,000, 80,000, and 100,000 units. The verified price is the default 60,000 units: $105 a month billed monthly, or $63 a month billed yearly. Prices for the other steps are not shown."
+    },
+    {
+      "q": "Does Krea have an affiliate link?",
+      "a": "No. We do not have a tracking URL. Visit goes to krea.ai."
+    }
+  ]
+}
