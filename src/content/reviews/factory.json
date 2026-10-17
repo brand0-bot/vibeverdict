@@ -1,0 +1,64 @@
+{
+  "audience": [
+    "Factory is for someone who wants software-development agents, called Droids, in a desktop app, a CLI, an SDK, and as cloud or local background agents. Pro is $20 a month. The verdict is what that price does not say. The pricing page calls the limit a rolling rate limit and describes it only as a multiple of Pro. It prints no token count, and it lists no free plan.",
+    "It is a poor fit if you need a free client, or a published message allowance, before you pay. Plus is $100 a month, ~5x the usage of Pro, and adds Droid Computers. Max is $200 a month, ~10x the usage of Pro. Both are a larger multiple of a limit the page does not count out."
+  ],
+  "features": [
+    "Droids run on frontier models and on open-weight models. The surfaces are desktop, CLI, SDK, and cloud and local background agents. Prices were checked Oct 17, 2026 (17 October 2026) on https://factory.com/pricing. The site at factory.ai redirects to factory.com.",
+    "Plus includes Droid Computers, which are Factory-managed cloud computers. Max adds early access to new features. The usage line on both cards is a multiple of Pro: ~5x on Plus and ~10x on Max.",
+    "Teams is $60 a month per team plus $40 a month per seat, up to 10 seats, with centralized billing. Business is tailored, and no dollar amount is shown. That card lists SSO, SAML and SCIM, Zero Data Retention, and audit logs. Enterprise shows no price. It is the contact plan for on-prem options, data residency, and dedicated compute."
+  ],
+  "limitations": [
+    "No free plan is listed on the pricing page. The first published price is Pro at $20 a month. Do not read a missing free row as a trial.",
+    "Usage limits are rolling rate limits. Plus is ~5x Pro. Max is ~10x Pro. That is the whole usage description. A token count is not on the page, so none is printed here.",
+    "The rating is Depends. Depends means $20 is a normal entry price for a coding agent, and the amount of work inside it is not published. Plus at $100 and Max at $200 multiply that unknown. There is no affiliate relationship. Visit goes to factory.ai, which redirects to factory.com."
+  ],
+  "pricingNotes": [
+    "Prices were checked Oct 17, 2026 (17 October 2026) on https://factory.com/pricing. Pro is $20 a month. Plus is $100 a month, ~5x the usage of Pro, and includes Droid Computers. Max is $200 a month, ~10x the usage of Pro, with early access to new features. Teams is $60 a month per team plus $40 a month per seat, up to 10 seats. Business is tailored, with no price shown. Enterprise has no price shown.",
+    "Prices were checked Oct 17, 2026 (17 October 2026) on https://factory.com/pricing. No free plan is listed, so none is shown. Usage limits are rolling rate limits described only as multiples of Pro. No token count is printed, so none is shown. factory.ai redirects to factory.com."
+  ],
+  "alternatives": [
+    {
+      "slug": "claude-code",
+      "text": "is included with Claude. Pro is $20 a month, or $17 a month with $200 billed up front. Max is from $100 a month, at 5x or 20x more usage than Pro. The free Claude plan does not include Claude Code. Claude names the multiple against Pro. Factory does the same, and still prints no token count."
+    },
+    {
+      "slug": "openai-codex",
+      "text": "is included with ChatGPT. Plus is $20 a month. Go is $8 a month. Pro is $100, $200, or $500 a month. Factory Pro is also $20 a month, and it is a separate subscription, not a ChatGPT plan."
+    },
+    {
+      "slug": "cursor",
+      "text": "is the editor. Docs list Pro at $20, Pro Plus at $60, and Ultra at $200, and the public pricing page showed a different lineup. That review is Depends. Factory is the agent in the CLI, an SDK, and the background, not an IDE seat."
+    },
+    {
+      "slug": "amp",
+      "text": "has a free Hobby plan if you bring a key or a ChatGPT or Claude subscription. Megawatt is $20 a month for 45,000 minutes of orb time. Gigawatt is $200 a month. Factory's pricing page does not list a free plan."
+    },
+    {
+      "slug": "devin",
+      "text": "is Pro at $20 a month and Max at $200 a month, and the included quota is not a published message count. Teams is an $80 a month minimum plus $40 a month per full seat. Factory Teams is $60 a month per team plus $40 a month per seat, up to 10 seats. Both quotas are opaque."
+    },
+    {
+      "slug": "opencode",
+      "text": "is free under the MIT license. Go is $10 a month and Go Plus is $40 a month, with a separate cap per model, or you bring a key. OpenCode is the client you do not pay for. Factory Plus, at $100 a month, is the plan that includes Droid Computers."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a free Factory plan?",
+      "a": "No. The pricing page does not list a free plan. Pro is $20 a month. Plus is $100 a month. Max is $200 a month."
+    },
+    {
+      "q": "How much usage does Pro include?",
+      "a": "The page calls it a rolling rate limit and does not print a token count. Plus is ~5x the usage of Pro, at $100 a month, and includes Droid Computers. Max is ~10x the usage of Pro, at $200 a month."
+    },
+    {
+      "q": "How does Factory Teams billing work?",
+      "a": "Teams is $60 a month per team plus $40 a month per seat, up to 10 seats, with centralized billing. Business is tailored and shows no price. Enterprise shows no price. Contact them for on-prem options, data residency, and dedicated compute."
+    },
+    {
+      "q": "Does Factory have an affiliate link?",
+      "a": "No. We do not have a tracking URL. Visit goes to factory.ai, which redirects to factory.com."
+    }
+  ]
+}

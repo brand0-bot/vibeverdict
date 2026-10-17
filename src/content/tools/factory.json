@@ -1,0 +1,56 @@
+{
+ "name": "Factory",
+ "category": "coding-agents",
+ "verdict": "Pro is $20 a month with no free plan, and usage is only described as a multiple of Pro.",
+ "rating": "depends",
+ "pricing": [
+  {
+   "plan": "Pro",
+   "price": "$20/mo"
+  },
+  {
+   "plan": "Plus",
+   "price": "$100/mo (~5x Pro usage)"
+  },
+  {
+   "plan": "Max",
+   "price": "$200/mo (~10x Pro usage)"
+  },
+  {
+   "plan": "Teams",
+   "price": "$60/mo per team + $40/mo per seat (up to 10 seats)"
+  },
+  {
+   "plan": "Business",
+   "price": "Tailored"
+  },
+  {
+   "plan": "Enterprise",
+   "price": "Contact"
+  }
+ ],
+ "pricingSource": "https://factory.com/pricing",
+ "lastVerified": "2026-10-17",
+ "verified": true,
+ "pros": [
+  "Desktop, CLI, SDK, and background agents on the published plans",
+  "Plus includes Droid Computers",
+  "Teams has centralized billing"
+ ],
+ "cons": [
+  "No free plan is listed on the pricing page",
+  "Usage is a rolling rate limit, described only as a multiple of Pro",
+  "Teams stops at 10 seats"
+ ],
+ "alternatives": [
+  "claude-code",
+  "openai-codex",
+  "cursor",
+  "amp",
+  "devin",
+  "opencode"
+ ],
+ "website": "https://factory.ai",
+ "affiliate": false,
+ "pricingNote": "Prices were checked Oct 17, 2026 (17 October 2026) on https://factory.com/pricing. Pro is $20 a month. Plus is $100 a month, ~5x the usage of Pro, and includes Droid Computers, which are Factory-managed cloud computers. Max is $200 a month, ~10x the usage of Pro, with early access to new features. Teams is $60 a month per team plus $40 a month per seat, up to 10 seats, with centralized billing. Business is tailored, with no price shown, and lists SSO, SAML and SCIM, Zero Data Retention, and audit logs. Enterprise has no price shown. Contact them for on-prem options, data residency, and dedicated compute. No free plan is listed on the pricing page, so none is shown. Usage limits are rolling rate limits described only as multiples of Pro. No token count is printed, so none is shown. factory.ai redirects to factory.com."
+}

@@ -1,0 +1,60 @@
+{
+  "audience": [
+    "Lindy is for a team that wants an agent in Slack for meetings, the inbox, and scheduled routines, and that will pay per active user. Team starts at $29.99 per active user a month, with 3,000 credits each, pooled across the team. The verdict is the billing unit. Anyone who uses Lindy in the workspace is an active user, including a person who @mentions Lindy in Slack.",
+    "It is a poor fit if you wanted a workflow tool with a published price per run, or a free plan that stays free. Free is $0 and starts with $50 in credits. The FAQ says those credits last 7 days. Direct signups are billed right away. Slack joiners get a 7-day free trial."
+  ],
+  "features": [
+    "Lindy sits in Slack. The page says it handles meetings, the inbox, and scheduled routines, with 1,500+ integrations and MCP support. You can choose the model per task. Team includes computer use. Prices were checked Oct 17, 2026 (17 October 2026) on https://www.lindy.ai/pricing.",
+    "The credit guide on that page splits work into bands. Everyday asks are 2 to 250 credits. Deep work is 250 to 1,000. Big builds are 1,000 to 2,500. A seat includes 3,000 credits a month. Those bands are ranges on the page, not a fixed cost for one meeting.",
+    "Team credits are pooled. Top-ups are $10 per 1,000 credits. Enterprise is Custom. The Enterprise card lists HIPAA and BAA, SSO and SCIM, and audit logs."
+  ],
+  "limitations": [
+    "Every active user in the workspace is billed. A Slack channel that @mentions Lindy can add a seat. Slack joiners get 7 days free. After that, they are on the bill. Direct signups do not get that trial.",
+    "Monthly credits do not roll over. Top-up credits do not expire until used. When credits run out, Lindy pauses. The pause avoids a surprise bill. It also stops the agent if the pool is empty.",
+    "The rating is Depends. Depends means the $29.99 price is real, and the workspace can add seats by use, not only by an admin invite. There is no affiliate relationship. Visit goes to lindy.ai."
+  ],
+  "pricingNotes": [
+    "Prices were checked Oct 17, 2026 (17 October 2026) on https://www.lindy.ai/pricing. Free is $0 and starts with $50 in free credits. The FAQ says those credits last 7 days. Team is from $29.99 per active user per month, with 3,000 credits each, pooled. Top-ups are $10 per 1,000 credits. Enterprise is Custom.",
+    "Prices were checked Oct 17, 2026 (17 October 2026) on https://www.lindy.ai/pricing. Every active user is billed, including Slack @mentions. Slack joiners get a 7-day free trial. Direct signups are billed right away. Monthly credits do not roll over. Top-up credits last until used. Lindy pauses when credits run out. The page's credit guide is 2 to 250 for everyday asks, 250 to 1,000 for deep work, and 1,000 to 2,500 for big builds."
+  ],
+  "alternatives": [
+    {
+      "slug": "n8n",
+      "text": "prices workflow executions. Cloud Starter is €24 a month, or €20 a month billed annually, for 2,500 executions, and the community edition can be self-hosted. n8n is the pick when you want a workflow you can open. Lindy is the pick when the agent should sit in Slack."
+    },
+    {
+      "slug": "zapier",
+      "text": "starts at $0 for 100 tasks. Professional starts from $19.99 a month. Team starts from $69 a month. Zapier is the no-code app catalog. Lindy bills an active user, then spends credits."
+    },
+    {
+      "slug": "make",
+      "text": "states a free plan of 1,000 credits a month. Core, Pro, and Teams dollar amounts were not in the pricing text we could read, so they are not repeated here. Make is a visual scenario builder. Lindy is an agent with a shared credit pool."
+    },
+    {
+      "slug": "manus",
+      "text": "sells credits for research, slides, and browser tasks. $20 a month buys 4,000 credits, and Manus does not publish what one task costs. Lindy's Team seat is $29.99 a month and publishes a credit guide in ranges."
+    },
+    {
+      "slug": "crewai",
+      "text": "is free for 50 workflow executions a month and two automations. Enterprise is Custom, and there is no published price between those. CrewAI is a crew you design. Lindy is a teammate that is already in Slack."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Lindy free?",
+      "a": "Free is $0. It starts with $50 in free credits and does not ask for a credit card. The FAQ says those credits last 7 days. Team is from $29.99 per active user a month."
+    },
+    {
+      "q": "Who counts as an active user?",
+      "a": "Every active user in the workspace is billed, including people who @mention Lindy in Slack. Slack joiners get a 7-day free trial. Direct signups are billed right away. Each Team user gets 3,000 credits, pooled across the team."
+    },
+    {
+      "q": "Do Lindy credits roll over?",
+      "a": "Monthly credits do not roll over. Top-up credits, at $10 per 1,000, do not expire until used. When credits run out, Lindy pauses. There is no surprise bill."
+    },
+    {
+      "q": "Does Lindy have an affiliate link?",
+      "a": "No. We do not have a tracking URL. Visit goes to lindy.ai."
+    }
+  ]
+}
